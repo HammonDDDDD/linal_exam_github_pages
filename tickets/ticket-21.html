@@ -1,305 +1,101 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Билет 21 · Линейная Алгебра: Экзамен</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:true,macros:{R:"\\mathbb{R}",C:"\\mathbb{C}",F:"\\mathbb{F}",Ker:"\\operatorname{Ker}",rk:"\\operatorname{rk}",tr:"\\operatorname{tr}",Sym:"\\operatorname{Sym}",Alt:"\\operatorname{Alt}",dist:"\\operatorname{dist}",pr:"\\operatorname{pr}",ort:"\\operatorname{ort}",End:"\\operatorname{End}",Hom:"\\operatorname{Hom}"}},svg:{fontCache:"global"}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body class="ticket-page full-active"><header class="topbar"><a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Линейная Алгебра: Экзамен</span></a><nav><a class="active" href="../index.html">Билеты</a><a href="../map.html">Карта</a><a href="../trainer.html">Тренажёр</a><a href="../formulas.html">Формулы</a><a href="../interactives.html">Интерактивы</a></nav><button id="themeToggle" class="icon-button">◐</button></header><main class="layout"><aside class="sidebar"><div style="margin:4px 6px 12px;color:var(--muted);font-size:13px">Билеты</div><a href="ticket-01.html" class="">1</a><a href="ticket-02.html" class="">2</a><a href="ticket-03.html" class="">3</a><a href="ticket-04.html" class="">4</a><a href="ticket-05.html" class="">5</a><a href="ticket-06.html" class="">6</a><a href="ticket-07.html" class="">7</a><a href="ticket-08.html" class="">8</a><a href="ticket-09.html" class="">9</a><a href="ticket-10.html" class="">10</a><a href="ticket-11.html" class="">11</a><a href="ticket-12.html" class="">12</a><a href="ticket-13.html" class="">13</a><a href="ticket-14.html" class="">14</a><a href="ticket-15.html" class="">15</a><a href="ticket-16.html" class="">16</a><a href="ticket-17.html" class="">17</a><a href="ticket-18.html" class="">18</a><a href="ticket-19.html" class="">19</a><a href="ticket-20.html" class="">20</a><a href="ticket-21.html" class="current">21</a><a href="ticket-22.html" class="">22</a><a href="ticket-23.html" class="">23</a><a href="ticket-24.html" class="">24</a><a href="ticket-25.html" class="">25</a><a href="ticket-26.html" class="">26</a><a href="ticket-27.html" class="">27</a></aside><article class="article"><div class="ticket-tools"><button class="small-btn" data-mark-ticket="21">Отметить как выученный</button><a class="small-btn" href="ticket-20.html">← Предыдущий</a><a class="small-btn" href="ticket-22.html">Следующий →</a></div><div class="mode-switch"><button id="showFull" class="active">Полный конспект</button><button id="showOral">Устный ответ</button></div><p class="mode-note">Полный конспект восстановлен из первой полной версии сайта. Вкладка «Устный ответ» содержит текущую краткую структуру ответа.</p><section id="fullContent" class="full-content">
-<style>
-.full-content .pdf-source-note{margin:0 0 18px;padding:14px 16px;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;background:color-mix(in srgb,var(--paper) 86%,var(--bg));color:var(--muted)}
-.full-content .pdf-ticket-pages{display:grid;gap:24px;justify-items:center;margin-top:16px}
-.full-content .pdf-ticket-page{width:min(100%,660px);height:934px;overflow:auto;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);position:relative;color:#000}
-.full-content .pdf-page-inner{width:892px;height:1262px;transform:scale(.74);transform-origin:top left;background:#fff;color:#000}
-.full-content .pdf-ticket-page p{margin:0;padding:0;color:#000}
-.full-content .pdf-ticket-page a{color:#000;text-decoration:none}
-.full-content .pdf-ticket-page *{box-sizing:content-box}
-@media (max-width:760px){.full-content .pdf-ticket-page{height:760px}.full-content .pdf-page-inner{transform:scale(.60)}}
-.full-content .ft10{font-size:31px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft11{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft12{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft13{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft14{font-size:26px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft15{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#0000ff;}
-.full-content .ft16{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft17{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#0000ff;}
-.full-content .ft18{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#0000ff;}
-.full-content .ft19{font-size:18px;line-height:21px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft310{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#ffffff;}
-.full-content .ft311{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft312{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft313{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft314{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft315{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft316{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft317{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft318{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft319{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft520{font-size:9px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft521{font-size:26px;line-height:32px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft822{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft923{font-size:18px;line-height:21px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft1024{font-size:18px;line-height:31px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft1025{font-size:22px;line-height:26px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft1726{font-size:12px;line-height:11px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft1827{font-size:9px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft2228{font-size:26px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft2329{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft2330{font-size:15px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft2431{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft2932{font-size:12px;line-height:11px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft3533{font-size:9px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft3634{font-size:12px;line-height:10px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-</style>
-<div class="pdf-ticket-pages">
-<div class="pdf-ticket-page"><div class="pdf-page-inner"><!-- Page 38 -->
-<div id="page38-div" style="position:relative;width:892px;height:1262px;">
-<p style="position:absolute;top:88px;left:87px;white-space:nowrap" class="ft384"><b>21.&#160;Билет&#160;21.&#160;Вещественные&#160;алгебраические&#160;по-</b></p>
-<p style="position:absolute;top:120px;left:145px;white-space:nowrap" class="ft384"><b>верхности&#160;и&#160;классификация&#160;квадрик.</b></p>
-<p style="position:absolute;top:176px;left:111px;white-space:nowrap" class="ft3810">План&#160;ответа</p>
-<p style="position:absolute;top:209px;left:111px;white-space:nowrap" class="ft389">Нужно&#160;не&#160;повторять&#160;весь&#160;билет&#160;19.&#160;Здесь&#160;только&#160;алгебраические&#160;по-<br/>верхности&#160;второго&#160;порядка:&#160;общее&#160;уравнение,&#160;перенос&#160;начала,&#160;цен-<br/>тральные&#160;и&#160;нецентральные&#160;квадрики.</p>
-<p style="position:absolute;top:301px;left:87px;white-space:nowrap" class="ft386"><b>Определение&#160;21.1.</b></p>
-<p style="position:absolute;top:301px;left:289px;white-space:nowrap" class="ft383">Вещественной&#160;алгебраической&#160;поверхностью&#160;называ-</p>
-<p style="position:absolute;top:323px;left:87px;white-space:nowrap" class="ft389">ется&#160;множество&#160;точек,&#160;координаты&#160;которых&#160;удовлетворяют&#160;полиномиаль-<br/>ному&#160;уравнению</p>
-<p style="position:absolute;top:367px;left:377px;white-space:nowrap" class="ft3811"><i>F</i></p>
-<p style="position:absolute;top:367px;left:390px;white-space:nowrap" class="ft3813">(</p>
-<p style="position:absolute;top:367px;left:397px;white-space:nowrap" class="ft3811"><i>x</i></p>
-<p style="position:absolute;top:374px;left:407px;white-space:nowrap" class="ft3815">1</p>
-<p style="position:absolute;top:367px;left:414px;white-space:nowrap" class="ft3811"><i>,&#160;.&#160;.&#160;.&#160;,&#160;x</i></p>
-<p style="position:absolute;top:374px;left:464px;white-space:nowrap" class="ft3817"><i>n</i></p>
-<p style="position:absolute;top:367px;left:472px;white-space:nowrap" class="ft3813">)&#160;=&#160;0</p>
-<p style="position:absolute;top:367px;left:511px;white-space:nowrap" class="ft3811"><i>.</i></p>
-<p style="position:absolute;top:397px;left:87px;white-space:nowrap" class="ft383">Если&#160;степень</p>
-<p style="position:absolute;top:399px;left:220px;white-space:nowrap" class="ft3811"><i>F</i></p>
-<p style="position:absolute;top:397px;left:239px;white-space:nowrap" class="ft383">равна</p>
-<p style="position:absolute;top:399px;left:300px;white-space:nowrap" class="ft3813">2</p>
-<p style="position:absolute;top:397px;left:309px;white-space:nowrap" class="ft383">,&#160;поверхность&#160;называется&#160;квадрикой.</p>
-<p style="position:absolute;top:434px;left:114px;white-space:nowrap" class="ft383">Общее&#160;уравнение&#160;квадрики&#160;в&#160;аффинно-евклидовом&#160;пространстве:</p>
-<p style="position:absolute;top:475px;left:351px;white-space:nowrap" class="ft3813">(</p>
-<p style="position:absolute;top:475px;left:358px;white-space:nowrap" class="ft3811"><i>Ax,&#160;x</i></p>
-<p style="position:absolute;top:475px;left:399px;white-space:nowrap" class="ft3813">)&#160;+&#160;2(</p>
-<p style="position:absolute;top:475px;left:443px;white-space:nowrap" class="ft3811"><i>b,&#160;x</i></p>
-<p style="position:absolute;top:475px;left:468px;white-space:nowrap" class="ft3813">)&#160;+</p>
-<p style="position:absolute;top:475px;left:497px;white-space:nowrap" class="ft3811"><i>c</i></p>
-<p style="position:absolute;top:475px;left:509px;white-space:nowrap" class="ft3813">=&#160;0</p>
-<p style="position:absolute;top:475px;left:537px;white-space:nowrap" class="ft3811"><i>,</i></p>
-<p style="position:absolute;top:513px;left:87px;white-space:nowrap" class="ft383">где</p>
-<p style="position:absolute;top:514px;left:124px;white-space:nowrap" class="ft3811"><i>A</i></p>
-<p style="position:absolute;top:514px;left:142px;white-space:nowrap" class="ft3813">=</p>
-<p style="position:absolute;top:514px;left:161px;white-space:nowrap" class="ft3811"><i>A</i></p>
-<p style="position:absolute;top:509px;left:174px;white-space:nowrap" class="ft3816"><i>∗</i></p>
-<p style="position:absolute;top:513px;left:187px;white-space:nowrap" class="ft383">—&#160;самосопряжённый&#160;оператор.</p>
-<p style="position:absolute;top:619px;left:326px;white-space:nowrap" class="ft3811"><i>x</i></p>
-<p style="position:absolute;top:553px;left:243px;white-space:nowrap" class="ft3811"><i>y</i></p>
-<p style="position:absolute;top:683px;left:214px;white-space:nowrap" class="ft383">эллипс</p>
-<p style="position:absolute;top:619px;left:514px;white-space:nowrap" class="ft3811"><i>x</i></p>
-<p style="position:absolute;top:553px;left:431px;white-space:nowrap" class="ft3811"><i>y</i></p>
-<p style="position:absolute;top:684px;left:386px;white-space:nowrap" class="ft383">гипербола</p>
-<p style="position:absolute;top:619px;left:702px;white-space:nowrap" class="ft3811"><i>x</i></p>
-<p style="position:absolute;top:553px;left:619px;white-space:nowrap" class="ft3811"><i>y</i></p>
-<p style="position:absolute;top:684px;left:579px;white-space:nowrap" class="ft383">парабола</p>
-<p style="position:absolute;top:748px;left:87px;white-space:nowrap" class="ft3818"><b>Перенос&#160;начала&#160;координат</b></p>
-<p style="position:absolute;top:786px;left:114px;white-space:nowrap" class="ft383">Положим</p>
-<p style="position:absolute;top:788px;left:211px;white-space:nowrap" class="ft3811"><i>x</i></p>
-<p style="position:absolute;top:788px;left:226px;white-space:nowrap" class="ft3813">=</p>
-<p style="position:absolute;top:788px;left:244px;white-space:nowrap" class="ft3811"><i>x</i></p>
-<p style="position:absolute;top:794px;left:254px;white-space:nowrap" class="ft3815">0</p>
-<p style="position:absolute;top:788px;left:265px;white-space:nowrap" class="ft3813">+</p>
-<p style="position:absolute;top:788px;left:283px;white-space:nowrap" class="ft3811"><i>y</i></p>
-<p style="position:absolute;top:786px;left:292px;white-space:nowrap" class="ft383">.&#160;Тогда</p>
-<p style="position:absolute;top:827px;left:252px;white-space:nowrap" class="ft3813">(</p>
-<p style="position:absolute;top:827px;left:259px;white-space:nowrap" class="ft3811"><i>Ax,&#160;x</i></p>
-<p style="position:absolute;top:827px;left:300px;white-space:nowrap" class="ft3813">)&#160;+&#160;2(</p>
-<p style="position:absolute;top:827px;left:344px;white-space:nowrap" class="ft3811"><i>b,&#160;x</i></p>
-<p style="position:absolute;top:827px;left:369px;white-space:nowrap" class="ft3813">)&#160;+</p>
-<p style="position:absolute;top:827px;left:398px;white-space:nowrap" class="ft3811"><i>c</i></p>
-<p style="position:absolute;top:827px;left:410px;white-space:nowrap" class="ft3813">=&#160;(</p>
-<p style="position:absolute;top:827px;left:436px;white-space:nowrap" class="ft3811"><i>Ay,&#160;y</i></p>
-<p style="position:absolute;top:827px;left:475px;white-space:nowrap" class="ft3813">)&#160;+&#160;2(</p>
-<p style="position:absolute;top:827px;left:519px;white-space:nowrap" class="ft3811"><i>Ax</i></p>
-<p style="position:absolute;top:834px;left:542px;white-space:nowrap" class="ft3815">0</p>
-<p style="position:absolute;top:827px;left:554px;white-space:nowrap" class="ft3813">+</p>
-<p style="position:absolute;top:827px;left:571px;white-space:nowrap" class="ft3811"><i>b,&#160;y</i></p>
-<p style="position:absolute;top:827px;left:596px;white-space:nowrap" class="ft3813">)&#160;+</p>
-<p style="position:absolute;top:827px;left:624px;white-space:nowrap" class="ft3811"><i>c</i></p>
-<p style="position:absolute;top:821px;left:632px;white-space:nowrap" class="ft3816"><i>′</i></p>
-<p style="position:absolute;top:827px;left:636px;white-space:nowrap" class="ft3811"><i>.</i></p>
-<p style="position:absolute;top:866px;left:87px;white-space:nowrap" class="ft383">Линейная&#160;часть&#160;исчезает&#160;тогда&#160;и&#160;только&#160;тогда,&#160;когда&#160;разрешима&#160;система</p>
-<p style="position:absolute;top:906px;left:406px;white-space:nowrap" class="ft3811"><i>Ax</i></p>
-<p style="position:absolute;top:913px;left:430px;white-space:nowrap" class="ft3815">0</p>
-<p style="position:absolute;top:906px;left:442px;white-space:nowrap" class="ft3813">=</p>
-<p style="position:absolute;top:902px;left:460px;white-space:nowrap" class="ft3814"><i>−</i></p>
-<p style="position:absolute;top:906px;left:474px;white-space:nowrap" class="ft3811"><i>b.</i></p>
-<p style="position:absolute;top:945px;left:87px;white-space:nowrap" class="ft383">Если&#160;решение&#160;существует,&#160;квадрика&#160;называется&#160;центральной.</p>
-<p style="position:absolute;top:999px;left:87px;white-space:nowrap" class="ft3818"><b>Центральные&#160;квадрики</b></p>
-<p style="position:absolute;top:1038px;left:114px;white-space:nowrap" class="ft383">После&#160;переноса&#160;в&#160;центр&#160;и&#160;ортогональной&#160;диагонализации</p>
-<p style="position:absolute;top:1039px;left:676px;white-space:nowrap" class="ft3811"><i>A</i></p>
-<p style="position:absolute;top:1038px;left:694px;white-space:nowrap" class="ft383">получаем</p>
-<p style="position:absolute;top:1078px;left:344px;white-space:nowrap" class="ft3811"><i>λ</i></p>
-<p style="position:absolute;top:1085px;left:355px;white-space:nowrap" class="ft3815">1</p>
-<p style="position:absolute;top:1078px;left:362px;white-space:nowrap" class="ft3811"><i>y</i></p>
-<p style="position:absolute;top:1075px;left:371px;white-space:nowrap" class="ft3815">2</p>
-<p style="position:absolute;top:1087px;left:370px;white-space:nowrap" class="ft3815">1</p>
-<p style="position:absolute;top:1078px;left:382px;white-space:nowrap" class="ft3813">+</p>
-<p style="position:absolute;top:1074px;left:400px;white-space:nowrap" class="ft3814"><i>·&#160;·&#160;·</i></p>
-<p style="position:absolute;top:1078px;left:425px;white-space:nowrap" class="ft3813">+</p>
-<p style="position:absolute;top:1078px;left:442px;white-space:nowrap" class="ft3811"><i>λ</i></p>
-<p style="position:absolute;top:1085px;left:452px;white-space:nowrap" class="ft3817"><i>n</i></p>
-<p style="position:absolute;top:1078px;left:461px;white-space:nowrap" class="ft3811"><i>y</i></p>
-<p style="position:absolute;top:1075px;left:470px;white-space:nowrap" class="ft3815">2</p>
-<p style="position:absolute;top:1087px;left:469px;white-space:nowrap" class="ft3817"><i>n</i></p>
-<p style="position:absolute;top:1078px;left:482px;white-space:nowrap" class="ft3813">+</p>
-<p style="position:absolute;top:1078px;left:500px;white-space:nowrap" class="ft3811"><i>c</i></p>
-<p style="position:absolute;top:1072px;left:507px;white-space:nowrap" class="ft3816"><i>′</i></p>
-<p style="position:absolute;top:1078px;left:516px;white-space:nowrap" class="ft3813">=&#160;0</p>
-<p style="position:absolute;top:1078px;left:544px;white-space:nowrap" class="ft3811"><i>.</i></p>
-<p style="position:absolute;top:1117px;left:87px;white-space:nowrap" class="ft383">По&#160;знакам&#160;коэффициентов&#160;возникают:</p>
-<p style="position:absolute;top:1153px;left:112px;white-space:nowrap" class="ft383">•&#160;эллипсоиды;</p>
-<p style="position:absolute;top:1207px;left:435px;white-space:nowrap" class="ft383">38</p>
-</div></div></div>
-<div class="pdf-ticket-page"><div class="pdf-page-inner"><!-- Page 39 -->
-<div id="page39-div" style="position:relative;width:892px;height:1262px;">
-<p style="position:absolute;top:91px;left:112px;white-space:nowrap" class="ft393">•&#160;конусы;</p>
-<p style="position:absolute;top:128px;left:112px;white-space:nowrap" class="ft393">•&#160;однополостные&#160;и&#160;двуполостные&#160;гиперболоиды;</p>
-<p style="position:absolute;top:165px;left:112px;white-space:nowrap" class="ft393">•&#160;цилиндры&#160;над&#160;соответствующими&#160;квадриками,&#160;если&#160;часть&#160;коэффици-</p>
-<p style="position:absolute;top:186px;left:132px;white-space:nowrap" class="ft393">ентов&#160;равна&#160;нулю.</p>
-<p style="position:absolute;top:223px;left:114px;white-space:nowrap" class="ft393">Типичные&#160;формы&#160;в</p>
-<p style="position:absolute;top:220px;left:302px;white-space:nowrap" class="ft3912">R</p>
-<p style="position:absolute;top:222px;left:315px;white-space:nowrap" class="ft3915">3</p>
-<p style="position:absolute;top:223px;left:322px;white-space:nowrap" class="ft393">:</p>
-<p style="position:absolute;top:262px;left:319px;white-space:nowrap" class="ft3911"><i>x</i></p>
-<p style="position:absolute;top:259px;left:329px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:286px;left:319px;white-space:nowrap" class="ft3911"><i>a</i></p>
-<p style="position:absolute;top:285px;left:328px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:274px;left:341px;white-space:nowrap" class="ft3913">+</p>
-<p style="position:absolute;top:262px;left:361px;white-space:nowrap" class="ft3911"><i>y</i></p>
-<p style="position:absolute;top:259px;left:370px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:286px;left:362px;white-space:nowrap" class="ft3911"><i>b</i></p>
-<p style="position:absolute;top:285px;left:369px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:274px;left:383px;white-space:nowrap" class="ft3913">+</p>
-<p style="position:absolute;top:262px;left:402px;white-space:nowrap" class="ft3911"><i>z</i></p>
-<p style="position:absolute;top:259px;left:411px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:286px;left:403px;white-space:nowrap" class="ft3911"><i>c</i></p>
-<p style="position:absolute;top:285px;left:411px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:274px;left:425px;white-space:nowrap" class="ft3913">=&#160;1</p>
-<p style="position:absolute;top:272px;left:471px;white-space:nowrap" class="ft393">эллипсоид</p>
-<p style="position:absolute;top:274px;left:571px;white-space:nowrap" class="ft3911"><i>,</i></p>
-<p style="position:absolute;top:320px;left:231px;white-space:nowrap" class="ft3911"><i>x</i></p>
-<p style="position:absolute;top:317px;left:241px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:344px;left:231px;white-space:nowrap" class="ft3911"><i>a</i></p>
-<p style="position:absolute;top:343px;left:241px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:332px;left:254px;white-space:nowrap" class="ft3913">+</p>
-<p style="position:absolute;top:320px;left:273px;white-space:nowrap" class="ft3911"><i>y</i></p>
-<p style="position:absolute;top:317px;left:283px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:344px;left:274px;white-space:nowrap" class="ft3911"><i>b</i></p>
-<p style="position:absolute;top:343px;left:282px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:327px;left:295px;white-space:nowrap" class="ft3914"><i>−</i></p>
-<p style="position:absolute;top:320px;left:315px;white-space:nowrap" class="ft3911"><i>z</i></p>
-<p style="position:absolute;top:317px;left:324px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:344px;left:316px;white-space:nowrap" class="ft3911"><i>c</i></p>
-<p style="position:absolute;top:343px;left:323px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:332px;left:338px;white-space:nowrap" class="ft3913">=&#160;1</p>
-<p style="position:absolute;top:331px;left:383px;white-space:nowrap" class="ft393">однополостный&#160;гиперболоид</p>
-<p style="position:absolute;top:332px;left:659px;white-space:nowrap" class="ft3911"><i>,</i></p>
-<p style="position:absolute;top:377px;left:229px;white-space:nowrap" class="ft3914"><i>−</i></p>
-<p style="position:absolute;top:369px;left:244px;white-space:nowrap" class="ft3911"><i>x</i></p>
-<p style="position:absolute;top:367px;left:254px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:394px;left:245px;white-space:nowrap" class="ft3911"><i>a</i></p>
-<p style="position:absolute;top:393px;left:254px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:377px;left:267px;white-space:nowrap" class="ft3914"><i>−</i></p>
-<p style="position:absolute;top:369px;left:287px;white-space:nowrap" class="ft3911"><i>y</i></p>
-<p style="position:absolute;top:367px;left:296px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:394px;left:288px;white-space:nowrap" class="ft3911"><i>b</i></p>
-<p style="position:absolute;top:393px;left:295px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:382px;left:309px;white-space:nowrap" class="ft3913">+</p>
-<p style="position:absolute;top:369px;left:329px;white-space:nowrap" class="ft3911"><i>z</i></p>
-<p style="position:absolute;top:367px;left:337px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:394px;left:329px;white-space:nowrap" class="ft3911"><i>c</i></p>
-<p style="position:absolute;top:393px;left:337px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:382px;left:351px;white-space:nowrap" class="ft3913">=&#160;1</p>
-<p style="position:absolute;top:380px;left:397px;white-space:nowrap" class="ft393">двуполостный&#160;гиперболоид</p>
-<p style="position:absolute;top:382px;left:659px;white-space:nowrap" class="ft3911"><i>,</i></p>
-<p style="position:absolute;top:419px;left:342px;white-space:nowrap" class="ft3911"><i>x</i></p>
-<p style="position:absolute;top:417px;left:351px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:444px;left:342px;white-space:nowrap" class="ft3911"><i>a</i></p>
-<p style="position:absolute;top:443px;left:351px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:431px;left:364px;white-space:nowrap" class="ft3913">+</p>
-<p style="position:absolute;top:419px;left:384px;white-space:nowrap" class="ft3911"><i>y</i></p>
-<p style="position:absolute;top:417px;left:393px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:444px;left:385px;white-space:nowrap" class="ft3911"><i>b</i></p>
-<p style="position:absolute;top:443px;left:392px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:427px;left:406px;white-space:nowrap" class="ft3914"><i>−</i></p>
-<p style="position:absolute;top:419px;left:426px;white-space:nowrap" class="ft3911"><i>z</i></p>
-<p style="position:absolute;top:417px;left:435px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:444px;left:426px;white-space:nowrap" class="ft3911"><i>c</i></p>
-<p style="position:absolute;top:443px;left:434px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:431px;left:448px;white-space:nowrap" class="ft3913">=&#160;0</p>
-<p style="position:absolute;top:430px;left:494px;white-space:nowrap" class="ft393">конус</p>
-<p style="position:absolute;top:431px;left:548px;white-space:nowrap" class="ft3911"><i>.</i></p>
-<p style="position:absolute;top:487px;left:87px;white-space:nowrap" class="ft3918"><b>Нецентральные&#160;квадрики</b></p>
-<p style="position:absolute;top:526px;left:114px;white-space:nowrap" class="ft393">Если</p>
-<p style="position:absolute;top:527px;left:167px;white-space:nowrap" class="ft3911"><i>Ax</i></p>
-<p style="position:absolute;top:534px;left:190px;white-space:nowrap" class="ft3915">0</p>
-<p style="position:absolute;top:527px;left:204px;white-space:nowrap" class="ft3913">=</p>
-<p style="position:absolute;top:522px;left:224px;white-space:nowrap" class="ft3914"><i>−</i></p>
-<p style="position:absolute;top:527px;left:238px;white-space:nowrap" class="ft3911"><i>b</i></p>
-<p style="position:absolute;top:526px;left:253px;white-space:nowrap" class="ft393">неразрешима,&#160;линейную&#160;часть&#160;полностью&#160;убрать&#160;нельзя.</p>
-<p style="position:absolute;top:547px;left:87px;white-space:nowrap" class="ft399">Так&#160;появляются&#160;параболические&#160;типы.&#160;После&#160;подходящего&#160;выбора&#160;коорди-<br/>нат&#160;получаются,&#160;например,</p>
-<p style="position:absolute;top:620px;left:256px;white-space:nowrap" class="ft3911"><i>z</i></p>
-<p style="position:absolute;top:620px;left:270px;white-space:nowrap" class="ft3913">=</p>
-<p style="position:absolute;top:608px;left:290px;white-space:nowrap" class="ft3911"><i>x</i></p>
-<p style="position:absolute;top:605px;left:300px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:632px;left:291px;white-space:nowrap" class="ft3911"><i>a</i></p>
-<p style="position:absolute;top:631px;left:300px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:620px;left:313px;white-space:nowrap" class="ft3913">+</p>
-<p style="position:absolute;top:608px;left:333px;white-space:nowrap" class="ft3911"><i>y</i></p>
-<p style="position:absolute;top:605px;left:342px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:632px;left:333px;white-space:nowrap" class="ft3911"><i>b</i></p>
-<p style="position:absolute;top:631px;left:341px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:619px;left:369px;white-space:nowrap" class="ft393">эллиптический&#160;параболоид</p>
-<p style="position:absolute;top:620px;left:632px;white-space:nowrap" class="ft3911"><i>,</i></p>
-<p style="position:absolute;top:678px;left:245px;white-space:nowrap" class="ft3911"><i>z</i></p>
-<p style="position:absolute;top:678px;left:259px;white-space:nowrap" class="ft3913">=</p>
-<p style="position:absolute;top:666px;left:279px;white-space:nowrap" class="ft3911"><i>x</i></p>
-<p style="position:absolute;top:663px;left:289px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:690px;left:280px;white-space:nowrap" class="ft3911"><i>a</i></p>
-<p style="position:absolute;top:689px;left:289px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:673px;left:302px;white-space:nowrap" class="ft3914"><i>−</i></p>
-<p style="position:absolute;top:666px;left:322px;white-space:nowrap" class="ft3911"><i>y</i></p>
-<p style="position:absolute;top:663px;left:331px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:690px;left:323px;white-space:nowrap" class="ft3911"><i>b</i></p>
-<p style="position:absolute;top:689px;left:330px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:677px;left:358px;white-space:nowrap" class="ft393">гиперболический&#160;параболоид</p>
-<p style="position:absolute;top:678px;left:643px;white-space:nowrap" class="ft3911"><i>.</i></p>
-<p style="position:absolute;top:734px;left:87px;white-space:nowrap" class="ft3918"><b>Цилиндрические&#160;поверхности</b></p>
-<p style="position:absolute;top:772px;left:114px;white-space:nowrap" class="ft393">Если&#160;после&#160;диагонализации&#160;часть&#160;переменных&#160;не&#160;входит&#160;в&#160;уравнение,</p>
-<p style="position:absolute;top:794px;left:87px;white-space:nowrap" class="ft399">то&#160;квадрика&#160;является&#160;цилиндром&#160;над&#160;квадрикой&#160;меньшей&#160;размерности.&#160;На-<br/>пример,</p>
-<p style="position:absolute;top:836px;left:401px;white-space:nowrap" class="ft3911"><i>x</i></p>
-<p style="position:absolute;top:834px;left:411px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:861px;left:401px;white-space:nowrap" class="ft3911"><i>a</i></p>
-<p style="position:absolute;top:860px;left:411px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:848px;left:424px;white-space:nowrap" class="ft3913">+</p>
-<p style="position:absolute;top:836px;left:443px;white-space:nowrap" class="ft3911"><i>y</i></p>
-<p style="position:absolute;top:834px;left:452px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:861px;left:444px;white-space:nowrap" class="ft3911"><i>b</i></p>
-<p style="position:absolute;top:860px;left:452px;white-space:nowrap" class="ft3915">2</p>
-<p style="position:absolute;top:848px;left:466px;white-space:nowrap" class="ft3913">=&#160;1</p>
-<p style="position:absolute;top:885px;left:87px;white-space:nowrap" class="ft393">в</p>
-<p style="position:absolute;top:881px;left:104px;white-space:nowrap" class="ft3912">R</p>
-<p style="position:absolute;top:884px;left:117px;white-space:nowrap" class="ft3915">3</p>
-<p style="position:absolute;top:885px;left:130px;white-space:nowrap" class="ft393">задаёт&#160;эллиптический&#160;цилиндр&#160;с&#160;осью,&#160;параллельной</p>
-<p style="position:absolute;top:886px;left:656px;white-space:nowrap" class="ft3911"><i>Oz</i></p>
-<p style="position:absolute;top:885px;left:679px;white-space:nowrap" class="ft393">.&#160;Аналогично</p>
-<p style="position:absolute;top:906px;left:87px;white-space:nowrap" class="ft393">получают&#160;гиперболические&#160;и&#160;конические&#160;цилиндры.</p>
-<p style="position:absolute;top:943px;left:111px;white-space:nowrap" class="ft3910">Главное</p>
-<p style="position:absolute;top:976px;left:111px;white-space:nowrap" class="ft399">Алгоритм&#160;классификации&#160;квадрики:&#160;записать&#160;квадратичную&#160;часть&#160;че-<br/>рез&#160;самосопряжённый&#160;оператор</p>
-<p style="position:absolute;top:999px;left:423px;white-space:nowrap" class="ft3911"><i>A</i></p>
-<p style="position:absolute;top:998px;left:436px;white-space:nowrap" class="ft393">,&#160;попытаться&#160;убрать&#160;линейную&#160;часть</p>
-<p style="position:absolute;top:1020px;left:111px;white-space:nowrap" class="ft393">переносом</p>
-<p style="position:absolute;top:1021px;left:218px;white-space:nowrap" class="ft3911"><i>Ax</i></p>
-<p style="position:absolute;top:1028px;left:241px;white-space:nowrap" class="ft3915">0</p>
-<p style="position:absolute;top:1021px;left:253px;white-space:nowrap" class="ft3913">=</p>
-<p style="position:absolute;top:1016px;left:271px;white-space:nowrap" class="ft3914"><i>−</i></p>
-<p style="position:absolute;top:1021px;left:285px;white-space:nowrap" class="ft3911"><i>b</i></p>
-<p style="position:absolute;top:1020px;left:293px;white-space:nowrap" class="ft393">,&#160;затем&#160;диагонализовать</p>
-<p style="position:absolute;top:1021px;left:529px;white-space:nowrap" class="ft3911"><i>A</i></p>
-<p style="position:absolute;top:1020px;left:547px;white-space:nowrap" class="ft393">ортогональным&#160;преобра-</p>
-<p style="position:absolute;top:1041px;left:111px;white-space:nowrap" class="ft399">зованием&#160;и&#160;читать&#160;тип&#160;по&#160;знакам&#160;коэффициентов&#160;и&#160;наличию&#160;свободных<br/>переменных.</p>
-<p style="position:absolute;top:1207px;left:435px;white-space:nowrap" class="ft393">39</p>
-</div></div></div>
-</div>
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Билет 21 · Линейная Алгебра: Экзамен</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:true,macros:{R:"\\mathbb{R}",C:"\\mathbb{C}",F:"\\mathbb{F}",Ker:"\\operatorname{Ker}",rk:"\\operatorname{rk}",tr:"\\operatorname{tr}",Sym:"\\operatorname{Sym}",Alt:"\\operatorname{Alt}",dist:"\\operatorname{dist}",pr:"\\operatorname{pr}",ort:"\\operatorname{ort}",End:"\\operatorname{End}",Hom:"\\operatorname{Hom}"}},svg:{fontCache:"global"}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body class="ticket-page full-active"><header class="topbar"><a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Линейная Алгебра: Экзамен</span></a><nav><a class="active" href="../index.html">Билеты</a><a href="../map.html">Карта</a><a href="../trainer.html">Тренажёр</a><a href="../formulas.html">Формулы</a><a href="../interactives.html">Интерактивы</a></nav><button id="themeToggle" class="icon-button">◐</button></header><main class="layout"><aside class="sidebar"><div style="margin:4px 6px 12px;color:var(--muted);font-size:13px">Билеты</div><a href="ticket-01.html" class="">1</a><a href="ticket-02.html" class="">2</a><a href="ticket-03.html" class="">3</a><a href="ticket-04.html" class="">4</a><a href="ticket-05.html" class="">5</a><a href="ticket-06.html" class="">6</a><a href="ticket-07.html" class="">7</a><a href="ticket-08.html" class="">8</a><a href="ticket-09.html" class="">9</a><a href="ticket-10.html" class="">10</a><a href="ticket-11.html" class="">11</a><a href="ticket-12.html" class="">12</a><a href="ticket-13.html" class="">13</a><a href="ticket-14.html" class="">14</a><a href="ticket-15.html" class="">15</a><a href="ticket-16.html" class="">16</a><a href="ticket-17.html" class="">17</a><a href="ticket-18.html" class="">18</a><a href="ticket-19.html" class="">19</a><a href="ticket-20.html" class="">20</a><a href="ticket-21.html" class="current">21</a><a href="ticket-22.html" class="">22</a><a href="ticket-23.html" class="">23</a><a href="ticket-24.html" class="">24</a><a href="ticket-25.html" class="">25</a><a href="ticket-26.html" class="">26</a><a href="ticket-27.html" class="">27</a></aside><article class="article"><div class="ticket-tools"><button class="small-btn" data-mark-ticket="21">Отметить как выученный</button><a class="small-btn" href="ticket-20.html">← Предыдущий</a><a class="small-btn" href="ticket-22.html">Следующий →</a></div><div class="mode-switch"><button id="showFull" class="active">Полный конспект</button><button id="showOral">Устный ответ</button></div><p class="mode-note">Полный конспект восстановлен из первой полной версии сайта. Вкладка «Устный ответ» содержит текущую краткую структуру ответа.</p><section id="fullContent" class="full-content full-content-clean">
+<div class="full-conspect-note">Полный конспект этого билета перенесён из файла «Алгебра билеты v2.pdf» и отображается как адаптивный HTML-текст, без PDF-подобной разметки.</div>
+<pre class="conspect-pre">21. Билет 21. Вещественные алгебраические по-
+    верхности и классификация квадрик.
+  План ответа
+  Нужно не повторять весь билет 19. Здесь только алгебраические по-
+  верхности второго порядка: общее уравнение, перенос начала, цен-
+  тральные и нецентральные квадрики.
+
+Определение 21.1. Вещественной алгебраической поверхностью называ-
+ется множество точек, координаты которых удовлетворяют полиномиаль-
+ному уравнению
+                            F (x1 , . . . , xn ) = 0.
+Если степень F равна 2, поверхность называется квадрикой.
+
+  Общее уравнение квадрики в аффинно-евклидовом пространстве:
+
+                                   (Ax, x) + 2(b, x) + c = 0,
+
+где A = A∗ — самосопряжённый оператор.
+
+                y                              y                         y
+
+                              x                              x                   x
+
+            эллипс                      гипербола                     парабола
+
+Перенос начала координат
+  Положим x = x0 + y. Тогда
+
+                    (Ax, x) + 2(b, x) + c = (Ay, y) + 2(Ax0 + b, y) + c′ .
+
+Линейная часть исчезает тогда и только тогда, когда разрешима система
+
+                                            Ax0 = −b.
+
+Если решение существует, квадрика называется центральной.
+
+Центральные квадрики
+  После переноса в центр и ортогональной диагонализации A получаем
+
+                                  λ1 y12 + · · · + λn yn2 + c′ = 0.
+
+По знакам коэффициентов возникают:
+
+  • эллипсоиды;
+
+  • конусы;
+
+  • однополостные и двуполостные гиперболоиды;
+
+  • цилиндры над соответствующими квадриками, если часть коэффици-
+    ентов равна нулю.
+
+  Типичные формы в R3 :
+
+                       x2 y 2 z 2
+                          + 2 + 2 =1      эллипсоид,
+                       a2  b   c
+              x2 y 2 z 2
+                 + 2 − 2 = 1 однополостный гиперболоид,
+              a2    b     c
+                  2     2
+                x     y     z2
+              − 2 − 2 + 2 = 1 двуполостный гиперболоид,
+                a     b     c
+                              x2 y 2 z 2
+                                 + 2 − 2 = 0 конус.
+                              a2  b   c
+
+Нецентральные квадрики
+  Если Ax0 = −b неразрешима, линейную часть полностью убрать нельзя.
+Так появляются параболические типы. После подходящего выбора коорди-
+нат получаются, например,
+
+                     x2 y 2
+                z=      + 2   эллиптический параболоид,
+                     a2  b
+                 x2 y 2
+               z= 2− 2        гиперболический параболоид.
+                 a  b
+
+Цилиндрические поверхности
+   Если после диагонализации часть переменных не входит в уравнение,
+то квадрика является цилиндром над квадрикой меньшей размерности. На-
+пример,
+                              x2 y 2
+                                 + 2 =1
+                              a2   b
+в R задаёт эллиптический цилиндр с осью, параллельной Oz. Аналогично
+
+получают гиперболические и конические цилиндры.
+
+  Главное
+  Алгоритм классификации квадрики: записать квадратичную часть че-
+  рез самосопряжённый оператор A, попытаться убрать линейную часть
+  переносом Ax0 = −b, затем диагонализовать A ортогональным преобра-
+  зованием и читать тип по знакам коэффициентов и наличию свободных
+  переменных.</pre>
 </section><section id="oralContent" class="oral-content"><article class="article"><h1>Билет 21. Вещественные алгебраические поверхности. Общее уравнение квадрики и классификация квадрик: центральные квадрики и нецентральные квадрики.</h1><p class="muted"><b>Раздел:</b> Аффинная геометрия и квадрики</p>
 <h2>План ответа</h2><div class="plan"><ul><li>Записать общее уравнение квадрики.</li><li>Отделить центральный и параболический случаи.</li><li>Диагонализовать квадратичную часть.</li><li>Перечислить нормальные формы: эллипсоиды, гиперболоиды, конусы, параболоиды.</li></ul></div><h2>Основные определения и факты</h2><div class="fact">Квадрика задаётся уравнением $(Ax,x)+2(b,x)+c=0$ с самосопряжённым $A$.</div><div class="fact">Если уравнение $Ax_0=-b$ разрешимо, перенос начала убирает линейную часть — квадрика центральная.</div><div class="fact">Если линейная часть в направлении $\ker A$ остаётся, появляется параболический тип.</div><div class="fact">Классификация задаётся знаками собственных значений и свободным членом.</div><h2>Ключевые формулы</h2><div class="formula-list"><div class="formula"><strong>Квадрика</strong><div>$(Ax,x)+2(b,x)+c=0$</div></div><div class="formula"><strong>Центр</strong><div>$Ax_0=-b$</div></div><div class="formula"><strong>Главные оси</strong><div>$\sum\lambda_i y_i^2+c=0$</div></div><div class="formula"><strong>Параболический случай</strong><div>линейный член в $\ker A$</div></div></div><h2>Примеры</h2><div class="example-box"><ol class="examples"><li>$x^2+y^2=1$ — эллипс.</li><li>$x^2-y^2=1$ — гипербола.</li><li>$x^2+y^2=z$ — эллиптический параболоид.</li></ol></div><h2>Проверочные вопросы</h2><div class="checklist"><ul><li>Как понять, что квадрика центральная?</li><li>Почему параболоиды не центральные?</li><li>Как знаки коэффициентов влияют на тип квадрики?</li></ul></div></article></section></article></main><footer class="footer"><p>Линейная Алгебра: Экзамен · билеты 1–27 · статический GitHub Pages.</p><p><a href="../sources.html">Источники</a></p></footer><script src="../assets/app.js"></script></body></html>

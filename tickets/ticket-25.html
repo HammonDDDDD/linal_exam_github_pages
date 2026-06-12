@@ -1,326 +1,84 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Билет 25 · Линейная Алгебра: Экзамен</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:true,macros:{R:"\\mathbb{R}",C:"\\mathbb{C}",F:"\\mathbb{F}",Ker:"\\operatorname{Ker}",rk:"\\operatorname{rk}",tr:"\\operatorname{tr}",Sym:"\\operatorname{Sym}",Alt:"\\operatorname{Alt}",dist:"\\operatorname{dist}",pr:"\\operatorname{pr}",ort:"\\operatorname{ort}",End:"\\operatorname{End}",Hom:"\\operatorname{Hom}"}},svg:{fontCache:"global"}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body class="ticket-page full-active"><header class="topbar"><a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Линейная Алгебра: Экзамен</span></a><nav><a class="active" href="../index.html">Билеты</a><a href="../map.html">Карта</a><a href="../trainer.html">Тренажёр</a><a href="../formulas.html">Формулы</a><a href="../interactives.html">Интерактивы</a></nav><button id="themeToggle" class="icon-button">◐</button></header><main class="layout"><aside class="sidebar"><div style="margin:4px 6px 12px;color:var(--muted);font-size:13px">Билеты</div><a href="ticket-01.html" class="">1</a><a href="ticket-02.html" class="">2</a><a href="ticket-03.html" class="">3</a><a href="ticket-04.html" class="">4</a><a href="ticket-05.html" class="">5</a><a href="ticket-06.html" class="">6</a><a href="ticket-07.html" class="">7</a><a href="ticket-08.html" class="">8</a><a href="ticket-09.html" class="">9</a><a href="ticket-10.html" class="">10</a><a href="ticket-11.html" class="">11</a><a href="ticket-12.html" class="">12</a><a href="ticket-13.html" class="">13</a><a href="ticket-14.html" class="">14</a><a href="ticket-15.html" class="">15</a><a href="ticket-16.html" class="">16</a><a href="ticket-17.html" class="">17</a><a href="ticket-18.html" class="">18</a><a href="ticket-19.html" class="">19</a><a href="ticket-20.html" class="">20</a><a href="ticket-21.html" class="">21</a><a href="ticket-22.html" class="">22</a><a href="ticket-23.html" class="">23</a><a href="ticket-24.html" class="">24</a><a href="ticket-25.html" class="current">25</a><a href="ticket-26.html" class="">26</a><a href="ticket-27.html" class="">27</a></aside><article class="article"><div class="ticket-tools"><button class="small-btn" data-mark-ticket="25">Отметить как выученный</button><a class="small-btn" href="ticket-24.html">← Предыдущий</a><a class="small-btn" href="ticket-26.html">Следующий →</a></div><div class="mode-switch"><button id="showFull" class="active">Полный конспект</button><button id="showOral">Устный ответ</button></div><p class="mode-note">Полный конспект восстановлен из первой полной версии сайта. Вкладка «Устный ответ» содержит текущую краткую структуру ответа.</p><section id="fullContent" class="full-content">
-<style>
-.full-content .pdf-source-note{margin:0 0 18px;padding:14px 16px;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;background:color-mix(in srgb,var(--paper) 86%,var(--bg));color:var(--muted)}
-.full-content .pdf-ticket-pages{display:grid;gap:24px;justify-items:center;margin-top:16px}
-.full-content .pdf-ticket-page{width:min(100%,660px);height:934px;overflow:auto;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);position:relative;color:#000}
-.full-content .pdf-page-inner{width:892px;height:1262px;transform:scale(.74);transform-origin:top left;background:#fff;color:#000}
-.full-content .pdf-ticket-page p{margin:0;padding:0;color:#000}
-.full-content .pdf-ticket-page a{color:#000;text-decoration:none}
-.full-content .pdf-ticket-page *{box-sizing:content-box}
-@media (max-width:760px){.full-content .pdf-ticket-page{height:760px}.full-content .pdf-page-inner{transform:scale(.60)}}
-.full-content .ft10{font-size:31px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft11{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft12{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft13{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft14{font-size:26px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft15{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#0000ff;}
-.full-content .ft16{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft17{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#0000ff;}
-.full-content .ft18{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#0000ff;}
-.full-content .ft19{font-size:18px;line-height:21px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft310{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#ffffff;}
-.full-content .ft311{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft312{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft313{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft314{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft315{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft316{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft317{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft318{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft319{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft520{font-size:9px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft521{font-size:26px;line-height:32px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft822{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft923{font-size:18px;line-height:21px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft1024{font-size:18px;line-height:31px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft1025{font-size:22px;line-height:26px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft1726{font-size:12px;line-height:11px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft1827{font-size:9px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft2228{font-size:26px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft2329{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft2330{font-size:15px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft2431{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft2932{font-size:12px;line-height:11px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft3533{font-size:9px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-.full-content .ft3634{font-size:12px;line-height:10px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
-</style>
-<div class="pdf-ticket-pages">
-<div class="pdf-ticket-page"><div class="pdf-page-inner"><!-- Page 46 -->
-<div id="page46-div" style="position:relative;width:892px;height:1262px;">
-<p style="position:absolute;top:87px;left:87px;white-space:nowrap" class="ft464"><b>25.&#160;Билет&#160;25.&#160;Симметрические&#160;и&#160;кососиммет-</b></p>
-<p style="position:absolute;top:120px;left:145px;white-space:nowrap" class="ft4621"><b>рические&#160;тензоры.&#160;Симметризация&#160;и&#160;аль-<br/>тернирование.</b></p>
-<p style="position:absolute;top:208px;left:111px;white-space:nowrap" class="ft4610">План&#160;ответа</p>
-<p style="position:absolute;top:241px;left:111px;white-space:nowrap" class="ft469">Здесь&#160;не&#160;нужно&#160;симметрическое&#160;или&#160;внешнее&#160;умножение&#160;как&#160;алгебры:<br/>только&#160;свойства&#160;тензоров&#160;и&#160;проекторы&#160;Sym,&#160;Alt.</p>
-<p style="position:absolute;top:308px;left:114px;white-space:nowrap" class="ft463">Рассмотрим&#160;ковариантные</p>
-<p style="position:absolute;top:309px;left:377px;white-space:nowrap" class="ft4611"><i>p</i></p>
-<p style="position:absolute;top:308px;left:386px;white-space:nowrap" class="ft463">-тензоры</p>
-<p style="position:absolute;top:309px;left:477px;white-space:nowrap" class="ft4611"><i>T</i></p>
-<p style="position:absolute;top:304px;left:495px;white-space:nowrap" class="ft4614"><i>∈</i></p>
-<p style="position:absolute;top:309px;left:513px;white-space:nowrap" class="ft4611"><i>T</i></p>
-<p style="position:absolute;top:304px;left:526px;white-space:nowrap" class="ft4617"><i>p</i></p>
-<p style="position:absolute;top:317px;left:523px;white-space:nowrap" class="ft4615">0</p>
-<p style="position:absolute;top:309px;left:533px;white-space:nowrap" class="ft4613">(</p>
-<p style="position:absolute;top:309px;left:540px;white-space:nowrap" class="ft4611"><i>V</i></p>
-<p style="position:absolute;top:309px;left:554px;white-space:nowrap" class="ft4613">)</p>
-<p style="position:absolute;top:308px;left:561px;white-space:nowrap" class="ft463">.&#160;Для&#160;перестановки</p>
-<p style="position:absolute;top:309px;left:754px;white-space:nowrap" class="ft4611"><i>σ</i></p>
-<p style="position:absolute;top:304px;left:770px;white-space:nowrap" class="ft4614"><i>∈</i></p>
-<p style="position:absolute;top:309px;left:788px;white-space:nowrap" class="ft4611"><i>S</i></p>
-<p style="position:absolute;top:316px;left:799px;white-space:nowrap" class="ft4617"><i>p</i></p>
-<p style="position:absolute;top:329px;left:87px;white-space:nowrap" class="ft463">задаётся&#160;оператор&#160;перестановки&#160;аргументов:</p>
-<p style="position:absolute;top:369px;left:298px;white-space:nowrap" class="ft4613">(</p>
-<p style="position:absolute;top:369px;left:305px;white-space:nowrap" class="ft4611"><i>F</i></p>
-<p style="position:absolute;top:376px;left:316px;white-space:nowrap" class="ft4617"><i>σ</i></p>
-<p style="position:absolute;top:369px;left:325px;white-space:nowrap" class="ft4611"><i>T</i></p>
-<p style="position:absolute;top:369px;left:337px;white-space:nowrap" class="ft4613">)(</p>
-<p style="position:absolute;top:369px;left:351px;white-space:nowrap" class="ft4611"><i>x</i></p>
-<p style="position:absolute;top:376px;left:361px;white-space:nowrap" class="ft4615">1</p>
-<p style="position:absolute;top:369px;left:368px;white-space:nowrap" class="ft4611"><i>,&#160;.&#160;.&#160;.&#160;,&#160;x</i></p>
-<p style="position:absolute;top:376px;left:417px;white-space:nowrap" class="ft4617"><i>p</i></p>
-<p style="position:absolute;top:369px;left:425px;white-space:nowrap" class="ft4613">)&#160;=</p>
-<p style="position:absolute;top:369px;left:455px;white-space:nowrap" class="ft4611"><i>T</i></p>
-<p style="position:absolute;top:369px;left:468px;white-space:nowrap" class="ft4613">(</p>
-<p style="position:absolute;top:369px;left:475px;white-space:nowrap" class="ft4611"><i>x</i></p>
-<p style="position:absolute;top:376px;left:485px;white-space:nowrap" class="ft4617"><i>σ</i></p>
-<p style="position:absolute;top:376px;left:492px;white-space:nowrap" class="ft4615">(1)</p>
-<p style="position:absolute;top:369px;left:509px;white-space:nowrap" class="ft4611"><i>,&#160;.&#160;.&#160;.&#160;,&#160;x</i></p>
-<p style="position:absolute;top:376px;left:559px;white-space:nowrap" class="ft4617"><i>σ</i></p>
-<p style="position:absolute;top:376px;left:566px;white-space:nowrap" class="ft4615">(</p>
-<p style="position:absolute;top:376px;left:571px;white-space:nowrap" class="ft4617"><i>p</i></p>
-<p style="position:absolute;top:376px;left:578px;white-space:nowrap" class="ft4615">)</p>
-<p style="position:absolute;top:369px;left:583px;white-space:nowrap" class="ft4613">)</p>
-<p style="position:absolute;top:369px;left:590px;white-space:nowrap" class="ft4611"><i>.</i></p>
-<p style="position:absolute;top:407px;left:87px;white-space:nowrap" class="ft466"><b>Определение&#160;25.1.</b></p>
-<p style="position:absolute;top:407px;left:289px;white-space:nowrap" class="ft463">Тензор</p>
-<p style="position:absolute;top:408px;left:361px;white-space:nowrap" class="ft4611"><i>T</i></p>
-<p style="position:absolute;top:407px;left:379px;white-space:nowrap" class="ft463">называется&#160;симметрическим,&#160;если</p>
-<p style="position:absolute;top:447px;left:361px;white-space:nowrap" class="ft4611"><i>F</i></p>
-<p style="position:absolute;top:454px;left:373px;white-space:nowrap" class="ft4617"><i>σ</i></p>
-<p style="position:absolute;top:447px;left:381px;white-space:nowrap" class="ft4611"><i>T</i></p>
-<p style="position:absolute;top:447px;left:399px;white-space:nowrap" class="ft4613">=</p>
-<p style="position:absolute;top:447px;left:418px;white-space:nowrap" class="ft4611"><i>T</i></p>
-<p style="position:absolute;top:442px;left:466px;white-space:nowrap" class="ft4614"><i>∀</i></p>
-<p style="position:absolute;top:447px;left:476px;white-space:nowrap" class="ft4611"><i>σ</i></p>
-<p style="position:absolute;top:442px;left:492px;white-space:nowrap" class="ft4614"><i>∈</i></p>
-<p style="position:absolute;top:447px;left:509px;white-space:nowrap" class="ft4611"><i>S</i></p>
-<p style="position:absolute;top:454px;left:519px;white-space:nowrap" class="ft4617"><i>p</i></p>
-<p style="position:absolute;top:447px;left:527px;white-space:nowrap" class="ft4611"><i>.</i></p>
-<p style="position:absolute;top:484px;left:87px;white-space:nowrap" class="ft463">Он&#160;называется&#160;кососимметрическим,&#160;если</p>
-<p style="position:absolute;top:524px;left:333px;white-space:nowrap" class="ft4611"><i>F</i></p>
-<p style="position:absolute;top:531px;left:345px;white-space:nowrap" class="ft4617"><i>σ</i></p>
-<p style="position:absolute;top:524px;left:353px;white-space:nowrap" class="ft4611"><i>T</i></p>
-<p style="position:absolute;top:524px;left:371px;white-space:nowrap" class="ft4613">=</p>
-<p style="position:absolute;top:523px;left:389px;white-space:nowrap" class="ft463">sgn</p>
-<p style="position:absolute;top:524px;left:422px;white-space:nowrap" class="ft4613">(</p>
-<p style="position:absolute;top:524px;left:428px;white-space:nowrap" class="ft4611"><i>σ</i></p>
-<p style="position:absolute;top:524px;left:439px;white-space:nowrap" class="ft4613">)</p>
-<p style="position:absolute;top:524px;left:446px;white-space:nowrap" class="ft4611"><i>T</i></p>
-<p style="position:absolute;top:520px;left:494px;white-space:nowrap" class="ft4614"><i>∀</i></p>
-<p style="position:absolute;top:524px;left:504px;white-space:nowrap" class="ft4611"><i>σ</i></p>
-<p style="position:absolute;top:520px;left:520px;white-space:nowrap" class="ft4614"><i>∈</i></p>
-<p style="position:absolute;top:524px;left:537px;white-space:nowrap" class="ft4611"><i>S</i></p>
-<p style="position:absolute;top:531px;left:548px;white-space:nowrap" class="ft4617"><i>p</i></p>
-<p style="position:absolute;top:524px;left:555px;white-space:nowrap" class="ft4611"><i>.</i></p>
-<p style="position:absolute;top:569px;left:444px;white-space:nowrap" class="ft4611"><i>T</i></p>
-<p style="position:absolute;top:565px;left:462px;white-space:nowrap" class="ft4614"><i>∈</i></p>
-<p style="position:absolute;top:569px;left:479px;white-space:nowrap" class="ft4611"><i>T</i></p>
-<p style="position:absolute;top:565px;left:491px;white-space:nowrap" class="ft4617"><i>p</i></p>
-<p style="position:absolute;top:578px;left:489px;white-space:nowrap" class="ft4615">0</p>
-<p style="position:absolute;top:569px;left:499px;white-space:nowrap" class="ft4613">(</p>
-<p style="position:absolute;top:569px;left:505px;white-space:nowrap" class="ft4611"><i>V</i></p>
-<p style="position:absolute;top:569px;left:520px;white-space:nowrap" class="ft4613">)</p>
-<p style="position:absolute;top:649px;left:221px;white-space:nowrap" class="ft463">Sym</p>
-<p style="position:absolute;top:650px;left:264px;white-space:nowrap" class="ft4611"><i>T</i></p>
-<p style="position:absolute;top:671px;left:122px;white-space:nowrap" class="ft463">среднее&#160;по&#160;перестановкам</p>
-<p style="position:absolute;top:650px;left:662px;white-space:nowrap" class="ft463">Alt</p>
-<p style="position:absolute;top:651px;left:691px;white-space:nowrap" class="ft4611"><i>T</i></p>
-<p style="position:absolute;top:671px;left:594px;white-space:nowrap" class="ft463">среднее&#160;со&#160;знаком</p>
-<p style="position:absolute;top:736px;left:87px;white-space:nowrap" class="ft4618"><b>Симметризация</b></p>
-<p style="position:absolute;top:799px;left:357px;white-space:nowrap" class="ft463">Sym</p>
-<p style="position:absolute;top:800px;left:396px;white-space:nowrap" class="ft4613">(</p>
-<p style="position:absolute;top:800px;left:403px;white-space:nowrap" class="ft4611"><i>T</i></p>
-<p style="position:absolute;top:800px;left:416px;white-space:nowrap" class="ft4613">)&#160;=</p>
-<p style="position:absolute;top:788px;left:450px;white-space:nowrap" class="ft4613">1</p>
-<p style="position:absolute;top:813px;left:448px;white-space:nowrap" class="ft4611"><i>p</i></p>
-<p style="position:absolute;top:813px;left:457px;white-space:nowrap" class="ft4613">!</p>
-<p style="position:absolute;top:779px;left:469px;white-space:nowrap" class="ft4619">X</p>
-<p style="position:absolute;top:825px;left:466px;white-space:nowrap" class="ft4617"><i>σ</i></p>
-<p style="position:absolute;top:822px;left:474px;white-space:nowrap" class="ft4616"><i>∈</i></p>
-<p style="position:absolute;top:825px;left:483px;white-space:nowrap" class="ft4617"><i>S</i></p>
-<p style="position:absolute;top:829px;left:490px;white-space:nowrap" class="ft4620"><i>p</i></p>
-<p style="position:absolute;top:800px;left:500px;white-space:nowrap" class="ft4611"><i>F</i></p>
-<p style="position:absolute;top:807px;left:511px;white-space:nowrap" class="ft4617"><i>σ</i></p>
-<p style="position:absolute;top:800px;left:520px;white-space:nowrap" class="ft4611"><i>T.</i></p>
-<p style="position:absolute;top:849px;left:87px;white-space:nowrap" class="ft463">Свойства:</p>
-<p style="position:absolute;top:885px;left:105px;white-space:nowrap" class="ft463">1)&#160;Sym</p>
-<p style="position:absolute;top:886px;left:171px;white-space:nowrap" class="ft4613">(</p>
-<p style="position:absolute;top:886px;left:178px;white-space:nowrap" class="ft4611"><i>T</i></p>
-<p style="position:absolute;top:886px;left:191px;white-space:nowrap" class="ft4613">)</p>
-<p style="position:absolute;top:885px;left:204px;white-space:nowrap" class="ft463">симметричен;</p>
-<p style="position:absolute;top:922px;left:105px;white-space:nowrap" class="ft463">2)&#160;Sym</p>
-<p style="position:absolute;top:918px;left:171px;white-space:nowrap" class="ft4615">2</p>
-<p style="position:absolute;top:923px;left:183px;white-space:nowrap" class="ft4613">=</p>
-<p style="position:absolute;top:922px;left:202px;white-space:nowrap" class="ft463">Sym;</p>
-<p style="position:absolute;top:958px;left:105px;white-space:nowrap" class="ft463">3)</p>
-<p style="position:absolute;top:955px;left:132px;white-space:nowrap" class="ft4614"><i>=</i></p>
-<p style="position:absolute;top:958px;left:148px;white-space:nowrap" class="ft463">Sym&#160;—&#160;пространство&#160;симметрических&#160;тензоров.</p>
-<p style="position:absolute;top:1012px;left:87px;white-space:nowrap" class="ft4618"><b>Альтернирование</b></p>
-<p style="position:absolute;top:1076px;left:335px;white-space:nowrap" class="ft463">Alt</p>
-<p style="position:absolute;top:1077px;left:361px;white-space:nowrap" class="ft4613">(</p>
-<p style="position:absolute;top:1077px;left:368px;white-space:nowrap" class="ft4611"><i>T</i></p>
-<p style="position:absolute;top:1077px;left:381px;white-space:nowrap" class="ft4613">)&#160;=</p>
-<p style="position:absolute;top:1065px;left:415px;white-space:nowrap" class="ft4613">1</p>
-<p style="position:absolute;top:1089px;left:413px;white-space:nowrap" class="ft4611"><i>p</i></p>
-<p style="position:absolute;top:1089px;left:422px;white-space:nowrap" class="ft4613">!</p>
-<p style="position:absolute;top:1055px;left:434px;white-space:nowrap" class="ft4619">X</p>
-<p style="position:absolute;top:1102px;left:431px;white-space:nowrap" class="ft4617"><i>σ</i></p>
-<p style="position:absolute;top:1099px;left:439px;white-space:nowrap" class="ft4616"><i>∈</i></p>
-<p style="position:absolute;top:1102px;left:448px;white-space:nowrap" class="ft4617"><i>S</i></p>
-<p style="position:absolute;top:1106px;left:455px;white-space:nowrap" class="ft4620"><i>p</i></p>
-<p style="position:absolute;top:1076px;left:465px;white-space:nowrap" class="ft463">sgn</p>
-<p style="position:absolute;top:1077px;left:497px;white-space:nowrap" class="ft4613">(</p>
-<p style="position:absolute;top:1077px;left:504px;white-space:nowrap" class="ft4611"><i>σ</i></p>
-<p style="position:absolute;top:1077px;left:514px;white-space:nowrap" class="ft4613">)</p>
-<p style="position:absolute;top:1077px;left:521px;white-space:nowrap" class="ft4611"><i>F</i></p>
-<p style="position:absolute;top:1084px;left:533px;white-space:nowrap" class="ft4617"><i>σ</i></p>
-<p style="position:absolute;top:1077px;left:541px;white-space:nowrap" class="ft4611"><i>T.</i></p>
-<p style="position:absolute;top:1126px;left:87px;white-space:nowrap" class="ft463">Свойства:</p>
-<p style="position:absolute;top:1162px;left:105px;white-space:nowrap" class="ft463">1)&#160;Alt</p>
-<p style="position:absolute;top:1163px;left:158px;white-space:nowrap" class="ft4613">(</p>
-<p style="position:absolute;top:1163px;left:165px;white-space:nowrap" class="ft4611"><i>T</i></p>
-<p style="position:absolute;top:1163px;left:177px;white-space:nowrap" class="ft4613">)</p>
-<p style="position:absolute;top:1162px;left:190px;white-space:nowrap" class="ft463">кососимметричен;</p>
-<p style="position:absolute;top:1207px;left:435px;white-space:nowrap" class="ft463">46</p>
-</div></div></div>
-<div class="pdf-ticket-page"><div class="pdf-page-inner"><!-- Page 47 -->
-<div id="page47-div" style="position:relative;width:892px;height:1262px;">
-<p style="position:absolute;top:91px;left:105px;white-space:nowrap" class="ft473">2)&#160;Alt</p>
-<p style="position:absolute;top:87px;left:158px;white-space:nowrap" class="ft4715">2</p>
-<p style="position:absolute;top:93px;left:170px;white-space:nowrap" class="ft4713">=</p>
-<p style="position:absolute;top:91px;left:189px;white-space:nowrap" class="ft473">Alt;</p>
-<p style="position:absolute;top:128px;left:105px;white-space:nowrap" class="ft473">3)</p>
-<p style="position:absolute;top:125px;left:132px;white-space:nowrap" class="ft4714"><i>=</i></p>
-<p style="position:absolute;top:128px;left:148px;white-space:nowrap" class="ft473">Alt</p>
-<p style="position:absolute;top:129px;left:179px;white-space:nowrap" class="ft4713">=&#160;Λ</p>
-<p style="position:absolute;top:127px;left:210px;white-space:nowrap" class="ft4717"><i>p</i></p>
-<p style="position:absolute;top:129px;left:217px;white-space:nowrap" class="ft4713">(</p>
-<p style="position:absolute;top:129px;left:224px;white-space:nowrap" class="ft4711"><i>V</i></p>
-<p style="position:absolute;top:124px;left:238px;white-space:nowrap" class="ft4716"><i>∗</i></p>
-<p style="position:absolute;top:129px;left:245px;white-space:nowrap" class="ft4713">)</p>
-<p style="position:absolute;top:128px;left:257px;white-space:nowrap" class="ft473">—&#160;пространство&#160;кососимметрических</p>
-<p style="position:absolute;top:129px;left:624px;white-space:nowrap" class="ft4711"><i>p</i></p>
-<p style="position:absolute;top:128px;left:633px;white-space:nowrap" class="ft473">-форм.</p>
-<p style="position:absolute;top:165px;left:114px;white-space:nowrap" class="ft473">Если&#160;в&#160;внешнем&#160;произведении&#160;повторяется&#160;один&#160;и&#160;тот&#160;же&#160;ковектор,&#160;ре-</p>
-<p style="position:absolute;top:186px;left:87px;white-space:nowrap" class="ft473">зультат&#160;равен&#160;нулю:</p>
-<p style="position:absolute;top:209px;left:405px;white-space:nowrap" class="ft4711"><i>e</i></p>
-<p style="position:absolute;top:206px;left:413px;white-space:nowrap" class="ft4717"><i>i</i></p>
-<p style="position:absolute;top:205px;left:422px;white-space:nowrap" class="ft4714"><i>∧</i></p>
-<p style="position:absolute;top:209px;left:438px;white-space:nowrap" class="ft4711"><i>e</i></p>
-<p style="position:absolute;top:206px;left:446px;white-space:nowrap" class="ft4717"><i>i</i></p>
-<p style="position:absolute;top:209px;left:456px;white-space:nowrap" class="ft4713">=&#160;0</p>
-<p style="position:absolute;top:209px;left:483px;white-space:nowrap" class="ft4711"><i>.</i></p>
-<p style="position:absolute;top:245px;left:111px;white-space:nowrap" class="ft4710">Аккуратное&#160;место</p>
-<p style="position:absolute;top:282px;left:111px;white-space:nowrap" class="ft473">При</p>
-<p style="position:absolute;top:283px;left:154px;white-space:nowrap" class="ft4711"><i>p</i></p>
-<p style="position:absolute;top:283px;left:168px;white-space:nowrap" class="ft4713">=&#160;2</p>
-<p style="position:absolute;top:282px;left:200px;white-space:nowrap" class="ft473">любой&#160;ковариантный&#160;тензор&#160;раскладывается&#160;на&#160;симметриче-</p>
-<p style="position:absolute;top:304px;left:111px;white-space:nowrap" class="ft473">скую&#160;и&#160;кососимметрическую&#160;части.&#160;При</p>
-<p style="position:absolute;top:305px;left:508px;white-space:nowrap" class="ft4711"><i>p</i></p>
-<p style="position:absolute;top:300px;left:523px;white-space:nowrap" class="ft4714"><i>≥</i></p>
-<p style="position:absolute;top:305px;left:543px;white-space:nowrap" class="ft4713">3</p>
-<p style="position:absolute;top:304px;left:558px;white-space:nowrap" class="ft473">одних&#160;этих&#160;двух&#160;частей</p>
-<p style="position:absolute;top:325px;left:111px;white-space:nowrap" class="ft479">уже&#160;недостаточно&#160;для&#160;полного&#160;разложения&#160;всего&#160;пространства&#160;тензо-<br/>ров.</p>
-<p style="position:absolute;top:413px;left:87px;white-space:nowrap" class="ft4718"><b>Почему&#160;это&#160;проекторы</b></p>
-<p style="position:absolute;top:452px;left:114px;white-space:nowrap" class="ft473">Для&#160;любой&#160;перестановки</p>
-<p style="position:absolute;top:453px;left:360px;white-space:nowrap" class="ft4711"><i>τ</i></p>
-<p style="position:absolute;top:448px;left:375px;white-space:nowrap" class="ft4714"><i>∈</i></p>
-<p style="position:absolute;top:453px;left:392px;white-space:nowrap" class="ft4711"><i>S</i></p>
-<p style="position:absolute;top:460px;left:403px;white-space:nowrap" class="ft4717"><i>p</i></p>
-<p style="position:absolute;top:452px;left:416px;white-space:nowrap" class="ft473">имеем</p>
-<p style="position:absolute;top:501px;left:297px;white-space:nowrap" class="ft4711"><i>F</i></p>
-<p style="position:absolute;top:508px;left:308px;white-space:nowrap" class="ft4717"><i>τ</i></p>
-<p style="position:absolute;top:500px;left:319px;white-space:nowrap" class="ft473">Sym</p>
-<p style="position:absolute;top:501px;left:358px;white-space:nowrap" class="ft4713">(</p>
-<p style="position:absolute;top:501px;left:365px;white-space:nowrap" class="ft4711"><i>T</i></p>
-<p style="position:absolute;top:501px;left:378px;white-space:nowrap" class="ft4713">)&#160;=</p>
-<p style="position:absolute;top:489px;left:413px;white-space:nowrap" class="ft4713">1</p>
-<p style="position:absolute;top:513px;left:410px;white-space:nowrap" class="ft4711"><i>p</i></p>
-<p style="position:absolute;top:513px;left:419px;white-space:nowrap" class="ft4713">!</p>
-<p style="position:absolute;top:479px;left:431px;white-space:nowrap" class="ft4719">X</p>
-<p style="position:absolute;top:526px;left:429px;white-space:nowrap" class="ft4717"><i>σ</i></p>
-<p style="position:absolute;top:523px;left:436px;white-space:nowrap" class="ft4716"><i>∈</i></p>
-<p style="position:absolute;top:526px;left:445px;white-space:nowrap" class="ft4717"><i>S</i></p>
-<p style="position:absolute;top:530px;left:453px;white-space:nowrap" class="ft4720"><i>p</i></p>
-<p style="position:absolute;top:501px;left:462px;white-space:nowrap" class="ft4711"><i>F</i></p>
-<p style="position:absolute;top:508px;left:473px;white-space:nowrap" class="ft4717"><i>τ&#160;σ</i></p>
-<p style="position:absolute;top:501px;left:489px;white-space:nowrap" class="ft4711"><i>T</i></p>
-<p style="position:absolute;top:501px;left:507px;white-space:nowrap" class="ft4713">=</p>
-<p style="position:absolute;top:500px;left:525px;white-space:nowrap" class="ft473">Sym</p>
-<p style="position:absolute;top:501px;left:565px;white-space:nowrap" class="ft4713">(</p>
-<p style="position:absolute;top:501px;left:572px;white-space:nowrap" class="ft4711"><i>T</i></p>
-<p style="position:absolute;top:501px;left:584px;white-space:nowrap" class="ft4713">)</p>
-<p style="position:absolute;top:501px;left:591px;white-space:nowrap" class="ft4711"><i>,</i></p>
-<p style="position:absolute;top:559px;left:87px;white-space:nowrap" class="ft473">так&#160;как&#160;при&#160;фиксированной</p>
-<p style="position:absolute;top:560px;left:359px;white-space:nowrap" class="ft4711"><i>τ</i></p>
-<p style="position:absolute;top:559px;left:374px;white-space:nowrap" class="ft473">множество</p>
-<p style="position:absolute;top:556px;left:484px;white-space:nowrap" class="ft4714"><i>{</i></p>
-<p style="position:absolute;top:560px;left:493px;white-space:nowrap" class="ft4711"><i>τ&#160;σ</i></p>
-<p style="position:absolute;top:556px;left:518px;white-space:nowrap" class="ft4714"><i>|</i></p>
-<p style="position:absolute;top:560px;left:528px;white-space:nowrap" class="ft4711"><i>σ</i></p>
-<p style="position:absolute;top:556px;left:544px;white-space:nowrap" class="ft4714"><i>∈</i></p>
-<p style="position:absolute;top:560px;left:561px;white-space:nowrap" class="ft4711"><i>S</i></p>
-<p style="position:absolute;top:567px;left:572px;white-space:nowrap" class="ft4717"><i>p</i></p>
-<p style="position:absolute;top:556px;left:579px;white-space:nowrap" class="ft4714"><i>}</i></p>
-<p style="position:absolute;top:559px;left:593px;white-space:nowrap" class="ft473">снова&#160;равно</p>
-<p style="position:absolute;top:560px;left:713px;white-space:nowrap" class="ft4711"><i>S</i></p>
-<p style="position:absolute;top:567px;left:724px;white-space:nowrap" class="ft4717"><i>p</i></p>
-<p style="position:absolute;top:559px;left:731px;white-space:nowrap" class="ft473">.&#160;Поэто-</p>
-<p style="position:absolute;top:583px;left:87px;white-space:nowrap" class="ft473">му&#160;Sym</p>
-<p style="position:absolute;top:584px;left:157px;white-space:nowrap" class="ft4713">(</p>
-<p style="position:absolute;top:584px;left:164px;white-space:nowrap" class="ft4711"><i>T</i></p>
-<p style="position:absolute;top:584px;left:176px;white-space:nowrap" class="ft4713">)</p>
-<p style="position:absolute;top:583px;left:189px;white-space:nowrap" class="ft473">симметричен&#160;и&#160;Sym</p>
-<p style="position:absolute;top:579px;left:380px;white-space:nowrap" class="ft4715">2</p>
-<p style="position:absolute;top:584px;left:392px;white-space:nowrap" class="ft4713">=</p>
-<p style="position:absolute;top:583px;left:411px;white-space:nowrap" class="ft473">Sym.</p>
-<p style="position:absolute;top:604px;left:114px;white-space:nowrap" class="ft473">Для&#160;альтернирования&#160;аналогично:</p>
-<p style="position:absolute;top:645px;left:340px;white-space:nowrap" class="ft4711"><i>F</i></p>
-<p style="position:absolute;top:652px;left:351px;white-space:nowrap" class="ft4717"><i>τ</i></p>
-<p style="position:absolute;top:644px;left:362px;white-space:nowrap" class="ft473">Alt</p>
-<p style="position:absolute;top:645px;left:388px;white-space:nowrap" class="ft4713">(</p>
-<p style="position:absolute;top:645px;left:394px;white-space:nowrap" class="ft4711"><i>T</i></p>
-<p style="position:absolute;top:645px;left:407px;white-space:nowrap" class="ft4713">)&#160;=</p>
-<p style="position:absolute;top:644px;left:438px;white-space:nowrap" class="ft473">sgn</p>
-<p style="position:absolute;top:645px;left:470px;white-space:nowrap" class="ft4713">(</p>
-<p style="position:absolute;top:645px;left:477px;white-space:nowrap" class="ft4711"><i>τ</i></p>
-<p style="position:absolute;top:645px;left:486px;white-space:nowrap" class="ft4713">)</p>
-<p style="position:absolute;top:644px;left:496px;white-space:nowrap" class="ft473">Alt</p>
-<p style="position:absolute;top:645px;left:522px;white-space:nowrap" class="ft4713">(</p>
-<p style="position:absolute;top:645px;left:529px;white-space:nowrap" class="ft4711"><i>T</i></p>
-<p style="position:absolute;top:645px;left:542px;white-space:nowrap" class="ft4713">)</p>
-<p style="position:absolute;top:645px;left:548px;white-space:nowrap" class="ft4711"><i>,</i></p>
-<p style="position:absolute;top:683px;left:87px;white-space:nowrap" class="ft473">поскольку&#160;sgn</p>
-<p style="position:absolute;top:685px;left:224px;white-space:nowrap" class="ft4713">(</p>
-<p style="position:absolute;top:685px;left:231px;white-space:nowrap" class="ft4711"><i>τ&#160;σ</i></p>
-<p style="position:absolute;top:685px;left:251px;white-space:nowrap" class="ft4713">)&#160;=</p>
-<p style="position:absolute;top:683px;left:287px;white-space:nowrap" class="ft473">sgn</p>
-<p style="position:absolute;top:685px;left:319px;white-space:nowrap" class="ft4713">(</p>
-<p style="position:absolute;top:685px;left:326px;white-space:nowrap" class="ft4711"><i>τ</i></p>
-<p style="position:absolute;top:685px;left:335px;white-space:nowrap" class="ft4713">)</p>
-<p style="position:absolute;top:683px;left:345px;white-space:nowrap" class="ft473">sgn</p>
-<p style="position:absolute;top:685px;left:377px;white-space:nowrap" class="ft4713">(</p>
-<p style="position:absolute;top:685px;left:384px;white-space:nowrap" class="ft4711"><i>σ</i></p>
-<p style="position:absolute;top:685px;left:395px;white-space:nowrap" class="ft4713">)</p>
-<p style="position:absolute;top:683px;left:402px;white-space:nowrap" class="ft473">.&#160;Значит,&#160;Alt</p>
-<p style="position:absolute;top:685px;left:521px;white-space:nowrap" class="ft4713">(</p>
-<p style="position:absolute;top:685px;left:528px;white-space:nowrap" class="ft4711"><i>T</i></p>
-<p style="position:absolute;top:685px;left:540px;white-space:nowrap" class="ft4713">)</p>
-<p style="position:absolute;top:683px;left:554px;white-space:nowrap" class="ft473">кососимметричен&#160;и&#160;Alt</p>
-<p style="position:absolute;top:679px;left:778px;white-space:nowrap" class="ft4715">2</p>
-<p style="position:absolute;top:685px;left:792px;white-space:nowrap" class="ft4713">=</p>
-<p style="position:absolute;top:705px;left:87px;white-space:nowrap" class="ft473">Alt.</p>
-<p style="position:absolute;top:1207px;left:435px;white-space:nowrap" class="ft473">47</p>
-</div></div></div>
-</div>
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Билет 25 · Линейная Алгебра: Экзамен</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:true,macros:{R:"\\mathbb{R}",C:"\\mathbb{C}",F:"\\mathbb{F}",Ker:"\\operatorname{Ker}",rk:"\\operatorname{rk}",tr:"\\operatorname{tr}",Sym:"\\operatorname{Sym}",Alt:"\\operatorname{Alt}",dist:"\\operatorname{dist}",pr:"\\operatorname{pr}",ort:"\\operatorname{ort}",End:"\\operatorname{End}",Hom:"\\operatorname{Hom}"}},svg:{fontCache:"global"}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body class="ticket-page full-active"><header class="topbar"><a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Линейная Алгебра: Экзамен</span></a><nav><a class="active" href="../index.html">Билеты</a><a href="../map.html">Карта</a><a href="../trainer.html">Тренажёр</a><a href="../formulas.html">Формулы</a><a href="../interactives.html">Интерактивы</a></nav><button id="themeToggle" class="icon-button">◐</button></header><main class="layout"><aside class="sidebar"><div style="margin:4px 6px 12px;color:var(--muted);font-size:13px">Билеты</div><a href="ticket-01.html" class="">1</a><a href="ticket-02.html" class="">2</a><a href="ticket-03.html" class="">3</a><a href="ticket-04.html" class="">4</a><a href="ticket-05.html" class="">5</a><a href="ticket-06.html" class="">6</a><a href="ticket-07.html" class="">7</a><a href="ticket-08.html" class="">8</a><a href="ticket-09.html" class="">9</a><a href="ticket-10.html" class="">10</a><a href="ticket-11.html" class="">11</a><a href="ticket-12.html" class="">12</a><a href="ticket-13.html" class="">13</a><a href="ticket-14.html" class="">14</a><a href="ticket-15.html" class="">15</a><a href="ticket-16.html" class="">16</a><a href="ticket-17.html" class="">17</a><a href="ticket-18.html" class="">18</a><a href="ticket-19.html" class="">19</a><a href="ticket-20.html" class="">20</a><a href="ticket-21.html" class="">21</a><a href="ticket-22.html" class="">22</a><a href="ticket-23.html" class="">23</a><a href="ticket-24.html" class="">24</a><a href="ticket-25.html" class="current">25</a><a href="ticket-26.html" class="">26</a><a href="ticket-27.html" class="">27</a></aside><article class="article"><div class="ticket-tools"><button class="small-btn" data-mark-ticket="25">Отметить как выученный</button><a class="small-btn" href="ticket-24.html">← Предыдущий</a><a class="small-btn" href="ticket-26.html">Следующий →</a></div><div class="mode-switch"><button id="showFull" class="active">Полный конспект</button><button id="showOral">Устный ответ</button></div><p class="mode-note">Полный конспект восстановлен из первой полной версии сайта. Вкладка «Устный ответ» содержит текущую краткую структуру ответа.</p><section id="fullContent" class="full-content full-content-clean">
+<div class="full-conspect-note">Полный конспект этого билета перенесён из файла «Алгебра билеты v2.pdf» и отображается как адаптивный HTML-текст, без PDF-подобной разметки.</div>
+<pre class="conspect-pre">25. Билет 25. Симметрические и кососиммет-
+    рические тензоры. Симметризация и аль-
+    тернирование.
+  План ответа
+  Здесь не нужно симметрическое или внешнее умножение как алгебры:
+  только свойства тензоров и проекторы Sym, Alt.
+
+   Рассмотрим ковариантные p-тензоры T ∈ T0p (V ). Для перестановки σ ∈ Sp
+задаётся оператор перестановки аргументов:
+
+                     (Fσ T )(x1 , . . . , xp ) = T (xσ(1) , . . . , xσ(p) ).
+
+Определение 25.1. Тензор T называется симметрическим, если
+
+                                Fσ T = T              ∀σ ∈ Sp .
+
+Он называется кососимметрическим, если
+
+                           Fσ T = sgn(σ)T                ∀σ ∈ Sp .
+
+                                                T ∈ T0p (V )
+
+             Sym T                                                               Alt T
+   среднее по перестановкам                                                среднее со знаком
+
+Симметризация
+
+                                                1 X
+                               Sym(T ) =               Fσ T.
+                                                p! σ∈S
+                                                         p
+
+Свойства:
+
+ 1) Sym(T ) симметричен;
+ 2) Sym = Sym;
+
+ 3) = Sym — пространство симметрических тензоров.
+
+Альтернирование
+
+                                          1 X
+                           Alt(T ) =             sgn(σ)Fσ T.
+                                          p! σ∈S
+                                                  p
+
+Свойства:
+
+ 1) Alt(T ) кососимметричен;
+
+ 2) Alt = Alt;
+
+ 3) = Alt = Λp (V ∗ ) — пространство кососимметрических p-форм.
+
+   Если в внешнем произведении повторяется один и тот же ковектор, ре-
+зультат равен нулю:
+                              ei ∧ ei = 0.
+
+  Аккуратное место
+
+  При p = 2 любой ковариантный тензор раскладывается на симметриче-
+  скую и кососимметрическую части. При p ≥ 3 одних этих двух частей
+  уже недостаточно для полного разложения всего пространства тензо-
+  ров.
+
+Почему это проекторы
+  Для любой перестановки τ ∈ Sp имеем
+
+                                     1 X
+                      Fτ Sym(T ) =          Fτ σ T = Sym(T ),
+                                     p! σ∈S
+                                          p
+
+так как при фиксированной τ множество {τ σ | σ ∈ Sp } снова равно Sp . Поэто-
+му Sym(T ) симметричен и Sym = Sym.
+   Для альтернирования аналогично:
+
+                           Fτ Alt(T ) = sgn(τ ) Alt(T ),
+поскольку sgn(τ σ) = sgn(τ ) sgn(σ). Значит, Alt(T ) кососимметричен и Alt =
+Alt.</pre>
 </section><section id="oralContent" class="oral-content"><article class="article"><h1>Билет 25. Симметрические и кососимметрические тензоры. Симметризация и альтернирование, их свойства.</h1><p class="muted"><b>Раздел:</b> Тензоры и алгебры</p>
 <h2>План ответа</h2><div class="plan"><ul><li>Определить симметрические и кососимметрические тензоры.</li><li>Ввести действие перестановок на аргументы.</li><li>Определить $\operatorname{Sym}$ и $\operatorname{Alt}$.</li><li>Сформулировать свойства проекторов.</li></ul></div><h2>Основные определения и факты</h2><div class="fact">Симметрический тензор не меняется при перестановке аргументов.</div><div class="fact">Кососимметрический тензор меняется на знак перестановки.</div><div class="fact">$\operatorname{Sym}$ — усреднение по всем перестановкам.</div><div class="fact">$\operatorname{Alt}$ — усреднение с множителем $\operatorname{sgn}(\sigma)$.</div><h2>Ключевые формулы</h2><div class="formula-list"><div class="formula"><strong>Симметризация</strong><div>$\operatorname{Sym}T=\frac1{p!}\sum_{\sigma\in S_p}F_\sigma T$</div></div><div class="formula"><strong>Альтернирование</strong><div>$\operatorname{Alt}T=\frac1{p!}\sum_{\sigma\in S_p}\operatorname{sgn}(\sigma)F_\sigma T$</div></div><div class="formula"><strong>Проектор</strong><div>$\operatorname{Sym}^2=\operatorname{Sym}$</div></div><div class="formula"><strong>Повтор</strong><div>$\omega\wedge\omega=0$</div></div></div><h2>Примеры</h2><div class="example-box"><ol class="examples"><li>Для билинейной формы симметрическая часть: $\frac12(\beta(x,y)+\beta(y,x))$.</li><li>Кососимметрическая часть: $\frac12(\beta(x,y)-\beta(y,x))$.</li><li>Если два аргумента кососимметрической формы совпали, значение равно 0.</li></ol></div><h2>Проверочные вопросы</h2><div class="checklist"><ul><li>Почему $\operatorname{Sym}$ — проектор?</li><li>Что означает знак перестановки?</li><li>Почему при $p\ge3$ есть смешанные типы симметрии?</li></ul></div></article></section></article></main><footer class="footer"><p>Линейная Алгебра: Экзамен · билеты 1–27 · статический GitHub Pages.</p><p><a href="../sources.html">Источники</a></p></footer><script src="../assets/app.js"></script></body></html>
