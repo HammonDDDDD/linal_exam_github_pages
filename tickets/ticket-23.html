@@ -1,2 +1,314 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Билет 23 · Линейная Алгебра: Экзамен</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:true,macros:{R:"\\mathbb{R}",C:"\\mathbb{C}",F:"\\mathbb{F}",Ker:"\\operatorname{Ker}",rk:"\\operatorname{rk}",tr:"\\operatorname{tr}",Sym:"\\operatorname{Sym}",Alt:"\\operatorname{Alt}",dist:"\\operatorname{dist}",pr:"\\operatorname{pr}",ort:"\\operatorname{ort}",End:"\\operatorname{End}",Hom:"\\operatorname{Hom}"}},svg:{fontCache:"global"}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body class="ticket-page full-active"><header class="topbar"><a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Линейная Алгебра: Экзамен</span></a><nav><a class="active" href="../index.html">Билеты</a><a href="../map.html">Карта</a><a href="../trainer.html">Тренажёр</a><a href="../formulas.html">Формулы</a><a href="../interactives.html">Интерактивы</a></nav><button id="themeToggle" class="icon-button">◐</button></header><main class="layout"><aside class="sidebar"><div style="margin:4px 6px 12px;color:var(--muted);font-size:13px">Билеты</div><a href="ticket-01.html" class="">1</a><a href="ticket-02.html" class="">2</a><a href="ticket-03.html" class="">3</a><a href="ticket-04.html" class="">4</a><a href="ticket-05.html" class="">5</a><a href="ticket-06.html" class="">6</a><a href="ticket-07.html" class="">7</a><a href="ticket-08.html" class="">8</a><a href="ticket-09.html" class="">9</a><a href="ticket-10.html" class="">10</a><a href="ticket-11.html" class="">11</a><a href="ticket-12.html" class="">12</a><a href="ticket-13.html" class="">13</a><a href="ticket-14.html" class="">14</a><a href="ticket-15.html" class="">15</a><a href="ticket-16.html" class="">16</a><a href="ticket-17.html" class="">17</a><a href="ticket-18.html" class="">18</a><a href="ticket-19.html" class="">19</a><a href="ticket-20.html" class="">20</a><a href="ticket-21.html" class="">21</a><a href="ticket-22.html" class="">22</a><a href="ticket-23.html" class="current">23</a><a href="ticket-24.html" class="">24</a><a href="ticket-25.html" class="">25</a><a href="ticket-26.html" class="">26</a><a href="ticket-27.html" class="">27</a></aside><article class="article"><div class="ticket-tools"><button class="small-btn" data-mark-ticket="23">Отметить как выученный</button><a class="small-btn" href="ticket-22.html">← Предыдущий</a><a class="small-btn" href="ticket-24.html">Следующий →</a></div><div class="mode-switch"><button id="showFull" class="active">Полный конспект</button><button id="showOral">Устный ответ</button></div><p class="mode-note">Полный конспект восстановлен из первой полной версии сайта. Вкладка «Устный ответ» содержит текущую краткую структуру ответа.</p><section id="fullContent" class="full-content" data-old-url="https://raw.githubusercontent.com/HammonDDDDD/linal_exam_github_pages/1f7afc254d9da403d546e97cd2877cf89860a648/tickets/ticket-23.html"><div class="loading-full">Загружаю полный билет…</div></section><section id="oralContent" class="oral-content"><article class="article"><h1>Билет 23. Тензорный базис и размерность пространства тензоров типа $(p,q)$. Компоненты тензора, их преобразование при замене базиса. Матричная запись тензоров. Эквивалентное определение тензора как наборов чисел.</h1><p class="muted"><b>Раздел:</b> Тензоры и алгебры</p>
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Билет 23 · Линейная Алгебра: Экзамен</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:true,macros:{R:"\\mathbb{R}",C:"\\mathbb{C}",F:"\\mathbb{F}",Ker:"\\operatorname{Ker}",rk:"\\operatorname{rk}",tr:"\\operatorname{tr}",Sym:"\\operatorname{Sym}",Alt:"\\operatorname{Alt}",dist:"\\operatorname{dist}",pr:"\\operatorname{pr}",ort:"\\operatorname{ort}",End:"\\operatorname{End}",Hom:"\\operatorname{Hom}"}},svg:{fontCache:"global"}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body class="ticket-page full-active"><header class="topbar"><a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Линейная Алгебра: Экзамен</span></a><nav><a class="active" href="../index.html">Билеты</a><a href="../map.html">Карта</a><a href="../trainer.html">Тренажёр</a><a href="../formulas.html">Формулы</a><a href="../interactives.html">Интерактивы</a></nav><button id="themeToggle" class="icon-button">◐</button></header><main class="layout"><aside class="sidebar"><div style="margin:4px 6px 12px;color:var(--muted);font-size:13px">Билеты</div><a href="ticket-01.html" class="">1</a><a href="ticket-02.html" class="">2</a><a href="ticket-03.html" class="">3</a><a href="ticket-04.html" class="">4</a><a href="ticket-05.html" class="">5</a><a href="ticket-06.html" class="">6</a><a href="ticket-07.html" class="">7</a><a href="ticket-08.html" class="">8</a><a href="ticket-09.html" class="">9</a><a href="ticket-10.html" class="">10</a><a href="ticket-11.html" class="">11</a><a href="ticket-12.html" class="">12</a><a href="ticket-13.html" class="">13</a><a href="ticket-14.html" class="">14</a><a href="ticket-15.html" class="">15</a><a href="ticket-16.html" class="">16</a><a href="ticket-17.html" class="">17</a><a href="ticket-18.html" class="">18</a><a href="ticket-19.html" class="">19</a><a href="ticket-20.html" class="">20</a><a href="ticket-21.html" class="">21</a><a href="ticket-22.html" class="">22</a><a href="ticket-23.html" class="current">23</a><a href="ticket-24.html" class="">24</a><a href="ticket-25.html" class="">25</a><a href="ticket-26.html" class="">26</a><a href="ticket-27.html" class="">27</a></aside><article class="article"><div class="ticket-tools"><button class="small-btn" data-mark-ticket="23">Отметить как выученный</button><a class="small-btn" href="ticket-22.html">← Предыдущий</a><a class="small-btn" href="ticket-24.html">Следующий →</a></div><div class="mode-switch"><button id="showFull" class="active">Полный конспект</button><button id="showOral">Устный ответ</button></div><p class="mode-note">Полный конспект восстановлен из первой полной версии сайта. Вкладка «Устный ответ» содержит текущую краткую структуру ответа.</p><section id="fullContent" class="full-content">
+<style>
+.full-content .pdf-source-note{margin:0 0 18px;padding:14px 16px;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;background:color-mix(in srgb,var(--paper) 86%,var(--bg));color:var(--muted)}
+.full-content .pdf-ticket-pages{display:grid;gap:24px;justify-items:center;margin-top:16px}
+.full-content .pdf-ticket-page{width:min(100%,660px);height:934px;overflow:auto;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);position:relative;color:#000}
+.full-content .pdf-page-inner{width:892px;height:1262px;transform:scale(.74);transform-origin:top left;background:#fff;color:#000}
+.full-content .pdf-ticket-page p{margin:0;padding:0;color:#000}
+.full-content .pdf-ticket-page a{color:#000;text-decoration:none}
+.full-content .pdf-ticket-page *{box-sizing:content-box}
+@media (max-width:760px){.full-content .pdf-ticket-page{height:760px}.full-content .pdf-page-inner{transform:scale(.60)}}
+.full-content .ft10{font-size:31px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft11{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft12{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft13{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft14{font-size:26px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft15{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#0000ff;}
+.full-content .ft16{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft17{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#0000ff;}
+.full-content .ft18{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#0000ff;}
+.full-content .ft19{font-size:18px;line-height:21px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft310{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#ffffff;}
+.full-content .ft311{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft312{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft313{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft314{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft315{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft316{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft317{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft318{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft319{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft520{font-size:9px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft521{font-size:26px;line-height:32px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft822{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft923{font-size:18px;line-height:21px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft1024{font-size:18px;line-height:31px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft1025{font-size:22px;line-height:26px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft1726{font-size:12px;line-height:11px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft1827{font-size:9px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2228{font-size:26px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2329{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2330{font-size:15px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2431{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2932{font-size:12px;line-height:11px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft3533{font-size:9px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft3634{font-size:12px;line-height:10px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+</style>
+<div class="pdf-ticket-pages">
+<div class="pdf-ticket-page"><div class="pdf-page-inner"><!-- Page 42 -->
+<div id="page42-div" style="position:relative;width:892px;height:1262px;">
+<p style="position:absolute;top:89px;left:87px;white-space:nowrap" class="ft424"><b>23.&#160;Билет&#160;23.&#160;Тензорный&#160;базис,&#160;размерность,</b></p>
+<p style="position:absolute;top:122px;left:145px;white-space:nowrap" class="ft4221"><b>компоненты,&#160;замена&#160;базиса,&#160;матричная&#160;за-<br/>пись.</b></p>
+<p style="position:absolute;top:205px;left:111px;white-space:nowrap" class="ft4210">План&#160;ответа</p>
+<p style="position:absolute;top:238px;left:111px;white-space:nowrap" class="ft429">Этот&#160;билет&#160;координатный.&#160;Не&#160;нужно&#160;снова&#160;давать&#160;все&#160;операции&#160;над<br/>тензорами;&#160;нужно&#160;объяснить&#160;базис,&#160;компоненты,&#160;закон&#160;преобразова-<br/>ния&#160;и&#160;почему&#160;тензор&#160;можно&#160;понимать&#160;как&#160;набор&#160;чисел&#160;с&#160;правильным<br/>законом&#160;замены.</p>
+<p style="position:absolute;top:344px;left:114px;white-space:nowrap" class="ft423">Пусть</p>
+<p style="position:absolute;top:345px;left:176px;white-space:nowrap" class="ft4211"><i>e</i></p>
+<p style="position:absolute;top:352px;left:184px;white-space:nowrap" class="ft4215">1</p>
+<p style="position:absolute;top:345px;left:191px;white-space:nowrap" class="ft4211"><i>,&#160;.&#160;.&#160;.&#160;,&#160;e</i></p>
+<p style="position:absolute;top:352px;left:238px;white-space:nowrap" class="ft4217"><i>n</i></p>
+<p style="position:absolute;top:344px;left:253px;white-space:nowrap" class="ft423">—&#160;базис</p>
+<p style="position:absolute;top:345px;left:335px;white-space:nowrap" class="ft4211"><i>V</i></p>
+<p style="position:absolute;top:344px;left:349px;white-space:nowrap" class="ft423">,&#160;а</p>
+<p style="position:absolute;top:345px;left:377px;white-space:nowrap" class="ft4211"><i>e</i></p>
+<p style="position:absolute;top:343px;left:385px;white-space:nowrap" class="ft4215">1</p>
+<p style="position:absolute;top:345px;left:392px;white-space:nowrap" class="ft4211"><i>,&#160;.&#160;.&#160;.&#160;,&#160;e</i></p>
+<p style="position:absolute;top:343px;left:440px;white-space:nowrap" class="ft4217"><i>n</i></p>
+<p style="position:absolute;top:344px;left:454px;white-space:nowrap" class="ft423">—&#160;двойственный&#160;базис</p>
+<p style="position:absolute;top:345px;left:677px;white-space:nowrap" class="ft4211"><i>V</i></p>
+<p style="position:absolute;top:340px;left:691px;white-space:nowrap" class="ft4216"><i>∗</i></p>
+<p style="position:absolute;top:344px;left:698px;white-space:nowrap" class="ft423">:</p>
+<p style="position:absolute;top:379px;left:404px;white-space:nowrap" class="ft4211"><i>e</i></p>
+<p style="position:absolute;top:376px;left:412px;white-space:nowrap" class="ft4217"><i>i</i></p>
+<p style="position:absolute;top:379px;left:417px;white-space:nowrap" class="ft4213">(</p>
+<p style="position:absolute;top:379px;left:424px;white-space:nowrap" class="ft4211"><i>e</i></p>
+<p style="position:absolute;top:386px;left:432px;white-space:nowrap" class="ft4217"><i>j</i></p>
+<p style="position:absolute;top:379px;left:439px;white-space:nowrap" class="ft4213">)&#160;=</p>
+<p style="position:absolute;top:379px;left:469px;white-space:nowrap" class="ft4211"><i>δ</i></p>
+<p style="position:absolute;top:376px;left:478px;white-space:nowrap" class="ft4217"><i>i</i></p>
+<p style="position:absolute;top:387px;left:477px;white-space:nowrap" class="ft4217"><i>j</i></p>
+<p style="position:absolute;top:379px;left:484px;white-space:nowrap" class="ft4211"><i>.</i></p>
+<p style="position:absolute;top:431px;left:87px;white-space:nowrap" class="ft4218"><b>Тензорный&#160;базис</b></p>
+<p style="position:absolute;top:469px;left:114px;white-space:nowrap" class="ft423">Базис&#160;пространства</p>
+<p style="position:absolute;top:471px;left:310px;white-space:nowrap" class="ft4211"><i>T</i></p>
+<p style="position:absolute;top:468px;left:323px;white-space:nowrap" class="ft4217"><i>p</i></p>
+<p style="position:absolute;top:479px;left:320px;white-space:nowrap" class="ft4217"><i>q</i></p>
+<p style="position:absolute;top:471px;left:330px;white-space:nowrap" class="ft4213">(</p>
+<p style="position:absolute;top:471px;left:337px;white-space:nowrap" class="ft4211"><i>V</i></p>
+<p style="position:absolute;top:471px;left:351px;white-space:nowrap" class="ft4213">)</p>
+<p style="position:absolute;top:469px;left:364px;white-space:nowrap" class="ft423">образуют&#160;тензоры</p>
+<p style="position:absolute;top:506px;left:328px;white-space:nowrap" class="ft4211"><i>e</i></p>
+<p style="position:absolute;top:503px;left:337px;white-space:nowrap" class="ft4217"><i>i</i></p>
+<p style="position:absolute;top:507px;left:341px;white-space:nowrap" class="ft4227">1</p>
+<p style="position:absolute;top:502px;left:352px;white-space:nowrap" class="ft4214"><i>⊗&#160;·&#160;·&#160;·&#160;⊗</i></p>
+<p style="position:absolute;top:506px;left:413px;white-space:nowrap" class="ft4211"><i>e</i></p>
+<p style="position:absolute;top:503px;left:421px;white-space:nowrap" class="ft4217"><i>i</i></p>
+<p style="position:absolute;top:506px;left:425px;white-space:nowrap" class="ft4220"><i>p</i></p>
+<p style="position:absolute;top:502px;left:436px;white-space:nowrap" class="ft4214"><i>⊗</i></p>
+<p style="position:absolute;top:506px;left:454px;white-space:nowrap" class="ft4211"><i>e</i></p>
+<p style="position:absolute;top:513px;left:462px;white-space:nowrap" class="ft4217"><i>j</i></p>
+<p style="position:absolute;top:517px;left:468px;white-space:nowrap" class="ft4227">1</p>
+<p style="position:absolute;top:502px;left:479px;white-space:nowrap" class="ft4214"><i>⊗&#160;·&#160;·&#160;·&#160;⊗</i></p>
+<p style="position:absolute;top:506px;left:539px;white-space:nowrap" class="ft4211"><i>e</i></p>
+<p style="position:absolute;top:513px;left:547px;white-space:nowrap" class="ft4217"><i>j</i></p>
+<p style="position:absolute;top:517px;left:553px;white-space:nowrap" class="ft4220"><i>q</i></p>
+<p style="position:absolute;top:506px;left:560px;white-space:nowrap" class="ft4211"><i>.</i></p>
+<p style="position:absolute;top:539px;left:87px;white-space:nowrap" class="ft423">Отсюда</p>
+<p style="position:absolute;top:560px;left:373px;white-space:nowrap" class="ft423">dim</p>
+<p style="position:absolute;top:561px;left:410px;white-space:nowrap" class="ft4211"><i>T</i></p>
+<p style="position:absolute;top:558px;left:423px;white-space:nowrap" class="ft4217"><i>p</i></p>
+<p style="position:absolute;top:570px;left:420px;white-space:nowrap" class="ft4217"><i>q</i></p>
+<p style="position:absolute;top:561px;left:430px;white-space:nowrap" class="ft4213">(</p>
+<p style="position:absolute;top:561px;left:437px;white-space:nowrap" class="ft4211"><i>V</i></p>
+<p style="position:absolute;top:561px;left:451px;white-space:nowrap" class="ft4213">)&#160;=</p>
+<p style="position:absolute;top:561px;left:481px;white-space:nowrap" class="ft4211"><i>n</i></p>
+<p style="position:absolute;top:558px;left:492px;white-space:nowrap" class="ft4217"><i>p</i></p>
+<p style="position:absolute;top:558px;left:498px;white-space:nowrap" class="ft4215">+</p>
+<p style="position:absolute;top:558px;left:508px;white-space:nowrap" class="ft4217"><i>q</i></p>
+<p style="position:absolute;top:561px;left:515px;white-space:nowrap" class="ft4211"><i>.</i></p>
+<p style="position:absolute;top:614px;left:87px;white-space:nowrap" class="ft4218"><b>Компоненты&#160;тензора</b></p>
+<p style="position:absolute;top:652px;left:114px;white-space:nowrap" class="ft423">Любой&#160;тензор&#160;единственным&#160;образом&#160;раскладывается:</p>
+<p style="position:absolute;top:687px;left:287px;white-space:nowrap" class="ft4211"><i>T</i></p>
+<p style="position:absolute;top:687px;left:305px;white-space:nowrap" class="ft4213">=</p>
+<p style="position:absolute;top:687px;left:323px;white-space:nowrap" class="ft4211"><i>T</i></p>
+<p style="position:absolute;top:682px;left:336px;white-space:nowrap" class="ft4217"><i>j</i></p>
+<p style="position:absolute;top:685px;left:341px;white-space:nowrap" class="ft4227">1</p>
+<p style="position:absolute;top:682px;left:347px;white-space:nowrap" class="ft4217"><i>...j</i></p>
+<p style="position:absolute;top:685px;left:363px;white-space:nowrap" class="ft4220"><i>q</i></p>
+<p style="position:absolute;top:696px;left:334px;white-space:nowrap" class="ft4217"><i>i</i></p>
+<p style="position:absolute;top:699px;left:338px;white-space:nowrap" class="ft4227">1</p>
+<p style="position:absolute;top:696px;left:344px;white-space:nowrap" class="ft4217"><i>...i</i></p>
+<p style="position:absolute;top:699px;left:359px;white-space:nowrap" class="ft4220"><i>p</i></p>
+<p style="position:absolute;top:687px;left:370px;white-space:nowrap" class="ft4211"><i>e</i></p>
+<p style="position:absolute;top:684px;left:378px;white-space:nowrap" class="ft4217"><i>i</i></p>
+<p style="position:absolute;top:687px;left:383px;white-space:nowrap" class="ft4227">1</p>
+<p style="position:absolute;top:682px;left:393px;white-space:nowrap" class="ft4214"><i>⊗&#160;·&#160;·&#160;·&#160;⊗</i></p>
+<p style="position:absolute;top:687px;left:454px;white-space:nowrap" class="ft4211"><i>e</i></p>
+<p style="position:absolute;top:684px;left:462px;white-space:nowrap" class="ft4217"><i>i</i></p>
+<p style="position:absolute;top:687px;left:467px;white-space:nowrap" class="ft4220"><i>p</i></p>
+<p style="position:absolute;top:682px;left:478px;white-space:nowrap" class="ft4214"><i>⊗</i></p>
+<p style="position:absolute;top:687px;left:496px;white-space:nowrap" class="ft4211"><i>e</i></p>
+<p style="position:absolute;top:694px;left:504px;white-space:nowrap" class="ft4217"><i>j</i></p>
+<p style="position:absolute;top:697px;left:509px;white-space:nowrap" class="ft4227">1</p>
+<p style="position:absolute;top:682px;left:520px;white-space:nowrap" class="ft4214"><i>⊗&#160;·&#160;·&#160;·&#160;⊗</i></p>
+<p style="position:absolute;top:687px;left:581px;white-space:nowrap" class="ft4211"><i>e</i></p>
+<p style="position:absolute;top:694px;left:589px;white-space:nowrap" class="ft4217"><i>j</i></p>
+<p style="position:absolute;top:697px;left:594px;white-space:nowrap" class="ft4220"><i>q</i></p>
+<p style="position:absolute;top:687px;left:601px;white-space:nowrap" class="ft4211"><i>.</i></p>
+<p style="position:absolute;top:719px;left:87px;white-space:nowrap" class="ft423">Числа</p>
+<p style="position:absolute;top:742px;left:423px;white-space:nowrap" class="ft4211"><i>T</i></p>
+<p style="position:absolute;top:737px;left:436px;white-space:nowrap" class="ft4217"><i>j</i></p>
+<p style="position:absolute;top:741px;left:441px;white-space:nowrap" class="ft4227">1</p>
+<p style="position:absolute;top:737px;left:447px;white-space:nowrap" class="ft4217"><i>...j</i></p>
+<p style="position:absolute;top:740px;left:463px;white-space:nowrap" class="ft4220"><i>q</i></p>
+<p style="position:absolute;top:751px;left:433px;white-space:nowrap" class="ft4217"><i>i</i></p>
+<p style="position:absolute;top:755px;left:438px;white-space:nowrap" class="ft4227">1</p>
+<p style="position:absolute;top:751px;left:444px;white-space:nowrap" class="ft4217"><i>...i</i></p>
+<p style="position:absolute;top:754px;left:459px;white-space:nowrap" class="ft4220"><i>p</i></p>
+<p style="position:absolute;top:770px;left:87px;white-space:nowrap" class="ft423">называются&#160;компонентами&#160;тензора.</p>
+<p style="position:absolute;top:823px;left:87px;white-space:nowrap" class="ft4218"><b>Закон&#160;преобразования&#160;компонент</b></p>
+<p style="position:absolute;top:862px;left:114px;white-space:nowrap" class="ft423">Пусть&#160;новый&#160;базис&#160;выражен&#160;через&#160;старый:</p>
+<p style="position:absolute;top:896px;left:409px;white-space:nowrap" class="ft4213">˜</p>
+<p style="position:absolute;top:896px;left:408px;white-space:nowrap" class="ft4211"><i>e</i></p>
+<p style="position:absolute;top:903px;left:416px;white-space:nowrap" class="ft4217"><i>i</i></p>
+<p style="position:absolute;top:896px;left:426px;white-space:nowrap" class="ft4213">=</p>
+<p style="position:absolute;top:896px;left:445px;white-space:nowrap" class="ft4211"><i>C</i></p>
+<p style="position:absolute;top:892px;left:459px;white-space:nowrap" class="ft4217"><i>j</i></p>
+<p style="position:absolute;top:905px;left:457px;white-space:nowrap" class="ft4217"><i>i</i></p>
+<p style="position:absolute;top:896px;left:465px;white-space:nowrap" class="ft4211"><i>e</i></p>
+<p style="position:absolute;top:903px;left:473px;white-space:nowrap" class="ft4217"><i>j</i></p>
+<p style="position:absolute;top:896px;left:480px;white-space:nowrap" class="ft4211"><i>.</i></p>
+<p style="position:absolute;top:929px;left:87px;white-space:nowrap" class="ft423">Тогда&#160;двойственный&#160;базис&#160;меняется&#160;обратной&#160;матрицей:</p>
+<p style="position:absolute;top:964px;left:393px;white-space:nowrap" class="ft4213">˜</p>
+<p style="position:absolute;top:964px;left:393px;white-space:nowrap" class="ft4211"><i>e</i></p>
+<p style="position:absolute;top:960px;left:401px;white-space:nowrap" class="ft4217"><i>i</i></p>
+<p style="position:absolute;top:964px;left:411px;white-space:nowrap" class="ft4213">=&#160;(</p>
+<p style="position:absolute;top:964px;left:436px;white-space:nowrap" class="ft4211"><i>C</i></p>
+<p style="position:absolute;top:957px;left:450px;white-space:nowrap" class="ft4216"><i>−</i></p>
+<p style="position:absolute;top:960px;left:460px;white-space:nowrap" class="ft4215">1</p>
+<p style="position:absolute;top:964px;left:467px;white-space:nowrap" class="ft4213">)</p>
+<p style="position:absolute;top:960px;left:474px;white-space:nowrap" class="ft4226"><i>i<br/>j</i></p>
+<p style="position:absolute;top:964px;left:481px;white-space:nowrap" class="ft4211"><i>e</i></p>
+<p style="position:absolute;top:960px;left:489px;white-space:nowrap" class="ft4217"><i>j</i></p>
+<p style="position:absolute;top:964px;left:495px;white-space:nowrap" class="ft4211"><i>.</i></p>
+<p style="position:absolute;top:996px;left:87px;white-space:nowrap" class="ft429">Компоненты&#160;тензора&#160;меняются&#160;так,&#160;что&#160;сам&#160;тензор&#160;остаётся&#160;тем&#160;же&#160;объек-<br/>том.&#160;Верхние&#160;и&#160;нижние&#160;индексы&#160;преобразуются&#160;взаимно&#160;обратными&#160;матри-<br/>цами.</p>
+<p style="position:absolute;top:1061px;left:114px;white-space:nowrap" class="ft423">Для&#160;оператора</p>
+<p style="position:absolute;top:1062px;left:261px;white-space:nowrap" class="ft4211"><i>A</i></p>
+<p style="position:absolute;top:1058px;left:279px;white-space:nowrap" class="ft4214"><i>∈</i></p>
+<p style="position:absolute;top:1062px;left:296px;white-space:nowrap" class="ft4211"><i>T</i></p>
+<p style="position:absolute;top:1060px;left:309px;white-space:nowrap" class="ft4215">1</p>
+<p style="position:absolute;top:1071px;left:307px;white-space:nowrap" class="ft4215">1</p>
+<p style="position:absolute;top:1062px;left:316px;white-space:nowrap" class="ft4213">(</p>
+<p style="position:absolute;top:1062px;left:323px;white-space:nowrap" class="ft4211"><i>V</i></p>
+<p style="position:absolute;top:1062px;left:337px;white-space:nowrap" class="ft4213">)</p>
+<p style="position:absolute;top:1061px;left:350px;white-space:nowrap" class="ft423">получается&#160;обычный&#160;закон&#160;подобия:</p>
+<p style="position:absolute;top:1091px;left:402px;white-space:nowrap" class="ft4213">˜</p>
+<p style="position:absolute;top:1096px;left:397px;white-space:nowrap" class="ft4211"><i>A</i></p>
+<p style="position:absolute;top:1096px;left:415px;white-space:nowrap" class="ft4213">=</p>
+<p style="position:absolute;top:1096px;left:434px;white-space:nowrap" class="ft4211"><i>C</i></p>
+<p style="position:absolute;top:1090px;left:448px;white-space:nowrap" class="ft4216"><i>−</i></p>
+<p style="position:absolute;top:1093px;left:458px;white-space:nowrap" class="ft4215">1</p>
+<p style="position:absolute;top:1096px;left:465px;white-space:nowrap" class="ft4211"><i>AC.</i></p>
+<p style="position:absolute;top:1128px;left:87px;white-space:nowrap" class="ft423">Для&#160;билинейной&#160;формы</p>
+<p style="position:absolute;top:1130px;left:321px;white-space:nowrap" class="ft4211"><i>B</i></p>
+<p style="position:absolute;top:1125px;left:341px;white-space:nowrap" class="ft4214"><i>∈</i></p>
+<p style="position:absolute;top:1130px;left:358px;white-space:nowrap" class="ft4211"><i>T</i></p>
+<p style="position:absolute;top:1127px;left:370px;white-space:nowrap" class="ft4215">2</p>
+<p style="position:absolute;top:1138px;left:368px;white-space:nowrap" class="ft4215">0</p>
+<p style="position:absolute;top:1130px;left:377px;white-space:nowrap" class="ft4213">(</p>
+<p style="position:absolute;top:1130px;left:384px;white-space:nowrap" class="ft4211"><i>V</i></p>
+<p style="position:absolute;top:1130px;left:398px;white-space:nowrap" class="ft4213">)</p>
+<p style="position:absolute;top:1128px;left:405px;white-space:nowrap" class="ft423">:</p>
+<p style="position:absolute;top:1159px;left:404px;white-space:nowrap" class="ft4213">˜</p>
+<p style="position:absolute;top:1163px;left:400px;white-space:nowrap" class="ft4211"><i>B</i></p>
+<p style="position:absolute;top:1163px;left:419px;white-space:nowrap" class="ft4213">=</p>
+<p style="position:absolute;top:1163px;left:438px;white-space:nowrap" class="ft4211"><i>C</i></p>
+<p style="position:absolute;top:1160px;left:451px;white-space:nowrap" class="ft4217"><i>T</i></p>
+<p style="position:absolute;top:1163px;left:461px;white-space:nowrap" class="ft4211"><i>BC.</i></p>
+<p style="position:absolute;top:1207px;left:435px;white-space:nowrap" class="ft423">42</p>
+</div></div></div>
+<div class="pdf-ticket-page"><div class="pdf-page-inner"><!-- Page 43 -->
+<div id="page43-div" style="position:relative;width:892px;height:1262px;">
+<p style="position:absolute;top:89px;left:87px;white-space:nowrap" class="ft4318"><b>Матричная&#160;запись&#160;и&#160;числовые&#160;массивы</b></p>
+<p style="position:absolute;top:127px;left:114px;white-space:nowrap" class="ft433">Тензор&#160;малой&#160;валентности&#160;можно&#160;записывать&#160;матрицей:&#160;оператор&#160;и&#160;би-</p>
+<p style="position:absolute;top:149px;left:87px;white-space:nowrap" class="ft439">линейная&#160;форма&#160;оба&#160;имеют&#160;матрицы.&#160;Но&#160;одна&#160;матрица&#160;сама&#160;по&#160;себе&#160;не&#160;опре-<br/>деляет&#160;тип&#160;объекта:&#160;важен&#160;закон&#160;преобразования&#160;при&#160;смене&#160;базиса.</p>
+<p style="position:absolute;top:207px;left:111px;white-space:nowrap" class="ft4310">Главное</p>
+<p style="position:absolute;top:241px;left:111px;white-space:nowrap" class="ft439">Эквивалентное&#160;определение&#160;тензора:&#160;это&#160;не&#160;просто&#160;набор&#160;чисел,&#160;а&#160;на-<br/>бор&#160;компонент&#160;в&#160;каждом&#160;базисе,&#160;преобразующийся&#160;по&#160;тензорному&#160;за-<br/>кону.</p>
+<p style="position:absolute;top:351px;left:87px;white-space:nowrap" class="ft4318"><b>Общая&#160;формула&#160;тензорного&#160;закона</b></p>
+<p style="position:absolute;top:389px;left:114px;white-space:nowrap" class="ft433">Если</p>
+<p style="position:absolute;top:412px;left:336px;white-space:nowrap" class="ft4313">˜</p>
+<p style="position:absolute;top:412px;left:335px;white-space:nowrap" class="ft4311"><i>e</i></p>
+<p style="position:absolute;top:419px;left:343px;white-space:nowrap" class="ft4317"><i>i</i></p>
+<p style="position:absolute;top:412px;left:353px;white-space:nowrap" class="ft4313">=</p>
+<p style="position:absolute;top:412px;left:372px;white-space:nowrap" class="ft4311"><i>C</i></p>
+<p style="position:absolute;top:408px;left:386px;white-space:nowrap" class="ft4317"><i>j</i></p>
+<p style="position:absolute;top:421px;left:384px;white-space:nowrap" class="ft4317"><i>i</i></p>
+<p style="position:absolute;top:412px;left:392px;white-space:nowrap" class="ft4311"><i>e</i></p>
+<p style="position:absolute;top:419px;left:400px;white-space:nowrap" class="ft4317"><i>j</i></p>
+<p style="position:absolute;top:412px;left:407px;white-space:nowrap" class="ft4311"><i>,</i></p>
+<p style="position:absolute;top:412px;left:451px;white-space:nowrap" class="ft4313">˜</p>
+<p style="position:absolute;top:412px;left:451px;white-space:nowrap" class="ft4311"><i>e</i></p>
+<p style="position:absolute;top:409px;left:459px;white-space:nowrap" class="ft4317"><i>i</i></p>
+<p style="position:absolute;top:412px;left:469px;white-space:nowrap" class="ft4313">=&#160;(</p>
+<p style="position:absolute;top:412px;left:494px;white-space:nowrap" class="ft4311"><i>C</i></p>
+<p style="position:absolute;top:406px;left:508px;white-space:nowrap" class="ft4316"><i>−</i></p>
+<p style="position:absolute;top:409px;left:518px;white-space:nowrap" class="ft4315">1</p>
+<p style="position:absolute;top:412px;left:525px;white-space:nowrap" class="ft4313">)</p>
+<p style="position:absolute;top:409px;left:532px;white-space:nowrap" class="ft4326"><i>i<br/>j</i></p>
+<p style="position:absolute;top:412px;left:538px;white-space:nowrap" class="ft4311"><i>e</i></p>
+<p style="position:absolute;top:409px;left:547px;white-space:nowrap" class="ft4317"><i>j</i></p>
+<p style="position:absolute;top:412px;left:553px;white-space:nowrap" class="ft4311"><i>,</i></p>
+<p style="position:absolute;top:442px;left:87px;white-space:nowrap" class="ft433">то&#160;компоненты&#160;тензора&#160;типа</p>
+<p style="position:absolute;top:443px;left:361px;white-space:nowrap" class="ft4313">(</p>
+<p style="position:absolute;top:443px;left:368px;white-space:nowrap" class="ft4311"><i>p,&#160;q</i></p>
+<p style="position:absolute;top:443px;left:393px;white-space:nowrap" class="ft4313">)</p>
+<p style="position:absolute;top:442px;left:404px;white-space:nowrap" class="ft433">преобразуются&#160;произведением&#160;матриц&#160;пе-</p>
+<p style="position:absolute;top:464px;left:87px;white-space:nowrap" class="ft433">рехода&#160;по&#160;каждому&#160;индексу:</p>
+<p style="position:absolute;top:495px;left:276px;white-space:nowrap" class="ft4319">e</p>
+<p style="position:absolute;top:505px;left:273px;white-space:nowrap" class="ft4311"><i>T</i></p>
+<p style="position:absolute;top:499px;left:286px;white-space:nowrap" class="ft4317"><i>j</i></p>
+<p style="position:absolute;top:503px;left:291px;white-space:nowrap" class="ft4327">1</p>
+<p style="position:absolute;top:499px;left:298px;white-space:nowrap" class="ft4317"><i>...j</i></p>
+<p style="position:absolute;top:503px;left:313px;white-space:nowrap" class="ft4320"><i>q</i></p>
+<p style="position:absolute;top:513px;left:284px;white-space:nowrap" class="ft4317"><i>i</i></p>
+<p style="position:absolute;top:517px;left:288px;white-space:nowrap" class="ft4327">1</p>
+<p style="position:absolute;top:513px;left:294px;white-space:nowrap" class="ft4317"><i>...i</i></p>
+<p style="position:absolute;top:517px;left:309px;white-space:nowrap" class="ft4320"><i>p</i></p>
+<p style="position:absolute;top:505px;left:325px;white-space:nowrap" class="ft4313">=</p>
+<p style="position:absolute;top:505px;left:344px;white-space:nowrap" class="ft4311"><i>C</i></p>
+<p style="position:absolute;top:501px;left:358px;white-space:nowrap" class="ft4317"><i>a</i></p>
+<p style="position:absolute;top:505px;left:364px;white-space:nowrap" class="ft4327">1</p>
+<p style="position:absolute;top:513px;left:356px;white-space:nowrap" class="ft4317"><i>i</i></p>
+<p style="position:absolute;top:517px;left:361px;white-space:nowrap" class="ft4327">1</p>
+<p style="position:absolute;top:500px;left:374px;white-space:nowrap" class="ft4314"><i>·&#160;·&#160;·</i></p>
+<p style="position:absolute;top:505px;left:398px;white-space:nowrap" class="ft4311"><i>C</i></p>
+<p style="position:absolute;top:499px;left:412px;white-space:nowrap" class="ft4317"><i>a</i></p>
+<p style="position:absolute;top:503px;left:419px;white-space:nowrap" class="ft4320"><i>p</i></p>
+<p style="position:absolute;top:513px;left:411px;white-space:nowrap" class="ft4317"><i>i</i></p>
+<p style="position:absolute;top:517px;left:415px;white-space:nowrap" class="ft4320"><i>p</i></p>
+<p style="position:absolute;top:505px;left:426px;white-space:nowrap" class="ft4313">(</p>
+<p style="position:absolute;top:505px;left:433px;white-space:nowrap" class="ft4311"><i>C</i></p>
+<p style="position:absolute;top:498px;left:447px;white-space:nowrap" class="ft4316"><i>−</i></p>
+<p style="position:absolute;top:501px;left:457px;white-space:nowrap" class="ft4315">1</p>
+<p style="position:absolute;top:505px;left:464px;white-space:nowrap" class="ft4313">)</p>
+<p style="position:absolute;top:500px;left:471px;white-space:nowrap" class="ft4317"><i>j</i></p>
+<p style="position:absolute;top:504px;left:476px;white-space:nowrap" class="ft4327">1</p>
+<p style="position:absolute;top:514px;left:471px;white-space:nowrap" class="ft4317"><i>b</i></p>
+<p style="position:absolute;top:517px;left:476px;white-space:nowrap" class="ft4327">1</p>
+<p style="position:absolute;top:500px;left:486px;white-space:nowrap" class="ft4314"><i>·&#160;·&#160;·</i></p>
+<p style="position:absolute;top:505px;left:510px;white-space:nowrap" class="ft4313">(</p>
+<p style="position:absolute;top:505px;left:517px;white-space:nowrap" class="ft4311"><i>C</i></p>
+<p style="position:absolute;top:498px;left:531px;white-space:nowrap" class="ft4316"><i>−</i></p>
+<p style="position:absolute;top:501px;left:540px;white-space:nowrap" class="ft4315">1</p>
+<p style="position:absolute;top:505px;left:548px;white-space:nowrap" class="ft4313">)</p>
+<p style="position:absolute;top:499px;left:554px;white-space:nowrap" class="ft4317"><i>j</i></p>
+<p style="position:absolute;top:503px;left:560px;white-space:nowrap" class="ft4320"><i>q</i></p>
+<p style="position:absolute;top:514px;left:554px;white-space:nowrap" class="ft4317"><i>b</i></p>
+<p style="position:absolute;top:517px;left:560px;white-space:nowrap" class="ft4320"><i>q</i></p>
+<p style="position:absolute;top:505px;left:567px;white-space:nowrap" class="ft4311"><i>T</i></p>
+<p style="position:absolute;top:501px;left:579px;white-space:nowrap" class="ft4317"><i>b</i></p>
+<p style="position:absolute;top:505px;left:585px;white-space:nowrap" class="ft4327">1</p>
+<p style="position:absolute;top:501px;left:591px;white-space:nowrap" class="ft4317"><i>...b</i></p>
+<p style="position:absolute;top:505px;left:607px;white-space:nowrap" class="ft4320"><i>q</i></p>
+<p style="position:absolute;top:513px;left:577px;white-space:nowrap" class="ft4317"><i>a</i></p>
+<p style="position:absolute;top:517px;left:584px;white-space:nowrap" class="ft4327">1</p>
+<p style="position:absolute;top:513px;left:590px;white-space:nowrap" class="ft4317"><i>...a</i></p>
+<p style="position:absolute;top:517px;left:607px;white-space:nowrap" class="ft4320"><i>p</i></p>
+<p style="position:absolute;top:505px;left:615px;white-space:nowrap" class="ft4311"><i>,</i></p>
+<p style="position:absolute;top:545px;left:87px;white-space:nowrap" class="ft439">с&#160;точностью&#160;до&#160;выбранного&#160;соглашения&#160;о&#160;том,&#160;как&#160;записывается&#160;матрица<br/>перехода.&#160;Смысл&#160;неизменен:&#160;разные&#160;типы&#160;индексов&#160;преобразуются&#160;взаим-<br/>но&#160;обратными&#160;матрицами.</p>
+<p style="position:absolute;top:610px;left:114px;white-space:nowrap" class="ft433">Именно&#160;этот&#160;закон&#160;отличает&#160;тензор&#160;от&#160;произвольной&#160;гиперматрицы&#160;чи-</p>
+<p style="position:absolute;top:632px;left:87px;white-space:nowrap" class="ft433">сел.</p>
+<p style="position:absolute;top:1207px;left:435px;white-space:nowrap" class="ft433">43</p>
+</div></div></div>
+</div>
+</section><section id="oralContent" class="oral-content"><article class="article"><h1>Билет 23. Тензорный базис и размерность пространства тензоров типа $(p,q)$. Компоненты тензора, их преобразование при замене базиса. Матричная запись тензоров. Эквивалентное определение тензора как наборов чисел.</h1><p class="muted"><b>Раздел:</b> Тензоры и алгебры</p>
 <h2>План ответа</h2><div class="plan"><ul><li>Ввести базис $e_i$ и сопряжённый базис $e^i$.</li><li>Записать тензорный базис и размерность.</li><li>Определить компоненты тензора.</li><li>Сформулировать закон преобразования координат.</li></ul></div><h2>Основные определения и факты</h2><div class="fact">Тензорный базис строится из произведений базисных ковекторов и базисных векторов.</div><div class="fact">Компоненты — координаты тензора в этом базисе.</div><div class="fact">Тензор как массив чисел эквивалентен полилинейной функции только вместе с законом преобразования координат.</div><div class="fact">Верхние и нижние индексы преобразуются взаимно обратными матрицами.</div><h2>Ключевые формулы</h2><div class="formula-list"><div class="formula"><strong>Базис</strong><div>$e^{i_1}\otimes\cdots\otimes e^{i_p}\otimes e_{j_1}\otimes\cdots\otimes e_{j_q}$</div></div><div class="formula"><strong>Компоненты</strong><div>$T^{j_1\ldots j_q}_{i_1\ldots i_p}$</div></div><div class="formula"><strong>Размерность</strong><div>$n^{p+q}$</div></div><div class="formula"><strong>Оператор</strong><div>$\widetilde A=C^{-1}AC$</div></div></div><h2>Примеры</h2><div class="example-box"><ol class="examples"><li>Для $T^1_1$ компоненты образуют матрицу оператора.</li><li>Для $T^2_0$ компоненты образуют матрицу билинейной формы.</li><li>Один и тот же числовой массив может быть матрицей оператора или билинейной формы, но законы смены базиса разные.</li></ol></div><h2>Проверочные вопросы</h2><div class="checklist"><ul><li>Что такое сопряжённый базис?</li><li>Почему массив чисел зависит от базиса?</li><li>Как отличить матрицу оператора от матрицы формы?</li></ul></div></article></section></article></main><footer class="footer"><p>Линейная Алгебра: Экзамен · билеты 1–27 · статический GitHub Pages.</p><p><a href="../sources.html">Источники</a></p></footer><script src="../assets/app.js"></script></body></html>

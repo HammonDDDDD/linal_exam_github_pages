@@ -1,2 +1,241 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Билет 20 · Линейная Алгебра: Экзамен</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:true,macros:{R:"\\mathbb{R}",C:"\\mathbb{C}",F:"\\mathbb{F}",Ker:"\\operatorname{Ker}",rk:"\\operatorname{rk}",tr:"\\operatorname{tr}",Sym:"\\operatorname{Sym}",Alt:"\\operatorname{Alt}",dist:"\\operatorname{dist}",pr:"\\operatorname{pr}",ort:"\\operatorname{ort}",End:"\\operatorname{End}",Hom:"\\operatorname{Hom}"}},svg:{fontCache:"global"}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body class="ticket-page full-active"><header class="topbar"><a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Линейная Алгебра: Экзамен</span></a><nav><a class="active" href="../index.html">Билеты</a><a href="../map.html">Карта</a><a href="../trainer.html">Тренажёр</a><a href="../formulas.html">Формулы</a><a href="../interactives.html">Интерактивы</a></nav><button id="themeToggle" class="icon-button">◐</button></header><main class="layout"><aside class="sidebar"><div style="margin:4px 6px 12px;color:var(--muted);font-size:13px">Билеты</div><a href="ticket-01.html" class="">1</a><a href="ticket-02.html" class="">2</a><a href="ticket-03.html" class="">3</a><a href="ticket-04.html" class="">4</a><a href="ticket-05.html" class="">5</a><a href="ticket-06.html" class="">6</a><a href="ticket-07.html" class="">7</a><a href="ticket-08.html" class="">8</a><a href="ticket-09.html" class="">9</a><a href="ticket-10.html" class="">10</a><a href="ticket-11.html" class="">11</a><a href="ticket-12.html" class="">12</a><a href="ticket-13.html" class="">13</a><a href="ticket-14.html" class="">14</a><a href="ticket-15.html" class="">15</a><a href="ticket-16.html" class="">16</a><a href="ticket-17.html" class="">17</a><a href="ticket-18.html" class="">18</a><a href="ticket-19.html" class="">19</a><a href="ticket-20.html" class="current">20</a><a href="ticket-21.html" class="">21</a><a href="ticket-22.html" class="">22</a><a href="ticket-23.html" class="">23</a><a href="ticket-24.html" class="">24</a><a href="ticket-25.html" class="">25</a><a href="ticket-26.html" class="">26</a><a href="ticket-27.html" class="">27</a></aside><article class="article"><div class="ticket-tools"><button class="small-btn" data-mark-ticket="20">Отметить как выученный</button><a class="small-btn" href="ticket-19.html">← Предыдущий</a><a class="small-btn" href="ticket-21.html">Следующий →</a></div><div class="mode-switch"><button id="showFull" class="active">Полный конспект</button><button id="showOral">Устный ответ</button></div><p class="mode-note">Полный конспект восстановлен из первой полной версии сайта. Вкладка «Устный ответ» содержит текущую краткую структуру ответа.</p><section id="fullContent" class="full-content" data-old-url="https://raw.githubusercontent.com/HammonDDDDD/linal_exam_github_pages/1f7afc254d9da403d546e97cd2877cf89860a648/tickets/ticket-20.html"><div class="loading-full">Загружаю полный билет…</div></section><section id="oralContent" class="oral-content"><article class="article"><h1>Билет 20. Момент инерции системы материальных точек относительно точки. Теорема Лагранжа о моментах инерции.</h1><p class="muted"><b>Раздел:</b> Аффинная геометрия и квадрики</p>
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Билет 20 · Линейная Алгебра: Экзамен</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:true,macros:{R:"\\mathbb{R}",C:"\\mathbb{C}",F:"\\mathbb{F}",Ker:"\\operatorname{Ker}",rk:"\\operatorname{rk}",tr:"\\operatorname{tr}",Sym:"\\operatorname{Sym}",Alt:"\\operatorname{Alt}",dist:"\\operatorname{dist}",pr:"\\operatorname{pr}",ort:"\\operatorname{ort}",End:"\\operatorname{End}",Hom:"\\operatorname{Hom}"}},svg:{fontCache:"global"}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body class="ticket-page full-active"><header class="topbar"><a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Линейная Алгебра: Экзамен</span></a><nav><a class="active" href="../index.html">Билеты</a><a href="../map.html">Карта</a><a href="../trainer.html">Тренажёр</a><a href="../formulas.html">Формулы</a><a href="../interactives.html">Интерактивы</a></nav><button id="themeToggle" class="icon-button">◐</button></header><main class="layout"><aside class="sidebar"><div style="margin:4px 6px 12px;color:var(--muted);font-size:13px">Билеты</div><a href="ticket-01.html" class="">1</a><a href="ticket-02.html" class="">2</a><a href="ticket-03.html" class="">3</a><a href="ticket-04.html" class="">4</a><a href="ticket-05.html" class="">5</a><a href="ticket-06.html" class="">6</a><a href="ticket-07.html" class="">7</a><a href="ticket-08.html" class="">8</a><a href="ticket-09.html" class="">9</a><a href="ticket-10.html" class="">10</a><a href="ticket-11.html" class="">11</a><a href="ticket-12.html" class="">12</a><a href="ticket-13.html" class="">13</a><a href="ticket-14.html" class="">14</a><a href="ticket-15.html" class="">15</a><a href="ticket-16.html" class="">16</a><a href="ticket-17.html" class="">17</a><a href="ticket-18.html" class="">18</a><a href="ticket-19.html" class="">19</a><a href="ticket-20.html" class="current">20</a><a href="ticket-21.html" class="">21</a><a href="ticket-22.html" class="">22</a><a href="ticket-23.html" class="">23</a><a href="ticket-24.html" class="">24</a><a href="ticket-25.html" class="">25</a><a href="ticket-26.html" class="">26</a><a href="ticket-27.html" class="">27</a></aside><article class="article"><div class="ticket-tools"><button class="small-btn" data-mark-ticket="20">Отметить как выученный</button><a class="small-btn" href="ticket-19.html">← Предыдущий</a><a class="small-btn" href="ticket-21.html">Следующий →</a></div><div class="mode-switch"><button id="showFull" class="active">Полный конспект</button><button id="showOral">Устный ответ</button></div><p class="mode-note">Полный конспект восстановлен из первой полной версии сайта. Вкладка «Устный ответ» содержит текущую краткую структуру ответа.</p><section id="fullContent" class="full-content">
+<style>
+.full-content .pdf-source-note{margin:0 0 18px;padding:14px 16px;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;background:color-mix(in srgb,var(--paper) 86%,var(--bg));color:var(--muted)}
+.full-content .pdf-ticket-pages{display:grid;gap:24px;justify-items:center;margin-top:16px}
+.full-content .pdf-ticket-page{width:min(100%,660px);height:934px;overflow:auto;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);position:relative;color:#000}
+.full-content .pdf-page-inner{width:892px;height:1262px;transform:scale(.74);transform-origin:top left;background:#fff;color:#000}
+.full-content .pdf-ticket-page p{margin:0;padding:0;color:#000}
+.full-content .pdf-ticket-page a{color:#000;text-decoration:none}
+.full-content .pdf-ticket-page *{box-sizing:content-box}
+@media (max-width:760px){.full-content .pdf-ticket-page{height:760px}.full-content .pdf-page-inner{transform:scale(.60)}}
+.full-content .ft10{font-size:31px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft11{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft12{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft13{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft14{font-size:26px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft15{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#0000ff;}
+.full-content .ft16{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft17{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#0000ff;}
+.full-content .ft18{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#0000ff;}
+.full-content .ft19{font-size:18px;line-height:21px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft310{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#ffffff;}
+.full-content .ft311{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft312{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft313{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft314{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft315{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft316{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft317{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft318{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft319{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft520{font-size:9px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft521{font-size:26px;line-height:32px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft822{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft923{font-size:18px;line-height:21px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft1024{font-size:18px;line-height:31px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft1025{font-size:22px;line-height:26px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft1726{font-size:12px;line-height:11px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft1827{font-size:9px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2228{font-size:26px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2329{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2330{font-size:15px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2431{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2932{font-size:12px;line-height:11px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft3533{font-size:9px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft3634{font-size:12px;line-height:10px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+</style>
+<div class="pdf-ticket-pages">
+<div class="pdf-ticket-page"><div class="pdf-page-inner"><!-- Page 37 -->
+<div id="page37-div" style="position:relative;width:892px;height:1262px;">
+<p style="position:absolute;top:87px;left:87px;white-space:nowrap" class="ft374"><b>20.&#160;Билет&#160;20.&#160;Момент&#160;инерции&#160;системы&#160;мате-</b></p>
+<p style="position:absolute;top:120px;left:145px;white-space:nowrap" class="ft374"><b>риальных&#160;точек.&#160;Теорема&#160;Лагранжа.</b></p>
+<p style="position:absolute;top:175px;left:111px;white-space:nowrap" class="ft3710">План&#160;ответа</p>
+<p style="position:absolute;top:208px;left:111px;white-space:nowrap" class="ft379">Нужны&#160;центр&#160;масс,&#160;момент&#160;инерции&#160;относительно&#160;точки&#160;и&#160;формула<br/>Лагранжа–Гюйгенса–Штейнера.</p>
+<p style="position:absolute;top:274px;left:114px;white-space:nowrap" class="ft373">Пусть&#160;в&#160;аффинно-евклидовом&#160;пространстве&#160;заданы&#160;материальные&#160;точки</p>
+<p style="position:absolute;top:312px;left:407px;white-space:nowrap" class="ft3711"><i>A</i></p>
+<p style="position:absolute;top:319px;left:420px;white-space:nowrap" class="ft3715">1</p>
+<p style="position:absolute;top:312px;left:427px;white-space:nowrap" class="ft3711"><i>,&#160;.&#160;.&#160;.&#160;,&#160;A</i></p>
+<p style="position:absolute;top:319px;left:480px;white-space:nowrap" class="ft3717"><i>s</i></p>
+<p style="position:absolute;top:347px;left:87px;white-space:nowrap" class="ft373">с&#160;массами</p>
+<p style="position:absolute;top:370px;left:354px;white-space:nowrap" class="ft3711"><i>m</i></p>
+<p style="position:absolute;top:377px;left:369px;white-space:nowrap" class="ft3715">1</p>
+<p style="position:absolute;top:370px;left:376px;white-space:nowrap" class="ft3711"><i>,&#160;.&#160;.&#160;.&#160;,&#160;m</i></p>
+<p style="position:absolute;top:377px;left:431px;white-space:nowrap" class="ft3717"><i>s</i></p>
+<p style="position:absolute;top:370px;left:438px;white-space:nowrap" class="ft3711"><i>,</i></p>
+<p style="position:absolute;top:370px;left:481px;white-space:nowrap" class="ft3711"><i>m</i></p>
+<p style="position:absolute;top:377px;left:497px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:370px;left:507px;white-space:nowrap" class="ft3711"><i>&gt;</i></p>
+<p style="position:absolute;top:370px;left:525px;white-space:nowrap" class="ft3713">0</p>
+<p style="position:absolute;top:370px;left:534px;white-space:nowrap" class="ft3711"><i>.</i></p>
+<p style="position:absolute;top:399px;left:87px;white-space:nowrap" class="ft373">Общая&#160;масса:</p>
+<p style="position:absolute;top:433px;left:398px;white-space:nowrap" class="ft3711"><i>M</i></p>
+<p style="position:absolute;top:433px;left:422px;white-space:nowrap" class="ft3713">=</p>
+<p style="position:absolute;top:415px;left:451px;white-space:nowrap" class="ft3717"><i>s</i></p>
+<p style="position:absolute;top:412px;left:441px;white-space:nowrap" class="ft3719">X</p>
+<p style="position:absolute;top:458px;left:443px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:458px;left:448px;white-space:nowrap" class="ft3715">=1</p>
+<p style="position:absolute;top:433px;left:469px;white-space:nowrap" class="ft3711"><i>m</i></p>
+<p style="position:absolute;top:440px;left:485px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:433px;left:490px;white-space:nowrap" class="ft3711"><i>.</i></p>
+<p style="position:absolute;top:482px;left:87px;white-space:nowrap" class="ft376"><b>Определение&#160;20.1.</b></p>
+<p style="position:absolute;top:482px;left:289px;white-space:nowrap" class="ft373">Центром&#160;масс&#160;называется&#160;точка</p>
+<p style="position:absolute;top:483px;left:604px;white-space:nowrap" class="ft3711"><i>C</i></p>
+<p style="position:absolute;top:482px;left:618px;white-space:nowrap" class="ft373">,&#160;для&#160;которой</p>
+<p style="position:absolute;top:514px;left:397px;white-space:nowrap" class="ft3717"><i>s</i></p>
+<p style="position:absolute;top:511px;left:387px;white-space:nowrap" class="ft3719">X</p>
+<p style="position:absolute;top:557px;left:390px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:557px;left:394px;white-space:nowrap" class="ft3715">=1</p>
+<p style="position:absolute;top:532px;left:416px;white-space:nowrap" class="ft3711"><i>m</i></p>
+<p style="position:absolute;top:539px;left:431px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:515px;left:436px;white-space:nowrap" class="ft3714"><i>−−→</i></p>
+<p style="position:absolute;top:532px;left:436px;white-space:nowrap" class="ft3711"><i>CA</i></p>
+<p style="position:absolute;top:539px;left:463px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:532px;left:474px;white-space:nowrap" class="ft3713">=&#160;0</p>
+<p style="position:absolute;top:532px;left:501px;white-space:nowrap" class="ft3711"><i>.</i></p>
+<p style="position:absolute;top:583px;left:87px;white-space:nowrap" class="ft373">Эквивалентно,&#160;для&#160;произвольной&#160;точки</p>
+<p style="position:absolute;top:584px;left:472px;white-space:nowrap" class="ft3711"><i>O</i></p>
+<p style="position:absolute;top:583px;left:486px;white-space:nowrap" class="ft373">:</p>
+<p style="position:absolute;top:617px;left:365px;white-space:nowrap" class="ft3714"><i>−→</i></p>
+<p style="position:absolute;top:634px;left:365px;white-space:nowrap" class="ft3711"><i>OC</i></p>
+<p style="position:absolute;top:634px;left:398px;white-space:nowrap" class="ft3713">=</p>
+<p style="position:absolute;top:622px;left:423px;white-space:nowrap" class="ft3713">1</p>
+<p style="position:absolute;top:646px;left:418px;white-space:nowrap" class="ft3711"><i>M</i></p>
+<p style="position:absolute;top:615px;left:452px;white-space:nowrap" class="ft3717"><i>s</i></p>
+<p style="position:absolute;top:612px;left:442px;white-space:nowrap" class="ft3719">X</p>
+<p style="position:absolute;top:659px;left:444px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:659px;left:449px;white-space:nowrap" class="ft3715">=1</p>
+<p style="position:absolute;top:634px;left:471px;white-space:nowrap" class="ft3711"><i>m</i></p>
+<p style="position:absolute;top:641px;left:486px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:617px;left:491px;white-space:nowrap" class="ft3714"><i>−−→</i></p>
+<p style="position:absolute;top:634px;left:491px;white-space:nowrap" class="ft3711"><i>OA</i></p>
+<p style="position:absolute;top:641px;left:518px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:634px;left:523px;white-space:nowrap" class="ft3711"><i>.</i></p>
+<p style="position:absolute;top:685px;left:87px;white-space:nowrap" class="ft376"><b>Определение&#160;20.2.</b></p>
+<p style="position:absolute;top:685px;left:287px;white-space:nowrap" class="ft373">Моментом&#160;инерции&#160;системы&#160;относительно&#160;точки</p>
+<p style="position:absolute;top:686px;left:760px;white-space:nowrap" class="ft3711"><i>S</i></p>
+<p style="position:absolute;top:685px;left:777px;white-space:nowrap" class="ft373">на-</p>
+<p style="position:absolute;top:706px;left:87px;white-space:nowrap" class="ft373">зывается</p>
+<p style="position:absolute;top:739px;left:368px;white-space:nowrap" class="ft3711"><i>I</i></p>
+<p style="position:absolute;top:745px;left:375px;white-space:nowrap" class="ft3717"><i>S</i></p>
+<p style="position:absolute;top:739px;left:389px;white-space:nowrap" class="ft3713">=</p>
+<p style="position:absolute;top:720px;left:418px;white-space:nowrap" class="ft3717"><i>s</i></p>
+<p style="position:absolute;top:717px;left:408px;white-space:nowrap" class="ft3719">X</p>
+<p style="position:absolute;top:763px;left:411px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:763px;left:415px;white-space:nowrap" class="ft3715">=1</p>
+<p style="position:absolute;top:739px;left:437px;white-space:nowrap" class="ft3711"><i>m</i></p>
+<p style="position:absolute;top:745px;left:452px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:713px;left:460px;white-space:nowrap" class="ft3719"></p>
+<p style="position:absolute;top:735px;left:460px;white-space:nowrap" class="ft3719"></p>
+<p style="position:absolute;top:722px;left:470px;white-space:nowrap" class="ft3714"><i>−−→</i></p>
+<p style="position:absolute;top:739px;left:470px;white-space:nowrap" class="ft3711"><i>SA</i></p>
+<p style="position:absolute;top:745px;left:495px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:713px;left:500px;white-space:nowrap" class="ft3719"></p>
+<p style="position:absolute;top:735px;left:500px;white-space:nowrap" class="ft3719"></p>
+<p style="position:absolute;top:727px;left:510px;white-space:nowrap" class="ft3715">2</p>
+<p style="position:absolute;top:739px;left:520px;white-space:nowrap" class="ft3711"><i>.</i></p>
+<p style="position:absolute;top:787px;left:87px;white-space:nowrap" class="ft376"><b>Теорема&#160;20.3</b></p>
+<p style="position:absolute;top:787px;left:231px;white-space:nowrap" class="ft373">(Лагранжа&#160;о&#160;моментах&#160;инерции)</p>
+<p style="position:absolute;top:787px;left:543px;white-space:nowrap" class="ft376"><b>.</b></p>
+<p style="position:absolute;top:787px;left:557px;white-space:nowrap" class="ft372"><i>Если</i></p>
+<p style="position:absolute;top:788px;left:609px;white-space:nowrap" class="ft3711"><i>C</i></p>
+<p style="position:absolute;top:787px;left:628px;white-space:nowrap" class="ft372"><i>—&#160;центр&#160;масс,&#160;то</i></p>
+<p style="position:absolute;top:809px;left:87px;white-space:nowrap" class="ft372"><i>для&#160;любой&#160;точки</i></p>
+<p style="position:absolute;top:810px;left:261px;white-space:nowrap" class="ft3711"><i>S</i></p>
+<p style="position:absolute;top:835px;left:365px;white-space:nowrap" class="ft3711"><i>I</i></p>
+<p style="position:absolute;top:842px;left:373px;white-space:nowrap" class="ft3717"><i>S</i></p>
+<p style="position:absolute;top:835px;left:387px;white-space:nowrap" class="ft3713">=</p>
+<p style="position:absolute;top:835px;left:405px;white-space:nowrap" class="ft3711"><i>I</i></p>
+<p style="position:absolute;top:842px;left:413px;white-space:nowrap" class="ft3717"><i>C</i></p>
+<p style="position:absolute;top:835px;left:428px;white-space:nowrap" class="ft3713">+</p>
+<p style="position:absolute;top:835px;left:446px;white-space:nowrap" class="ft3711"><i>M</i></p>
+<p style="position:absolute;top:810px;left:467px;white-space:nowrap" class="ft3719"></p>
+<p style="position:absolute;top:832px;left:467px;white-space:nowrap" class="ft3719"></p>
+<p style="position:absolute;top:819px;left:477px;white-space:nowrap" class="ft3714"><i>−→</i></p>
+<p style="position:absolute;top:835px;left:477px;white-space:nowrap" class="ft3711"><i>SC</i></p>
+<p style="position:absolute;top:810px;left:503px;white-space:nowrap" class="ft3719"></p>
+<p style="position:absolute;top:832px;left:503px;white-space:nowrap" class="ft3719"></p>
+<p style="position:absolute;top:824px;left:513px;white-space:nowrap" class="ft3715">2</p>
+<p style="position:absolute;top:835px;left:523px;white-space:nowrap" class="ft3711"><i>.</i></p>
+<p style="position:absolute;top:873px;left:87px;white-space:nowrap" class="ft372"><i>Доказательство.</i></p>
+<p style="position:absolute;top:873px;left:266px;white-space:nowrap" class="ft373">Разложим</p>
+<p style="position:absolute;top:893px;left:377px;white-space:nowrap" class="ft3714"><i>−−→</i></p>
+<p style="position:absolute;top:910px;left:377px;white-space:nowrap" class="ft3711"><i>SA</i></p>
+<p style="position:absolute;top:917px;left:402px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:910px;left:413px;white-space:nowrap" class="ft3713">=</p>
+<p style="position:absolute;top:893px;left:431px;white-space:nowrap" class="ft3714"><i>−→</i></p>
+<p style="position:absolute;top:910px;left:431px;white-space:nowrap" class="ft3711"><i>SC</i></p>
+<p style="position:absolute;top:910px;left:461px;white-space:nowrap" class="ft3713">+</p>
+<p style="position:absolute;top:893px;left:478px;white-space:nowrap" class="ft3714"><i>−−→</i></p>
+<p style="position:absolute;top:910px;left:478px;white-space:nowrap" class="ft3711"><i>CA</i></p>
+<p style="position:absolute;top:917px;left:505px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:910px;left:511px;white-space:nowrap" class="ft3711"><i>.</i></p>
+<p style="position:absolute;top:946px;left:87px;white-space:nowrap" class="ft373">Тогда</p>
+<p style="position:absolute;top:970px;left:221px;white-space:nowrap" class="ft3711"><i>I</i></p>
+<p style="position:absolute;top:976px;left:229px;white-space:nowrap" class="ft3717"><i>S</i></p>
+<p style="position:absolute;top:970px;left:243px;white-space:nowrap" class="ft3713">=</p>
+<p style="position:absolute;top:948px;left:262px;white-space:nowrap" class="ft3719">X</p>
+<p style="position:absolute;top:994px;left:273px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:970px;left:291px;white-space:nowrap" class="ft3711"><i>m</i></p>
+<p style="position:absolute;top:976px;left:306px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:965px;left:311px;white-space:nowrap" class="ft3714"><i>k</i></p>
+<p style="position:absolute;top:953px;left:320px;white-space:nowrap" class="ft3714"><i>−→</i></p>
+<p style="position:absolute;top:970px;left:320px;white-space:nowrap" class="ft3711"><i>SC</i></p>
+<p style="position:absolute;top:970px;left:350px;white-space:nowrap" class="ft3713">+</p>
+<p style="position:absolute;top:953px;left:367px;white-space:nowrap" class="ft3714"><i>−−→</i></p>
+<p style="position:absolute;top:970px;left:367px;white-space:nowrap" class="ft3711"><i>CA</i></p>
+<p style="position:absolute;top:976px;left:394px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:965px;left:400px;white-space:nowrap" class="ft3714"><i>k</i></p>
+<p style="position:absolute;top:966px;left:408px;white-space:nowrap" class="ft3715">2</p>
+<p style="position:absolute;top:1029px;left:243px;white-space:nowrap" class="ft3713">=</p>
+<p style="position:absolute;top:1008px;left:262px;white-space:nowrap" class="ft3719">X</p>
+<p style="position:absolute;top:1054px;left:273px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:1029px;left:291px;white-space:nowrap" class="ft3711"><i>m</i></p>
+<p style="position:absolute;top:1036px;left:306px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:1025px;left:311px;white-space:nowrap" class="ft3714"><i>k</i></p>
+<p style="position:absolute;top:1013px;left:320px;white-space:nowrap" class="ft3714"><i>−→</i></p>
+<p style="position:absolute;top:1029px;left:320px;white-space:nowrap" class="ft3711"><i>SC</i></p>
+<p style="position:absolute;top:1025px;left:346px;white-space:nowrap" class="ft3714"><i>k</i></p>
+<p style="position:absolute;top:1026px;left:355px;white-space:nowrap" class="ft3715">2</p>
+<p style="position:absolute;top:1029px;left:366px;white-space:nowrap" class="ft3713">+&#160;2</p>
+<p style="position:absolute;top:994px;left:395px;white-space:nowrap" class="ft3719">&#160;</p>
+<p style="position:absolute;top:1013px;left:409px;white-space:nowrap" class="ft3714"><i>−→</i></p>
+<p style="position:absolute;top:1029px;left:409px;white-space:nowrap" class="ft3711"><i>SC,</i></p>
+<p style="position:absolute;top:1008px;left:443px;white-space:nowrap" class="ft3719">X</p>
+<p style="position:absolute;top:1054px;left:454px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:1029px;left:472px;white-space:nowrap" class="ft3711"><i>m</i></p>
+<p style="position:absolute;top:1036px;left:487px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:1013px;left:492px;white-space:nowrap" class="ft3714"><i>−−→</i></p>
+<p style="position:absolute;top:1029px;left:492px;white-space:nowrap" class="ft3711"><i>CA</i></p>
+<p style="position:absolute;top:1036px;left:519px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:994px;left:524px;white-space:nowrap" class="ft3719">!</p>
+<p style="position:absolute;top:1029px;left:543px;white-space:nowrap" class="ft3713">+</p>
+<p style="position:absolute;top:1008px;left:560px;white-space:nowrap" class="ft3719">X</p>
+<p style="position:absolute;top:1054px;left:571px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:1029px;left:589px;white-space:nowrap" class="ft3711"><i>m</i></p>
+<p style="position:absolute;top:1036px;left:605px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:1025px;left:610px;white-space:nowrap" class="ft3714"><i>k</i></p>
+<p style="position:absolute;top:1013px;left:619px;white-space:nowrap" class="ft3714"><i>−−→</i></p>
+<p style="position:absolute;top:1029px;left:619px;white-space:nowrap" class="ft3711"><i>CA</i></p>
+<p style="position:absolute;top:1036px;left:646px;white-space:nowrap" class="ft3717"><i>i</i></p>
+<p style="position:absolute;top:1025px;left:651px;white-space:nowrap" class="ft3714"><i>k</i></p>
+<p style="position:absolute;top:1026px;left:660px;white-space:nowrap" class="ft3715">2</p>
+<p style="position:absolute;top:1029px;left:667px;white-space:nowrap" class="ft3711"><i>.</i></p>
+<p style="position:absolute;top:1074px;left:87px;white-space:nowrap" class="ft373">Среднее&#160;слагаемое&#160;равно&#160;нулю&#160;по&#160;определению&#160;центра&#160;масс,&#160;поэтому</p>
+<p style="position:absolute;top:1114px;left:369px;white-space:nowrap" class="ft3711"><i>I</i></p>
+<p style="position:absolute;top:1121px;left:377px;white-space:nowrap" class="ft3717"><i>S</i></p>
+<p style="position:absolute;top:1114px;left:391px;white-space:nowrap" class="ft3713">=</p>
+<p style="position:absolute;top:1114px;left:409px;white-space:nowrap" class="ft3711"><i>M</i></p>
+<p style="position:absolute;top:1110px;left:428px;white-space:nowrap" class="ft3714"><i>k</i></p>
+<p style="position:absolute;top:1097px;left:437px;white-space:nowrap" class="ft3714"><i>−→</i></p>
+<p style="position:absolute;top:1114px;left:437px;white-space:nowrap" class="ft3711"><i>SC</i></p>
+<p style="position:absolute;top:1110px;left:463px;white-space:nowrap" class="ft3714"><i>k</i></p>
+<p style="position:absolute;top:1111px;left:472px;white-space:nowrap" class="ft3715">2</p>
+<p style="position:absolute;top:1114px;left:483px;white-space:nowrap" class="ft3713">+</p>
+<p style="position:absolute;top:1114px;left:501px;white-space:nowrap" class="ft3711"><i>I</i></p>
+<p style="position:absolute;top:1121px;left:508px;white-space:nowrap" class="ft3717"><i>C</i></p>
+<p style="position:absolute;top:1114px;left:519px;white-space:nowrap" class="ft3711"><i>.</i></p>
+<p style="position:absolute;top:1207px;left:435px;white-space:nowrap" class="ft373">37</p>
+</div></div></div>
+</div>
+</section><section id="oralContent" class="oral-content"><article class="article"><h1>Билет 20. Момент инерции системы материальных точек относительно точки. Теорема Лагранжа о моментах инерции.</h1><p class="muted"><b>Раздел:</b> Аффинная геометрия и квадрики</p>
 <h2>План ответа</h2><div class="plan"><ul><li>Определить систему материальных точек и центр масс.</li><li>Определить момент инерции относительно точки.</li><li>Сформулировать теорему Лагранжа–Штейнера.</li><li>Доказать разложением $\overrightarrow{AP_i}=\overrightarrow{AC}+\overrightarrow{CP_i}$.</li></ul></div><h2>Основные определения и факты</h2><div class="fact">Центр масс $C$ задаётся условием $\sum m_i\overrightarrow{CP_i}=0$.</div><div class="fact">Момент инерции относительно точки $A$: $I_A=\sum m_i\|\overrightarrow{AP_i}\|^2$.</div><div class="fact">Теорема: $I_A=I_C+M\|\overrightarrow{AC}\|^2$, где $M=\sum m_i$.</div><div class="fact">Смешанный член исчезает из-за определения центра масс.</div><h2>Ключевые формулы</h2><div class="formula-list"><div class="formula"><strong>Центр масс</strong><div>$\sum_i m_i\overrightarrow{CP_i}=0$</div></div><div class="formula"><strong>Момент инерции</strong><div>$I_A=\sum_i m_i\|\overrightarrow{AP_i}\|^2$</div></div><div class="formula"><strong>Штейнер</strong><div>$I_A=I_C+M\|\overrightarrow{AC}\|^2$</div></div></div><h2>Примеры</h2><div class="example-box"><ol class="examples"><li>Для двух равных масс в точках 0 и 2 центр масс — 1.</li><li>Если точка $A=C$, то $I_A=I_C$.</li><li>При переносе точки отсчёта от центра масс на расстояние $d$ момент увеличивается на $Md^2$.</li></ol></div><h2>Проверочные вопросы</h2><div class="checklist"><ul><li>Почему смешанный член равен нулю?</li><li>Что такое центр масс в аффинной записи?</li><li>Как меняется момент при переносе точки отсчёта?</li></ul></div></article></section></article></main><footer class="footer"><p>Линейная Алгебра: Экзамен · билеты 1–27 · статический GitHub Pages.</p><p><a href="../sources.html">Источники</a></p></footer><script src="../assets/app.js"></script></body></html>

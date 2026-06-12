@@ -1,2 +1,207 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Билет 17 · Линейная Алгебра: Экзамен</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:true,macros:{R:"\\mathbb{R}",C:"\\mathbb{C}",F:"\\mathbb{F}",Ker:"\\operatorname{Ker}",rk:"\\operatorname{rk}",tr:"\\operatorname{tr}",Sym:"\\operatorname{Sym}",Alt:"\\operatorname{Alt}",dist:"\\operatorname{dist}",pr:"\\operatorname{pr}",ort:"\\operatorname{ort}",End:"\\operatorname{End}",Hom:"\\operatorname{Hom}"}},svg:{fontCache:"global"}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body class="ticket-page full-active"><header class="topbar"><a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Линейная Алгебра: Экзамен</span></a><nav><a class="active" href="../index.html">Билеты</a><a href="../map.html">Карта</a><a href="../trainer.html">Тренажёр</a><a href="../formulas.html">Формулы</a><a href="../interactives.html">Интерактивы</a></nav><button id="themeToggle" class="icon-button">◐</button></header><main class="layout"><aside class="sidebar"><div style="margin:4px 6px 12px;color:var(--muted);font-size:13px">Билеты</div><a href="ticket-01.html" class="">1</a><a href="ticket-02.html" class="">2</a><a href="ticket-03.html" class="">3</a><a href="ticket-04.html" class="">4</a><a href="ticket-05.html" class="">5</a><a href="ticket-06.html" class="">6</a><a href="ticket-07.html" class="">7</a><a href="ticket-08.html" class="">8</a><a href="ticket-09.html" class="">9</a><a href="ticket-10.html" class="">10</a><a href="ticket-11.html" class="">11</a><a href="ticket-12.html" class="">12</a><a href="ticket-13.html" class="">13</a><a href="ticket-14.html" class="">14</a><a href="ticket-15.html" class="">15</a><a href="ticket-16.html" class="">16</a><a href="ticket-17.html" class="current">17</a><a href="ticket-18.html" class="">18</a><a href="ticket-19.html" class="">19</a><a href="ticket-20.html" class="">20</a><a href="ticket-21.html" class="">21</a><a href="ticket-22.html" class="">22</a><a href="ticket-23.html" class="">23</a><a href="ticket-24.html" class="">24</a><a href="ticket-25.html" class="">25</a><a href="ticket-26.html" class="">26</a><a href="ticket-27.html" class="">27</a></aside><article class="article"><div class="ticket-tools"><button class="small-btn" data-mark-ticket="17">Отметить как выученный</button><a class="small-btn" href="ticket-16.html">← Предыдущий</a><a class="small-btn" href="ticket-18.html">Следующий →</a></div><div class="mode-switch"><button id="showFull" class="active">Полный конспект</button><button id="showOral">Устный ответ</button></div><p class="mode-note">Полный конспект восстановлен из первой полной версии сайта. Вкладка «Устный ответ» содержит текущую краткую структуру ответа.</p><section id="fullContent" class="full-content" data-old-url="https://raw.githubusercontent.com/HammonDDDDD/linal_exam_github_pages/1f7afc254d9da403d546e97cd2877cf89860a648/tickets/ticket-17.html"><div class="loading-full">Загружаю полный билет…</div></section><section id="oralContent" class="oral-content"><article class="article"><h1>Билет 17. Полярное разложение невырожденного линейного оператора в евклидовом пространстве.</h1><p class="muted"><b>Раздел:</b> Эрмитовы пространства и операторы</p>
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Билет 17 · Линейная Алгебра: Экзамен</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:true,macros:{R:"\\mathbb{R}",C:"\\mathbb{C}",F:"\\mathbb{F}",Ker:"\\operatorname{Ker}",rk:"\\operatorname{rk}",tr:"\\operatorname{tr}",Sym:"\\operatorname{Sym}",Alt:"\\operatorname{Alt}",dist:"\\operatorname{dist}",pr:"\\operatorname{pr}",ort:"\\operatorname{ort}",End:"\\operatorname{End}",Hom:"\\operatorname{Hom}"}},svg:{fontCache:"global"}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body class="ticket-page full-active"><header class="topbar"><a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Линейная Алгебра: Экзамен</span></a><nav><a class="active" href="../index.html">Билеты</a><a href="../map.html">Карта</a><a href="../trainer.html">Тренажёр</a><a href="../formulas.html">Формулы</a><a href="../interactives.html">Интерактивы</a></nav><button id="themeToggle" class="icon-button">◐</button></header><main class="layout"><aside class="sidebar"><div style="margin:4px 6px 12px;color:var(--muted);font-size:13px">Билеты</div><a href="ticket-01.html" class="">1</a><a href="ticket-02.html" class="">2</a><a href="ticket-03.html" class="">3</a><a href="ticket-04.html" class="">4</a><a href="ticket-05.html" class="">5</a><a href="ticket-06.html" class="">6</a><a href="ticket-07.html" class="">7</a><a href="ticket-08.html" class="">8</a><a href="ticket-09.html" class="">9</a><a href="ticket-10.html" class="">10</a><a href="ticket-11.html" class="">11</a><a href="ticket-12.html" class="">12</a><a href="ticket-13.html" class="">13</a><a href="ticket-14.html" class="">14</a><a href="ticket-15.html" class="">15</a><a href="ticket-16.html" class="">16</a><a href="ticket-17.html" class="current">17</a><a href="ticket-18.html" class="">18</a><a href="ticket-19.html" class="">19</a><a href="ticket-20.html" class="">20</a><a href="ticket-21.html" class="">21</a><a href="ticket-22.html" class="">22</a><a href="ticket-23.html" class="">23</a><a href="ticket-24.html" class="">24</a><a href="ticket-25.html" class="">25</a><a href="ticket-26.html" class="">26</a><a href="ticket-27.html" class="">27</a></aside><article class="article"><div class="ticket-tools"><button class="small-btn" data-mark-ticket="17">Отметить как выученный</button><a class="small-btn" href="ticket-16.html">← Предыдущий</a><a class="small-btn" href="ticket-18.html">Следующий →</a></div><div class="mode-switch"><button id="showFull" class="active">Полный конспект</button><button id="showOral">Устный ответ</button></div><p class="mode-note">Полный конспект восстановлен из первой полной версии сайта. Вкладка «Устный ответ» содержит текущую краткую структуру ответа.</p><section id="fullContent" class="full-content">
+<style>
+.full-content .pdf-source-note{margin:0 0 18px;padding:14px 16px;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;background:color-mix(in srgb,var(--paper) 86%,var(--bg));color:var(--muted)}
+.full-content .pdf-ticket-pages{display:grid;gap:24px;justify-items:center;margin-top:16px}
+.full-content .pdf-ticket-page{width:min(100%,660px);height:934px;overflow:auto;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);position:relative;color:#000}
+.full-content .pdf-page-inner{width:892px;height:1262px;transform:scale(.74);transform-origin:top left;background:#fff;color:#000}
+.full-content .pdf-ticket-page p{margin:0;padding:0;color:#000}
+.full-content .pdf-ticket-page a{color:#000;text-decoration:none}
+.full-content .pdf-ticket-page *{box-sizing:content-box}
+@media (max-width:760px){.full-content .pdf-ticket-page{height:760px}.full-content .pdf-page-inner{transform:scale(.60)}}
+.full-content .ft10{font-size:31px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft11{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft12{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft13{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft14{font-size:26px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft15{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#0000ff;}
+.full-content .ft16{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft17{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#0000ff;}
+.full-content .ft18{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#0000ff;}
+.full-content .ft19{font-size:18px;line-height:21px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft310{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#ffffff;}
+.full-content .ft311{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft312{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft313{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft314{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft315{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft316{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft317{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft318{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft319{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft520{font-size:9px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft521{font-size:26px;line-height:32px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft822{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft923{font-size:18px;line-height:21px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft1024{font-size:18px;line-height:31px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft1025{font-size:22px;line-height:26px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft1726{font-size:12px;line-height:11px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft1827{font-size:9px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2228{font-size:26px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2329{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2330{font-size:15px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2431{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2932{font-size:12px;line-height:11px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft3533{font-size:9px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft3634{font-size:12px;line-height:10px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+</style>
+<div class="pdf-ticket-pages">
+<div class="pdf-ticket-page"><div class="pdf-page-inner"><!-- Page 32 -->
+<div id="page32-div" style="position:relative;width:892px;height:1262px;">
+<p style="position:absolute;top:87px;left:87px;white-space:nowrap" class="ft324"><b>17.&#160;Билет&#160;17.&#160;Полярное&#160;разложение&#160;невырож-</b></p>
+<p style="position:absolute;top:120px;left:145px;white-space:nowrap" class="ft324"><b>денного&#160;оператора.</b></p>
+<p style="position:absolute;top:175px;left:111px;white-space:nowrap" class="ft3210">План&#160;ответа</p>
+<p style="position:absolute;top:207px;left:111px;white-space:nowrap" class="ft329">Билет&#160;использует&#160;результат&#160;о&#160;положительном&#160;корне.&#160;Нужно&#160;доказать<br/>разложение</p>
+<p style="position:absolute;top:230px;left:232px;white-space:nowrap" class="ft3211"><i>A</i></p>
+<p style="position:absolute;top:230px;left:250px;white-space:nowrap" class="ft3213">=</p>
+<p style="position:absolute;top:230px;left:269px;white-space:nowrap" class="ft3211"><i>U&#160;P</i></p>
+<p style="position:absolute;top:229px;left:296px;white-space:nowrap" class="ft323">,&#160;где</p>
+<p style="position:absolute;top:230px;left:345px;white-space:nowrap" class="ft3211"><i>U</i></p>
+<p style="position:absolute;top:229px;left:364px;white-space:nowrap" class="ft323">ортогонален,</p>
+<p style="position:absolute;top:230px;left:495px;white-space:nowrap" class="ft3211"><i>P&#160;&gt;</i></p>
+<p style="position:absolute;top:230px;left:533px;white-space:nowrap" class="ft3213">0</p>
+<p style="position:absolute;top:229px;left:547px;white-space:nowrap" class="ft323">самосопряжён.</p>
+<p style="position:absolute;top:278px;left:87px;white-space:nowrap" class="ft326"><b>Теорема&#160;17.1</b></p>
+<p style="position:absolute;top:278px;left:228px;white-space:nowrap" class="ft323">(Полярное&#160;разложение)</p>
+<p style="position:absolute;top:278px;left:457px;white-space:nowrap" class="ft326"><b>.</b></p>
+<p style="position:absolute;top:278px;left:469px;white-space:nowrap" class="ft322"><i>Пусть</i></p>
+<p style="position:absolute;top:279px;left:537px;white-space:nowrap" class="ft3211"><i>A</i></p>
+<p style="position:absolute;top:278px;left:554px;white-space:nowrap" class="ft322"><i>—&#160;невырожденный&#160;линей-</i></p>
+<p style="position:absolute;top:299px;left:87px;white-space:nowrap" class="ft3223"><i>ный&#160;оператор&#160;евклидова&#160;пространства.&#160;Тогда&#160;существует&#160;единствен-<br/>ное&#160;разложение</i></p>
+<p style="position:absolute;top:344px;left:413px;white-space:nowrap" class="ft3211"><i>A</i></p>
+<p style="position:absolute;top:344px;left:431px;white-space:nowrap" class="ft3213">=</p>
+<p style="position:absolute;top:344px;left:450px;white-space:nowrap" class="ft3211"><i>U&#160;P,</i></p>
+<p style="position:absolute;top:374px;left:87px;white-space:nowrap" class="ft322"><i>где</i></p>
+<p style="position:absolute;top:375px;left:127px;white-space:nowrap" class="ft3211"><i>U</i></p>
+<p style="position:absolute;top:374px;left:149px;white-space:nowrap" class="ft322"><i>—&#160;ортогональный&#160;оператор,&#160;а</i></p>
+<p style="position:absolute;top:375px;left:463px;white-space:nowrap" class="ft3211"><i>P</i></p>
+<p style="position:absolute;top:374px;left:485px;white-space:nowrap" class="ft322"><i>—&#160;положительно&#160;определённый</i></p>
+<p style="position:absolute;top:396px;left:87px;white-space:nowrap" class="ft322"><i>самосопряжённый&#160;оператор.</i></p>
+<p style="position:absolute;top:432px;left:87px;white-space:nowrap" class="ft322"><i>Доказательство.</i></p>
+<p style="position:absolute;top:432px;left:266px;white-space:nowrap" class="ft323">Рассмотрим&#160;оператор</p>
+<p style="position:absolute;top:473px;left:427px;white-space:nowrap" class="ft3211"><i>A</i></p>
+<p style="position:absolute;top:467px;left:440px;white-space:nowrap" class="ft3216"><i>∗</i></p>
+<p style="position:absolute;top:473px;left:448px;white-space:nowrap" class="ft3211"><i>A.</i></p>
+<p style="position:absolute;top:512px;left:87px;white-space:nowrap" class="ft323">Он&#160;самосопряжён&#160;и&#160;положительно&#160;определён,&#160;поскольку</p>
+<p style="position:absolute;top:552px;left:311px;white-space:nowrap" class="ft3213">(</p>
+<p style="position:absolute;top:552px;left:318px;white-space:nowrap" class="ft3211"><i>A</i></p>
+<p style="position:absolute;top:546px;left:331px;white-space:nowrap" class="ft3216"><i>∗</i></p>
+<p style="position:absolute;top:552px;left:338px;white-space:nowrap" class="ft3211"><i>Ax,&#160;x</i></p>
+<p style="position:absolute;top:552px;left:379px;white-space:nowrap" class="ft3213">)&#160;=&#160;(</p>
+<p style="position:absolute;top:552px;left:417px;white-space:nowrap" class="ft3211"><i>Ax,&#160;Ax</i></p>
+<p style="position:absolute;top:552px;left:471px;white-space:nowrap" class="ft3213">)&#160;=</p>
+<p style="position:absolute;top:548px;left:501px;white-space:nowrap" class="ft3214"><i>k</i></p>
+<p style="position:absolute;top:552px;left:510px;white-space:nowrap" class="ft3211"><i>Ax</i></p>
+<p style="position:absolute;top:548px;left:533px;white-space:nowrap" class="ft3214"><i>k</i></p>
+<p style="position:absolute;top:549px;left:542px;white-space:nowrap" class="ft3215">2</p>
+<p style="position:absolute;top:552px;left:554px;white-space:nowrap" class="ft3211"><i>&gt;</i></p>
+<p style="position:absolute;top:552px;left:573px;white-space:nowrap" class="ft3213">0</p>
+<p style="position:absolute;top:591px;left:87px;white-space:nowrap" class="ft323">при</p>
+<p style="position:absolute;top:592px;left:128px;white-space:nowrap" class="ft3211"><i>x</i></p>
+<p style="position:absolute;top:587px;left:143px;white-space:nowrap" class="ft3214"><i>6</i></p>
+<p style="position:absolute;top:592px;left:143px;white-space:nowrap" class="ft3213">=&#160;0</p>
+<p style="position:absolute;top:591px;left:171px;white-space:nowrap" class="ft323">.&#160;Поэтому&#160;существует&#160;положительный&#160;корень</p>
+<p style="position:absolute;top:632px;left:392px;white-space:nowrap" class="ft3211"><i>P</i></p>
+<p style="position:absolute;top:632px;left:411px;white-space:nowrap" class="ft3213">=&#160;(</p>
+<p style="position:absolute;top:632px;left:436px;white-space:nowrap" class="ft3211"><i>A</i></p>
+<p style="position:absolute;top:625px;left:449px;white-space:nowrap" class="ft3216"><i>∗</i></p>
+<p style="position:absolute;top:632px;left:456px;white-space:nowrap" class="ft3211"><i>A</i></p>
+<p style="position:absolute;top:632px;left:470px;white-space:nowrap" class="ft3213">)</p>
+<p style="position:absolute;top:628px;left:476px;white-space:nowrap" class="ft3215">1/2</p>
+<p style="position:absolute;top:632px;left:496px;white-space:nowrap" class="ft3211"><i>.</i></p>
+<p style="position:absolute;top:670px;left:87px;white-space:nowrap" class="ft323">Положим</p>
+<p style="position:absolute;top:693px;left:403px;white-space:nowrap" class="ft3211"><i>U</i></p>
+<p style="position:absolute;top:693px;left:422px;white-space:nowrap" class="ft3213">=</p>
+<p style="position:absolute;top:693px;left:441px;white-space:nowrap" class="ft3211"><i>AP</i></p>
+<p style="position:absolute;top:686px;left:468px;white-space:nowrap" class="ft3216"><i>−</i></p>
+<p style="position:absolute;top:690px;left:478px;white-space:nowrap" class="ft3215">1</p>
+<p style="position:absolute;top:693px;left:485px;white-space:nowrap" class="ft3211"><i>.</i></p>
+<p style="position:absolute;top:723px;left:87px;white-space:nowrap" class="ft323">Проверим&#160;ортогональность:</p>
+<p style="position:absolute;top:764px;left:288px;white-space:nowrap" class="ft3211"><i>U</i></p>
+<p style="position:absolute;top:757px;left:301px;white-space:nowrap" class="ft3216"><i>∗</i></p>
+<p style="position:absolute;top:764px;left:309px;white-space:nowrap" class="ft3211"><i>U</i></p>
+<p style="position:absolute;top:764px;left:327px;white-space:nowrap" class="ft3213">=&#160;(</p>
+<p style="position:absolute;top:764px;left:353px;white-space:nowrap" class="ft3211"><i>P</i></p>
+<p style="position:absolute;top:757px;left:367px;white-space:nowrap" class="ft3216"><i>−</i></p>
+<p style="position:absolute;top:761px;left:376px;white-space:nowrap" class="ft3215">1</p>
+<p style="position:absolute;top:764px;left:384px;white-space:nowrap" class="ft3213">)</p>
+<p style="position:absolute;top:757px;left:390px;white-space:nowrap" class="ft3216"><i>∗</i></p>
+<p style="position:absolute;top:764px;left:397px;white-space:nowrap" class="ft3211"><i>A</i></p>
+<p style="position:absolute;top:757px;left:411px;white-space:nowrap" class="ft3216"><i>∗</i></p>
+<p style="position:absolute;top:764px;left:418px;white-space:nowrap" class="ft3211"><i>AP</i></p>
+<p style="position:absolute;top:757px;left:445px;white-space:nowrap" class="ft3216"><i>−</i></p>
+<p style="position:absolute;top:761px;left:455px;white-space:nowrap" class="ft3215">1</p>
+<p style="position:absolute;top:764px;left:467px;white-space:nowrap" class="ft3213">=</p>
+<p style="position:absolute;top:764px;left:485px;white-space:nowrap" class="ft3211"><i>P</i></p>
+<p style="position:absolute;top:757px;left:499px;white-space:nowrap" class="ft3216"><i>−</i></p>
+<p style="position:absolute;top:761px;left:509px;white-space:nowrap" class="ft3215">1</p>
+<p style="position:absolute;top:764px;left:516px;white-space:nowrap" class="ft3211"><i>P</i></p>
+<p style="position:absolute;top:761px;left:530px;white-space:nowrap" class="ft3215">2</p>
+<p style="position:absolute;top:764px;left:537px;white-space:nowrap" class="ft3211"><i>P</i></p>
+<p style="position:absolute;top:757px;left:551px;white-space:nowrap" class="ft3216"><i>−</i></p>
+<p style="position:absolute;top:761px;left:560px;white-space:nowrap" class="ft3215">1</p>
+<p style="position:absolute;top:764px;left:573px;white-space:nowrap" class="ft3213">=</p>
+<p style="position:absolute;top:764px;left:591px;white-space:nowrap" class="ft3211"><i>I.</i></p>
+<p style="position:absolute;top:802px;left:87px;white-space:nowrap" class="ft323">Значит,</p>
+<p style="position:absolute;top:803px;left:166px;white-space:nowrap" class="ft3211"><i>U</i></p>
+<p style="position:absolute;top:802px;left:186px;white-space:nowrap" class="ft323">ортогонален,&#160;и</p>
+<p style="position:absolute;top:825px;left:413px;white-space:nowrap" class="ft3211"><i>A</i></p>
+<p style="position:absolute;top:825px;left:431px;white-space:nowrap" class="ft3213">=</p>
+<p style="position:absolute;top:825px;left:450px;white-space:nowrap" class="ft3211"><i>U&#160;P.</i></p>
+<p style="position:absolute;top:890px;left:87px;white-space:nowrap" class="ft322"><i>Единственность.</i></p>
+<p style="position:absolute;top:890px;left:269px;white-space:nowrap" class="ft323">Если</p>
+<p style="position:absolute;top:892px;left:321px;white-space:nowrap" class="ft3211"><i>A</i></p>
+<p style="position:absolute;top:892px;left:339px;white-space:nowrap" class="ft3213">=</p>
+<p style="position:absolute;top:892px;left:358px;white-space:nowrap" class="ft3211"><i>U&#160;P</i></p>
+<p style="position:absolute;top:890px;left:385px;white-space:nowrap" class="ft323">,&#160;где</p>
+<p style="position:absolute;top:892px;left:434px;white-space:nowrap" class="ft3211"><i>U</i></p>
+<p style="position:absolute;top:890px;left:453px;white-space:nowrap" class="ft323">ортогонален,</p>
+<p style="position:absolute;top:892px;left:584px;white-space:nowrap" class="ft3211"><i>P&#160;&gt;</i></p>
+<p style="position:absolute;top:892px;left:622px;white-space:nowrap" class="ft3213">0</p>
+<p style="position:absolute;top:890px;left:630px;white-space:nowrap" class="ft323">,&#160;то</p>
+<p style="position:absolute;top:931px;left:359px;white-space:nowrap" class="ft3211"><i>A</i></p>
+<p style="position:absolute;top:925px;left:372px;white-space:nowrap" class="ft3216"><i>∗</i></p>
+<p style="position:absolute;top:931px;left:379px;white-space:nowrap" class="ft3211"><i>A</i></p>
+<p style="position:absolute;top:931px;left:397px;white-space:nowrap" class="ft3213">=</p>
+<p style="position:absolute;top:931px;left:416px;white-space:nowrap" class="ft3211"><i>P</i></p>
+<p style="position:absolute;top:925px;left:429px;white-space:nowrap" class="ft3216"><i>∗</i></p>
+<p style="position:absolute;top:931px;left:437px;white-space:nowrap" class="ft3211"><i>U</i></p>
+<p style="position:absolute;top:925px;left:450px;white-space:nowrap" class="ft3216"><i>∗</i></p>
+<p style="position:absolute;top:931px;left:457px;white-space:nowrap" class="ft3211"><i>U&#160;P</i></p>
+<p style="position:absolute;top:931px;left:490px;white-space:nowrap" class="ft3213">=</p>
+<p style="position:absolute;top:931px;left:509px;white-space:nowrap" class="ft3211"><i>P</i></p>
+<p style="position:absolute;top:928px;left:522px;white-space:nowrap" class="ft3215">2</p>
+<p style="position:absolute;top:931px;left:529px;white-space:nowrap" class="ft3211"><i>.</i></p>
+<p style="position:absolute;top:970px;left:87px;white-space:nowrap" class="ft323">Так&#160;как&#160;положительный&#160;корень&#160;единственен,</p>
+<p style="position:absolute;top:1010px;left:392px;white-space:nowrap" class="ft3211"><i>P</i></p>
+<p style="position:absolute;top:1010px;left:411px;white-space:nowrap" class="ft3213">=&#160;(</p>
+<p style="position:absolute;top:1010px;left:436px;white-space:nowrap" class="ft3211"><i>A</i></p>
+<p style="position:absolute;top:1004px;left:449px;white-space:nowrap" class="ft3216"><i>∗</i></p>
+<p style="position:absolute;top:1010px;left:456px;white-space:nowrap" class="ft3211"><i>A</i></p>
+<p style="position:absolute;top:1010px;left:470px;white-space:nowrap" class="ft3213">)</p>
+<p style="position:absolute;top:1007px;left:476px;white-space:nowrap" class="ft3215">1/2</p>
+<p style="position:absolute;top:1010px;left:496px;white-space:nowrap" class="ft3211"><i>.</i></p>
+<p style="position:absolute;top:1049px;left:87px;white-space:nowrap" class="ft323">После&#160;этого</p>
+<p style="position:absolute;top:1072px;left:406px;white-space:nowrap" class="ft3211"><i>U</i></p>
+<p style="position:absolute;top:1072px;left:425px;white-space:nowrap" class="ft3213">=</p>
+<p style="position:absolute;top:1072px;left:443px;white-space:nowrap" class="ft3211"><i>AP</i></p>
+<p style="position:absolute;top:1065px;left:470px;white-space:nowrap" class="ft3216"><i>−</i></p>
+<p style="position:absolute;top:1068px;left:480px;white-space:nowrap" class="ft3215">1</p>
+<p style="position:absolute;top:1102px;left:87px;white-space:nowrap" class="ft323">тоже&#160;единственен.</p>
+<p style="position:absolute;top:1207px;left:435px;white-space:nowrap" class="ft323">32</p>
+</div></div></div>
+<div class="pdf-ticket-page"><div class="pdf-page-inner"><!-- Page 33 -->
+<div id="page33-div" style="position:relative;width:892px;height:1262px;">
+<p style="position:absolute;top:93px;left:111px;white-space:nowrap" class="ft3310">Главное</p>
+<p style="position:absolute;top:126px;left:111px;white-space:nowrap" class="ft339">Полярное&#160;разложение&#160;—&#160;операторный&#160;аналог&#160;записи&#160;комплексного<br/>числа</p>
+<p style="position:absolute;top:149px;left:171px;white-space:nowrap" class="ft3311"><i>z</i></p>
+<p style="position:absolute;top:149px;left:185px;white-space:nowrap" class="ft3313">=</p>
+<p style="position:absolute;top:149px;left:204px;white-space:nowrap" class="ft3311"><i>e</i></p>
+<p style="position:absolute;top:146px;left:212px;white-space:nowrap" class="ft3317"><i>iφ</i></p>
+<p style="position:absolute;top:149px;left:225px;white-space:nowrap" class="ft3311"><i>r</i></p>
+<p style="position:absolute;top:147px;left:234px;white-space:nowrap" class="ft333">:&#160;ортогональная&#160;часть&#160;играет&#160;роль&#160;поворота,&#160;положитель-</p>
+<p style="position:absolute;top:169px;left:111px;white-space:nowrap" class="ft333">ная&#160;самосопряжённая&#160;часть&#160;—&#160;роль&#160;растяжения.</p>
+<p style="position:absolute;top:1207px;left:435px;white-space:nowrap" class="ft333">33</p>
+</div></div></div>
+</div>
+</section><section id="oralContent" class="oral-content"><article class="article"><h1>Билет 17. Полярное разложение невырожденного линейного оператора в евклидовом пространстве.</h1><p class="muted"><b>Раздел:</b> Эрмитовы пространства и операторы</p>
 <h2>План ответа</h2><div class="plan"><ul><li>Сформулировать полярное разложение.</li><li>Построить положительную часть $P=(A^*A)^{1/2}$.</li><li>Положить $U=AP^{-1}$.</li><li>Доказать ортогональность/унитарность $U$ и единственность.</li></ul></div><h2>Основные определения и факты</h2><div class="fact">Полярное разложение — аналог $z=re^{i\varphi}$: оператор = изометрическая часть × положительная часть.</div><div class="fact">Для невырожденного $A$ оператор $A^*A$ положительно определён.</div><div class="fact">$P=(A^*A)^{1/2}$, $U=AP^{-1}$, тогда $A=UP$.</div><div class="fact">Единственность следует из $P^2=A^*A$.</div><h2>Ключевые формулы</h2><div class="formula-list"><div class="formula"><strong>Полярное разложение</strong><div>$A=UP$</div></div><div class="formula"><strong>Положительная часть</strong><div>$P=(A^*A)^{1/2}$</div></div><div class="formula"><strong>Ортогональная часть</strong><div>$U=AP^{-1}$</div></div><div class="formula"><strong>Проверка</strong><div>$U^*U=I$</div></div></div><h2>Примеры</h2><div class="example-box"><ol class="examples"><li>Если $A$ уже положительно определён, то $U=I$, $P=A$.</li><li>Если $A$ ортогонален, то $P=I$, $U=A$.</li><li>Для диагональной $A=\operatorname{diag}(2,3)$ имеем $P=A$, $U=I$.</li></ol></div><h2>Проверочные вопросы</h2><div class="checklist"><ul><li>Почему $A^*A$ положителен?</li><li>Как проверить $U^*U=I$?</li><li>Почему разложение единственно?</li></ul></div></article></section></article></main><footer class="footer"><p>Линейная Алгебра: Экзамен · билеты 1–27 · статический GitHub Pages.</p><p><a href="../sources.html">Источники</a></p></footer><script src="../assets/app.js"></script></body></html>

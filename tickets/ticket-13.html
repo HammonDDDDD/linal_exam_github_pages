@@ -1,2 +1,238 @@
-<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Билет 13 · Линейная Алгебра: Экзамен</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:true,macros:{R:"\\mathbb{R}",C:"\\mathbb{C}",F:"\\mathbb{F}",Ker:"\\operatorname{Ker}",rk:"\\operatorname{rk}",tr:"\\operatorname{tr}",Sym:"\\operatorname{Sym}",Alt:"\\operatorname{Alt}",dist:"\\operatorname{dist}",pr:"\\operatorname{pr}",ort:"\\operatorname{ort}",End:"\\operatorname{End}",Hom:"\\operatorname{Hom}"}},svg:{fontCache:"global"}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body class="ticket-page full-active"><header class="topbar"><a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Линейная Алгебра: Экзамен</span></a><nav><a class="active" href="../index.html">Билеты</a><a href="../map.html">Карта</a><a href="../trainer.html">Тренажёр</a><a href="../formulas.html">Формулы</a><a href="../interactives.html">Интерактивы</a></nav><button id="themeToggle" class="icon-button">◐</button></header><main class="layout"><aside class="sidebar"><div style="margin:4px 6px 12px;color:var(--muted);font-size:13px">Билеты</div><a href="ticket-01.html" class="">1</a><a href="ticket-02.html" class="">2</a><a href="ticket-03.html" class="">3</a><a href="ticket-04.html" class="">4</a><a href="ticket-05.html" class="">5</a><a href="ticket-06.html" class="">6</a><a href="ticket-07.html" class="">7</a><a href="ticket-08.html" class="">8</a><a href="ticket-09.html" class="">9</a><a href="ticket-10.html" class="">10</a><a href="ticket-11.html" class="">11</a><a href="ticket-12.html" class="">12</a><a href="ticket-13.html" class="current">13</a><a href="ticket-14.html" class="">14</a><a href="ticket-15.html" class="">15</a><a href="ticket-16.html" class="">16</a><a href="ticket-17.html" class="">17</a><a href="ticket-18.html" class="">18</a><a href="ticket-19.html" class="">19</a><a href="ticket-20.html" class="">20</a><a href="ticket-21.html" class="">21</a><a href="ticket-22.html" class="">22</a><a href="ticket-23.html" class="">23</a><a href="ticket-24.html" class="">24</a><a href="ticket-25.html" class="">25</a><a href="ticket-26.html" class="">26</a><a href="ticket-27.html" class="">27</a></aside><article class="article"><div class="ticket-tools"><button class="small-btn" data-mark-ticket="13">Отметить как выученный</button><a class="small-btn" href="ticket-12.html">← Предыдущий</a><a class="small-btn" href="ticket-14.html">Следующий →</a></div><div class="mode-switch"><button id="showFull" class="active">Полный конспект</button><button id="showOral">Устный ответ</button></div><p class="mode-note">Полный конспект восстановлен из первой полной версии сайта. Вкладка «Устный ответ» содержит текущую краткую структуру ответа.</p><section id="fullContent" class="full-content" data-old-url="https://raw.githubusercontent.com/HammonDDDDD/linal_exam_github_pages/1f7afc254d9da403d546e97cd2877cf89860a648/tickets/ticket-13.html"><div class="loading-full">Загружаю полный билет…</div></section><section id="oralContent" class="oral-content"><article class="article"><h1>Билет 13. Нормальные операторы в эрмитовом пространстве, их собственные значения и собственные векторы. Теорема о каноническом виде матрицы нормального оператора в эрмитовом пространстве.</h1><p class="muted"><b>Раздел:</b> Эрмитовы пространства и операторы</p>
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Билет 13 · Линейная Алгебра: Экзамен</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:true,macros:{R:"\\mathbb{R}",C:"\\mathbb{C}",F:"\\mathbb{F}",Ker:"\\operatorname{Ker}",rk:"\\operatorname{rk}",tr:"\\operatorname{tr}",Sym:"\\operatorname{Sym}",Alt:"\\operatorname{Alt}",dist:"\\operatorname{dist}",pr:"\\operatorname{pr}",ort:"\\operatorname{ort}",End:"\\operatorname{End}",Hom:"\\operatorname{Hom}"}},svg:{fontCache:"global"}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body class="ticket-page full-active"><header class="topbar"><a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Линейная Алгебра: Экзамен</span></a><nav><a class="active" href="../index.html">Билеты</a><a href="../map.html">Карта</a><a href="../trainer.html">Тренажёр</a><a href="../formulas.html">Формулы</a><a href="../interactives.html">Интерактивы</a></nav><button id="themeToggle" class="icon-button">◐</button></header><main class="layout"><aside class="sidebar"><div style="margin:4px 6px 12px;color:var(--muted);font-size:13px">Билеты</div><a href="ticket-01.html" class="">1</a><a href="ticket-02.html" class="">2</a><a href="ticket-03.html" class="">3</a><a href="ticket-04.html" class="">4</a><a href="ticket-05.html" class="">5</a><a href="ticket-06.html" class="">6</a><a href="ticket-07.html" class="">7</a><a href="ticket-08.html" class="">8</a><a href="ticket-09.html" class="">9</a><a href="ticket-10.html" class="">10</a><a href="ticket-11.html" class="">11</a><a href="ticket-12.html" class="">12</a><a href="ticket-13.html" class="current">13</a><a href="ticket-14.html" class="">14</a><a href="ticket-15.html" class="">15</a><a href="ticket-16.html" class="">16</a><a href="ticket-17.html" class="">17</a><a href="ticket-18.html" class="">18</a><a href="ticket-19.html" class="">19</a><a href="ticket-20.html" class="">20</a><a href="ticket-21.html" class="">21</a><a href="ticket-22.html" class="">22</a><a href="ticket-23.html" class="">23</a><a href="ticket-24.html" class="">24</a><a href="ticket-25.html" class="">25</a><a href="ticket-26.html" class="">26</a><a href="ticket-27.html" class="">27</a></aside><article class="article"><div class="ticket-tools"><button class="small-btn" data-mark-ticket="13">Отметить как выученный</button><a class="small-btn" href="ticket-12.html">← Предыдущий</a><a class="small-btn" href="ticket-14.html">Следующий →</a></div><div class="mode-switch"><button id="showFull" class="active">Полный конспект</button><button id="showOral">Устный ответ</button></div><p class="mode-note">Полный конспект восстановлен из первой полной версии сайта. Вкладка «Устный ответ» содержит текущую краткую структуру ответа.</p><section id="fullContent" class="full-content">
+<style>
+.full-content .pdf-source-note{margin:0 0 18px;padding:14px 16px;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;background:color-mix(in srgb,var(--paper) 86%,var(--bg));color:var(--muted)}
+.full-content .pdf-ticket-pages{display:grid;gap:24px;justify-items:center;margin-top:16px}
+.full-content .pdf-ticket-page{width:min(100%,660px);height:934px;overflow:auto;background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);position:relative;color:#000}
+.full-content .pdf-page-inner{width:892px;height:1262px;transform:scale(.74);transform-origin:top left;background:#fff;color:#000}
+.full-content .pdf-ticket-page p{margin:0;padding:0;color:#000}
+.full-content .pdf-ticket-page a{color:#000;text-decoration:none}
+.full-content .pdf-ticket-page *{box-sizing:content-box}
+@media (max-width:760px){.full-content .pdf-ticket-page{height:760px}.full-content .pdf-page-inner{transform:scale(.60)}}
+.full-content .ft10{font-size:31px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft11{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft12{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft13{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft14{font-size:26px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft15{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#0000ff;}
+.full-content .ft16{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft17{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#0000ff;}
+.full-content .ft18{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#0000ff;}
+.full-content .ft19{font-size:18px;line-height:21px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft310{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#ffffff;}
+.full-content .ft311{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft312{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft313{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft314{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft315{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft316{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft317{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft318{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft319{font-size:18px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft520{font-size:9px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft521{font-size:26px;line-height:32px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft822{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft923{font-size:18px;line-height:21px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft1024{font-size:18px;line-height:31px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft1025{font-size:22px;line-height:26px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft1726{font-size:12px;line-height:11px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft1827{font-size:9px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2228{font-size:26px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2329{font-size:22px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2330{font-size:15px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2431{font-size:12px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft2932{font-size:12px;line-height:11px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft3533{font-size:9px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+.full-content .ft3634{font-size:12px;line-height:10px;font-family:"DejaVu Serif","Times New Roman",serif;color:#000000;}
+</style>
+<div class="pdf-ticket-pages">
+<div class="pdf-ticket-page"><div class="pdf-page-inner"><!-- Page 26 -->
+<div id="page26-div" style="position:relative;width:892px;height:1262px;">
+<p style="position:absolute;top:87px;left:87px;white-space:nowrap" class="ft264"><b>13.&#160;Билет&#160;13.&#160;Нормальные&#160;операторы&#160;в&#160;эрми-</b></p>
+<p style="position:absolute;top:120px;left:145px;white-space:nowrap" class="ft264"><b>товом&#160;пространстве.&#160;Канонический&#160;вид.</b></p>
+<p style="position:absolute;top:175px;left:111px;white-space:nowrap" class="ft2610">План&#160;ответа</p>
+<p style="position:absolute;top:207px;left:111px;white-space:nowrap" class="ft269">Билет&#160;только&#160;про&#160;нормальные&#160;операторы&#160;в&#160;эрмитовом&#160;пространстве:<br/>определение,&#160;свойства&#160;собственных&#160;векторов,&#160;ортогональность&#160;и&#160;диа-<br/>гонализация.</p>
+<p style="position:absolute;top:295px;left:87px;white-space:nowrap" class="ft266"><b>Определение&#160;13.1.</b></p>
+<p style="position:absolute;top:295px;left:285px;white-space:nowrap" class="ft263">Оператор</p>
+<p style="position:absolute;top:296px;left:381px;white-space:nowrap" class="ft2611"><i>A</i></p>
+<p style="position:absolute;top:295px;left:398px;white-space:nowrap" class="ft263">в&#160;эрмитовом&#160;пространстве&#160;называется&#160;нор-</p>
+<p style="position:absolute;top:316px;left:87px;white-space:nowrap" class="ft263">мальным,&#160;если</p>
+<p style="position:absolute;top:339px;left:399px;white-space:nowrap" class="ft2611"><i>AA</i></p>
+<p style="position:absolute;top:333px;left:425px;white-space:nowrap" class="ft2616"><i>∗</i></p>
+<p style="position:absolute;top:339px;left:437px;white-space:nowrap" class="ft2613">=</p>
+<p style="position:absolute;top:339px;left:456px;white-space:nowrap" class="ft2611"><i>A</i></p>
+<p style="position:absolute;top:333px;left:469px;white-space:nowrap" class="ft2616"><i>∗</i></p>
+<p style="position:absolute;top:339px;left:476px;white-space:nowrap" class="ft2611"><i>A.</i></p>
+<p style="position:absolute;top:371px;left:114px;white-space:nowrap" class="ft263">Примеры&#160;нормальных&#160;операторов:</p>
+<p style="position:absolute;top:404px;left:112px;white-space:nowrap" class="ft263">•&#160;самосопряжённые:</p>
+<p style="position:absolute;top:406px;left:321px;white-space:nowrap" class="ft2611"><i>A</i></p>
+<p style="position:absolute;top:400px;left:334px;white-space:nowrap" class="ft2616"><i>∗</i></p>
+<p style="position:absolute;top:406px;left:346px;white-space:nowrap" class="ft2613">=</p>
+<p style="position:absolute;top:406px;left:365px;white-space:nowrap" class="ft2611"><i>A</i></p>
+<p style="position:absolute;top:404px;left:378px;white-space:nowrap" class="ft263">;</p>
+<p style="position:absolute;top:440px;left:112px;white-space:nowrap" class="ft263">•&#160;косоэрмитовы:</p>
+<p style="position:absolute;top:441px;left:279px;white-space:nowrap" class="ft2611"><i>A</i></p>
+<p style="position:absolute;top:436px;left:292px;white-space:nowrap" class="ft2616"><i>∗</i></p>
+<p style="position:absolute;top:441px;left:304px;white-space:nowrap" class="ft2613">=</p>
+<p style="position:absolute;top:437px;left:323px;white-space:nowrap" class="ft2614"><i>−</i></p>
+<p style="position:absolute;top:441px;left:337px;white-space:nowrap" class="ft2611"><i>A</i></p>
+<p style="position:absolute;top:440px;left:350px;white-space:nowrap" class="ft263">;</p>
+<p style="position:absolute;top:475px;left:112px;white-space:nowrap" class="ft263">•&#160;унитарные:</p>
+<p style="position:absolute;top:477px;left:247px;white-space:nowrap" class="ft2611"><i>A</i></p>
+<p style="position:absolute;top:471px;left:260px;white-space:nowrap" class="ft2616"><i>∗</i></p>
+<p style="position:absolute;top:477px;left:267px;white-space:nowrap" class="ft2611"><i>A</i></p>
+<p style="position:absolute;top:477px;left:286px;white-space:nowrap" class="ft2613">=</p>
+<p style="position:absolute;top:477px;left:304px;white-space:nowrap" class="ft2611"><i>I</i></p>
+<p style="position:absolute;top:475px;left:313px;white-space:nowrap" class="ft263">.</p>
+<p style="position:absolute;top:509px;left:87px;white-space:nowrap" class="ft266"><b>Лемма&#160;13.2.</b></p>
+<p style="position:absolute;top:509px;left:220px;white-space:nowrap" class="ft262"><i>Если</i></p>
+<p style="position:absolute;top:510px;left:271px;white-space:nowrap" class="ft2611"><i>A</i></p>
+<p style="position:absolute;top:509px;left:289px;white-space:nowrap" class="ft262"><i>нормален,&#160;то&#160;для&#160;любого</i></p>
+<p style="position:absolute;top:510px;left:540px;white-space:nowrap" class="ft2611"><i>λ</i></p>
+<p style="position:absolute;top:505px;left:555px;white-space:nowrap" class="ft2614"><i>∈</i></p>
+<p style="position:absolute;top:505px;left:572px;white-space:nowrap" class="ft2612">C</p>
+<p style="position:absolute;top:509px;left:590px;white-space:nowrap" class="ft262"><i>оператор</i></p>
+<p style="position:absolute;top:510px;left:690px;white-space:nowrap" class="ft2611"><i>A</i></p>
+<p style="position:absolute;top:505px;left:706px;white-space:nowrap" class="ft2614"><i>−</i></p>
+<p style="position:absolute;top:510px;left:722px;white-space:nowrap" class="ft2611"><i>λI</i></p>
+<p style="position:absolute;top:509px;left:747px;white-space:nowrap" class="ft262"><i>тоже</i></p>
+<p style="position:absolute;top:530px;left:87px;white-space:nowrap" class="ft262"><i>нормален.</i></p>
+<p style="position:absolute;top:564px;left:87px;white-space:nowrap" class="ft266"><b>Лемма&#160;13.3.</b></p>
+<p style="position:absolute;top:564px;left:221px;white-space:nowrap" class="ft262"><i>Если</i></p>
+<p style="position:absolute;top:565px;left:273px;white-space:nowrap" class="ft2611"><i>A</i></p>
+<p style="position:absolute;top:564px;left:292px;white-space:nowrap" class="ft262"><i>нормален&#160;и</i></p>
+<p style="position:absolute;top:565px;left:408px;white-space:nowrap" class="ft2611"><i>Ax</i></p>
+<p style="position:absolute;top:565px;left:436px;white-space:nowrap" class="ft2613">=</p>
+<p style="position:absolute;top:565px;left:455px;white-space:nowrap" class="ft2611"><i>λx</i></p>
+<p style="position:absolute;top:564px;left:475px;white-space:nowrap" class="ft262"><i>,&#160;то</i></p>
+<p style="position:absolute;top:600px;left:407px;white-space:nowrap" class="ft2611"><i>A</i></p>
+<p style="position:absolute;top:594px;left:420px;white-space:nowrap" class="ft2616"><i>∗</i></p>
+<p style="position:absolute;top:600px;left:427px;white-space:nowrap" class="ft2611"><i>x</i></p>
+<p style="position:absolute;top:600px;left:442px;white-space:nowrap" class="ft2613">=</p>
+<p style="position:absolute;top:600px;left:461px;white-space:nowrap" class="ft2611"><i>λx.</i></p>
+<p style="position:absolute;top:635px;left:87px;white-space:nowrap" class="ft262"><i>Доказательство.</i></p>
+<p style="position:absolute;top:635px;left:266px;white-space:nowrap" class="ft263">Для&#160;нормального&#160;оператора</p>
+<p style="position:absolute;top:636px;left:542px;white-space:nowrap" class="ft2611"><i>B</i></p>
+<p style="position:absolute;top:636px;left:561px;white-space:nowrap" class="ft2613">=</p>
+<p style="position:absolute;top:636px;left:580px;white-space:nowrap" class="ft2611"><i>A</i></p>
+<p style="position:absolute;top:631px;left:597px;white-space:nowrap" class="ft2614"><i>−</i></p>
+<p style="position:absolute;top:636px;left:615px;white-space:nowrap" class="ft2611"><i>λI</i></p>
+<p style="position:absolute;top:635px;left:640px;white-space:nowrap" class="ft263">выполнено</p>
+<p style="position:absolute;top:667px;left:379px;white-space:nowrap" class="ft2614"><i>k</i></p>
+<p style="position:absolute;top:672px;left:388px;white-space:nowrap" class="ft2611"><i>Bx</i></p>
+<p style="position:absolute;top:667px;left:413px;white-space:nowrap" class="ft2614"><i>k</i></p>
+<p style="position:absolute;top:668px;left:422px;white-space:nowrap" class="ft2615">2</p>
+<p style="position:absolute;top:672px;left:434px;white-space:nowrap" class="ft2613">=</p>
+<p style="position:absolute;top:667px;left:452px;white-space:nowrap" class="ft2614"><i>k</i></p>
+<p style="position:absolute;top:672px;left:461px;white-space:nowrap" class="ft2611"><i>B</i></p>
+<p style="position:absolute;top:665px;left:475px;white-space:nowrap" class="ft2616"><i>∗</i></p>
+<p style="position:absolute;top:672px;left:483px;white-space:nowrap" class="ft2611"><i>x</i></p>
+<p style="position:absolute;top:667px;left:493px;white-space:nowrap" class="ft2614"><i>k</i></p>
+<p style="position:absolute;top:668px;left:502px;white-space:nowrap" class="ft2615">2</p>
+<p style="position:absolute;top:672px;left:509px;white-space:nowrap" class="ft2611"><i>.</i></p>
+<p style="position:absolute;top:706px;left:87px;white-space:nowrap" class="ft263">Если</p>
+<p style="position:absolute;top:707px;left:139px;white-space:nowrap" class="ft2611"><i>Bx</i></p>
+<p style="position:absolute;top:707px;left:169px;white-space:nowrap" class="ft2613">=&#160;0</p>
+<p style="position:absolute;top:706px;left:196px;white-space:nowrap" class="ft263">,&#160;то</p>
+<p style="position:absolute;top:707px;left:234px;white-space:nowrap" class="ft2611"><i>B</i></p>
+<p style="position:absolute;top:702px;left:248px;white-space:nowrap" class="ft2616"><i>∗</i></p>
+<p style="position:absolute;top:707px;left:255px;white-space:nowrap" class="ft2611"><i>x</i></p>
+<p style="position:absolute;top:707px;left:270px;white-space:nowrap" class="ft2613">=&#160;0</p>
+<p style="position:absolute;top:706px;left:298px;white-space:nowrap" class="ft263">,&#160;то&#160;есть</p>
+<p style="position:absolute;top:743px;left:385px;white-space:nowrap" class="ft2613">(</p>
+<p style="position:absolute;top:743px;left:392px;white-space:nowrap" class="ft2611"><i>A</i></p>
+<p style="position:absolute;top:737px;left:405px;white-space:nowrap" class="ft2616"><i>∗</i></p>
+<p style="position:absolute;top:738px;left:416px;white-space:nowrap" class="ft2614"><i>−</i></p>
+<p style="position:absolute;top:743px;left:434px;white-space:nowrap" class="ft2611"><i>λI</i></p>
+<p style="position:absolute;top:743px;left:454px;white-space:nowrap" class="ft2613">)</p>
+<p style="position:absolute;top:743px;left:460px;white-space:nowrap" class="ft2611"><i>x</i></p>
+<p style="position:absolute;top:743px;left:475px;white-space:nowrap" class="ft2613">=&#160;0</p>
+<p style="position:absolute;top:743px;left:503px;white-space:nowrap" class="ft2611"><i>.</i></p>
+<p style="position:absolute;top:811px;left:87px;white-space:nowrap" class="ft266"><b>Утверждение&#160;13.4.</b></p>
+<p style="position:absolute;top:811px;left:294px;white-space:nowrap" class="ft262"><i>Собственные&#160;векторы&#160;нормального&#160;оператора,&#160;от-</i></p>
+<p style="position:absolute;top:832px;left:87px;white-space:nowrap" class="ft262"><i>вечающие&#160;различным&#160;собственным&#160;значениям,&#160;ортогональны.</i></p>
+<p style="position:absolute;top:866px;left:87px;white-space:nowrap" class="ft262"><i>Доказательство.</i></p>
+<p style="position:absolute;top:866px;left:266px;white-space:nowrap" class="ft263">Пусть</p>
+<p style="position:absolute;top:867px;left:328px;white-space:nowrap" class="ft2611"><i>Ax</i></p>
+<p style="position:absolute;top:867px;left:356px;white-space:nowrap" class="ft2613">=</p>
+<p style="position:absolute;top:867px;left:375px;white-space:nowrap" class="ft2611"><i>λx</i></p>
+<p style="position:absolute;top:866px;left:395px;white-space:nowrap" class="ft263">,</p>
+<p style="position:absolute;top:867px;left:406px;white-space:nowrap" class="ft2611"><i>Ay</i></p>
+<p style="position:absolute;top:867px;left:434px;white-space:nowrap" class="ft2613">=</p>
+<p style="position:absolute;top:867px;left:452px;white-space:nowrap" class="ft2611"><i>µy</i></p>
+<p style="position:absolute;top:866px;left:472px;white-space:nowrap" class="ft263">,</p>
+<p style="position:absolute;top:867px;left:483px;white-space:nowrap" class="ft2611"><i>λ</i></p>
+<p style="position:absolute;top:862px;left:499px;white-space:nowrap" class="ft2614"><i>6</i></p>
+<p style="position:absolute;top:867px;left:499px;white-space:nowrap" class="ft2613">=</p>
+<p style="position:absolute;top:867px;left:517px;white-space:nowrap" class="ft2611"><i>µ</i></p>
+<p style="position:absolute;top:866px;left:528px;white-space:nowrap" class="ft263">.&#160;Тогда</p>
+<p style="position:absolute;top:902px;left:262px;white-space:nowrap" class="ft2611"><i>λ</i></p>
+<p style="position:absolute;top:898px;left:272px;white-space:nowrap" class="ft2614"><i>h</i></p>
+<p style="position:absolute;top:902px;left:279px;white-space:nowrap" class="ft2611"><i>x,&#160;y</i></p>
+<p style="position:absolute;top:898px;left:306px;white-space:nowrap" class="ft2614"><i>i</i></p>
+<p style="position:absolute;top:902px;left:318px;white-space:nowrap" class="ft2613">=</p>
+<p style="position:absolute;top:898px;left:337px;white-space:nowrap" class="ft2614"><i>h</i></p>
+<p style="position:absolute;top:902px;left:344px;white-space:nowrap" class="ft2611"><i>Ax,&#160;y</i></p>
+<p style="position:absolute;top:898px;left:384px;white-space:nowrap" class="ft2614"><i>i</i></p>
+<p style="position:absolute;top:902px;left:396px;white-space:nowrap" class="ft2613">=</p>
+<p style="position:absolute;top:898px;left:415px;white-space:nowrap" class="ft2614"><i>h</i></p>
+<p style="position:absolute;top:902px;left:422px;white-space:nowrap" class="ft2611"><i>x,&#160;A</i></p>
+<p style="position:absolute;top:896px;left:453px;white-space:nowrap" class="ft2616"><i>∗</i></p>
+<p style="position:absolute;top:902px;left:460px;white-space:nowrap" class="ft2611"><i>y</i></p>
+<p style="position:absolute;top:898px;left:469px;white-space:nowrap" class="ft2614"><i>i</i></p>
+<p style="position:absolute;top:902px;left:481px;white-space:nowrap" class="ft2613">=</p>
+<p style="position:absolute;top:898px;left:499px;white-space:nowrap" class="ft2614"><i>h</i></p>
+<p style="position:absolute;top:902px;left:506px;white-space:nowrap" class="ft2611"><i>x,&#160;µy</i></p>
+<p style="position:absolute;top:898px;left:544px;white-space:nowrap" class="ft2614"><i>i</i></p>
+<p style="position:absolute;top:902px;left:556px;white-space:nowrap" class="ft2613">=</p>
+<p style="position:absolute;top:902px;left:575px;white-space:nowrap" class="ft2611"><i>µ</i></p>
+<p style="position:absolute;top:898px;left:585px;white-space:nowrap" class="ft2614"><i>h</i></p>
+<p style="position:absolute;top:902px;left:592px;white-space:nowrap" class="ft2611"><i>x,&#160;y</i></p>
+<p style="position:absolute;top:898px;left:619px;white-space:nowrap" class="ft2614"><i>i</i></p>
+<p style="position:absolute;top:902px;left:626px;white-space:nowrap" class="ft2611"><i>.</i></p>
+<p style="position:absolute;top:937px;left:87px;white-space:nowrap" class="ft263">Значит,</p>
+<p style="position:absolute;top:938px;left:166px;white-space:nowrap" class="ft2613">(</p>
+<p style="position:absolute;top:938px;left:173px;white-space:nowrap" class="ft2611"><i>λ</i></p>
+<p style="position:absolute;top:933px;left:187px;white-space:nowrap" class="ft2614"><i>−</i></p>
+<p style="position:absolute;top:938px;left:205px;white-space:nowrap" class="ft2611"><i>µ</i></p>
+<p style="position:absolute;top:938px;left:216px;white-space:nowrap" class="ft2613">)</p>
+<p style="position:absolute;top:933px;left:222px;white-space:nowrap" class="ft2614"><i>h</i></p>
+<p style="position:absolute;top:938px;left:229px;white-space:nowrap" class="ft2611"><i>x,&#160;y</i></p>
+<p style="position:absolute;top:933px;left:257px;white-space:nowrap" class="ft2614"><i>i</i></p>
+<p style="position:absolute;top:938px;left:268px;white-space:nowrap" class="ft2613">=&#160;0</p>
+<p style="position:absolute;top:937px;left:296px;white-space:nowrap" class="ft263">,&#160;откуда</p>
+<p style="position:absolute;top:933px;left:377px;white-space:nowrap" class="ft2614"><i>h</i></p>
+<p style="position:absolute;top:938px;left:384px;white-space:nowrap" class="ft2611"><i>x,&#160;y</i></p>
+<p style="position:absolute;top:933px;left:411px;white-space:nowrap" class="ft2614"><i>i</i></p>
+<p style="position:absolute;top:938px;left:423px;white-space:nowrap" class="ft2613">=&#160;0</p>
+<p style="position:absolute;top:937px;left:451px;white-space:nowrap" class="ft263">.</p>
+<p style="position:absolute;top:970px;left:87px;white-space:nowrap" class="ft266"><b>Теорема&#160;13.5</b></p>
+<p style="position:absolute;top:970px;left:230px;white-space:nowrap" class="ft263">(Канонический&#160;вид&#160;нормального&#160;оператора)</p>
+<p style="position:absolute;top:970px;left:653px;white-space:nowrap" class="ft266"><b>.</b></p>
+<p style="position:absolute;top:970px;left:667px;white-space:nowrap" class="ft262"><i>В&#160;конечномер-</i></p>
+<p style="position:absolute;top:992px;left:87px;white-space:nowrap" class="ft2623"><i>ном&#160;эрмитовом&#160;пространстве&#160;для&#160;нормального&#160;оператора&#160;существует<br/>ортонормированный&#160;базис&#160;из&#160;собственных&#160;векторов.&#160;В&#160;этом&#160;базисе&#160;мат-<br/>рица&#160;оператора&#160;диагональна:</i></p>
+<p style="position:absolute;top:1072px;left:357px;white-space:nowrap" class="ft2613">[</p>
+<p style="position:absolute;top:1072px;left:361px;white-space:nowrap" class="ft2611"><i>A</i></p>
+<p style="position:absolute;top:1072px;left:375px;white-space:nowrap" class="ft2613">]&#160;=</p>
+<p style="position:absolute;top:1071px;left:403px;white-space:nowrap" class="ft263">diag</p>
+<p style="position:absolute;top:1072px;left:442px;white-space:nowrap" class="ft2613">(</p>
+<p style="position:absolute;top:1072px;left:449px;white-space:nowrap" class="ft2611"><i>λ</i></p>
+<p style="position:absolute;top:1079px;left:460px;white-space:nowrap" class="ft2615">1</p>
+<p style="position:absolute;top:1072px;left:467px;white-space:nowrap" class="ft2611"><i>,&#160;.&#160;.&#160;.&#160;,&#160;λ</i></p>
+<p style="position:absolute;top:1079px;left:516px;white-space:nowrap" class="ft2617"><i>n</i></p>
+<p style="position:absolute;top:1072px;left:525px;white-space:nowrap" class="ft2613">)</p>
+<p style="position:absolute;top:1072px;left:531px;white-space:nowrap" class="ft2611"><i>.</i></p>
+<p style="position:absolute;top:1106px;left:87px;white-space:nowrap" class="ft262"><i>Идея.</i></p>
+<p style="position:absolute;top:1106px;left:151px;white-space:nowrap" class="ft263">Над</p>
+<p style="position:absolute;top:1103px;left:193px;white-space:nowrap" class="ft2612">C</p>
+<p style="position:absolute;top:1106px;left:209px;white-space:nowrap" class="ft263">характеристический&#160;многочлен&#160;имеет&#160;корень,&#160;значит&#160;есть&#160;соб-</p>
+<p style="position:absolute;top:1128px;left:87px;white-space:nowrap" class="ft269">ственный&#160;вектор.&#160;Его&#160;ортогональное&#160;дополнение&#160;инвариантно&#160;относитель-<br/>но</p>
+<p style="position:absolute;top:1151px;left:116px;white-space:nowrap" class="ft2611"><i>A</i></p>
+<p style="position:absolute;top:1150px;left:134px;white-space:nowrap" class="ft263">и</p>
+<p style="position:absolute;top:1151px;left:152px;white-space:nowrap" class="ft2611"><i>A</i></p>
+<p style="position:absolute;top:1145px;left:165px;white-space:nowrap" class="ft2616"><i>∗</i></p>
+<p style="position:absolute;top:1150px;left:172px;white-space:nowrap" class="ft263">,&#160;поэтому&#160;можно&#160;применить&#160;индукцию&#160;по&#160;размерности.</p>
+<p style="position:absolute;top:1207px;left:435px;white-space:nowrap" class="ft263">26</p>
+</div></div></div>
+</div>
+</section><section id="oralContent" class="oral-content"><article class="article"><h1>Билет 13. Нормальные операторы в эрмитовом пространстве, их собственные значения и собственные векторы. Теорема о каноническом виде матрицы нормального оператора в эрмитовом пространстве.</h1><p class="muted"><b>Раздел:</b> Эрмитовы пространства и операторы</p>
 <h2>План ответа</h2><div class="plan"><ul><li>Определить нормальный оператор.</li><li>Показать основные леммы о собственных векторах.</li><li>Сформулировать спектральную теорему.</li><li>Объяснить ортонормированный собственный базис.</li></ul></div><h2>Основные определения и факты</h2><div class="fact">Нормальный оператор удовлетворяет $AA^*=A^*A$.</div><div class="fact">Если $A$ нормален, то $\|Ax\|=\|A^*x\|$.</div><div class="fact">Собственные подпространства нормального оператора для разных собственных значений ортогональны.</div><div class="fact">В конечномерном эрмитовом пространстве нормальный оператор диагонализуется в ортонормированном базисе.</div><h2>Ключевые формулы</h2><div class="formula-list"><div class="formula"><strong>Нормальность</strong><div>$AA^*=A^*A$</div></div><div class="formula"><strong>Диагонализация</strong><div>$U^*AU=\operatorname{diag}(\lambda_i)$</div></div><div class="formula"><strong>Ортогональность</strong><div>$(x,y)=0$ при $\lambda\ne\mu$</div></div><div class="formula"><strong>Сдвиг</strong><div>$A-\lambda I$ нормален</div></div></div><h2>Примеры</h2><div class="example-box"><ol class="examples"><li>Унитарная матрица нормальна.</li><li>Эрмитова матрица нормальна.</li><li>Матрица поворота на плоскости над $\mathbb C$ диагонализуется с собственными значениями $e^{\pm i\varphi}$.</li></ol></div><h2>Проверочные вопросы</h2><div class="checklist"><ul><li>Почему самосопряжённый оператор нормален?</li><li>Что даёт нормальность для диагонализации?</li><li>Почему обычной диагонализуемости недостаточно для ОНБ?</li></ul></div></article></section></article></main><footer class="footer"><p>Линейная Алгебра: Экзамен · билеты 1–27 · статический GitHub Pages.</p><p><a href="../sources.html">Источники</a></p></footer><script src="../assets/app.js"></script></body></html>
