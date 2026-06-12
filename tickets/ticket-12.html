@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Билет 12. Комплексификация евклидова пространства — эрмитово (унитарное) пространство. Эрмитово скалярное произведение, его свойства. Неравенства Коши — Буняковского и треугольника в эрмитовом пространстве. Эрмитово сопряжённый оператор и его свойства. · Линейная алгебра</title>
+  <meta name="description" content="Интерактивный конспект по линейной алгебре: билеты 1–27, формы, операторы, аффинная геометрия и тензоры.">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      macros: {
+        R: "\\mathbb{R}", C: "\\mathbb{C}", F: "\\mathbb{F}",
+        Ker: "\\operatorname{Ker}", Imop: "\\operatorname{Im}", rk: "\\operatorname{rk}",
+        End: "\\operatorname{End}", Hom: "\\operatorname{Hom}", tr: "\\operatorname{tr}",
+        diag: "\\operatorname{diag}", Span: "\\operatorname{span}", Id: "\\operatorname{Id}",
+        Sym: "\\operatorname{Sym}", Alt: "\\operatorname{Alt}", dist: "\\operatorname{dist}",
+        pr: "\\operatorname{pr}", ort: "\\operatorname{ort}"
+      }
+    },
+    svg: { fontCache: 'global' }
+  };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<header class="topbar">
+  <a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Алгебра II</span></a>
+  <nav>
+    <a class="active" href="../index.html#tickets">Билеты</a>
+    <a href="../map.html">Карта</a>
+    <a href="../trainer.html">Тренажёр</a>
+    <a href="../formulas.html">Формулы</a>
+    <a href="../interactives.html">Интерактивы</a>
+    <a href="../assets/lin_alg_notes.pdf">PDF</a>
+  </nav>
+  <button id="themeToggle" class="icon-button" aria-label="Переключить тему">◐</button>
+</header>
+<main class="layout">
+  <aside class="sidebar" aria-label="Навигация по билетам">
+    <div style="margin: 4px 6px 12px; color: var(--muted); font-size: 13px;">Билеты</div>
+    <a href="../tickets/ticket-01.html">1</a>
+<a href="../tickets/ticket-02.html">2</a>
+<a href="../tickets/ticket-03.html">3</a>
+<a href="../tickets/ticket-04.html">4</a>
+<a href="../tickets/ticket-05.html">5</a>
+<a href="../tickets/ticket-06.html">6</a>
+<a href="../tickets/ticket-07.html">7</a>
+<a href="../tickets/ticket-08.html">8</a>
+<a href="../tickets/ticket-09.html">9</a>
+<a href="../tickets/ticket-10.html">10</a>
+<a href="../tickets/ticket-11.html">11</a>
+<a href="../tickets/ticket-12.html" class="current">12</a>
+<a href="../tickets/ticket-13.html">13</a>
+<a href="../tickets/ticket-14.html">14</a>
+<a href="../tickets/ticket-15.html">15</a>
+<a href="../tickets/ticket-16.html">16</a>
+<a href="../tickets/ticket-17.html">17</a>
+<a href="../tickets/ticket-18.html">18</a>
+<a href="../tickets/ticket-19.html">19</a>
+<a href="../tickets/ticket-20.html">20</a>
+<a href="../tickets/ticket-21.html">21</a>
+<a href="../tickets/ticket-22.html">22</a>
+<a href="../tickets/ticket-23.html">23</a>
+<a href="../tickets/ticket-24.html">24</a>
+<a href="../tickets/ticket-25.html">25</a>
+<a href="../tickets/ticket-26.html">26</a>
+<a href="../tickets/ticket-27.html">27</a>
+  </aside>
+  <article class="article">
+    <div class="ticket-tools">
+      <button class="small-btn primary" data-mark-ticket="12">Отметить как выученный</button>
+      <button class="small-btn" id="examMode">Режим устного ответа</button>
+      <a class="small-btn" href="ticket-11.html">← Предыдущий</a>
+      <a class="small-btn" href="ticket-13.html">Следующий →</a>
+    </div>
+    <h1 id="билет-12-комплексификация-евклидова-пространства--эрмитово-унитарное-пространство-эрмитово-скалярное-произведение-его-свойства-неравенства-коши--буняковского-и-треугольника-в-эрмитовом-пространстве-эрмитово-сопряжённый-оператор-и-его-свойства">Билет 12. Комплексификация евклидова пространства — эрмитово (унитарное) пространство. Эрмитово скалярное произведение, его свойства. Неравенства Коши — Буняковского и треугольника в эрмитовом пространстве. Эрмитово сопряжённый оператор и его свойства.</h1>
+<h4 id="содержание-билета">Содержание билета.</h4>
+<p>Комплексификация евклидова пространства — эрмитово (унитарное) пространство. Эрмитово скалярное произведение, его свойства. Неравенства Коши — Буняковского и треугольника в эрмитовом пространстве. Эрмитово сопряжённый оператор и его свойства.</p>
+<div class="planbox">
+
+<p>аккуратно проговори convention: какой аргумент линейный, какой сопряжённо-линейный. Это место часто валит знаками и комплексным сопряжением.</p>
+</div>
+
+<h3 id="эрмитовы-пространства">Эрмитовы пространства</h3>
+<h3 id="эрмитова-форма-и-неравенство-кошибуняковского">Эрмитова форма и неравенство Коши–Буняковского</h3>
+<div class="definition">
+
+<p><strong>Определение 157</strong> (Эрмитова форма). Пусть <span class="math inline">\(V\)</span> — комплексное векторное пространство. Отображение <span class="math display">\[(\cdot,\cdot):V\times V\to\relax\]</span> называется эрмитовой формой, если выполнены свойства:</p>
+<ol type="1">
+<li><p><span class="math inline">\((x+y,z)=(x,z)+(y,z)\)</span>;</p></li>
+<li><p><span class="math inline">\((\lambda x,z)=\lambda(x,z)\)</span>;</p></li>
+<li><p><span class="math inline">\((x,y)=\overline{(y,x)}\)</span>;</p></li>
+<li><p><span class="math inline">\((x,x)&gt;0\)</span> при <span class="math inline">\(x\ne0\)</span>.</p></li>
+</ol>
+<div class="clarifybox">
+
+<p>Convention зафиксирована: эрмитово произведение линейно по первому аргументу и сопряжённо-линейно по второму. Тогда <span class="math inline">\((x,\alpha y)=\overline{\alpha}(x,y)\)</span>, <span class="math inline">\((\alpha x,y)=\alpha(x,y)\)</span>.</p>
+</div>
+
+</div>
+
+<p>Из свойства эрмитовости следует полулинейность по другому аргументу: <span class="math display">\[(x,\lambda y)=\overline{\lambda}(x,y).\]</span></p>
+<div class="definition">
+
+<p><strong>Определение 158</strong> (Унитарное пространство). Комплексное векторное пространство с положительно определённой эрмитовой формой называется <em>унитарным пространством</em>.</p>
+</div>
+
+<div class="theorem">
+
+<p><strong>Теорема 159</strong> (Неравенство Коши–Буняковского). <em>Для любых <span class="math inline">\(x,y\)</span> в евклидовом или унитарном пространстве выполнено <span class="math display">\[|(x,y)|^2\le (x,x)(y,y).\]</span> Иначе говоря, <span class="math display">\[|(x,y)|\le \|x\|\,\|y\|.\]</span></em></p>
+</div>
+
+<div class="proof">
+
+<p><em>Proof.</em> Если <span class="math inline">\(y=0\)</span>, то утверждение очевидно. Пусть <span class="math inline">\(y\ne0\)</span>. Рассмотрим вектор <span class="math display">\[z=x-\frac{(x,y)}{(y,y)}y.\]</span> Тогда <span class="math display">\[(z,y)=0.\]</span> Так как <span class="math inline">\((z,z)\ge0\)</span>, получаем <span class="math display">\[\begin{aligned}
+0\le (z,z)
+&amp;=\left(x-\frac{(x,y)}{(y,y)}y,\ x-\frac{(x,y)}{(y,y)}y\right)\\
+&amp;=(x,x)-\frac{|(x,y)|^2}{(y,y)}.
+\end{aligned}\]</span> Отсюда <span class="math display">\[|(x,y)|^2\le (x,x)(y,y).\]</span></p>
+<div class="clarifybox">
+
+<p>Коши–Буняковский доказывается через неотрицательность <span class="math inline">\(\|x-\lambda y\|^2\)</span>. При <span class="math inline">\(y\ne0\)</span> берём <span class="math inline">\(\lambda=\frac{(x,y)}{(y,y)}\)</span> для выбранной convention и получаем <span class="math inline">\(|(x,y)|^2\le (x,x)(y,y)\)</span>.</p>
+</div>
+
+<p> ◻</p>
+</div>
+
+<div class="theorem">
+
+<p><strong>Теорема 160</strong> (Неравенство треугольника). <em>Для нормы, порождённой скалярным произведением, <span class="math display">\[\|x+y\|\le \|x\|+\|y\|.\]</span></em></p>
+</div>
+
+<div class="proof">
+
+<p><em>Proof.</em> Используя неравенство Коши–Буняковского, имеем <span class="math display">\[\begin{aligned}
+\|x+y\|^2
+&amp;=(x+y,x+y)\\
+&amp;=\|x\|^2+2\operatorname{Re}(x,y)+\|y\|^2\\
+&amp;\le \|x\|^2+2|(x,y)|+\|y\|^2\\
+&amp;\le \|x\|^2+2\|x\|\|y\|+\|y\|^2\\
+&amp;=(\|x\|+\|y\|)^2.
+\end{aligned}\]</span> ◻</p>
+</div>
+
+<h3 id="сопряжённые-самосопряжённые-и-нормальные-операторы">Сопряжённые, самосопряжённые и нормальные операторы</h3>
+<h3 id="основные-свойства-сопряжения">Основные свойства сопряжения</h3>
+<div class="definition">
+
+<p><strong>Определение 161</strong> (Сопряжённый оператор). Пусть <span class="math inline">\(A\in\operatorname{End}(V)\)</span>, где <span class="math inline">\(V\)</span> — евклидово или унитарное пространство. Оператор <span class="math inline">\(A^*\)</span> называется сопряжённым к <span class="math inline">\(A\)</span>, если <span class="math display">\[(Ax,y)=(x,A^*y)
+\qquad \forall x,y\in V.\]</span></p>
+</div>
+
+<p>Для сопряжения выполнены свойства:</p>
+<ol type="1">
+<li><p><span class="math inline">\((A^*)^*=A\)</span>;</p></li>
+<li><p><span class="math inline">\((A+B)^*=A^*+B^*\)</span>;</p></li>
+<li><p><span class="math inline">\((\lambda A)^*=\overline{\lambda}A^*\)</span> в комплексном случае и <span class="math inline">\((\lambda A)^*=\lambda A^*\)</span> в вещественном случае;</p></li>
+<li><p><span class="math inline">\((AB)^*=B^*A^*\)</span>.</p></li>
+</ol>
+<div class="proof">
+
+<p><em>Проверка свойства для произведения.</em> Для любых <span class="math inline">\(x,y\in V\)</span> имеем <span class="math display">\[(ABx,y)=(Bx,A^*y)=(x,B^*A^*y).\]</span> Следовательно, <span class="math display">\[(AB)^*=B^*A^*.\]</span> ◻</p>
+</div>
+
+<div class="definition">
+
+<p><strong>Определение 162</strong>. Оператор <span class="math inline">\(A\)</span> называется:</p>
+<ol type="1">
+<li><p><em>самосопряжённым</em>, если <span class="math inline">\(A=A^*\)</span>;</p></li>
+<li><p><em>кососамосопряжённым</em>, если <span class="math inline">\(A^*=-A\)</span>;</p></li>
+<li><p><em>нормальным</em>, если <span class="math inline">\(AA^*=A^*A\)</span>;</p></li>
+<li><p><em>унитарным</em> в унитарном пространстве, если <span class="math inline">\(A^*A=AA^*=E\)</span>;</p></li>
+<li><p><em>ортогональным</em> в евклидовом пространстве, если <span class="math inline">\(A^TA=AA^T=E\)</span>.</p></li>
+</ol>
+<div class="clarifybox">
+
+<p>Стандартный набор примеров нормальных операторов: самосопряжённые <span class="math inline">\(A^*=A\)</span>, кососамосопряжённые <span class="math inline">\(A^*=-A\)</span>, унитарные/ортогональные <span class="math inline">\(A^*A=I\)</span>. Все они нормальны, то есть <span class="math inline">\(A^*A=AA^*\)</span>.</p>
+</div>
+
+</div>
+
+<div class="lemma">
+
+<p><strong>Лемма 163</strong>. <em>Если <span class="math inline">\(A\)</span> — нормальный оператор в унитарном пространстве и <span class="math inline">\(Ax=\lambda x\)</span>, то <span class="math display">\[A^*x=\overline{\lambda}x.\]</span></em></p>
+</div>
+
+<div class="proof">
+
+<p><em>Proof.</em> Пусть <span class="math inline">\(Ax=\lambda x\)</span>. Тогда <span class="math display">\[(A-\lambda E)x=0.\]</span> Так как <span class="math inline">\(A\)</span> нормален, оператор <span class="math inline">\(A-\lambda E\)</span> тоже нормален. Для нормального оператора <span class="math inline">\(B\)</span> выполнено <span class="math display">\[\|Bx\|=\|B^*x\|.\]</span> Отсюда <span class="math display">\[0=\|(A-\lambda E)x\|=\|(A^*-\overline\lambda E)x\|,\]</span> значит <span class="math display">\[A^*x=\overline\lambda x.\]</span></p>
+<div class="clarifybox">
+
+<p>Если <span class="math inline">\(A\)</span> нормален, то <span class="math inline">\(A-\lambda I\)</span> также нормален, поскольку <span class="math inline">\((A-\lambda I)^*(A-\lambda I)=(A^*-\overline\lambda I)(A-\lambda I)\)</span> и множители переставляются благодаря нормальности <span class="math inline">\(A\)</span>.</p>
+</div>
+
+<p> ◻</p>
+</div>
+
+<div class="corollary">
+
+<p><strong>Следствие 164</strong>. <em>Собственные векторы нормального оператора, отвечающие различным собственным значениям, ортогональны.</em></p>
+</div>
+
+<div class="proof">
+
+<p><em>Proof.</em> Пусть <span class="math display">\[Ax=\lambda x,
+\qquad
+Ay=\mu y,
+\qquad
+\lambda\ne\mu.\]</span> Тогда <span class="math display">\[\lambda(x,y)=(Ax,y)=(x,A^*y)=(x,\overline\mu y)=\mu(x,y),\]</span> поэтому <span class="math display">\[(\lambda-\mu)(x,y)=0.\]</span> Так как <span class="math inline">\(\lambda\ne\mu\)</span>, получаем <span class="math inline">\((x,y)=0\)</span>.</p>
+<div class="clarifybox">
+
+<p>При выбранной convention собственные значения в формулах с сопряжённым оператором комплексно сопрягаются: если <span class="math inline">\(Ax=\lambda x\)</span>, то в скалярных произведениях появляется <span class="math inline">\(\overline\lambda\)</span> при переходе через второй аргумент.</p>
+</div>
+
+<p> ◻</p>
+</div>
+
+<div class="corollary">
+
+<p><strong>Следствие 165</strong>. <em>Если <span class="math inline">\(A=A^*\)</span>, то все собственные значения <span class="math inline">\(A\)</span> вещественны.</em></p>
+</div>
+
+<div class="proof">
+
+<p><em>Proof.</em> Если <span class="math inline">\(Ax=\lambda x\)</span>, <span class="math inline">\(x\ne0\)</span>, то <span class="math display">\[\lambda(x,x)=(Ax,x)=(x,Ax)=\overline{\lambda}(x,x).\]</span> Так как <span class="math inline">\((x,x)&gt;0\)</span>, имеем <span class="math inline">\(\lambda=\overline\lambda\)</span>, то есть <span class="math inline">\(\lambda\in\mathbb{R}\)</span>. ◻</p>
+</div>
+
+<h2 id="дополнительные-уточнения">Дополнительные уточнения</h2>
+<h3 id="2-эрмитовы-пространства-и-convention-линейности">2. Эрмитовы пространства и convention линейности</h3>
+<p>Будем использовать следующее соглашение: <span class="math display">\[\text{эрмитово произведение линейно по первому аргументу и полулинейно по второму.}\]</span> То есть <span class="math display">\[(\alpha x_1+\beta x_2,y)=\alpha(x_1,y)+\beta(x_2,y),\]</span> а по второму аргументу <span class="math display">\[(x,\alpha y_1+\beta y_2)=\overline{\alpha}(x,y_1)+\overline{\beta}(x,y_2).\]</span> Эрмитова симметричность: <span class="math display">\[(x,y)=\overline{(y,x)}.\]</span> Положительная определённость: <span class="math display">\[(x,x)\ge 0,
+\qquad
+(x,x)=0\Longleftrightarrow x=0.\]</span></p>
+<p>Для доказательства неравенства Коши–Буняковского при <span class="math inline">\(y\ne0\)</span> удобно рассмотреть <span class="math display">\[x-\lambda y,
+\qquad
+\lambda=\frac{(x,y)}{(y,y)}.\]</span> Из положительности <span class="math display">\[(x-\lambda y,x-\lambda y)\ge0\]</span> после раскрытия получается <span class="math display">\[|(x,y)|^2\le (x,x)(y,y).\]</span> Равенство достигается тогда и только тогда, когда <span class="math inline">\(x\)</span> и <span class="math inline">\(y\)</span> линейно зависимы.</p>
+<p>Сопряжённый оператор в эрмитовом пространстве при выбранной convention задаётся формулой <span class="math display">\[(Ax,y)=(x,A^*y).\]</span> Нормальный оператор удовлетворяет <span class="math display">\[AA^*=A^*A.\]</span> В конечномерном эрмитовом пространстве нормальный оператор диагонализуется в ортонормированном базисе. Для самосопряжённого оператора собственные значения вещественны, а собственные подпространства, отвечающие различным собственным значениям, ортогональны.</p>
+
+  </article>
+</main>
+
+<footer class="footer">
+  <p>Конспект по линейной алгебре, билеты 1–27. Статический сайт для GitHub Pages.</p>
+  <p><a href="../assets/lin_alg_notes.pdf">Скачать PDF</a> · <a href="../assets/lin_alg_notes.tex">Скачать TeX</a></p>
+</footer>
+<script src="../assets/app.js"></script>
+</html>

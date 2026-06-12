@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Билет 21. Вещественные алгебраические поверхности. Общее уравнение квадрики и классификация квадрик: центральные квадрики — конусы, эллипсоиды, гиперболоиды и построенные на них цилиндрические поверхности; нецентральные квадрики — эллиптические и гиперболические параболоиды. · Линейная алгебра</title>
+  <meta name="description" content="Интерактивный конспект по линейной алгебре: билеты 1–27, формы, операторы, аффинная геометрия и тензоры.">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      macros: {
+        R: "\\mathbb{R}", C: "\\mathbb{C}", F: "\\mathbb{F}",
+        Ker: "\\operatorname{Ker}", Imop: "\\operatorname{Im}", rk: "\\operatorname{rk}",
+        End: "\\operatorname{End}", Hom: "\\operatorname{Hom}", tr: "\\operatorname{tr}",
+        diag: "\\operatorname{diag}", Span: "\\operatorname{span}", Id: "\\operatorname{Id}",
+        Sym: "\\operatorname{Sym}", Alt: "\\operatorname{Alt}", dist: "\\operatorname{dist}",
+        pr: "\\operatorname{pr}", ort: "\\operatorname{ort}"
+      }
+    },
+    svg: { fontCache: 'global' }
+  };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<header class="topbar">
+  <a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Алгебра II</span></a>
+  <nav>
+    <a class="active" href="../index.html#tickets">Билеты</a>
+    <a href="../map.html">Карта</a>
+    <a href="../trainer.html">Тренажёр</a>
+    <a href="../formulas.html">Формулы</a>
+    <a href="../interactives.html">Интерактивы</a>
+    <a href="../assets/lin_alg_notes.pdf">PDF</a>
+  </nav>
+  <button id="themeToggle" class="icon-button" aria-label="Переключить тему">◐</button>
+</header>
+<main class="layout">
+  <aside class="sidebar" aria-label="Навигация по билетам">
+    <div style="margin: 4px 6px 12px; color: var(--muted); font-size: 13px;">Билеты</div>
+    <a href="../tickets/ticket-01.html">1</a>
+<a href="../tickets/ticket-02.html">2</a>
+<a href="../tickets/ticket-03.html">3</a>
+<a href="../tickets/ticket-04.html">4</a>
+<a href="../tickets/ticket-05.html">5</a>
+<a href="../tickets/ticket-06.html">6</a>
+<a href="../tickets/ticket-07.html">7</a>
+<a href="../tickets/ticket-08.html">8</a>
+<a href="../tickets/ticket-09.html">9</a>
+<a href="../tickets/ticket-10.html">10</a>
+<a href="../tickets/ticket-11.html">11</a>
+<a href="../tickets/ticket-12.html">12</a>
+<a href="../tickets/ticket-13.html">13</a>
+<a href="../tickets/ticket-14.html">14</a>
+<a href="../tickets/ticket-15.html">15</a>
+<a href="../tickets/ticket-16.html">16</a>
+<a href="../tickets/ticket-17.html">17</a>
+<a href="../tickets/ticket-18.html">18</a>
+<a href="../tickets/ticket-19.html">19</a>
+<a href="../tickets/ticket-20.html">20</a>
+<a href="../tickets/ticket-21.html" class="current">21</a>
+<a href="../tickets/ticket-22.html">22</a>
+<a href="../tickets/ticket-23.html">23</a>
+<a href="../tickets/ticket-24.html">24</a>
+<a href="../tickets/ticket-25.html">25</a>
+<a href="../tickets/ticket-26.html">26</a>
+<a href="../tickets/ticket-27.html">27</a>
+  </aside>
+  <article class="article">
+    <div class="ticket-tools">
+      <button class="small-btn primary" data-mark-ticket="21">Отметить как выученный</button>
+      <button class="small-btn" id="examMode">Режим устного ответа</button>
+      <a class="small-btn" href="ticket-20.html">← Предыдущий</a>
+      <a class="small-btn" href="ticket-22.html">Следующий →</a>
+    </div>
+    <h1 id="билет-21-вещественные-алгебраические-поверхности-общее-уравнение-квадрики-и-классификация-квадрик-центральные-квадрики--конусы-эллипсоиды-гиперболоиды-и-построенные-на-них-цилиндрические-поверхности-нецентральные-квадрики--эллиптические-и-гиперболические-параболоиды">Билет 21. Вещественные алгебраические поверхности. Общее уравнение квадрики и классификация квадрик: центральные квадрики — конусы, эллипсоиды, гиперболоиды и построенные на них цилиндрические поверхности; нецентральные квадрики — эллиптические и гиперболические параболоиды.</h1>
+<h4 id="содержание-билета">Содержание билета.</h4>
+<p>Вещественные алгебраические поверхности. Общее уравнение квадрики и классификация квадрик: центральные квадрики — конусы, эллипсоиды, гиперболоиды и построенные на них цилиндрические поверхности; нецентральные квадрики — эллиптические и гиперболические параболоиды.</p>
+<div class="planbox">
+
+<p>билет большой; главное — общая форма <span class="math inline">\(x^TAx+2b^Tx+c=0\)</span>, перенос начала, диагонализация квадратичной части, затем классификация по знакам и наличию линейной части.</p>
+</div>
+
+<div class="center">
+
+</div>
+
+<h3 id="квадрики-в-аффинном-евклидовом-пространстве">Квадрики в аффинном евклидовом пространстве</h3>
+<h3 id="классификация-квадрик">Классификация квадрик</h3>
+<div class="definition">
+
+<p><strong>Определение 225</strong> (Квадрика). Квадрикой называется множество точек, координаты которых удовлетворяют уравнению второй степени <span class="math display">\[q(x)=0,\]</span> где <span class="math display">\[q(x)=x^TAx+2b^Tx+c,
+\qquad A=A^T.\]</span> В координатах: <span class="math display">\[\sum_{i,j=1}^n a_{ij}x_ix_j+2\sum_{i=1}^n b_ix_i+c=0.\]</span></p>
+</div>
+
+<div class="remark">
+
+<p><em>Замечание 226</em>. На стр. 67 явно указана тема: <em>классификация квадрик</em>. В записи используется переход к “удобной” системе координат: сначала диагонализация квадратичной части, затем перенос начала координат, если это возможно.</p>
+</div>
+
+<p>Пусть <span class="math display">\[q(x)=x^TAx+2b^Tx+c.\]</span> После ортогональной замены координат симметрическая матрица <span class="math inline">\(A\)</span> приводится к диагональному виду: <span class="math display">\[A\sim \operatorname{diag}(\lambda_1,\ldots,\lambda_n).\]</span> Тогда уравнение принимает вид <span class="math display">\[\lambda_1y_1^2+\\cdots+\lambda_ny_n^2+2\beta_1y_1+
+\cdots+2\beta_ny_n+c=0.\]</span> Дальше для ненулевых <span class="math inline">\(\lambda_i\)</span> выделяются полные квадраты: <span class="math display">\[\lambda_i y_i^2+2\beta_i y_i
+=\lambda_i\left(y_i+\frac{\beta_i}{\lambda_i}\right)^2
+-\frac{\beta_i^2}{\lambda_i}.\]</span></p>
+<div class="clarifybox">
+
+<p>Универсальный алгоритм классификации квадрик: записать <span class="math inline">\(Q(x)=(Ax,x)+2(b,x)+c\)</span>, диагонализовать самосопряжённый <span class="math inline">\(A\)</span>, затем переносом начала убрать линейную часть в направлениях <span class="math inline">\(\Im A\)</span>.</p>
+</div>
+
+<div class="proposition">
+
+<p><strong>Утверждение 227</strong> (Центр квадрики). <em>Точка <span class="math inline">\(x_0\)</span> является центром квадрики, если после переноса начала координат в <span class="math inline">\(x_0\)</span> исчезают линейные члены. Для уравнения <span class="math display">\[q(x)=x^TAx+2b^Tx+c\]</span> это даёт систему <span class="math display">\[Ax_0+b=0.\]</span></em></p>
+<div class="clarifybox">
+
+<p><em>Центр квадрики существует тогда и только тогда, когда уравнение <span class="math inline">\(Ax_0=-b\)</span> разрешимо. Если оно разрешимо, перенос <span class="math inline">\(x=y+x_0\)</span> убирает линейную часть; если нет, остаётся параболический тип.</em></p>
+</div>
+
+</div>
+
+<h3 id="основные-нормальные-формы-и-рисунки">Основные нормальные формы и рисунки</h3>
+<p>Стандартные поверхности второго порядка: конус, цилиндр, сфера/эллипсоид, двуполостный и однополостный гиперболоиды, параболоид.</p>
+<p>Типичные нормальные формы: <span class="math display">\[\frac{x_1^2}{a_1^2}+\cdots+\frac{x_n^2}{a_n^2}=1
+\qquad \text{эллипсоид},\]</span> <span class="math display">\[\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=1
+\qquad \text{однополостный гиперболоид},\]</span> <span class="math display">\[-\frac{x^2}{a^2}-\frac{y^2}{b^2}+\frac{z^2}{c^2}=1
+\qquad \text{двуполостный гиперболоид},\]</span> <span class="math display">\[\frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}=0
+\qquad \text{конус},\]</span> <span class="math display">\[\frac{x^2}{a^2}+\frac{y^2}{b^2}=1
+\qquad \text{цилиндр},\]</span> <span class="math display">\[z=\frac{x^2}{a^2}+\frac{y^2}{b^2}
+\qquad \text{эллиптический параболоид}.\]</span></p>
+<div class="clarifybox">
+
+<p>Центральные нормальные формы: эллипсоид <span class="math inline">\(\sum x_i^2/a_i^2=1\)</span>; конус <span class="math inline">\(\sum_{+}x_i^2/a_i^2-\sum_{-}x_j^2/b_j^2=0\)</span>; одно- и двуполостные гиперболоиды отличаются числом отрицательных квадратов при правой части <span class="math inline">\(1\)</span>. Нецентральные типы: эллиптический и гиперболический параболоиды.</p>
+</div>
+
+<div class="remark">
+
+<p><em>Замечание 228</em> (Принцип классификации). Классификация квадрик в аффинной/евклидовой геометрии сводится к приведению уравнения второй степени к нормальной форме допустимыми преобразованиями координат. В евклидовом случае допустимы ортогональные преобразования и переносы; в аффинном случае допустимы более общие невырожденные аффинные преобразования.</p>
+<div class="clarifybox">
+
+<p>Евклидова классификация сохраняет длины и углы, поэтому коэффициенты при квадратах важны с точностью до ортогональных преобразований и переносов. Аффинная классификация грубее: допускает произвольные невырожденные аффинные замены и обычно различает только тип вырождения/знаки.</p>
+</div>
+
+</div>
+
+<h3 id="касательнаяполярная-плоскость">Касательная/полярная плоскость</h3>
+<p>Пусть квадрика задана уравнением <span class="math display">\[F(x)=x^TAx+2b^Tx+c=0.\]</span> Если <span class="math inline">\(x_0\)</span> — точка квадрики и градиент <span class="math inline">\(\nabla F(x_0)\ne0\)</span>, то касательная гиперплоскость задаётся уравнением <span class="math display">\[(Ax_0+b,\,x-x_0)=0.\]</span> Эквивалентно, после раскрытия: <span class="math display">\[x_0^TAx+b^Tx+b^Tx_0+c=0,\]</span> если <span class="math inline">\(x_0\)</span> лежит на квадрике.</p>
+<div class="clarifybox">
+
+<p>Для квадрики <span class="math inline">\(Q(x)=x^TAx+2b^Tx+c\)</span> полярная гиперплоскость точки <span class="math inline">\(p\)</span> имеет уравнение <span class="math inline">\(p^TAx+b^Tx+b^Tp+c=0\)</span>. Если <span class="math inline">\(p\)</span> лежит на квадрике, это касательная гиперплоскость в точке <span class="math inline">\(p\)</span>.</p>
+</div>
+
+<h2 id="дополнительные-уточнения">Дополнительные уточнения</h2>
+<h3 id="6-квадрики-центральный-и-параболический-случаи">6. Квадрики: центральный и параболический случаи</h3>
+<p>Квадрика в аффинно-евклидовом пространстве задаётся уравнением <span class="math display">\[(Ax,x)+2(b,x)+c=0,\]</span> где <span class="math inline">\(A\)</span> — самосопряжённый оператор. При переносе начала координат <span class="math display">\[x=x_0+y\]</span> получаем <span class="math display">\[(Ay,y)+2(Ax_0+b,y)+c&#39;=0.\]</span> Линейная часть исчезает тогда и только тогда, когда существует решение <span class="math display">\[Ax_0=-b.\]</span> В этом случае квадрика центральная, и после перехода к главным осям её уравнение имеет вид <span class="math display">\[\lambda_1 y_1^2+\cdots+\lambda_k y_k^2+c&#39;=0.\]</span> По знакам коэффициентов возникают эллипсоиды, однополостные и двуполостные гиперболоиды, конусы и пустые множества.</p>
+<p>Если уравнение <span class="math inline">\(Ax_0=-b\)</span> неразрешимо, линейную часть полностью убрать нельзя. Тогда используется разложение <span class="math display">\[V=\Im A\oplus \operatorname{Ker}A\]</span> для самосопряжённого <span class="math inline">\(A\)</span>, причём <span class="math display">\[\Im A=(\operatorname{Ker}A)^\perp.\]</span> Линейная часть раскладывается на компоненту из <span class="math inline">\(\Im A\)</span> и компоненту из <span class="math inline">\(\operatorname{Ker}A\)</span>; первую можно убрать переносом, вторая порождает параболический тип квадрики.</p>
+<p>Для системы материальных точек с массами <span class="math inline">\(m_i\)</span> центр масс <span class="math inline">\(C\)</span> определяется условием <span class="math display">\[\sum_i m_i\overrightarrow{CA_i}=0.\]</span> Если момент инерции относительно точки <span class="math inline">\(S\)</span> задан как <span class="math display">\[I_S=\sum_i m_i\|\overrightarrow{SA_i}\|^2,\]</span> то теорема Лагранжа–Гюйгенса–Штейнера даёт <span class="math display">\[I_S=I_C+m\|\overrightarrow{SC}\|^2,
+\qquad
+m=\sum_i m_i.\]</span></p>
+
+  </article>
+</main>
+
+<footer class="footer">
+  <p>Конспект по линейной алгебре, билеты 1–27. Статический сайт для GitHub Pages.</p>
+  <p><a href="../assets/lin_alg_notes.pdf">Скачать PDF</a> · <a href="../assets/lin_alg_notes.tex">Скачать TeX</a></p>
+</footer>
+<script src="../assets/app.js"></script>
+</html>

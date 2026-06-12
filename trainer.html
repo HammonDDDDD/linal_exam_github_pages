@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тренажёр · Линейная алгебра</title>
+  <meta name="description" content="Интерактивный конспект по линейной алгебре: билеты 1–27, формы, операторы, аффинная геометрия и тензоры.">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      macros: {
+        R: "\\mathbb{R}", C: "\\mathbb{C}", F: "\\mathbb{F}",
+        Ker: "\\operatorname{Ker}", Imop: "\\operatorname{Im}", rk: "\\operatorname{rk}",
+        End: "\\operatorname{End}", Hom: "\\operatorname{Hom}", tr: "\\operatorname{tr}",
+        diag: "\\operatorname{diag}", Span: "\\operatorname{span}", Id: "\\operatorname{Id}",
+        Sym: "\\operatorname{Sym}", Alt: "\\operatorname{Alt}", dist: "\\operatorname{dist}",
+        pr: "\\operatorname{pr}", ort: "\\operatorname{ort}"
+      }
+    },
+    svg: { fontCache: 'global' }
+  };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-icon">LA</span><span>Алгебра II</span></a>
+  <nav>
+    <a href="index.html#tickets">Билеты</a>
+    <a href="map.html">Карта</a>
+    <a class="active" href="trainer.html">Тренажёр</a>
+    <a href="formulas.html">Формулы</a>
+    <a href="interactives.html">Интерактивы</a>
+    <a href="assets/lin_alg_notes.pdf">PDF</a>
+  </nav>
+  <button id="themeToggle" class="icon-button" aria-label="Переключить тему">◐</button>
+</header>
+<main class="container">
+  <h1 class="section-title">Тренажёр устного ответа</h1>
+  <div class="panel">
+    <p>Кликни по карточке, чтобы перевернуть её. Это быстрый режим самопроверки перед тем, как идти в полный билет.</p>
+    <div id="flashcard" class="flashcard ticket-card"></div>
+    <div class="actions">
+      <button id="prevCard" class="button secondary">← Назад</button>
+      <button id="flipCard" class="button">Показать ответ</button>
+      <button id="nextCard" class="button secondary">Дальше →</button>
+    </div>
+  </div>
+</main>
+<script>
+const cards = [{"q": "Что такое билинейная форма?", "a": "Отображение $\beta:V\times V\to\\mathbb F$, линейное по каждому аргументу.", "ticket": 1}, {"q": "Как меняется матрица билинейной формы при замене базиса?", "a": "Если $X=CY$, то $B\\prime=C^TBC$.", "ticket": 1}, {"q": "В чём смысл критерия Сильвестра?", "a": "Квадратичная форма положительно определена тогда и только тогда, когда все ведущие главные миноры положительны.", "ticket": 5}, {"q": "Что измеряет определитель Грама?", "a": "Квадрат объёма параллелепипеда, натянутого на систему векторов.", "ticket": 8}, {"q": "Что значит нормальный оператор?", "a": "В эрмитовом пространстве $AA^*=A^*A$; такие операторы унитарно диагонализуются.", "ticket": 13}, {"q": "Что такое полярное разложение?", "a": "Для невырожденного оператора $A$ разложение $A=UP$, где $U$ ортогонален/унитарен, а $P$ положителен.", "ticket": 17}, {"q": "Что такое тензор типа $(p,q)$?", "a": "Полилинейная функция от $p$ ковекторных и $q$ векторных аргументов.", "ticket": 22}, {"q": "Что делает свёртка тензора?", "a": "Суммирует по одной верхней и одной нижней паре индексов, уменьшая тип на $(1,1)$.", "ticket": 24}];
+let i = 0, flipped = false;
+const el = document.getElementById('flashcard');
+function render() {
+  const c = cards[i];
+  el.innerHTML = `<div><div>${flipped ? c.a : c.q}</div><div class="flash-meta">Билет ${c.ticket} · карточка ${i+1}/${cards.length}</div></div>`;
+  if (window.MathJax) MathJax.typesetPromise([el]);
+}
+document.getElementById('flipCard').onclick = () => { flipped = !flipped; render(); };
+document.getElementById('nextCard').onclick = () => { i = (i+1)%cards.length; flipped=false; render(); };
+document.getElementById('prevCard').onclick = () => { i = (i-1+cards.length)%cards.length; flipped=false; render(); };
+el.onclick = () => { flipped = !flipped; render(); };
+render();
+</script>
+
+<footer class="footer">
+  <p>Конспект по линейной алгебре, билеты 1–27. Статический сайт для GitHub Pages.</p>
+  <p><a href="assets/lin_alg_notes.pdf">Скачать PDF</a> · <a href="assets/lin_alg_notes.tex">Скачать TeX</a></p>
+</footer>
+<script src="assets/app.js"></script>
+</html>

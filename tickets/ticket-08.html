@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Билет 8. Матрица и определитель Грама системы векторов евклидова пространства, их свойства. Процесс ортогонализации Грама — Шмидта, его геометрический смысл. Геометрический смысл определителя. QR-разложение. · Линейная алгебра</title>
+  <meta name="description" content="Интерактивный конспект по линейной алгебре: билеты 1–27, формы, операторы, аффинная геометрия и тензоры.">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      macros: {
+        R: "\\mathbb{R}", C: "\\mathbb{C}", F: "\\mathbb{F}",
+        Ker: "\\operatorname{Ker}", Imop: "\\operatorname{Im}", rk: "\\operatorname{rk}",
+        End: "\\operatorname{End}", Hom: "\\operatorname{Hom}", tr: "\\operatorname{tr}",
+        diag: "\\operatorname{diag}", Span: "\\operatorname{span}", Id: "\\operatorname{Id}",
+        Sym: "\\operatorname{Sym}", Alt: "\\operatorname{Alt}", dist: "\\operatorname{dist}",
+        pr: "\\operatorname{pr}", ort: "\\operatorname{ort}"
+      }
+    },
+    svg: { fontCache: 'global' }
+  };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<header class="topbar">
+  <a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Алгебра II</span></a>
+  <nav>
+    <a class="active" href="../index.html#tickets">Билеты</a>
+    <a href="../map.html">Карта</a>
+    <a href="../trainer.html">Тренажёр</a>
+    <a href="../formulas.html">Формулы</a>
+    <a href="../interactives.html">Интерактивы</a>
+    <a href="../assets/lin_alg_notes.pdf">PDF</a>
+  </nav>
+  <button id="themeToggle" class="icon-button" aria-label="Переключить тему">◐</button>
+</header>
+<main class="layout">
+  <aside class="sidebar" aria-label="Навигация по билетам">
+    <div style="margin: 4px 6px 12px; color: var(--muted); font-size: 13px;">Билеты</div>
+    <a href="../tickets/ticket-01.html">1</a>
+<a href="../tickets/ticket-02.html">2</a>
+<a href="../tickets/ticket-03.html">3</a>
+<a href="../tickets/ticket-04.html">4</a>
+<a href="../tickets/ticket-05.html">5</a>
+<a href="../tickets/ticket-06.html">6</a>
+<a href="../tickets/ticket-07.html">7</a>
+<a href="../tickets/ticket-08.html" class="current">8</a>
+<a href="../tickets/ticket-09.html">9</a>
+<a href="../tickets/ticket-10.html">10</a>
+<a href="../tickets/ticket-11.html">11</a>
+<a href="../tickets/ticket-12.html">12</a>
+<a href="../tickets/ticket-13.html">13</a>
+<a href="../tickets/ticket-14.html">14</a>
+<a href="../tickets/ticket-15.html">15</a>
+<a href="../tickets/ticket-16.html">16</a>
+<a href="../tickets/ticket-17.html">17</a>
+<a href="../tickets/ticket-18.html">18</a>
+<a href="../tickets/ticket-19.html">19</a>
+<a href="../tickets/ticket-20.html">20</a>
+<a href="../tickets/ticket-21.html">21</a>
+<a href="../tickets/ticket-22.html">22</a>
+<a href="../tickets/ticket-23.html">23</a>
+<a href="../tickets/ticket-24.html">24</a>
+<a href="../tickets/ticket-25.html">25</a>
+<a href="../tickets/ticket-26.html">26</a>
+<a href="../tickets/ticket-27.html">27</a>
+  </aside>
+  <article class="article">
+    <div class="ticket-tools">
+      <button class="small-btn primary" data-mark-ticket="8">Отметить как выученный</button>
+      <button class="small-btn" id="examMode">Режим устного ответа</button>
+      <a class="small-btn" href="ticket-07.html">← Предыдущий</a>
+      <a class="small-btn" href="ticket-09.html">Следующий →</a>
+    </div>
+    <h1 id="билет-8-матрица-и-определитель-грама-системы-векторов-евклидова-пространства-их-свойства-процесс-ортогонализации-грама--шмидта-его-геометрический-смысл-геометрический-смысл-определителя-qr-разложение">Билет 8. Матрица и определитель Грама системы векторов евклидова пространства, их свойства. Процесс ортогонализации Грама — Шмидта, его геометрический смысл. Геометрический смысл определителя. QR-разложение.</h1>
+<h4 id="содержание-билета">Содержание билета.</h4>
+<p>Матрица и определитель Грама системы векторов евклидова пространства, их свойства. Процесс ортогонализации Грама — Шмидта, его геометрический смысл. Геометрический смысл определителя. QR-разложение.</p>
+<div class="planbox">
+
+<p>отвечай через геометрию: матрица Грама кодирует взаимные скалярные произведения, её определитель равен квадрату объёма параллелепипеда, Грам–Шмидт строит ортонормированный базис, QR — матричная форма этого процесса.</p>
+</div>
+
+<div class="center">
+
+</div>
+
+<h3 id="матрица-грама-и-определитель-грама">Матрица Грама и определитель Грама</h3>
+<div class="definition">
+
+<p><strong>Определение 126</strong> (Матрица Грама). Для векторов <span class="math inline">\(v_1,\ldots,v_k\)</span> евклидова пространства <span class="math inline">\(V\)</span> матрицей Грама называется матрица <span class="math display">\[G(v_1,\ldots,v_k)=\bigl((v_i,v_j)\bigr)_{i,j=1}^k.\]</span> Её определитель <span class="math display">\[\Gamma(v_1,\ldots,v_k)=\det G(v_1,\ldots,v_k)\]</span> называется определителем Грама.</p>
+</div>
+
+<div class="theorem">
+
+<p><strong>Теорема 127</strong> (Критерий линейной зависимости через определитель Грама). <em>Для векторов <span class="math inline">\(v_1,\ldots,v_k\)</span> евклидова пространства выполнено <span class="math display">\[\det G(v_1,\ldots,v_k)=0
+\quad\Longleftrightarrow\quad
+v_1,\ldots,v_k \text{ линейно зависимы}.\]</span></em></p>
+</div>
+
+<div class="proof">
+
+<p><em>Proof.</em> Если <span class="math inline">\(v_1,\ldots,v_k\)</span> линейно зависимы, то один из векторов выражается через остальные, поэтому строки и столбцы матрицы Грама линейно зависимы. Следовательно, <span class="math display">\[\det G=0.\]</span></p>
+<p>В обратную сторону рассуждение идёт через квадратичную форму <span class="math display">\[\left(\sum_{i=1}^k \lambda_i v_i,
+\sum_{j=1}^k \lambda_j v_j\right)
+=\sum_{i,j=1}^k \lambda_i\lambda_j (v_i,v_j).\]</span> Если <span class="math inline">\(\det G=0\)</span>, то существует ненулевой столбец <span class="math inline">\(\lambda=(\lambda_1,\ldots,\lambda_k)^T\)</span>, для которого <span class="math display">\[G\lambda=0.\]</span> Тогда <span class="math display">\[\left|\sum_{i=1}^k\lambda_i v_i\right|^2
+=\lambda^T G\lambda=0,\]</span> а значит <span class="math display">\[\sum_{i=1}^k\lambda_i v_i=0.\]</span> Следовательно, <span class="math inline">\(v_1,\ldots,v_k\)</span> линейно зависимы.</p>
+<div class="clarifybox">
+
+<p>Грам–Шмидт: <span class="math inline">\(f_1=e_1\)</span>, <span class="math inline">\(f_k=e_k-\sum_{i=1}^{k-1}\frac{(e_k,f_i)}{(f_i,f_i)}f_i\)</span>. Затем <span class="math inline">\(u_k=f_k/\|f_k\|\)</span>. Геометрически на каждом шаге вычитаются проекции на уже построенное подпространство.</p>
+</div>
+
+<p> ◻</p>
+</div>
+
+<h3 id="ортогонализация-грамашмидта">Ортогонализация Грама–Шмидта</h3>
+<div class="theorem">
+
+<p><strong>Теорема 128</strong> (Процесс ортогонализации). <em>Пусть <span class="math inline">\(e_1,\ldots,e_n\)</span> — базис евклидова пространства <span class="math inline">\(V\)</span>. Тогда из него можно построить ортогональный базис <span class="math inline">\(f_1,\ldots,f_n\)</span> по формулам <span class="math display">\[f_1=e_1,\]</span> <span class="math display">\[f_k=e_k-\sum_{i=1}^{k-1}\frac{(e_k,f_i)}{(f_i,f_i)}f_i,
+\qquad k=2,\ldots,n.\]</span> Если дополнительно положить <span class="math display">\[\varepsilon_k=\frac{f_k}{|f_k|},\]</span> то получится ортонормированный базис.</em></p>
+<div class="clarifybox">
+
+<p><em>Формула Грама–Шмидта: <span class="math inline">\(f_k=e_k-\sum\limits_{i=1}^{k-1}\frac{(e_k,f_i)}{(f_i,f_i)}f_i\)</span>. Именно она обеспечивает <span class="math inline">\((f_k,f_j)=0\)</span> для всех <span class="math inline">\(j&lt;k\)</span>.</em></p>
+</div>
+
+</div>
+
+<div class="proof">
+
+<p><em>Идея.</em> Пусть <span class="math display">\[V_k=\langle e_1,\ldots,e_k\rangle.\]</span> На каждом шаге берём компоненту <span class="math inline">\(e_k\)</span>, ортогональную уже построенному подпространству <span class="math inline">\(V_{k-1}\)</span>: <span class="math display">\[f_k=e_k-\operatorname{pr}_{V_{k-1}}e_k.\]</span> Тогда <span class="math display">\[f_k\perp f_1,\ldots,f_{k-1},\]</span> а также <span class="math display">\[V_k=\langle f_1,\ldots,f_k\rangle.\]</span> ◻</p>
+</div>
+
+<h3 id="объём-определитель-грама-и-высота">Объём, определитель Грама и высота</h3>
+<div class="definition">
+
+<p><strong>Определение 129</strong> (Объём параллелепипеда). Пусть <span class="math inline">\(x_1,\ldots,x_k\)</span> — векторы евклидова пространства. Объём <span class="math inline">\(k\)</span>-мерного параллелепипеда, натянутого на эти векторы, обозначается <span class="math display">\[V_k(x_1,\ldots,x_k).\]</span> Для ортогональных векторов <span class="math display">\[V_k(x_1,\ldots,x_k)=|x_1|\cdots |x_k|.\]</span> В общем случае объём определяется через ортогонализацию: <span class="math display">\[V_k(x_1,\ldots,x_k)=|f_1|\cdots |f_k|,\]</span> где <span class="math inline">\(f_1,\ldots,f_k\)</span> получены из <span class="math inline">\(x_1,\ldots,x_k\)</span> процессом Грама–Шмидта.</p>
+</div>
+
+<div class="theorem">
+
+<p><strong>Теорема 130</strong> (Определитель Грама и объём). <em>Для любых <span class="math inline">\(x_1,\ldots,x_k\in V\)</span> выполнено <span class="math display">\[\det G(x_1,\ldots,x_k)=V_k(x_1,\ldots,x_k)^2.\]</span></em></p>
+</div>
+
+<div class="proof">
+
+<p><em>Proof.</em> Пусть <span class="math inline">\(f_1,\ldots,f_k\)</span> — ортогонализированная система, полученная из <span class="math inline">\(x_1,\ldots,x_k\)</span>. Переход от <span class="math inline">\(x_i\)</span> к <span class="math inline">\(f_i\)</span> задаётся верхнетреугольной матрицей с единицами на диагонали, поэтому определитель Грама при таком переходе не меняется. В ортогональной системе матрица Грама диагональна: <span class="math display">\[G(f_1,\ldots,f_k)=\operatorname{diag}(|f_1|^2,\ldots,|f_k|^2).\]</span> Значит, <span class="math display">\[\det G(f_1,\ldots,f_k)=|f_1|^2\cdots |f_k|^2
+=V_k(x_1,\ldots,x_k)^2.\]</span></p>
+<div class="clarifybox">
+
+<p>Если столбцы матрицы <span class="math inline">\(X\)</span> — координаты векторов <span class="math inline">\(v_1,
+\ldots,v_k\)</span> в ортонормированном базисе, то матрица Грама равна <span class="math inline">\(G=X^TX\)</span>. Поэтому <span class="math inline">\(\det G\ge0\)</span>, а при <span class="math inline">\(k=n\)</span> <span class="math inline">\(\det G=(\det X)^2\)</span>.</p>
+</div>
+
+<p> ◻</p>
+</div>
+
+<div class="corollary">
+
+<p><strong>Следствие 131</strong> (Высота). <em>Если <span class="math inline">\(x_1,\ldots,x_k\)</span> линейно независимы, то высота, опущенная из <span class="math inline">\(x_k\)</span> на подпространство <span class="math display">\[\langle x_1,\ldots,x_{k-1}\rangle,\]</span> равна <span class="math display">\[h=\frac{V_k(x_1,\ldots,x_k)}{V_{k-1}(x_1,\ldots,x_{k-1})}.\]</span> В терминах определителей Грама: <span class="math display">\[h^2=\frac{\det G(x_1,\ldots,x_k)}{\det G(x_1,\ldots,x_{k-1})}.\]</span></em></p>
+<div class="clarifybox">
+
+<p><em>Расстояние от вектора <span class="math inline">\(x\)</span> до подпространства <span class="math inline">\(U\)</span> равно <span class="math inline">\(\|\operatorname{ort}_U x\|\)</span>. Угол с подпространством задаётся через проекцию: <span class="math inline">\(\cos\angle(x,U)=\|\operatorname{pr}_Ux\|/\|x\|\)</span> при <span class="math inline">\(x\ne0\)</span>.</em></p>
+</div>
+
+</div>
+
+<div class="remark">
+
+<p><em>Замечание 132</em> (Ориентированный объём). Если <span class="math inline">\(k=n\)</span> и выбран ориентированный ортонормированный базис, то ориентированный объём параллелепипеда равен определителю матрицы координат: <span class="math display">\[\operatorname{Vol}(x_1,\ldots,x_n)=\det X.\]</span> При этом обычный объём равен <span class="math display">\[V_n(x_1,\ldots,x_n)=|\det X|.\]</span></p>
+<div class="clarifybox">
+
+<p>Геометрический смысл определителя Грама: <span class="math inline">\(\sqrt{\det G(v_1,
+\ldots,v_k)}\)</span> — <span class="math inline">\(k\)</span>-мерный объём параллелепипеда, натянутого на эти векторы. Для ориентированного объёма в полной размерности используется <span class="math inline">\(\det X\)</span>, для неориентированного — <span class="math inline">\(|\det X|\)</span>.</p>
+</div>
+
+</div>
+
+<h3 id="qr-разложение">QR-разложение</h3>
+<div class="theorem">
+
+<p><strong>Теорема 133</strong> (QR-разложение). <em>Пусть <span class="math inline">\(A\in M_{m\times n}(\mathbb{R})\)</span> имеет линейно независимые столбцы <span class="math display">\[a_1,\ldots,a_n.\]</span> Тогда существует разложение <span class="math display">\[A=QR,\]</span> где столбцы матрицы <span class="math inline">\(Q\)</span> образуют ортонормированную систему, а <span class="math inline">\(R\)</span> — верхнетреугольная матрица с положительными диагональными элементами.</em></p>
+<div class="clarifybox">
+
+<p><em>QR-разложение: если <span class="math inline">\(A\in M_{m,n}(\mathbb{R})\)</span> имеет линейно независимые столбцы, то <span class="math inline">\(A=QR\)</span>, где столбцы <span class="math inline">\(Q\)</span> ортонормированы, а <span class="math inline">\(R\)</span> верхнетреугольная с положительной диагональю. Для квадратной невырожденной матрицы <span class="math inline">\(m=n\)</span>, <span class="math inline">\(Q\)</span> ортогональна.</em></p>
+</div>
+
+</div>
+
+<div class="proof">
+
+<p><em>Алгоритм.</em> К столбцам <span class="math inline">\(a_1,\ldots,a_n\)</span> применяем процесс ортогонализации Грама–Шмидта. Получаем ортонормированные векторы <span class="math display">\[q_1,\ldots,q_n.\]</span> Каждый столбец <span class="math inline">\(a_j\)</span> выражается через <span class="math inline">\(q_1,\ldots,q_j\)</span>: <span class="math display">\[a_j=r_{1j}q_1+\cdots+r_{jj}q_j.\]</span> В матричном виде это даёт <span class="math display">\[A=QR.\]</span> Диагональные элементы <span class="math inline">\(r_{jj}\)</span> выбираются положительными. ◻</p>
+</div>
+
+<div class="proposition">
+
+<p><strong>Утверждение 134</strong> (Единственность QR-разложения). <em>Если <span class="math display">\[A=Q_1R_1=Q_2R_2,\]</span> где <span class="math inline">\(Q_1,Q_2\)</span> ортогональны, а <span class="math inline">\(R_1,R_2\)</span> верхнетреугольны с положительной диагональю, то <span class="math display">\[Q_1=Q_2,
+\qquad
+R_1=R_2.\]</span></em></p>
+<div class="clarifybox">
+
+<p><em>Единственность QR при положительной диагонали <span class="math inline">\(R\)</span>: если <span class="math inline">\(A=Q_1R_1=Q_2R_2\)</span>, то <span class="math inline">\(Q_2^TQ_1=R_2R_1^{-1}\)</span>. Левая часть ортогональна, правая верхнетреугольна с положительной диагональю; значит обе равны <span class="math inline">\(I\)</span>, и <span class="math inline">\(Q_1=Q_2, R_1=R_2\)</span>.</em></p>
+</div>
+
+</div>
+
+  </article>
+</main>
+
+<footer class="footer">
+  <p>Конспект по линейной алгебре, билеты 1–27. Статический сайт для GitHub Pages.</p>
+  <p><a href="../assets/lin_alg_notes.pdf">Скачать PDF</a> · <a href="../assets/lin_alg_notes.tex">Скачать TeX</a></p>
+</footer>
+<script src="../assets/app.js"></script>
+</html>

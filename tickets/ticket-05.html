@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Билет 5. Положительно/отрицательно определённые билинейные и квадратичные формы. Критерий Сильвестра. · Линейная алгебра</title>
+  <meta name="description" content="Интерактивный конспект по линейной алгебре: билеты 1–27, формы, операторы, аффинная геометрия и тензоры.">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      macros: {
+        R: "\\mathbb{R}", C: "\\mathbb{C}", F: "\\mathbb{F}",
+        Ker: "\\operatorname{Ker}", Imop: "\\operatorname{Im}", rk: "\\operatorname{rk}",
+        End: "\\operatorname{End}", Hom: "\\operatorname{Hom}", tr: "\\operatorname{tr}",
+        diag: "\\operatorname{diag}", Span: "\\operatorname{span}", Id: "\\operatorname{Id}",
+        Sym: "\\operatorname{Sym}", Alt: "\\operatorname{Alt}", dist: "\\operatorname{dist}",
+        pr: "\\operatorname{pr}", ort: "\\operatorname{ort}"
+      }
+    },
+    svg: { fontCache: 'global' }
+  };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<header class="topbar">
+  <a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Алгебра II</span></a>
+  <nav>
+    <a class="active" href="../index.html#tickets">Билеты</a>
+    <a href="../map.html">Карта</a>
+    <a href="../trainer.html">Тренажёр</a>
+    <a href="../formulas.html">Формулы</a>
+    <a href="../interactives.html">Интерактивы</a>
+    <a href="../assets/lin_alg_notes.pdf">PDF</a>
+  </nav>
+  <button id="themeToggle" class="icon-button" aria-label="Переключить тему">◐</button>
+</header>
+<main class="layout">
+  <aside class="sidebar" aria-label="Навигация по билетам">
+    <div style="margin: 4px 6px 12px; color: var(--muted); font-size: 13px;">Билеты</div>
+    <a href="../tickets/ticket-01.html">1</a>
+<a href="../tickets/ticket-02.html">2</a>
+<a href="../tickets/ticket-03.html">3</a>
+<a href="../tickets/ticket-04.html">4</a>
+<a href="../tickets/ticket-05.html" class="current">5</a>
+<a href="../tickets/ticket-06.html">6</a>
+<a href="../tickets/ticket-07.html">7</a>
+<a href="../tickets/ticket-08.html">8</a>
+<a href="../tickets/ticket-09.html">9</a>
+<a href="../tickets/ticket-10.html">10</a>
+<a href="../tickets/ticket-11.html">11</a>
+<a href="../tickets/ticket-12.html">12</a>
+<a href="../tickets/ticket-13.html">13</a>
+<a href="../tickets/ticket-14.html">14</a>
+<a href="../tickets/ticket-15.html">15</a>
+<a href="../tickets/ticket-16.html">16</a>
+<a href="../tickets/ticket-17.html">17</a>
+<a href="../tickets/ticket-18.html">18</a>
+<a href="../tickets/ticket-19.html">19</a>
+<a href="../tickets/ticket-20.html">20</a>
+<a href="../tickets/ticket-21.html">21</a>
+<a href="../tickets/ticket-22.html">22</a>
+<a href="../tickets/ticket-23.html">23</a>
+<a href="../tickets/ticket-24.html">24</a>
+<a href="../tickets/ticket-25.html">25</a>
+<a href="../tickets/ticket-26.html">26</a>
+<a href="../tickets/ticket-27.html">27</a>
+  </aside>
+  <article class="article">
+    <div class="ticket-tools">
+      <button class="small-btn primary" data-mark-ticket="5">Отметить как выученный</button>
+      <button class="small-btn" id="examMode">Режим устного ответа</button>
+      <a class="small-btn" href="ticket-04.html">← Предыдущий</a>
+      <a class="small-btn" href="ticket-06.html">Следующий →</a>
+    </div>
+    <h1 id="билет-5-положительноотрицательно-определённые-билинейные-и-квадратичные-формы-критерий-сильвестра">Билет 5. Положительно/отрицательно определённые билинейные и квадратичные формы. Критерий Сильвестра.</h1>
+<h4 id="содержание-билета">Содержание билета.</h4>
+<p>Положительно/отрицательно определённые билинейные и квадратичные формы. Критерий Сильвестра.</p>
+<div class="planbox">
+
+<p>главный скелет ответа — определение положительной/отрицательной определённости, связь с нормальным видом, затем критерий Сильвестра через главные угловые миноры.</p>
+</div>
+
+<h3 id="канонический-вид-квадратичной-формы">Канонический вид квадратичной формы</h3>
+<div class="theorem">
+
+<p><strong>Теорема 90</strong> (Существование ортогонального базиса). <em>Пусть <span class="math inline">\(\operatorname{char}\mathbb{F}\ne2\)</span> и <span class="math inline">\(\beta\)</span> — симметрическая билинейная форма на конечномерном пространстве <span class="math inline">\(V\)</span>. Тогда существует ортогональный базис пространства <span class="math inline">\(V\)</span> относительно формы <span class="math inline">\(\beta\)</span>.</em></p>
+</div>
+
+<div class="proof">
+
+<p><em>Proof.</em> Доказательство ведётся индукцией по <span class="math inline">\(n=\dim V\)</span>.</p>
+<p>Если <span class="math inline">\(n=1\)</span>, утверждение очевидно.</p>
+<p>Пусть <span class="math inline">\(n&gt;1\)</span> и утверждение уже доказано для пространств меньшей размерности. Рассмотрим квадратичную форму <span class="math display">\[q(x)=\beta(x,x).\]</span> Если <span class="math inline">\(q(x)=0\)</span> для всех <span class="math inline">\(x\in V\)</span>, то по формуле поляризации <span class="math display">\[\beta(x,y)=\frac{q(x+y)-q(x)-q(y)}{2}=0,\]</span> то есть форма нулевая, и любой базис является ортогональным.</p>
+<p>Если же существует <span class="math inline">\(e_1\in V\)</span> такой, что <span class="math display">\[q(e_1)=\beta(e_1,e_1)\ne0,\]</span> то подпространство <span class="math inline">\(\langle e_1\rangle\)</span> невырождено. Тогда <span class="math display">\[V=\langle e_1\rangle\oplus \langle e_1\rangle^\perp.\]</span> К подпространству <span class="math inline">\(\langle e_1\rangle^\perp\)</span> применяем индукционное предположение и получаем в нём ортогональный базис <span class="math display">\[e_2,\ldots,e_n.\]</span> Тогда <span class="math display">\[e_1,e_2,\ldots,e_n\]</span> — ортогональный базис всего <span class="math inline">\(V\)</span>. ◻</p>
+</div>
+
+<div class="corollary">
+
+<p><strong>Следствие 91</strong>. <em>Любую квадратичную форму можно привести к каноническому виду.</em></p>
+</div>
+
+<h3 id="метод-лагранжа">Метод Лагранжа</h3>
+<p>Рассмотрим квадратичную форму <span class="math display">\[q(x_1,\ldots,x_n)
+=\sum_{i=1}^n b_{ii}x_i^2
++2\sum_{1\le i&lt;j\le n} b_{ij}x_ix_j.\]</span> Если <span class="math inline">\(b_{11}\ne0\)</span>, то выделяем полный квадрат: <span class="math display">\[\begin{aligned}
+q(x_1,\ldots,x_n)
+&amp;=b_{11}\left(x_1+\frac{b_{12}}{b_{11}}x_2+\cdots+\frac{b_{1n}}{b_{11}}x_n\right)^2 \\
+&amp;\quad + q_1(x_2,\ldots,x_n),
+\end{aligned}\]</span> где <span class="math inline">\(q_1\)</span> — квадратичная форма от <span class="math inline">\(n-1\)</span> переменных. Далее применяем тот же процесс к <span class="math inline">\(q_1\)</span>.</p>
+<p>Если <span class="math inline">\(b_{11}=0\)</span>, но есть ненулевой коэффициент при смешанном члене, то выполняют линейную замену переменных, чтобы появился ненулевой квадрат.</p>
+<div class="clarifybox">
+
+<p>Стандартный ход метода Лагранжа: если при <span class="math inline">\(x_1^2\)</span> коэффициент <span class="math inline">\(a_{11}\ne0\)</span>, выделяют полный квадрат <span class="math display">\[q=a_{11}\left(x_1+\frac{a_{12}}{a_{11}}x_2+\cdots+\frac{a_{1n}}{a_{11}}x_n\right)^2+q_1(x_2,
+\ldots,x_n),\]</span> после чего повторяют процедуру для <span class="math inline">\(q_1\)</span>. Если подходящего квадратного коэффициента нет, сначала делают линейную замену, создающую ненулевой квадрат.</p>
+</div>
+
+<div class="remark">
+
+<p><em>Замечание 92</em>. В результате метода Лагранжа получается новый базис, в котором матрица квадратичной формы диагональна.</p>
+</div>
+
+<h3 id="метод-якоби">Метод Якоби</h3>
+<p>Пусть <span class="math inline">\(B\)</span> — матрица симметрической билинейной формы в базисе <span class="math inline">\(e_1,\ldots,e_n\)</span>. Обозначим угловые миноры: <span class="math display">\[\Delta_k=\det B_k,\]</span> где <span class="math inline">\(B_k\)</span> — левый верхний <span class="math inline">\(k\times k\)</span> блок матрицы <span class="math inline">\(B\)</span>, и положим <span class="math display">\[\Delta_0=1.\]</span></p>
+<div class="theorem">
+
+<p><strong>Теорема 93</strong> (Формула Якоби). <em>Если <span class="math display">\[\Delta_k\ne0,
+\qquad k=1,\ldots,n,\]</span> то существует ортогональный базис <span class="math inline">\(f_1,\ldots,f_n\)</span>, в котором квадратичная форма имеет вид <span class="math display">\[q(x_1,\ldots,x_n)
+=\frac{\Delta_1}{\Delta_0}x_1^2
++\frac{\Delta_2}{\Delta_1}x_2^2
++\cdots+
+\frac{\Delta_n}{\Delta_{n-1}}x_n^2.\]</span></em></p>
+<div class="clarifybox">
+
+<p><em>Точная стандартная формулировка — метод Якоби: если ведущие главные миноры <span class="math inline">\(\Delta_k\ne0\)</span>, то квадратичная форма приводится треугольной заменой к виду <span class="math display">\[q=\Delta_1 y_1^2+\frac{\Delta_2}{\Delta_1}y_2^2+\cdots+\frac{\Delta_n}{\Delta_{n-1}}y_n^2.\]</span> Эта же формула используется для быстрого определения инерции при невырожденных ведущих минорах.</em></p>
+</div>
+
+</div>
+
+<div class="proof">
+
+<p><em>Идея доказательства.</em> Пусть <span class="math display">\[V_k=\langle e_1,\ldots,e_k\rangle.\]</span> Условие <span class="math inline">\(\Delta_k\ne0\)</span> означает, что ограничение формы на <span class="math inline">\(V_k\)</span> невырождено. Тогда можно строить ортогональный базис последовательно: <span class="math display">\[V_1\subset V_2\subset\cdots\subset V_n=V,\]</span> выбирая <span class="math display">\[f_k\in V_k\cap V_{k-1}^{\perp}\]</span> так, чтобы <span class="math display">\[V_k=V_{k-1}\oplus\langle f_k\rangle.\]</span> В этом базисе матрица формы диагональна. Диагональные элементы определяются из соотношения для определителей: <span class="math display">\[\Delta_k=\prod_{i=1}^k \beta(f_i,f_i).\]</span> Поэтому <span class="math display">\[\beta(f_k,f_k)=\frac{\Delta_k}{\Delta_{k-1}}.\]</span></p>
+<div class="clarifybox">
+
+<p>Смысл геометрического доказательства: симметрическая билинейная форма задаётся самосопряжённым оператором, поэтому в ортонормированном базисе из собственных векторов её матрица диагональна. Геометрически это переход к главным осям.</p>
+</div>
+
+<p> ◻</p>
+</div>
+
+<h3 id="положительная-определённость-и-критерий-сильвестра">Положительная определённость и критерий Сильвестра</h3>
+<div class="definition">
+
+<p><strong>Определение 94</strong> (Положительно определённая квадратичная форма). Квадратичная форма <span class="math inline">\(q\)</span> называется <em>положительно определённой</em>, если <span class="math display">\[q(x)&gt;0
+\qquad \forall x\ne0.\]</span></p>
+</div>
+
+<div class="definition">
+
+<p><strong>Определение 95</strong> (Отрицательно определённая квадратичная форма). Квадратичная форма <span class="math inline">\(q\)</span> называется <em>отрицательно определённой</em>, если <span class="math display">\[q(x)&lt;0
+\qquad \forall x\ne0.\]</span></p>
+</div>
+
+<div class="definition">
+
+<p><strong>Определение 96</strong> (Полуопределённые формы). Форма называется положительно полуопределённой, если <span class="math display">\[q(x)\ge0
+\qquad \forall x\in V,\]</span> и отрицательно полуопределённой, если <span class="math display">\[q(x)\le0
+\qquad \forall x\in V.\]</span></p>
+<div class="clarifybox">
+
+<p>Классификация по знаку: положительно определённая <span class="math inline">\(q(x)&gt;0\)</span> при <span class="math inline">\(x\ne0\)</span>; отрицательно определённая <span class="math inline">\(q(x)&lt;0\)</span>; положительно полуопределённая <span class="math inline">\(q(x)\ge0\)</span>; отрицательно полуопределённая <span class="math inline">\(q(x)\le0\)</span>; неопределённая — принимает и положительные, и отрицательные значения.</p>
+</div>
+
+</div>
+
+<div class="theorem">
+
+<p><strong>Теорема 97</strong> (Критерий через канонический вид). <em>Пусть квадратичная форма приведена к каноническому виду <span class="math display">\[q(x_1,
+\ldots,x_n)=a_1x_1^2+
+\cdots+a_nx_n^2.\]</span> Тогда:</em></p>
+<ol type="1">
+<li><p><em><span class="math inline">\(q\)</span> положительно определена тогда и только тогда, когда <span class="math inline">\(a_i&gt;0\)</span> для всех <span class="math inline">\(i\)</span>;</em></p></li>
+<li><p><em><span class="math inline">\(q\)</span> отрицательно определена тогда и только тогда, когда <span class="math inline">\(a_i&lt;0\)</span> для всех <span class="math inline">\(i\)</span>;</em></p></li>
+<li><p><em>если среди <span class="math inline">\(a_i\)</span> есть положительные и отрицательные, то форма неопределённая.</em></p></li>
+</ol>
+</div>
+
+<div class="theorem">
+
+<p><strong>Теорема 98</strong> (Критерий Сильвестра). <em>Пусть <span class="math inline">\(q\)</span> — вещественная квадратичная форма с симметрической матрицей <span class="math inline">\(B\)</span>, а <span class="math display">\[\Delta_k\]</span> — её угловые миноры. Тогда <span class="math inline">\(q\)</span> положительно определена тогда и только тогда, когда <span class="math display">\[\Delta_1&gt;0,
+\quad
+\Delta_2&gt;0,
+\quad
+\ldots,
+\quad
+\Delta_n&gt;0.\]</span></em></p>
+</div>
+
+<div class="proof">
+
+<p><em>Proof.</em> Если все угловые миноры положительны, то по формуле Якоби <span class="math display">\[q(x_1,
+\ldots,x_n)=
+\frac{\Delta_1}{\Delta_0}x_1^2+
+\frac{\Delta_2}{\Delta_1}x_2^2+
+\cdots+
+\frac{\Delta_n}{\Delta_{n-1}}x_n^2.\]</span> Так как все отношения <span class="math display">\[\frac{\Delta_k}{\Delta_{k-1}}\]</span> положительны, форма положительно определена. Обратное направление следует из того, что ограничение положительно определённой формы на любое подпространство также положительно определено, поэтому все соответствующие угловые миноры положительны.</p>
+<div class="clarifybox">
+
+<p>Доказательство закона инерции через переходную матрицу: если две диагональные записи одной формы связаны невырожденной заменой <span class="math inline">\(x=Cy\)</span>, то максимальная размерность подпространства, на котором форма положительно определена, не меняется. Эта максимальная размерность равна числу положительных квадратов; аналогично для отрицательных. Поэтому числа положительных, отрицательных и нулевых коэффициентов не зависят от приведения.</p>
+</div>
+
+<p> ◻</p>
+</div>
+
+<div class="corollary">
+
+<p><strong>Следствие 99</strong> (Критерий отрицательной определённости). <em>Форма <span class="math inline">\(q\)</span> отрицательно определена тогда и только тогда, когда <span class="math display">\[(-1)^k\Delta_k&gt;0,
+\qquad k=1,
+\ldots,n.\]</span> Иначе говоря, <span class="math display">\[\Delta_1&lt;0,
+\quad
+\Delta_2&gt;0,
+\quad
+\Delta_3&lt;0,
+\quad
+\ldots\]</span></em></p>
+<div class="clarifybox">
+
+<p><em>Для отрицательной определённости критерий записывается как <span class="math inline">\(\Delta_1&lt;0,\Delta_2&gt;0,\Delta_3&lt;0,\ldots\)</span>, то есть <span class="math inline">\((-1)^k\Delta_k&gt;0\)</span>. Для положительной определённости: <span class="math inline">\(\Delta_k&gt;0\)</span> для всех <span class="math inline">\(k\)</span>.</em></p>
+</div>
+
+</div>
+
+<div class="example">
+
+<p><strong>Пример 100</strong>. На странице 19 приведён пример квадратичной формы от двух переменных и вычисление её матрицы/миноров.</p>
+<div class="clarifybox">
+
+<p>Численный пример заменён проверенным стандартным: матрица <span class="math inline">\(\begin{pmatrix}2&amp;1\\1&amp;2\end{pmatrix}\)</span> положительно определена, так как <span class="math inline">\(\Delta_1=2&gt;0\)</span>, <span class="math inline">\(\Delta_2=3&gt;0\)</span>. Матрица <span class="math inline">\(\begin{pmatrix}0&amp;1\\1&amp;0\end{pmatrix}\)</span> неопределённа, поскольку <span class="math inline">\(q(x,y)=2xy\)</span> принимает оба знака.</p>
+</div>
+
+</div>
+
+  </article>
+</main>
+
+<footer class="footer">
+  <p>Конспект по линейной алгебре, билеты 1–27. Статический сайт для GitHub Pages.</p>
+  <p><a href="../assets/lin_alg_notes.pdf">Скачать PDF</a> · <a href="../assets/lin_alg_notes.tex">Скачать TeX</a></p>
+</footer>
+<script src="../assets/app.js"></script>
+</html>

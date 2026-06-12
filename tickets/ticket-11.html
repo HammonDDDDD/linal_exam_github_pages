@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Билет 11. Отождествление $V$ и $V^*$ при наличии невырожденной билинейной формы (например, скалярного произведения). Соответствие между операторами и билинейными формами в евклидовом пространстве. Сопряжённый оператор и его свойства. · Линейная алгебра</title>
+  <meta name="description" content="Интерактивный конспект по линейной алгебре: билеты 1–27, формы, операторы, аффинная геометрия и тензоры.">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      macros: {
+        R: "\\mathbb{R}", C: "\\mathbb{C}", F: "\\mathbb{F}",
+        Ker: "\\operatorname{Ker}", Imop: "\\operatorname{Im}", rk: "\\operatorname{rk}",
+        End: "\\operatorname{End}", Hom: "\\operatorname{Hom}", tr: "\\operatorname{tr}",
+        diag: "\\operatorname{diag}", Span: "\\operatorname{span}", Id: "\\operatorname{Id}",
+        Sym: "\\operatorname{Sym}", Alt: "\\operatorname{Alt}", dist: "\\operatorname{dist}",
+        pr: "\\operatorname{pr}", ort: "\\operatorname{ort}"
+      }
+    },
+    svg: { fontCache: 'global' }
+  };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<header class="topbar">
+  <a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Алгебра II</span></a>
+  <nav>
+    <a class="active" href="../index.html#tickets">Билеты</a>
+    <a href="../map.html">Карта</a>
+    <a href="../trainer.html">Тренажёр</a>
+    <a href="../formulas.html">Формулы</a>
+    <a href="../interactives.html">Интерактивы</a>
+    <a href="../assets/lin_alg_notes.pdf">PDF</a>
+  </nav>
+  <button id="themeToggle" class="icon-button" aria-label="Переключить тему">◐</button>
+</header>
+<main class="layout">
+  <aside class="sidebar" aria-label="Навигация по билетам">
+    <div style="margin: 4px 6px 12px; color: var(--muted); font-size: 13px;">Билеты</div>
+    <a href="../tickets/ticket-01.html">1</a>
+<a href="../tickets/ticket-02.html">2</a>
+<a href="../tickets/ticket-03.html">3</a>
+<a href="../tickets/ticket-04.html">4</a>
+<a href="../tickets/ticket-05.html">5</a>
+<a href="../tickets/ticket-06.html">6</a>
+<a href="../tickets/ticket-07.html">7</a>
+<a href="../tickets/ticket-08.html">8</a>
+<a href="../tickets/ticket-09.html">9</a>
+<a href="../tickets/ticket-10.html">10</a>
+<a href="../tickets/ticket-11.html" class="current">11</a>
+<a href="../tickets/ticket-12.html">12</a>
+<a href="../tickets/ticket-13.html">13</a>
+<a href="../tickets/ticket-14.html">14</a>
+<a href="../tickets/ticket-15.html">15</a>
+<a href="../tickets/ticket-16.html">16</a>
+<a href="../tickets/ticket-17.html">17</a>
+<a href="../tickets/ticket-18.html">18</a>
+<a href="../tickets/ticket-19.html">19</a>
+<a href="../tickets/ticket-20.html">20</a>
+<a href="../tickets/ticket-21.html">21</a>
+<a href="../tickets/ticket-22.html">22</a>
+<a href="../tickets/ticket-23.html">23</a>
+<a href="../tickets/ticket-24.html">24</a>
+<a href="../tickets/ticket-25.html">25</a>
+<a href="../tickets/ticket-26.html">26</a>
+<a href="../tickets/ticket-27.html">27</a>
+  </aside>
+  <article class="article">
+    <div class="ticket-tools">
+      <button class="small-btn primary" data-mark-ticket="11">Отметить как выученный</button>
+      <button class="small-btn" id="examMode">Режим устного ответа</button>
+      <a class="small-btn" href="ticket-10.html">← Предыдущий</a>
+      <a class="small-btn" href="ticket-12.html">Следующий →</a>
+    </div>
+    <h1 id="билет-11-отождествление-v-и-v-при-наличии-невырожденной-билинейной-формы-например-скалярного-произведения-соответствие-между-операторами-и-билинейными-формами-в-евклидовом-пространстве-сопряжённый-оператор-и-его-свойства">Билет 11. Отождествление <span class="math inline">\(V\)</span> и <span class="math inline">\(V^*\)</span> при наличии невырожденной билинейной формы (например, скалярного произведения). Соответствие между операторами и билинейными формами в евклидовом пространстве. Сопряжённый оператор и его свойства.</h1>
+<h4 id="содержание-билета">Содержание билета.</h4>
+<p>Отождествление <span class="math inline">\(V\)</span> и <span class="math inline">\(V^*\)</span> при наличии невырожденной билинейной формы (например, скалярного произведения). Соответствие между операторами и билинейными формами в евклидовом пространстве. Сопряжённый оператор и его свойства.</p>
+<div class="planbox">
+
+<p>центральная мысль — невырожденная билинейная форма даёт изоморфизм <span class="math inline">\(V\simeq V^*\)</span>; скалярное произведение переводит билинейные формы в операторы; сопряжённый оператор определяется переносом действия с одного аргумента скалярного произведения на другой.</p>
+</div>
+
+<h3 id="связь-билинейных-форм-двойственного-пространства-и-операторов">Связь билинейных форм, двойственного пространства и операторов</h3>
+<h3 id="невырожденная-форма-и-двойственное-пространство">Невырожденная форма и двойственное пространство</h3>
+<p>Пусть <span class="math inline">\(V\)</span> — конечномерное пространство и <span class="math inline">\(\beta\in\operatorname{BL}(V)\)</span>. Форма <span class="math inline">\(\beta\)</span> задаёт отображение <span class="math display">\[V\to V^*,
+\qquad
+y\mapsto \beta(\,\cdot\,,y),\]</span> где функционал <span class="math inline">\(\beta(\,\cdot\,,y)\)</span> действует по правилу <span class="math display">\[x\mapsto \beta(x,y).\]</span></p>
+<div class="clarifybox">
+
+<p>Для билинейной формы есть два естественных отображения: <span class="math inline">\(x\mapsto\beta(x,\cdot)\)</span> и <span class="math inline">\(y\mapsto\beta(\cdot,y)\)</span>. В евклидовом пространстве оператор обычно задают условием <span class="math inline">\(\beta(x,y)=(Ax,y)\)</span> или <span class="math inline">\((x,Ay)\)</span>; выбранное соглашение надо держать единым.</p>
+</div>
+
+<div class="proposition">
+
+<p><strong>Утверждение 153</strong>. <em>Если <span class="math inline">\(\beta\)</span> невырождена, то соответствующее отображение <span class="math display">\[V\to V^*\]</span> является изоморфизмом.</em></p>
+</div>
+
+<div class="proof">
+
+<p><em>Proof.</em> Ядро этого отображения состоит из таких <span class="math inline">\(y\in V\)</span>, что <span class="math display">\[\beta(x,y)=0
+\qquad \forall x\in V.\]</span> То есть ядро совпадает с правым ядром формы. Если форма невырождена, то ядро равно нулю. Так как <span class="math display">\[\dim V=\dim V^*,\]</span> инъективное линейное отображение <span class="math inline">\(V\to V^*\)</span> является изоморфизмом. ◻</p>
+</div>
+
+<div class="corollary">
+
+<p><strong>Следствие 154</strong> (Евклидово пространство отождествляется с двойственным). <em>В конечномерном евклидовом пространстве каждый линейный функционал <span class="math inline">\(\omega\in V^*\)</span> единственным образом представляется в виде <span class="math display">\[\omega(x)=(y,x)\]</span> для некоторого <span class="math inline">\(y\in V\)</span>.</em></p>
+<div class="clarifybox">
+
+<p><em>В вещественном евклидовом случае <span class="math inline">\((x,y)=(y,x)\)</span>, поэтому порядок аргументов не влияет. Для эрмитова случая в этом конспекте фиксируем convention: линейность по первому аргументу и полулинейность по второму, <span class="math inline">\((y,x)=\overline{(x,y)}\)</span>.</em></p>
+</div>
+
+</div>
+
+<p>Если <span class="math inline">\(e_1,\ldots,e_n\)</span> — ортонормированный базис, то двойственный базис <span class="math inline">\(e_1^*,\ldots,e_n^*\)</span> связан с ним так: <span class="math display">\[e_i^*(e_j)=\delta_{ij}=(e_i,e_j).\]</span> Следовательно, в евклидовом пространстве ортонормированный базис можно отождествлять со своим двойственным базисом.</p>
+<h3 id="билинейные-формы-и-линейные-операторы">Билинейные формы и линейные операторы</h3>
+<p>Пусть <span class="math inline">\(V\)</span> — конечномерное евклидово пространство. Каждому линейному оператору <span class="math inline">\(A\in\operatorname{End}(V)\)</span> можно сопоставить билинейную форму <span class="math display">\[\alpha_A(x,y)=(x,Ay).\]</span> Это задаёт отображение <span class="math display">\[\operatorname{End}(V)\to\operatorname{BL}(V),
+\qquad
+A\mapsto \alpha_A.\]</span></p>
+<div class="proposition">
+
+<p><strong>Утверждение 155</strong>. <em>Отображение <span class="math display">\[A\mapsto \alpha_A,
+\qquad
+\alpha_A(x,y)=(x,Ay),\]</span> является изоморфизмом векторных пространств <span class="math display">\[\operatorname{End}(V)\cong\operatorname{BL}(V).\]</span></em></p>
+</div>
+
+<div class="proof">
+
+<p><em>Proof.</em> Линейность по <span class="math inline">\(A\)</span> очевидна: <span class="math display">\[\alpha_{A+B}(x,y)=\alpha_A(x,y)+\alpha_B(x,y),\]</span> <span class="math display">\[\alpha_{\lambda A}(x,y)=\lambda\alpha_A(x,y).\]</span></p>
+<p>Покажем инъективность. Если <span class="math inline">\(\alpha_A=0\)</span>, то <span class="math display">\[(x,Ay)=0
+\qquad \forall x,y\in V.\]</span> Для каждого фиксированного <span class="math inline">\(y\)</span> вектор <span class="math inline">\(Ay\)</span> ортогонален всем <span class="math inline">\(x\in V\)</span>. Значит, <span class="math display">\[Ay=0
+\qquad \forall y\in V,\]</span> то есть <span class="math display">\[A=0.\]</span></p>
+<p>Так как <span class="math display">\[\dim\operatorname{End}(V)=n^2,
+\qquad
+\dim\operatorname{BL}(V)=n^2,\]</span> инъективное линейное отображение между пространствами одинаковой размерности является изоморфизмом. ◻</p>
+</div>
+
+<p>В ортонормированном базисе связь матрицы формы и матрицы оператора записывается особенно просто. Если <span class="math display">\[A e_j=\sum_i a_{ij}e_i,\]</span> то <span class="math display">\[\alpha_A(e_i,e_j)=(e_i,Ae_j)=a_{ij}.\]</span> Следовательно, в ортонормированном базисе матрица билинейной формы <span class="math inline">\(\alpha_A\)</span> совпадает с матрицей оператора <span class="math inline">\(A\)</span>.</p>
+<div class="clarifybox">
+
+<p>Сопряжённый оператор <span class="math inline">\(A^*\)</span> задаётся равенством <span class="math inline">\((Ax,y)=(x,A^*y)\)</span> в вещественном случае и при выбранной эрмитовой convention. В ортонормированном базисе его матрица равна <span class="math inline">\(A^T\)</span> над <span class="math inline">\(\mathbb{R}\)</span> и <span class="math inline">\(\overline{A}^{T}\)</span> над <span class="math inline">\(\relax\)</span>.</p>
+</div>
+
+<h3 id="сопряжённый-оператор-и-инвариантные-подпространства">Сопряжённый оператор и инвариантные подпространства</h3>
+<h3 id="связь-билинейных-форм-и-операторов">Связь билинейных форм и операторов</h3>
+<p>Пусть <span class="math inline">\(V\)</span> — евклидово или унитарное пространство, а <span class="math inline">\(A\in\operatorname{End}(V)\)</span>. Сопряжённый оператор <span class="math inline">\(A^*\)</span> задаётся условием <span class="math display">\[(Ax,y)=(x,A^*y)
+\qquad \forall x,y\in V.\]</span></p>
+<div class="clarifybox">
+
+<p>Фиксируем convention для всего файла: <span class="math inline">\(\langle \lambda x,y\rangle=\lambda\langle x,y\rangle\)</span>, <span class="math inline">\(\langle x,\lambda y\rangle=\overline{\lambda}\langle x,y\rangle\)</span>, <span class="math inline">\(\langle y,x\rangle=\overline{\langle x,y\rangle}\)</span>. Тогда <span class="math inline">\(\langle Ax,y\rangle=\langle x,A^*y\rangle\)</span>.</p>
+</div>
+
+<p>В ортонормированном базисе матрица сопряжённого оператора получается из матрицы <span class="math inline">\(A\)</span> транспонированием и, в комплексном случае, комплексным сопряжением: <span class="math display">\[[A^*]=[A]^*.\]</span> В вещественном евклидовом случае это просто транспонирование: <span class="math display">\[[A^*]=[A]^T.\]</span></p>
+<div class="lemma">
+
+<p><strong>Лемма 156</strong> (Инвариантность ортогонального дополнения). <em>Пусть <span class="math inline">\(U\subset V\)</span> — подпространство. Тогда <span class="math display">\[U \text{ инвариантно относительно } A
+\quad\Longleftrightarrow\quad
+U^\perp \text{ инвариантно относительно } A^*.\]</span> В частности, если <span class="math inline">\(A=A^*\)</span>, то из <span class="math inline">\(A\)</span>-инвариантности <span class="math inline">\(U\)</span> следует <span class="math inline">\(A\)</span>-инвариантность <span class="math inline">\(U^\perp\)</span>.</em></p>
+</div>
+
+<div class="proof">
+
+<p><em>Proof.</em> Пусть <span class="math inline">\(U\)</span> инвариантно относительно <span class="math inline">\(A\)</span>, то есть <span class="math display">\[Au\in U \qquad \forall u\in U.\]</span> Возьмём <span class="math inline">\(x\in U^\perp\)</span> и <span class="math inline">\(u\in U\)</span>. Тогда <span class="math display">\[(u,A^*x)=(Au,x)=0,\]</span> так как <span class="math inline">\(Au\in U\)</span>, а <span class="math inline">\(x\perp U\)</span>. Следовательно, <span class="math inline">\(A^*x\in U^\perp\)</span>. Обратное направление доказывается аналогично, применяя рассуждение к <span class="math inline">\(A^*\)</span>.</p>
+<div class="clarifybox">
+
+<p>Правильная форма определения сопряжённого: <span class="math inline">\((Ax,y)=(x,A^*y)\)</span>. Эквивалентная запись с переименованными переменными: <span class="math inline">\((A^*u,x)=(u,Ax)\)</span> в вещественном случае; в эрмитовом случае нужно учитывать комплексное сопряжение по выбранной convention.</p>
+</div>
+
+<p> ◻</p>
+</div>
+
+<h2 id="дополнительные-уточнения">Дополнительные уточнения</h2>
+<h3 id="1-билинейные-формы-сопряжённое-пространство-и-невырожденность">1. Билинейные формы, сопряжённое пространство и невырожденность</h3>
+<p>Пусть <span class="math inline">\(V\)</span> — конечномерное пространство над полем <span class="math inline">\(\mathbb{F}\)</span>, а <span class="math display">\[\beta:V\times V\to \mathbb{F}\]</span> — билинейная форма. При фиксации второго аргумента <span class="math inline">\(v\in V\)</span> получаем линейный функционал <span class="math display">\[x\mapsto \beta(x,v),\]</span> поэтому билинейной форме соответствует линейное отображение <span class="math display">\[\Phi_\beta:V\to V^*,\qquad
+\Phi_\beta(v)(x)=\beta(x,v).\]</span> Это даёт изоморфизм <span class="math display">\[\operatorname{Bil}(V)\simeq \operatorname{Hom}(V,V^*).\]</span></p>
+<p>В этой конвенции правое ядро формы записывается как <span class="math display">\[\operatorname{Ker}_R\beta=\{v\in V\mid \beta(x,v)=0\ \forall x\in V\}=\operatorname{Ker}\Phi_\beta.\]</span> Аналогично, если фиксировать первый аргумент, возникает отображение <span class="math display">\[\Psi_\beta:V\to V^*,\qquad \Psi_\beta(u)(y)=\beta(u,y),\]</span> и левое ядро <span class="math display">\[\operatorname{Ker}_L\beta=\{u\in V\mid \beta(u,y)=0\ \forall y\in V\}=\operatorname{Ker}\Psi_\beta.\]</span> Для конечномерного пространства следующие условия эквивалентны: <span class="math display">\[\beta\text{ невырождена}
+\quad\Longleftrightarrow\quad
+\Phi_\beta\text{ --- изоморфизм}
+\quad\Longleftrightarrow\quad
+\det B\ne 0
+\quad\Longleftrightarrow\quad
+\operatorname{Ker}_L\beta=\operatorname{Ker}_R\beta=0.\]</span></p>
+<p>Если на <span class="math inline">\(V\)</span> задано скалярное произведение <span class="math inline">\((\cdot,\cdot)\)</span>, то оно задаёт изоморфизм <span class="math display">\[V\xrightarrow{\sim} V^*,\qquad v\mapsto (\cdot,v).\]</span> В ортонормированном базисе <span class="math inline">\(e_1,\ldots,e_n\)</span> вектор <span class="math inline">\(e_i\)</span> переходит в сопряжённый ковектор <span class="math inline">\(e^i\)</span>, поскольку <span class="math display">\[e^i(e_j)=\delta^i_j,
+\qquad
+(e_j,e_i)=\delta_{ji}.\]</span></p>
+<p>В евклидовом пространстве билинейной форме <span class="math inline">\(\beta\)</span> соответствует единственный оператор <span class="math inline">\(A\in\operatorname{End}(V)\)</span> такой, что <span class="math display">\[\beta(x,y)=(x,Ay).\]</span> В ортонормированном базисе матрица оператора <span class="math inline">\(A\)</span> совпадает с матрицей формы <span class="math inline">\(\beta\)</span>. Сопряжённый оператор задаётся условием <span class="math display">\[(Ax,y)=(x,A^*y).\]</span> Тогда <span class="math display">\[\beta(x,y)=\beta(y,x)\Longleftrightarrow A^*=A,
+\qquad
+\beta(x,y)=-\beta(y,x)\Longleftrightarrow A^*=-A.\]</span></p>
+
+  </article>
+</main>
+
+<footer class="footer">
+  <p>Конспект по линейной алгебре, билеты 1–27. Статический сайт для GitHub Pages.</p>
+  <p><a href="../assets/lin_alg_notes.pdf">Скачать PDF</a> · <a href="../assets/lin_alg_notes.tex">Скачать TeX</a></p>
+</footer>
+<script src="../assets/app.js"></script>
+</html>

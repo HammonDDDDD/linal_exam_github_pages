@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Билет 1. Билинейные формы и их матрицы. Преобразование матрицы билинейной формы при замене базиса. Ранг и ядра билинейной формы. · Линейная алгебра</title>
+  <meta name="description" content="Интерактивный конспект по линейной алгебре: билеты 1–27, формы, операторы, аффинная геометрия и тензоры.">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      macros: {
+        R: "\\mathbb{R}", C: "\\mathbb{C}", F: "\\mathbb{F}",
+        Ker: "\\operatorname{Ker}", Imop: "\\operatorname{Im}", rk: "\\operatorname{rk}",
+        End: "\\operatorname{End}", Hom: "\\operatorname{Hom}", tr: "\\operatorname{tr}",
+        diag: "\\operatorname{diag}", Span: "\\operatorname{span}", Id: "\\operatorname{Id}",
+        Sym: "\\operatorname{Sym}", Alt: "\\operatorname{Alt}", dist: "\\operatorname{dist}",
+        pr: "\\operatorname{pr}", ort: "\\operatorname{ort}"
+      }
+    },
+    svg: { fontCache: 'global' }
+  };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<header class="topbar">
+  <a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Алгебра II</span></a>
+  <nav>
+    <a class="active" href="../index.html#tickets">Билеты</a>
+    <a href="../map.html">Карта</a>
+    <a href="../trainer.html">Тренажёр</a>
+    <a href="../formulas.html">Формулы</a>
+    <a href="../interactives.html">Интерактивы</a>
+    <a href="../assets/lin_alg_notes.pdf">PDF</a>
+  </nav>
+  <button id="themeToggle" class="icon-button" aria-label="Переключить тему">◐</button>
+</header>
+<main class="layout">
+  <aside class="sidebar" aria-label="Навигация по билетам">
+    <div style="margin: 4px 6px 12px; color: var(--muted); font-size: 13px;">Билеты</div>
+    <a href="../tickets/ticket-01.html" class="current">1</a>
+<a href="../tickets/ticket-02.html">2</a>
+<a href="../tickets/ticket-03.html">3</a>
+<a href="../tickets/ticket-04.html">4</a>
+<a href="../tickets/ticket-05.html">5</a>
+<a href="../tickets/ticket-06.html">6</a>
+<a href="../tickets/ticket-07.html">7</a>
+<a href="../tickets/ticket-08.html">8</a>
+<a href="../tickets/ticket-09.html">9</a>
+<a href="../tickets/ticket-10.html">10</a>
+<a href="../tickets/ticket-11.html">11</a>
+<a href="../tickets/ticket-12.html">12</a>
+<a href="../tickets/ticket-13.html">13</a>
+<a href="../tickets/ticket-14.html">14</a>
+<a href="../tickets/ticket-15.html">15</a>
+<a href="../tickets/ticket-16.html">16</a>
+<a href="../tickets/ticket-17.html">17</a>
+<a href="../tickets/ticket-18.html">18</a>
+<a href="../tickets/ticket-19.html">19</a>
+<a href="../tickets/ticket-20.html">20</a>
+<a href="../tickets/ticket-21.html">21</a>
+<a href="../tickets/ticket-22.html">22</a>
+<a href="../tickets/ticket-23.html">23</a>
+<a href="../tickets/ticket-24.html">24</a>
+<a href="../tickets/ticket-25.html">25</a>
+<a href="../tickets/ticket-26.html">26</a>
+<a href="../tickets/ticket-27.html">27</a>
+  </aside>
+  <article class="article">
+    <div class="ticket-tools">
+      <button class="small-btn primary" data-mark-ticket="1">Отметить как выученный</button>
+      <button class="small-btn" id="examMode">Режим устного ответа</button>
+      
+      <a class="small-btn" href="ticket-02.html">Следующий →</a>
+    </div>
+    <h1 id="билет-1-билинейные-формы-и-их-матрицы-преобразование-матрицы-билинейной-формы-при-замене-базиса-ранг-и-ядра-билинейной-формы">Билет 1. Билинейные формы и их матрицы. Преобразование матрицы билинейной формы при замене базиса. Ранг и ядра билинейной формы.</h1>
+<h4 id="содержание-билета">Содержание билета.</h4>
+<p>Билинейные формы и их матрицы. Преобразование матрицы билинейной формы при замене базиса. Ранг и ядра билинейной формы.</p>
+<div class="planbox">
+
+<p>порядок ответа — дать определение билинейности, записать матрицу <span class="math inline">\(B=(\beta(e_i,e_j))\)</span>, вывести формулу <span class="math inline">\(\beta(x,y)=X^TBY\)</span>, затем показать замену базиса <span class="math inline">\(B&#39; = C^TBC\)</span>, после этого обсудить ранг и левое/правое ядра.</p>
+</div>
+
+<h3 id="билинейные-формы">Билинейные формы</h3>
+<div class="definition">
+
+<p><strong>Определение 3</strong> (Билинейная форма). Пусть <span class="math inline">\(V\)</span> — векторное пространство над полем <span class="math inline">\(\mathbb{F}\)</span>. Отображение <span class="math display">\[\beta: V \times V \to \mathbb{F}\]</span> называется <em>билинейной формой</em>, если оно линейно по каждому аргументу: для любых <span class="math inline">\(x,x_1,x_2,y,y_1,y_2\in V\)</span> и <span class="math inline">\(\alpha\in\mathbb{F}\)</span> выполнено</p>
+<ol type="1">
+<li><p><span class="math inline">\(\beta(x_1+x_2,y)=\beta(x_1,y)+\beta(x_2,y)\)</span>;</p></li>
+<li><p><span class="math inline">\(\beta(\alpha x,y)=\alpha\beta(x,y)\)</span>;</p></li>
+<li><p><span class="math inline">\(\beta(x,y_1+y_2)=\beta(x,y_1)+\beta(x,y_2)\)</span>;</p></li>
+<li><p><span class="math inline">\(\beta(x,\alpha y)=\alpha\beta(x,y)\)</span>.</p></li>
+</ol>
+</div>
+
+<div class="example">
+
+<p><strong>Пример 4</strong>. Нулевая форма: <span class="math display">\[\beta(x,y)=0.\]</span></p>
+</div>
+
+<div class="example">
+
+<p><strong>Пример 5</strong>. Пусть <span class="math inline">\(V=\mathbb{F}^n\)</span>, <span class="math inline">\(x=(x_1,\ldots,x_n)^T\)</span>, <span class="math inline">\(y=(y_1,\ldots,y_n)^T\)</span>. Тогда пример билинейной формы: <span class="math display">\[\beta(x,y)=x_1y_1+\cdots+x_ny_n=\sum_{i=1}^n x_i y_i.\]</span></p>
+</div>
+
+<div class="example">
+
+<p><strong>Пример 6</strong>. Если <span class="math inline">\(f,g\in V^*\)</span>, то <span class="math display">\[\beta(x,y)=f(x)g(y)\]</span> является билинейной формой.</p>
+</div>
+
+<div class="example">
+
+<p><strong>Пример 7</strong>. Для матриц <span class="math inline">\(A,B\in M_n(\mathbb{F})\)</span> в конспекте приведён пример вида <span class="math display">\[\beta(A,B)=\operatorname{tr}(AB).\]</span></p>
+<div class="clarifybox">
+
+<p>На пространстве матриц стандартный проверенный пример билинейной формы записывается как <span class="math inline">\(\langle A,B\rangle=\operatorname{tr}(A^{T}B)\)</span> над <span class="math inline">\(\mathbb{R}\)</span> и как <span class="math inline">\(\operatorname{tr}(A^{*}B)\)</span> над <span class="math inline">\(\relax\)</span>. Запись <span class="math inline">\(\operatorname{tr}(AB)\)</span> тоже билинейна, но не является стандартным положительным скалярным произведением на всех матрицах.</p>
+</div>
+
+</div>
+
+<div class="example">
+
+<p><strong>Пример 8</strong>. На странице приведён пример с определителем матрицы <span class="math inline">\(2\times 2\)</span>.</p>
+<div class="clarifybox">
+
+<p>Определитель одной матрицы <span class="math inline">\(\det A\)</span> не является билинейной формой от пары матриц. Корректный пример с определителем: <span class="math inline">\((x,y)\mapsto \det(x,y)\)</span> на <span class="math inline">\(\mathbb{R}^2\)</span> — кососимметрическая билинейная форма от двух векторов; в размерности <span class="math inline">\(n\)</span> <span class="math inline">\(\det(v_1,\ldots,v_n)\)</span> — полилинейная антисимметрическая форма.</p>
+</div>
+
+</div>
+
+<div class="example">
+
+<p><strong>Пример 9</strong>. Если <span class="math inline">\(f,g\in C[a,b]\)</span>, то <span class="math display">\[\beta(f,g)=\int_a^b f(x)g(x)\,dx\]</span> является билинейной формой.</p>
+</div>
+
+<div class="proposition">
+
+<p><strong>Утверждение 10</strong> (Операции с билинейными формами). <em>Если <span class="math inline">\(\beta,\beta_1,\beta_2\)</span> — билинейные формы на <span class="math inline">\(V\)</span>, а <span class="math inline">\(\alpha\in\mathbb{F}\)</span>, то формы <span class="math display">\[\alpha\beta,
+\qquad
+\beta_1+\beta_2\]</span> задаются правилами <span class="math display">\[(\alpha\beta)(x,y)=\alpha\beta(x,y),\]</span> <span class="math display">\[(\beta_1+\beta_2)(x,y)=\beta_1(x,y)+\beta_2(x,y),\]</span> и снова являются билинейными формами.</em></p>
+</div>
+
+<div class="remark">
+
+<p><em>Замечание 11</em>. Билинейные формы на <span class="math inline">\(V\)</span> образуют векторное пространство. Обозначение из конспекта: <span class="math display">\[\operatorname{BL}(V).\]</span></p>
+</div>
+
+<div class="definition">
+
+<p><strong>Определение 12</strong> (Матрица билинейной формы). Пусть <span class="math inline">\(\dim V=n\)</span> и <span class="math inline">\(e_1,\ldots,e_n\)</span> — базис пространства <span class="math inline">\(V\)</span>. Для билинейной формы <span class="math inline">\(\beta\)</span> положим <span class="math display">\[b_{ij}=\beta(e_i,e_j).\]</span> Матрица <span class="math display">\[B=(b_{ij})_{i,j=1}^n\]</span> называется матрицей билинейной формы <span class="math inline">\(\beta\)</span> в базисе <span class="math inline">\(e_1,\ldots,e_n\)</span>.</p>
+</div>
+
+<p>Если <span class="math display">\[x=e_1x_1+\cdots+e_nx_n,\qquad
+y=e_1y_1+\cdots+e_ny_n,\]</span> то по билинейности <span class="math display">\[\begin{aligned}
+\beta(x,y)
+&amp;=\beta(e_1x_1+\cdots+e_nx_n,
+e_1y_1+\cdots+e_ny_n) \\
+&amp;=\sum_{i=1}^n\sum_{j=1}^n x_i\beta(e_i,e_j)y_j.
+\end{aligned}\]</span> Если <span class="math inline">\(X=(x_1,\ldots,x_n)^T\)</span>, <span class="math inline">\(Y=(y_1,\ldots,y_n)^T\)</span>, то <span class="math display">\[\beta(x,y)=X^TBY.\]</span></p>
+<div class="corollary">
+
+<p><strong>Следствие 13</strong>. <em>Соответствие <span class="math display">\[\beta \longmapsto B=(\beta(e_i,e_j))\]</span> задаёт биекцию между пространством билинейных форм на <span class="math inline">\(V\)</span> и пространством матриц <span class="math inline">\(M_n(\mathbb{F})\)</span>. Поэтому <span class="math display">\[\dim \operatorname{BL}(V)=n^2.\]</span></em></p>
+</div>
+
+<div class="proposition">
+
+<p><strong>Утверждение 14</strong> (Изменение матрицы билинейной формы при замене базиса). <em>Пусть <span class="math inline">\(e=(e_1,\ldots,e_n)\)</span> и <span class="math inline">\(\widetilde e=(\widetilde e_1,\ldots,\widetilde e_n)\)</span> — два базиса пространства <span class="math inline">\(V\)</span>. Пусть матрица перехода <span class="math inline">\(C\)</span> задана соотношением <span class="math display">\[\widetilde e = eC.\]</span> Если <span class="math inline">\(X,Y\)</span> — координатные столбцы в старом базисе, а <span class="math inline">\(\widetilde X,\widetilde Y\)</span> — координатные столбцы в новом базисе, то <span class="math display">\[X=C\widetilde X,
+\qquad
+Y=C\widetilde Y.\]</span> Тогда матрицы билинейной формы в этих базисах связаны формулой <span class="math display">\[\widetilde B=C^TBC.\]</span></em></p>
+</div>
+
+<div class="proof">
+
+<p><em>Proof.</em> В старом базисе <span class="math display">\[\beta(x,y)=X^TBY.\]</span> После замены координат <span class="math inline">\(X=C\widetilde X\)</span>, <span class="math inline">\(Y=C\widetilde Y\)</span> получаем <span class="math display">\[\begin{aligned}
+\beta(x,y)
+&amp;=(C\widetilde X)^T B(C\widetilde Y) \\
+&amp;=\widetilde X^T C^TBC\widetilde Y.
+\end{aligned}\]</span> Значит, матрица формы в новом базисе равна <span class="math display">\[\widetilde B=C^TBC.\]</span> ◻</p>
+</div>
+
+<div class="definition">
+
+<p><strong>Определение 15</strong> (Левое и правое ядро билинейной формы). Пусть <span class="math inline">\(\beta\)</span> — билинейная форма на <span class="math inline">\(V\)</span>. Определим <span class="math display">\[\operatorname{Ker}_L\beta=\{x\in V\mid \beta(x,y)=0\quad \forall y\in V\},\]</span> <span class="math display">\[\operatorname{Ker}_R\beta=\{y\in V\mid \beta(x,y)=0\quad \forall x\in V\}.\]</span></p>
+<div class="clarifybox">
+
+<p>Фиксируем обозначения: <span class="math inline">\(\operatorname{Ker}_L\beta=\{x\in V\mid \beta(x,y)=0\ \forall y\in V\}\)</span>, <span class="math inline">\(\operatorname{Ker}_R\beta=\{y\in V\mid \beta(x,y)=0\ \forall x\in V\}\)</span>. В матрице <span class="math inline">\(B\)</span> это соответственно <span class="math inline">\(X^TB=0\)</span> и <span class="math inline">\(BY=0\)</span>; поэтому при конечной размерности обе размерности равны <span class="math inline">\(n-\operatorname{rk}B\)</span>.</p>
+</div>
+
+</div>
+
+<div class="proposition">
+
+<p><strong>Утверждение 16</strong>. <em><span class="math inline">\(\operatorname{Ker}_L\beta\)</span> и <span class="math inline">\(\operatorname{Ker}_R\beta\)</span> являются подпространствами пространства <span class="math inline">\(V\)</span>.</em></p>
+</div>
+
+<div class="proof">
+
+<p><em>Proof.</em> Для левого ядра: если <span class="math inline">\(x_1,x_2\in\operatorname{Ker}_L\beta\)</span>, то для любого <span class="math inline">\(y\in V\)</span> <span class="math display">\[\beta(x_1+x_2,y)=\beta(x_1,y)+\beta(x_2,y)=0.\]</span> Если <span class="math inline">\(\alpha\in\mathbb{F}\)</span> и <span class="math inline">\(x\in\operatorname{Ker}_L\beta\)</span>, то <span class="math display">\[\beta(\alpha x,y)=\alpha\beta(x,y)=0.\]</span> Значит, <span class="math inline">\(\operatorname{Ker}_L\beta\)</span> — подпространство. Для правого ядра доказательство аналогично. ◻</p>
+</div>
+
+<p>Пусть в некотором базисе матрица формы равна <span class="math inline">\(B\)</span>, а <span class="math display">\[\beta(x,y)=X^TBY.\]</span> Тогда условия принадлежности ядрам выражаются матрично: <span class="math display">\[x\in\operatorname{Ker}_L\beta
+\quad\Longleftrightarrow\quad
+X^TB=0
+\quad\Longleftrightarrow\quad
+B^TX=0,\]</span> <span class="math display">\[y\in\operatorname{Ker}_R\beta
+\quad\Longleftrightarrow\quad
+BY=0.\]</span> Отсюда <span class="math display">\[\dim \operatorname{Ker}_L\beta=n-\operatorname{rk}B,
+\qquad
+\dim \operatorname{Ker}_R\beta=n-\operatorname{rk}B.\]</span> В частности, <span class="math display">\[\dim \operatorname{Ker}_L\beta=\dim \operatorname{Ker}_R\beta.\]</span></p>
+<div class="definition">
+
+<p><strong>Определение 17</strong> (Невырожденная билинейная форма). Билинейная форма <span class="math inline">\(\beta\)</span> называется <em>невырожденной</em>, если её ядро тривиально. В конечномерном случае это равносильно условиям <span class="math display">\[\operatorname{Ker}_L\beta=0,
+\qquad
+\operatorname{Ker}_R\beta=0,\]</span> а также условию <span class="math display">\[\det B\ne 0.\]</span></p>
+<div class="clarifybox">
+
+<p>Используем стандартную формулировку через два ядра: левое <span class="math inline">\(\operatorname{Ker}_L\beta\)</span> зануляет форму по первому аргументу, правое <span class="math inline">\(\operatorname{Ker}_R\beta\)</span> — по второму. Билинейная форма невырождена тогда и только тогда, когда эти ядра нулевые, что эквивалентно <span class="math inline">\(\det B\ne0\)</span> в некотором/любом базисе.</p>
+</div>
+
+</div>
+
+<div class="corollary">
+
+<p><strong>Следствие 18</strong>. <em>Если одно из ядер невырожденной формы равно нулю, то и другое ядро равно нулю.</em></p>
+</div>
+
+<h3 id="пример">Пример</h3>
+<p>На странице приведён вычислительный пример билинейной формы с матрицей <span class="math display">\[B=\begin{pmatrix}
+1 &amp; 1 &amp; 2\\
+-1 &amp; 1 &amp; -1\\
+1 &amp; 3 &amp; 1
+\end{pmatrix}\]</span></p>
+<div class="clarifybox">
+
+<p>Для матрицы билинейной формы точная общая схема такая: если <span class="math inline">\(B=(\beta(e_i,e_j))\)</span>, координаты новых базисных векторов образуют столбцы матрицы <span class="math inline">\(C\)</span>, то <span class="math inline">\(B&#39;=C^TBC\)</span>. Ранг формы равен рангу этой матрицы и не зависит от базиса, так как умножение на невырожденные <span class="math inline">\(C^T\)</span> и <span class="math inline">\(C\)</span> не меняет ранг.</p>
+</div>
+
+<p>Идея примера: найти ядро формы через систему линейных уравнений, соответствующую матрице <span class="math inline">\(B\)</span> или <span class="math inline">\(B^T\)</span>.</p>
+<h2 id="дополнительные-уточнения">Дополнительные уточнения</h2>
+<h3 id="1-билинейные-формы-сопряжённое-пространство-и-невырожденность">1. Билинейные формы, сопряжённое пространство и невырожденность</h3>
+<p>Пусть <span class="math inline">\(V\)</span> — конечномерное пространство над полем <span class="math inline">\(\mathbb{F}\)</span>, а <span class="math display">\[\beta:V\times V\to \mathbb{F}\]</span> — билинейная форма. При фиксации второго аргумента <span class="math inline">\(v\in V\)</span> получаем линейный функционал <span class="math display">\[x\mapsto \beta(x,v),\]</span> поэтому билинейной форме соответствует линейное отображение <span class="math display">\[\Phi_\beta:V\to V^*,\qquad
+\Phi_\beta(v)(x)=\beta(x,v).\]</span> Это даёт изоморфизм <span class="math display">\[\operatorname{Bil}(V)\simeq \operatorname{Hom}(V,V^*).\]</span></p>
+<p>В этой конвенции правое ядро формы записывается как <span class="math display">\[\operatorname{Ker}_R\beta=\{v\in V\mid \beta(x,v)=0\ \forall x\in V\}=\operatorname{Ker}\Phi_\beta.\]</span> Аналогично, если фиксировать первый аргумент, возникает отображение <span class="math display">\[\Psi_\beta:V\to V^*,\qquad \Psi_\beta(u)(y)=\beta(u,y),\]</span> и левое ядро <span class="math display">\[\operatorname{Ker}_L\beta=\{u\in V\mid \beta(u,y)=0\ \forall y\in V\}=\operatorname{Ker}\Psi_\beta.\]</span> Для конечномерного пространства следующие условия эквивалентны: <span class="math display">\[\beta\text{ невырождена}
+\quad\Longleftrightarrow\quad
+\Phi_\beta\text{ --- изоморфизм}
+\quad\Longleftrightarrow\quad
+\det B\ne 0
+\quad\Longleftrightarrow\quad
+\operatorname{Ker}_L\beta=\operatorname{Ker}_R\beta=0.\]</span></p>
+<p>Если на <span class="math inline">\(V\)</span> задано скалярное произведение <span class="math inline">\((\cdot,\cdot)\)</span>, то оно задаёт изоморфизм <span class="math display">\[V\xrightarrow{\sim} V^*,\qquad v\mapsto (\cdot,v).\]</span> В ортонормированном базисе <span class="math inline">\(e_1,\ldots,e_n\)</span> вектор <span class="math inline">\(e_i\)</span> переходит в сопряжённый ковектор <span class="math inline">\(e^i\)</span>, поскольку <span class="math display">\[e^i(e_j)=\delta^i_j,
+\qquad
+(e_j,e_i)=\delta_{ji}.\]</span></p>
+<p>В евклидовом пространстве билинейной форме <span class="math inline">\(\beta\)</span> соответствует единственный оператор <span class="math inline">\(A\in\operatorname{End}(V)\)</span> такой, что <span class="math display">\[\beta(x,y)=(x,Ay).\]</span> В ортонормированном базисе матрица оператора <span class="math inline">\(A\)</span> совпадает с матрицей формы <span class="math inline">\(\beta\)</span>. Сопряжённый оператор задаётся условием <span class="math display">\[(Ax,y)=(x,A^*y).\]</span> Тогда <span class="math display">\[\beta(x,y)=\beta(y,x)\Longleftrightarrow A^*=A,
+\qquad
+\beta(x,y)=-\beta(y,x)\Longleftrightarrow A^*=-A.\]</span></p>
+
+  </article>
+</main>
+
+<footer class="footer">
+  <p>Конспект по линейной алгебре, билеты 1–27. Статический сайт для GitHub Pages.</p>
+  <p><a href="../assets/lin_alg_notes.pdf">Скачать PDF</a> · <a href="../assets/lin_alg_notes.tex">Скачать TeX</a></p>
+</footer>
+<script src="../assets/app.js"></script>
+</html>

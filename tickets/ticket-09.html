@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Билет 9. Метрика (расстояние), её свойства. Расстояние и угол между вектором и подпространством. · Линейная алгебра</title>
+  <meta name="description" content="Интерактивный конспект по линейной алгебре: билеты 1–27, формы, операторы, аффинная геометрия и тензоры.">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      macros: {
+        R: "\\mathbb{R}", C: "\\mathbb{C}", F: "\\mathbb{F}",
+        Ker: "\\operatorname{Ker}", Imop: "\\operatorname{Im}", rk: "\\operatorname{rk}",
+        End: "\\operatorname{End}", Hom: "\\operatorname{Hom}", tr: "\\operatorname{tr}",
+        diag: "\\operatorname{diag}", Span: "\\operatorname{span}", Id: "\\operatorname{Id}",
+        Sym: "\\operatorname{Sym}", Alt: "\\operatorname{Alt}", dist: "\\operatorname{dist}",
+        pr: "\\operatorname{pr}", ort: "\\operatorname{ort}"
+      }
+    },
+    svg: { fontCache: 'global' }
+  };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<header class="topbar">
+  <a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Алгебра II</span></a>
+  <nav>
+    <a class="active" href="../index.html#tickets">Билеты</a>
+    <a href="../map.html">Карта</a>
+    <a href="../trainer.html">Тренажёр</a>
+    <a href="../formulas.html">Формулы</a>
+    <a href="../interactives.html">Интерактивы</a>
+    <a href="../assets/lin_alg_notes.pdf">PDF</a>
+  </nav>
+  <button id="themeToggle" class="icon-button" aria-label="Переключить тему">◐</button>
+</header>
+<main class="layout">
+  <aside class="sidebar" aria-label="Навигация по билетам">
+    <div style="margin: 4px 6px 12px; color: var(--muted); font-size: 13px;">Билеты</div>
+    <a href="../tickets/ticket-01.html">1</a>
+<a href="../tickets/ticket-02.html">2</a>
+<a href="../tickets/ticket-03.html">3</a>
+<a href="../tickets/ticket-04.html">4</a>
+<a href="../tickets/ticket-05.html">5</a>
+<a href="../tickets/ticket-06.html">6</a>
+<a href="../tickets/ticket-07.html">7</a>
+<a href="../tickets/ticket-08.html">8</a>
+<a href="../tickets/ticket-09.html" class="current">9</a>
+<a href="../tickets/ticket-10.html">10</a>
+<a href="../tickets/ticket-11.html">11</a>
+<a href="../tickets/ticket-12.html">12</a>
+<a href="../tickets/ticket-13.html">13</a>
+<a href="../tickets/ticket-14.html">14</a>
+<a href="../tickets/ticket-15.html">15</a>
+<a href="../tickets/ticket-16.html">16</a>
+<a href="../tickets/ticket-17.html">17</a>
+<a href="../tickets/ticket-18.html">18</a>
+<a href="../tickets/ticket-19.html">19</a>
+<a href="../tickets/ticket-20.html">20</a>
+<a href="../tickets/ticket-21.html">21</a>
+<a href="../tickets/ticket-22.html">22</a>
+<a href="../tickets/ticket-23.html">23</a>
+<a href="../tickets/ticket-24.html">24</a>
+<a href="../tickets/ticket-25.html">25</a>
+<a href="../tickets/ticket-26.html">26</a>
+<a href="../tickets/ticket-27.html">27</a>
+  </aside>
+  <article class="article">
+    <div class="ticket-tools">
+      <button class="small-btn primary" data-mark-ticket="9">Отметить как выученный</button>
+      <button class="small-btn" id="examMode">Режим устного ответа</button>
+      <a class="small-btn" href="ticket-08.html">← Предыдущий</a>
+      <a class="small-btn" href="ticket-10.html">Следующий →</a>
+    </div>
+    <h1 id="билет-9-метрика-расстояние-её-свойства-расстояние-и-угол-между-вектором-и-подпространством">Билет 9. Метрика (расстояние), её свойства. Расстояние и угол между вектором и подпространством.</h1>
+<h4 id="содержание-билета">Содержание билета.</h4>
+<p>Метрика (расстояние), её свойства. Расстояние и угол между вектором и подпространством.</p>
+<div class="planbox">
+
+<p>здесь лучше показать, что расстояние — это метрика из нормы, а расстояние до подпространства выражается через ортогональную составляющую.</p>
+</div>
+
+<h3 id="метрические-пространства-расстояние-и-угол">Метрические пространства, расстояние и угол</h3>
+<div class="definition">
+
+<p><strong>Определение 135</strong> (Метрическое пространство). Пусть <span class="math inline">\(X\)</span> — множество. Функция <span class="math display">\[\rho:X\times X\to\mathbb{R}\]</span> называется метрикой, если для любых <span class="math inline">\(x,y,z\in X\)</span> выполнено:</p>
+<ol type="1">
+<li><p><span class="math inline">\(\rho(x,y)\ge0\)</span>, причём <span class="math inline">\(\rho(x,y)=0\Longleftrightarrow x=y\)</span>;</p></li>
+<li><p><span class="math inline">\(\rho(x,y)=\rho(y,x)\)</span>;</p></li>
+<li><p><span class="math inline">\(\rho(x,z)\le \rho(x,y)+\rho(y,z)\)</span>.</p></li>
+</ol>
+</div>
+
+<p>В евклидовом пространстве метрика задаётся формулой <span class="math display">\[\rho(x,y)=|x-y|.\]</span></p>
+<div class="definition">
+
+<p><strong>Определение 136</strong> (Расстояние от точки до подпространства). Пусть <span class="math inline">\(U\le V\)</span>. Расстояние от <span class="math inline">\(x\in V\)</span> до <span class="math inline">\(U\)</span> определяется как <span class="math display">\[\rho(x,U)=\inf_{u\in U}|x-u|.\]</span></p>
+</div>
+
+<div class="theorem">
+
+<p><strong>Теорема 137</strong> (Расстояние до подпространства через ортогональную проекцию). <em>Если <span class="math inline">\(V\)</span> — евклидово пространство и <span class="math inline">\(U\le V\)</span>, то <span class="math display">\[\rho(x,U)=|x-\operatorname{pr}_U x|.\]</span> Иначе говоря, <span class="math display">\[\rho(x,U)=|\operatorname{ort}_U x|.\]</span></em></p>
+</div>
+
+<div class="proof">
+
+<p><em>Proof.</em> Разложим <span class="math display">\[x=\operatorname{pr}_U x+\operatorname{ort}_U x,
+\qquad \operatorname{pr}_Ux\in U,
+\quad \operatorname{ort}_Ux\in U^\perp.\]</span> Для любого <span class="math inline">\(u\in U\)</span> имеем <span class="math display">\[x-u=(\operatorname{pr}_Ux-u)+\operatorname{ort}_Ux,\]</span> причём слагаемые ортогональны. Поэтому <span class="math display">\[|x-u|^2=|\operatorname{pr}_Ux-u|^2+|\operatorname{ort}_Ux|^2\ge |\operatorname{ort}_Ux|^2.\]</span> Минимум достигается при <span class="math inline">\(u=\operatorname{pr}_Ux\)</span>, значит <span class="math display">\[\rho(x,U)=|\operatorname{ort}_Ux|.\]</span></p>
+<div class="clarifybox">
+
+<p>Фиксируем обозначения: <span class="math inline">\(\operatorname{pr}_U x\)</span> — ортогональная проекция на <span class="math inline">\(U\)</span>, <span class="math inline">\(\operatorname{ort}_U x=x-\operatorname{pr}_U x\)</span> — ортогональная составляющая. Тогда <span class="math inline">\(x=\operatorname{pr}_U x+\operatorname{ort}_U x\)</span>, где <span class="math inline">\(\operatorname{pr}_U x\in U\)</span>, <span class="math inline">\(\operatorname{ort}_U x\in U^\perp\)</span>.</p>
+</div>
+
+<p> ◻</p>
+</div>
+
+<div class="definition">
+
+<p><strong>Определение 138</strong> (Угол между векторами). Для ненулевых <span class="math inline">\(x,y\in V\)</span> угол между ними определяется формулой <span class="math display">\[\cos\angle(x,y)=\frac{(x,y)}{|x|\,|y|}.\]</span> Корректность определения следует из неравенства Коши–Буняковского.</p>
+</div>
+
+<div class="definition">
+
+<p><strong>Определение 139</strong> (Угол между вектором и подпространством). Угол между ненулевым вектором <span class="math inline">\(x\)</span> и подпространством <span class="math inline">\(U\)</span> определяется как минимальный угол между <span class="math inline">\(x\)</span> и ненулевыми векторами из <span class="math inline">\(U\)</span>. В конспекте он выражается через ортогональную проекцию: <span class="math display">\[\cos\angle(x,U)=\frac{|\operatorname{pr}_Ux|}{|x|},
+\qquad
+\sin\angle(x,U)=\frac{|\operatorname{ort}_Ux|}{|x|}.\]</span></p>
+<div class="clarifybox">
+
+<p>Угол между ненулевым вектором <span class="math inline">\(x\)</span> и подпространством <span class="math inline">\(U\)</span> удобно определять как угол между <span class="math inline">\(x\)</span> и его проекцией <span class="math inline">\(\operatorname{pr}_Ux\)</span>: <span class="math inline">\(\cos\varphi=\|\operatorname{pr}_Ux\|/\|x\|\)</span>, если <span class="math inline">\(\operatorname{pr}_Ux\ne0\)</span>.</p>
+</div>
+
+</div>
+
+  </article>
+</main>
+
+<footer class="footer">
+  <p>Конспект по линейной алгебре, билеты 1–27. Статический сайт для GitHub Pages.</p>
+  <p><a href="../assets/lin_alg_notes.pdf">Скачать PDF</a> · <a href="../assets/lin_alg_notes.tex">Скачать TeX</a></p>
+</footer>
+<script src="../assets/app.js"></script>
+</html>

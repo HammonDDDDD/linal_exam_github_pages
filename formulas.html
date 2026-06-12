@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Формулы · Линейная алгебра</title>
+  <meta name="description" content="Интерактивный конспект по линейной алгебре: билеты 1–27, формы, операторы, аффинная геометрия и тензоры.">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      macros: {
+        R: "\\mathbb{R}", C: "\\mathbb{C}", F: "\\mathbb{F}",
+        Ker: "\\operatorname{Ker}", Imop: "\\operatorname{Im}", rk: "\\operatorname{rk}",
+        End: "\\operatorname{End}", Hom: "\\operatorname{Hom}", tr: "\\operatorname{tr}",
+        diag: "\\operatorname{diag}", Span: "\\operatorname{span}", Id: "\\operatorname{Id}",
+        Sym: "\\operatorname{Sym}", Alt: "\\operatorname{Alt}", dist: "\\operatorname{dist}",
+        pr: "\\operatorname{pr}", ort: "\\operatorname{ort}"
+      }
+    },
+    svg: { fontCache: 'global' }
+  };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-icon">LA</span><span>Алгебра II</span></a>
+  <nav>
+    <a href="index.html#tickets">Билеты</a>
+    <a href="map.html">Карта</a>
+    <a href="trainer.html">Тренажёр</a>
+    <a class="active" href="formulas.html">Формулы</a>
+    <a href="interactives.html">Интерактивы</a>
+    <a href="assets/lin_alg_notes.pdf">PDF</a>
+  </nav>
+  <button id="themeToggle" class="icon-button" aria-label="Переключить тему">◐</button>
+</header>
+<main class="container">
+  <h1 class="section-title">Формулы и быстрые переходы</h1>
+  <article class="article">
+    <p>Это не замена билетов, а навигационная таблица: каждая строка ведёт к билету, где формула объясняется и используется.</p>
+    <table>
+      <thead><tr><th>Тема</th><th>Формула</th><th>Билет</th></tr></thead>
+      <tbody><tr><td>Матрица билинейной формы</td><td>$\beta(x,y)=X^TBY$</td><td><a href="tickets/ticket-01.html">1</a></td></tr><tr><td>Замена базиса билинейной формы</td><td>$B\prime=C^TBC$</td><td><a href="tickets/ticket-01.html">1</a></td></tr><tr><td>Поляризация</td><td>$\beta(x,y)=\frac{q(x+y)-q(x)-q(y)}{2}$</td><td><a href="tickets/ticket-03.html">3</a></td></tr><tr><td>Критерий Сильвестра</td><td>$\Delta_1>0,\ldots,\Delta_n>0$</td><td><a href="tickets/ticket-05.html">5</a></td></tr><tr><td>Коши–Буняковский</td><td>$|(x,y)|\leq \|x\|\,\|y\|$</td><td><a href="tickets/ticket-06.html">6</a></td></tr><tr><td>Проекция</td><td>$x=\operatorname{pr}_U x+\operatorname{ort}_U x$</td><td><a href="tickets/ticket-07.html">7</a></td></tr><tr><td>Грам</td><td>$G=( (x_i,x_j) )$</td><td><a href="tickets/ticket-08.html">8</a></td></tr><tr><td>Объём через Грам</td><td>$\operatorname{Vol}^2=\det G$</td><td><a href="tickets/ticket-08.html">8</a></td></tr><tr><td>Сопряжённый оператор</td><td>$(Ax,y)=(x,A^*y)$</td><td><a href="tickets/ticket-11.html">11</a></td></tr><tr><td>Нормальный оператор</td><td>$AA^*=A^*A$</td><td><a href="tickets/ticket-13.html">13</a></td></tr><tr><td>Положительный корень</td><td>$B^2=A,\quad B\ge 0$</td><td><a href="tickets/ticket-16.html">16</a></td></tr><tr><td>Полярное разложение</td><td>$A=UP$</td><td><a href="tickets/ticket-17.html">17</a></td></tr><tr><td>Параллелограмм</td><td>$\|x+y\|^2+\|x-y\|^2=2\|x\|^2+2\|y\|^2$</td><td><a href="tickets/ticket-18.html">18</a></td></tr><tr><td>Расстояние между плоскостями</td><td>$\operatorname{dist}(A_0+U,B_0+W)=\|\operatorname{pr}_{(U+W)^\perp}(B_0-A_0)\|$</td><td><a href="tickets/ticket-19.html">19</a></td></tr><tr><td>Квадрика</td><td>$(Ax,x)+2(b,x)+c=0$</td><td><a href="tickets/ticket-21.html">21</a></td></tr><tr><td>Тензор типа $(p,q)$</td><td>$T:(V^*)^p\times V^q\to \mathbb{F}$</td><td><a href="tickets/ticket-22.html">22</a></td></tr><tr><td>Тензорный закон</td><td>$T^{i_1\dots i_p}_{j_1\dots j_q}$ преобразуется верхними и нижними матрицами перехода</td><td><a href="tickets/ticket-23.html">23</a></td></tr><tr><td>Свёртка</td><td>$C(T)^{{i_2\dots i_p}}_{{j_2\dots j_q}}=T^{a i_2\dots i_p}_{a j_2\dots j_q}$</td><td><a href="tickets/ticket-24.html">24</a></td></tr><tr><td>Симметризация</td><td>$\operatorname{Sym}T=\frac1{p!}\sum_{\sigma\in S_p}F_\sigma T$</td><td><a href="tickets/ticket-25.html">25</a></td></tr><tr><td>Альтернирование</td><td>$\operatorname{Alt}T=\frac1{p!}\sum_{\sigma\in S_p}\operatorname{sgn}(\sigma)F_\sigma T$</td><td><a href="tickets/ticket-25.html">25</a></td></tr><tr><td>Внешнее произведение</td><td>$\omega\wedge\eta=\frac{(p+q)!}{p!q!}\operatorname{Alt}(\omega\otimes\eta)$</td><td><a href="tickets/ticket-27.html">27</a></td></tr></tbody>
+    </table>
+  </article>
+</main>
+
+<footer class="footer">
+  <p>Конспект по линейной алгебре, билеты 1–27. Статический сайт для GitHub Pages.</p>
+  <p><a href="assets/lin_alg_notes.pdf">Скачать PDF</a> · <a href="assets/lin_alg_notes.tex">Скачать TeX</a></p>
+</footer>
+<script src="assets/app.js"></script>
+</html>

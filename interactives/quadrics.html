@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Интерактив: квадрики · Линейная алгебра</title>
+  <meta name="description" content="Интерактивный конспект по линейной алгебре: билеты 1–27, формы, операторы, аффинная геометрия и тензоры.">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      macros: {
+        R: "\\mathbb{R}", C: "\\mathbb{C}", F: "\\mathbb{F}",
+        Ker: "\\operatorname{Ker}", Imop: "\\operatorname{Im}", rk: "\\operatorname{rk}",
+        End: "\\operatorname{End}", Hom: "\\operatorname{Hom}", tr: "\\operatorname{tr}",
+        diag: "\\operatorname{diag}", Span: "\\operatorname{span}", Id: "\\operatorname{Id}",
+        Sym: "\\operatorname{Sym}", Alt: "\\operatorname{Alt}", dist: "\\operatorname{dist}",
+        pr: "\\operatorname{pr}", ort: "\\operatorname{ort}"
+      }
+    },
+    svg: { fontCache: 'global' }
+  };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<header class="topbar">
+  <a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Алгебра II</span></a>
+  <nav>
+    <a href="index.html#tickets">Билеты</a>
+    <a href="../map.html">Карта</a>
+    <a href="../trainer.html">Тренажёр</a>
+    <a href="../formulas.html">Формулы</a>
+    <a href="../interactives.html">Интерактивы</a>
+    <a href="../assets/lin_alg_notes.pdf">PDF</a>
+  </nav>
+  <button id="themeToggle" class="icon-button" aria-label="Переключить тему">◐</button>
+</header>
+<main class="container">
+  <h1 class="section-title">Интерактив: центральные квадрики на плоскости</h1>
+  <div class="canvas-card panel">
+    <canvas id="quad" width="760" height="460"></canvas>
+    <div class="controls">
+      <label>$a$ в $ax^2+by^2=1$ <input id="qa" type="range" min="-3" max="3" step="0.1" value="1"></label>
+      <label>$b$ в $ax^2+by^2=1$ <input id="qb" type="range" min="-3" max="3" step="0.1" value="1"></label>
+      <p id="quadText"></p>
+      <p><a href="../tickets/ticket-21.html">Перейти к билету 21</a></p>
+    </div>
+  </div>
+</main>
+<script>
+qa.oninput=qb.oninput=drawQ;function drawQ(){const cv=quad,ctx=cv.getContext('2d'),W=cv.width,H=cv.height,ox=W/2,oy=H/2,sc=52;ctx.clearRect(0,0,W,H);ctx.strokeStyle='#c9c2b6';ctx.beginPath();ctx.moveTo(0,oy);ctx.lineTo(W,oy);ctx.moveTo(ox,0);ctx.lineTo(ox,H);ctx.stroke();let a=+qa.value,b=+qb.value;if(Math.abs(a)<.12)a=.12*Math.sign(a||1);if(Math.abs(b)<.12)b=.12*Math.sign(b||1);ctx.fillStyle='#405c9b';ctx.strokeStyle='#405c9b';ctx.lineWidth=2;ctx.beginPath();let first=true;for(let x=-5;x<=5;x+=.01){let y2=(1-a*x*x)/b;if(y2>=0){let y=Math.sqrt(y2);for(const yy of [y,-y]){let X=ox+x*sc,Y=oy-yy*sc;if(first){ctx.moveTo(X,Y);first=false}else ctx.lineTo(X,Y)}}else first=true}ctx.stroke();let type=(a>0&&b>0)?'эллипс':(a*b<0?'гипербола':'мнимый/вырожденный случай');quadText.innerHTML=`Тип: <b>${type}</b>. Знаки коэффициентов: $a=${a.toFixed(1)}, b=${b.toFixed(1)}$.`;if(window.MathJax)MathJax.typesetPromise([quadText]);}drawQ();
+</script>
+
+<footer class="footer">
+  <p>Конспект по линейной алгебре, билеты 1–27. Статический сайт для GitHub Pages.</p>
+  <p><a href="../assets/lin_alg_notes.pdf">Скачать PDF</a> · <a href="../assets/lin_alg_notes.tex">Скачать TeX</a></p>
+</footer>
+<script src="../assets/app.js"></script>
+</html>

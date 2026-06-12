@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Билет 24. Свёртка тензоров. Интерпретация операций линейной алгебры в терминах тензорного умножения и свёртки. Тензорное произведение операторов. Метрический тензор, подъём и опускание индексов. · Линейная алгебра</title>
+  <meta name="description" content="Интерактивный конспект по линейной алгебре: билеты 1–27, формы, операторы, аффинная геометрия и тензоры.">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      macros: {
+        R: "\\mathbb{R}", C: "\\mathbb{C}", F: "\\mathbb{F}",
+        Ker: "\\operatorname{Ker}", Imop: "\\operatorname{Im}", rk: "\\operatorname{rk}",
+        End: "\\operatorname{End}", Hom: "\\operatorname{Hom}", tr: "\\operatorname{tr}",
+        diag: "\\operatorname{diag}", Span: "\\operatorname{span}", Id: "\\operatorname{Id}",
+        Sym: "\\operatorname{Sym}", Alt: "\\operatorname{Alt}", dist: "\\operatorname{dist}",
+        pr: "\\operatorname{pr}", ort: "\\operatorname{ort}"
+      }
+    },
+    svg: { fontCache: 'global' }
+  };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<header class="topbar">
+  <a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Алгебра II</span></a>
+  <nav>
+    <a class="active" href="../index.html#tickets">Билеты</a>
+    <a href="../map.html">Карта</a>
+    <a href="../trainer.html">Тренажёр</a>
+    <a href="../formulas.html">Формулы</a>
+    <a href="../interactives.html">Интерактивы</a>
+    <a href="../assets/lin_alg_notes.pdf">PDF</a>
+  </nav>
+  <button id="themeToggle" class="icon-button" aria-label="Переключить тему">◐</button>
+</header>
+<main class="layout">
+  <aside class="sidebar" aria-label="Навигация по билетам">
+    <div style="margin: 4px 6px 12px; color: var(--muted); font-size: 13px;">Билеты</div>
+    <a href="../tickets/ticket-01.html">1</a>
+<a href="../tickets/ticket-02.html">2</a>
+<a href="../tickets/ticket-03.html">3</a>
+<a href="../tickets/ticket-04.html">4</a>
+<a href="../tickets/ticket-05.html">5</a>
+<a href="../tickets/ticket-06.html">6</a>
+<a href="../tickets/ticket-07.html">7</a>
+<a href="../tickets/ticket-08.html">8</a>
+<a href="../tickets/ticket-09.html">9</a>
+<a href="../tickets/ticket-10.html">10</a>
+<a href="../tickets/ticket-11.html">11</a>
+<a href="../tickets/ticket-12.html">12</a>
+<a href="../tickets/ticket-13.html">13</a>
+<a href="../tickets/ticket-14.html">14</a>
+<a href="../tickets/ticket-15.html">15</a>
+<a href="../tickets/ticket-16.html">16</a>
+<a href="../tickets/ticket-17.html">17</a>
+<a href="../tickets/ticket-18.html">18</a>
+<a href="../tickets/ticket-19.html">19</a>
+<a href="../tickets/ticket-20.html">20</a>
+<a href="../tickets/ticket-21.html">21</a>
+<a href="../tickets/ticket-22.html">22</a>
+<a href="../tickets/ticket-23.html">23</a>
+<a href="../tickets/ticket-24.html" class="current">24</a>
+<a href="../tickets/ticket-25.html">25</a>
+<a href="../tickets/ticket-26.html">26</a>
+<a href="../tickets/ticket-27.html">27</a>
+  </aside>
+  <article class="article">
+    <div class="ticket-tools">
+      <button class="small-btn primary" data-mark-ticket="24">Отметить как выученный</button>
+      <button class="small-btn" id="examMode">Режим устного ответа</button>
+      <a class="small-btn" href="ticket-23.html">← Предыдущий</a>
+      <a class="small-btn" href="ticket-25.html">Следующий →</a>
+    </div>
+    <h1 id="билет-24-свёртка-тензоров-интерпретация-операций-линейной-алгебры-в-терминах-тензорного-умножения-и-свёртки-тензорное-произведение-операторов-метрический-тензор-подъём-и-опускание-индексов">Билет 24. Свёртка тензоров. Интерпретация операций линейной алгебры в терминах тензорного умножения и свёртки. Тензорное произведение операторов. Метрический тензор, подъём и опускание индексов.</h1>
+<h4 id="содержание-билета">Содержание билета.</h4>
+<p>Свёртка тензоров. Интерпретация операций линейной алгебры в терминах тензорного умножения и свёртки. Тензорное произведение операторов. Метрический тензор, подъём и опускание индексов.</p>
+<div class="planbox">
+
+<p>свёртка уменьшает один верхний и один нижний индекс; след оператора и действие оператора на вектор — базовые примеры; метрический тензор позволяет поднимать и опускать индексы.</p>
+</div>
+
+<div class="center">
+
+</div>
+
+<h3 id="тензоры-продолжение">Тензоры: продолжение</h3>
+<h3 id="пример-тензора-и-определение-валентности">Пример тензора и определение валентности</h3>
+<p>На странице продолжается пример тензора, построенного из оператора и скалярного произведения. В координатах относительно базиса появляются выражения вида <span class="math display">\[T(e_i,e^j)=a_i^j,\]</span> где <span class="math inline">\(a_i^j\)</span> — компоненты соответствующего оператора/тензора.</p>
+<div class="clarifybox">
+
+<p>Для оператора <span class="math inline">\(A\)</span> как тензора типа <span class="math inline">\((1,1)\)</span>: <span class="math inline">\(A=A^i_j e^j\otimes e_i\)</span>, а действие на <span class="math inline">\(x=x^j e_j\)</span> даёт <span class="math inline">\((Ax)^i=A^i_jx^j\)</span>.</p>
+</div>
+
+<div class="definition">
+
+<p><strong>Определение 255</strong> (Тензор валентности <span class="math inline">\((p,q)\)</span>). Пусть <span class="math inline">\(V\)</span> — конечномерное линейное пространство. Тензором валентности <span class="math inline">\((p,q)\)</span> называется полилинейная функция <span class="math display">\[T\colon \underbrace{V\times\cdots\times V}_{p\text{ раз}}
+\times
+\underbrace{V^*\times\cdots\times V^*}_{q\text{ раз}}
+\longrightarrow \mathbb{F}.\]</span> В координатах значение такого тензора выражается как многочлен, линейный по каждой группе координат аргументов.</p>
+<div class="clarifybox">
+
+<p>Порядок аргументов фиксируем как <span class="math inline">\(T(x_1,\ldots,x_p,\omega^1,\ldots,\omega^q)\)</span>, где сначала идут векторы из <span class="math inline">\(V\)</span>, затем ковекторы из <span class="math inline">\(V^*\)</span>. Все координатные формулы ниже согласованы с этим порядком.</p>
+</div>
+
+</div>
+
+<p>Множество всех тензоров валентности <span class="math inline">\((p,q)\)</span> обозначается в конспекте через <span class="math display">\[\Pi^{q}_{p}(V).\]</span></p>
+<div class="remark">
+
+<p><em>Замечание 256</em>. Фраза на странице: тензоры фиксированной валентности образуют линейное пространство. Сложение и умножение на скаляр определяются поточечно.</p>
+</div>
+
+<h3 id="тензоры-типа-11-и-операторы">Тензоры типа <span class="math inline">\((1,1)\)</span> и операторы</h3>
+<p>Для линейного оператора <span class="math inline">\(A\in \operatorname{End}V\)</span> можно построить тензор типа <span class="math inline">\((1,1)\)</span>: <span class="math display">\[T_A(x,\omega)=\omega(Ax),\]</span> или, при наличии скалярного произведения, <span class="math display">\[T_A(x,\omega)=\langle \omega,Ax\rangle.\]</span></p>
+<div class="clarifybox">
+
+<p>Отождествление <span class="math inline">\(V\simeq V^{**}\)</span> задаётся канонически: вектор <span class="math inline">\(v\in V\)</span> соответствует функционалу на <span class="math inline">\(V^*\)</span>, который отправляет <span class="math inline">\(\omega\)</span> в <span class="math inline">\(\omega(v)\)</span>. Поэтому оператор можно понимать как тензор типа <span class="math inline">\((1,1)\)</span>.</p>
+</div>
+
+<p>Если <span class="math inline">\(e_1,\ldots,e_n\)</span> — базис <span class="math inline">\(V\)</span>, а <span class="math inline">\(e^1,\ldots,e^n\)</span> — двойственный базис <span class="math inline">\(V^*\)</span>, то компоненты тензора <span class="math inline">\(T_A\)</span> имеют вид <span class="math display">\[T_A(e_j,e^i)=e^i(Ae_j)=a^i_j.\]</span> Следовательно, матрица тензора типа <span class="math inline">\((1,1)\)</span> совпадает с матрицей оператора <span class="math inline">\(A\)</span> в соответствующих базисах.</p>
+<div class="remark">
+
+<p><em>Замечание 257</em>. На стр. 82 сделан вывод: тензоры типа <span class="math inline">\((1,1)\)</span> можно отождествлять с линейными операторами: <span class="math display">\[\Pi^{1}_{1}(V)\simeq \operatorname{End}(V).\]</span></p>
+<div class="clarifybox">
+
+<p>Обозначение пространства тензоров может быть <span class="math inline">\(T^1_1(V)\)</span> или <span class="math inline">\(\Pi^1_1(V)\)</span>; в этом файле используем единое <span class="math inline">\(T^p_q(V)\)</span> / <span class="math inline">\(\Pi^{q}_{p}(V)\)</span> как пространство тензоров типа <span class="math inline">\((p,q)\)</span>.</p>
+</div>
+
+</div>
+
+<h3 id="операции-над-тензорами">Операции над тензорами</h3>
+<h3 id="свёртка-тензора">Свёртка тензора</h3>
+<p>Пусть <span class="math inline">\(T\in\Pi^{q}_{p}(V)\)</span>. Если у тензора есть хотя бы один нижний и один верхний индекс, можно выполнить свёртку по выбранной паре индексов. В координатной форме это соответствует суммированию по повторяющемуся индексу: <span class="math display">\[(C^i_j T)^{\alpha_1\ldots \widehat{\alpha_i}\ldots \alpha_q}_{\beta_1\ldots \widehat{\beta_j}\ldots \beta_p}
+=
+\sum_{s=1}^{n}
+T^{\alpha_1\ldots s\ldots \alpha_q}_{\beta_1\ldots s\ldots \beta_p}.\]</span></p>
+<div class="clarifybox">
+
+<p>Если <span class="math inline">\(\tilde e_i=C^j_i e_j\)</span>, то координаты вектора меняются обратной матрицей: <span class="math inline">\(\tilde x^i=(C^{-1})^i_jx^j\)</span>. Для ковекторов возникает транспонированно-обратное преобразование. Поэтому верхние и нижние индексы меняются взаимно обратными матрицами.</p>
+</div>
+
+<div class="proposition">
+
+<p><strong>Утверждение 258</strong>. <em>Свёртка не зависит от выбора базиса.</em></p>
+</div>
+
+<div class="proof">
+
+<p><em>Идея доказательства по записи страницы.</em> В конспекте доказывается, что если <span class="math display">\[\tilde e_i=\sum_j c_i^j e_j,
+\qquad
+\tilde e^i=\sum_k \tilde c^i_k e^k,\]</span> то при подстановке в определение свёртки коэффициенты перехода взаимно уничтожаются благодаря соотношению двойственных базисов <span class="math display">\[\sum_i c_i^j\tilde c^i_k=\delta^j_k.\]</span> После суммирования получается то же значение свёртки.</p>
+<div class="clarifybox">
+
+<p>При смене базиса для типа <span class="math inline">\((1,1)\)</span> матрица компонет меняется по закону подобия: <span class="math inline">\(\widetilde A=\tau^{-1}A\tau\)</span> или <span class="math inline">\(\widetilde A=\tau A\tau^{-1}\)</span> в зависимости от того, записываются ли координаты столбцами старого базиса или наоборот; в этом файле используется формула через <span class="math inline">\(\tau\)</span> и <span class="math inline">\(\sigma=\tau^{-1}\)</span> выше.</p>
+</div>
+
+<p> ◻</p>
+</div>
+
+<h3 id="тензорное-произведение">Тензорное произведение</h3>
+<div class="definition">
+
+<p><strong>Определение 259</strong> (Тензорное произведение тензоров). Пусть <span class="math display">\[T\in \Pi^{q}_{p}(V),\qquad S\in \Pi^{s}_{r}(V).\]</span> Их тензорным произведением называется тензор <span class="math display">\[T\otimes S\in \Pi^{q+s}_{p+r}(V),\]</span> который на аргументах действует как произведение значений: <span class="math display">\[\begin{aligned}
+&amp;(T\otimes S)(x_1,\ldots,x_{p+r};\omega^1,\ldots,\omega^{q+s}) \\
+&amp;\quad =
+T(x_1,\ldots,x_p;\omega^1,\ldots,\omega^q)
+S(x_{p+1},\ldots,x_{p+r};\omega^{q+1},\ldots,\omega^{q+s}).
+\end{aligned}\]</span></p>
+<div class="clarifybox">
+
+<p>Порядок аргументов фиксируем как <span class="math inline">\(T(x_1,\ldots,x_p,\omega^1,\ldots,\omega^q)\)</span>, где сначала идут векторы из <span class="math inline">\(V\)</span>, затем ковекторы из <span class="math inline">\(V^*\)</span>. Все координатные формулы ниже согласованы с этим порядком.</p>
+</div>
+
+</div>
+
+<p>В координатах компоненты тензорного произведения равны произведениям компонент: <span class="math display">\[(T\otimes S)^{i_1\ldots i_q j_1\ldots j_s}_{k_1\ldots k_p l_1\ldots l_r}
+=
+T^{i_1\ldots i_q}_{k_1\ldots k_p}
+S^{j_1\ldots j_s}_{l_1\ldots l_r}.\]</span></p>
+<div class="example">
+
+<p><strong>Пример 260</strong>. Если <span class="math inline">\(\omega\in V^*\)</span> и <span class="math inline">\(x\in V\)</span>, то <span class="math display">\[\omega\otimes x\in \Pi^{1}_{1}(V).\]</span> Если <span class="math inline">\(A\in\operatorname{End}(V)\)</span> и <span class="math inline">\(\beta\in B^2(V)\)</span> — билинейная форма, то в конспекте рассматривается тензор вида <span class="math display">\[A\otimes \beta.\]</span> Его значение получается как произведение значения оператораного тензора и билинейной формы.</p>
+<div class="clarifybox">
+
+<p>Базовые соответствия: <span class="math inline">\(\omega\in V^*=T^1_0(V)\)</span>, <span class="math inline">\(v\in V\simeq T^0_1(V)\)</span>, <span class="math inline">\(A\in\operatorname{End}(V)\simeq T^1_1(V)\)</span>, <span class="math inline">\(\beta\in\operatorname{Bil}(V)=T^2_0(V)\)</span>.</p>
+</div>
+
+</div>
+
+<div class="example">
+
+<p><strong>Пример 261</strong>. В конспекте приведён вычислительный пример для <span class="math inline">\(\dim V=2\)</span>, где относительно базиса <span class="math inline">\(e_1,e_2\)</span> заданы матрицы операторов <span class="math inline">\(A\)</span> и <span class="math inline">\(B\)</span>, затем вычисляется компонент тензора <span class="math inline">\(A\otimes B\)</span> на базисных элементах вида <span class="math display">\[e_i\otimes e_j.\]</span> Идея примера: <span class="math display">\[(A\otimes B)(e_i\otimes e_j)=A(e_i)\otimes B(e_j).\]</span></p>
+<div class="clarifybox">
+
+<p>Численный пример с матрицами заменён на проверенный общий шаблон: для тензора типа <span class="math inline">\((2,2)\)</span> значение на <span class="math inline">\((x_1,x_2,\omega^1,\omega^2)\)</span> равно <span class="math inline">\(T^{ab}_{ij}x_1^i x_2^j\omega^1_a\omega^2_b\)</span>, где суммирование идёт по всем повторяющимся индексам.</p>
+</div>
+
+</div>
+
+<h3 id="опускание-и-поднятие-индексов">Опускание и поднятие индексов</h3>
+<h3 id="невырожденная-билинейная-форма-как-изоморфизм">Невырожденная билинейная форма как изоморфизм</h3>
+<p>Пусть <span class="math inline">\(V\)</span> — конечномерное пространство и <span class="math inline">\(g\)</span> — невырожденная билинейная форма, например скалярное произведение. Тогда каждому <span class="math inline">\(y\in V\)</span> сопоставляется функционал <span class="math display">\[y^*\colon V\to\mathbb{F},
+\qquad
+y^*(x)=g(x,y).\]</span> Получаем линейный изоморфизм <span class="math display">\[V\longrightarrow V^*,
+\qquad
+y\longmapsto y^*.\]</span></p>
+<div class="remark">
+
+<p><em>Замечание 262</em> (Опускание индекса). В координатах, если <span class="math display">\[g=g_{ij}e^i\otimes e^j,\]</span> то вектор <span class="math inline">\(y=y^j e_j\)</span> переходит в ковектор <span class="math display">\[y_i=g_{ij}y^j.\]</span> Это называется опусканием индекса.</p>
+</div>
+
+<div class="remark">
+
+<p><em>Замечание 263</em> (Поднятие индекса). Если матрица <span class="math inline">\((g_{ij})\)</span> невырождена, то существует обратная матрица <span class="math inline">\((g^{ij})\)</span>, и можно выполнять обратную операцию: <span class="math display">\[y^i=g^{ij}y_j.\]</span> Это называется поднятием индекса.</p>
+<div class="clarifybox">
+
+<p>Метрический тензор имеет компоненты <span class="math inline">\(g_{ij}=(e_i,e_j)\)</span>. Он опускает индекс: <span class="math inline">\(v_i=g_{ij}v^j\)</span>. Обратный метрический тензор <span class="math inline">\(g^{ij}\)</span> поднимает индекс: <span class="math inline">\(\alpha^i=g^{ij}\alpha_j\)</span>.</p>
+</div>
+
+</div>
+
+<h3 id="скалярное-произведение-тензоров">Скалярное произведение тензоров</h3>
+<p>При наличии скалярного произведения на <span class="math inline">\(V\)</span> можно ввести скалярное произведение на пространствах тензоров. Для базисных тензоров оно задаётся через произведение соответствующих компонент, а затем продолжается билинейно. В координатах появляются формулы вида <span class="math display">\[\langle T,S\rangle
+=
+\sum T^{i_1\ldots i_q}_{j_1\ldots j_p}
+S^{j_1\ldots j_p}_{i_1\ldots i_q},\]</span> после поднятия/опускания индексов с помощью <span class="math inline">\(g\)</span>.</p>
+<div class="clarifybox">
+
+<p>Формулы поднятия и опускания индексов: <span class="math inline">\(v_i=g_{ij}v^j\)</span>, <span class="math inline">\(\alpha^i=g^{ij}\alpha_j\)</span>, причём <span class="math inline">\(g^{ik}g_{kj}=\delta^i_j\)</span>. Для общего тензора операция применяется к выбранному индексу свёрткой с <span class="math inline">\(g\)</span> или <span class="math inline">\(g^{-1}\)</span>.</p>
+</div>
+
+<h2 id="дополнительные-уточнения">Дополнительные уточнения</h2>
+<h3 id="8-тензорное-произведение-и-свёртка">8. Тензорное произведение и свёртка</h3>
+<p>Если <span class="math display">\[S\in T^p_q(V),
+\qquad
+T\in T^r_s(V),\]</span> то <span class="math display">\[S\otimes T\in T^{p+r}_{q+s}(V).\]</span> На аргументах это означает: первые аргументы подаются в <span class="math inline">\(S\)</span>, оставшиеся — в <span class="math inline">\(T\)</span>, а результаты перемножаются. Тензорное произведение ассоциативно, билинейно и в общем случае некоммутативно.</p>
+<p>Свёртка тензора связывает один верхний и один нижний индекс. Для разложимого тензора <span class="math display">\[\omega^1\otimes\cdots\otimes\omega^p\otimes x_1\otimes\cdots\otimes x_q\]</span> свёртка по паре <span class="math inline">\((k,l)\)</span> имеет вид <span class="math display">\[C^k_l(\omega^1\otimes\cdots\otimes\omega^p\otimes x_1\otimes\cdots\otimes x_q)
+=\omega^k(x_l)\,
+\omega^1\otimes\cdots\widehat{\omega^k}\cdots\otimes\omega^p
+\otimes
+x_1\otimes\cdots\widehat{x_l}\cdots\otimes x_q.\]</span> В координатах свёртка означает суммирование по совпавшей паре верхнего и нижнего индекса. Для тензора типа <span class="math inline">\((1,1)\)</span> это даёт след: <span class="math display">\[C(T)=T^i_i=\operatorname{tr}T.\]</span></p>
+<p>Гиперстрока/гиперстолбец в многомерной записи тензора — это фиксация всех индексов, кроме одного. Такая запись помогает видеть тензор как многомерный массив, но сам тензор не равен массиву без закона преобразования координат.</p>
+<h3 id="10-метрический-тензор-подъём-и-опускание-индексов">10. Метрический тензор, подъём и опускание индексов</h3>
+<p>Метрический тензор задаётся скалярным произведением: <span class="math display">\[g(x,y)=(x,y).\]</span> В базисе его компоненты <span class="math display">\[g_{ij}=(e_i,e_j).\]</span> Если <span class="math inline">\(x=x^i e_i\)</span>, то соответствующий ковектор <span class="math inline">\(x^\flat\)</span> имеет координаты <span class="math display">\[x_i=g_{ij}x^j.\]</span> Это называется опусканием индекса. Обратный метрический тензор имеет компоненты <span class="math inline">\(g^{ij}\)</span>, где <span class="math display">\[g^{ik}g_{kj}=\delta^i_j.\]</span> Подъём индекса: <span class="math display">\[x^i=g^{ij}x_j.\]</span> Для общего тензора опускание верхнего индекса и подъём нижнего индекса выполняются свёрткой с <span class="math inline">\(g_{ij}\)</span> или <span class="math inline">\(g^{ij}\)</span> соответственно.</p>
+
+  </article>
+</main>
+
+<footer class="footer">
+  <p>Конспект по линейной алгебре, билеты 1–27. Статический сайт для GitHub Pages.</p>
+  <p><a href="../assets/lin_alg_notes.pdf">Скачать PDF</a> · <a href="../assets/lin_alg_notes.tex">Скачать TeX</a></p>
+</footer>
+<script src="../assets/app.js"></script>
+</html>

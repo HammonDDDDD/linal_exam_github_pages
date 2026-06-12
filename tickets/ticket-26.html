@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Билет 26. Симметрическое умножение и его свойства. Симметрическая алгебра, её базис и размерность. Изоморфизм алгебре многочленов от нескольких переменных. · Линейная алгебра</title>
+  <meta name="description" content="Интерактивный конспект по линейной алгебре: билеты 1–27, формы, операторы, аффинная геометрия и тензоры.">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      macros: {
+        R: "\\mathbb{R}", C: "\\mathbb{C}", F: "\\mathbb{F}",
+        Ker: "\\operatorname{Ker}", Imop: "\\operatorname{Im}", rk: "\\operatorname{rk}",
+        End: "\\operatorname{End}", Hom: "\\operatorname{Hom}", tr: "\\operatorname{tr}",
+        diag: "\\operatorname{diag}", Span: "\\operatorname{span}", Id: "\\operatorname{Id}",
+        Sym: "\\operatorname{Sym}", Alt: "\\operatorname{Alt}", dist: "\\operatorname{dist}",
+        pr: "\\operatorname{pr}", ort: "\\operatorname{ort}"
+      }
+    },
+    svg: { fontCache: 'global' }
+  };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<header class="topbar">
+  <a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Алгебра II</span></a>
+  <nav>
+    <a class="active" href="../index.html#tickets">Билеты</a>
+    <a href="../map.html">Карта</a>
+    <a href="../trainer.html">Тренажёр</a>
+    <a href="../formulas.html">Формулы</a>
+    <a href="../interactives.html">Интерактивы</a>
+    <a href="../assets/lin_alg_notes.pdf">PDF</a>
+  </nav>
+  <button id="themeToggle" class="icon-button" aria-label="Переключить тему">◐</button>
+</header>
+<main class="layout">
+  <aside class="sidebar" aria-label="Навигация по билетам">
+    <div style="margin: 4px 6px 12px; color: var(--muted); font-size: 13px;">Билеты</div>
+    <a href="../tickets/ticket-01.html">1</a>
+<a href="../tickets/ticket-02.html">2</a>
+<a href="../tickets/ticket-03.html">3</a>
+<a href="../tickets/ticket-04.html">4</a>
+<a href="../tickets/ticket-05.html">5</a>
+<a href="../tickets/ticket-06.html">6</a>
+<a href="../tickets/ticket-07.html">7</a>
+<a href="../tickets/ticket-08.html">8</a>
+<a href="../tickets/ticket-09.html">9</a>
+<a href="../tickets/ticket-10.html">10</a>
+<a href="../tickets/ticket-11.html">11</a>
+<a href="../tickets/ticket-12.html">12</a>
+<a href="../tickets/ticket-13.html">13</a>
+<a href="../tickets/ticket-14.html">14</a>
+<a href="../tickets/ticket-15.html">15</a>
+<a href="../tickets/ticket-16.html">16</a>
+<a href="../tickets/ticket-17.html">17</a>
+<a href="../tickets/ticket-18.html">18</a>
+<a href="../tickets/ticket-19.html">19</a>
+<a href="../tickets/ticket-20.html">20</a>
+<a href="../tickets/ticket-21.html">21</a>
+<a href="../tickets/ticket-22.html">22</a>
+<a href="../tickets/ticket-23.html">23</a>
+<a href="../tickets/ticket-24.html">24</a>
+<a href="../tickets/ticket-25.html">25</a>
+<a href="../tickets/ticket-26.html" class="current">26</a>
+<a href="../tickets/ticket-27.html">27</a>
+  </aside>
+  <article class="article">
+    <div class="ticket-tools">
+      <button class="small-btn primary" data-mark-ticket="26">Отметить как выученный</button>
+      <button class="small-btn" id="examMode">Режим устного ответа</button>
+      <a class="small-btn" href="ticket-25.html">← Предыдущий</a>
+      <a class="small-btn" href="ticket-27.html">Следующий →</a>
+    </div>
+    <h1 id="билет-26-симметрическое-умножение-и-его-свойства-симметрическая-алгебра-её-базис-и-размерность-изоморфизм-алгебре-многочленов-от-нескольких-переменных">Билет 26. Симметрическое умножение и его свойства. Симметрическая алгебра, её базис и размерность. Изоморфизм алгебре многочленов от нескольких переменных.</h1>
+<h4 id="содержание-билета">Содержание билета.</h4>
+<p>Симметрическое умножение и его свойства. Симметрическая алгебра, её базис и размерность. Изоморфизм алгебре многочленов от нескольких переменных.</p>
+<div class="planbox">
+
+<p>Материал про полную симметрическую алгебру и изоморфизм с многочленами удобно оформить как стандартное дополнение к билету.</p>
+</div>
+
+<h3 id="симметрические-тензоры">Симметрические тензоры</h3>
+<h3 id="действие-группы-перестановок-и-симметризация">Действие группы перестановок и симметризация</h3>
+<p>Пусть <span class="math inline">\(T\in\Pi^0_p(V)\)</span> — ковариантный тензор порядка <span class="math inline">\(p\)</span>. Для перестановки <span class="math inline">\(\sigma\in S_p\)</span> определяется оператор <span class="math inline">\(f_\sigma\)</span> перестановки аргументов: <span class="math display">\[(f_\sigma T)(x_1,\ldots,x_p)
+=
+T(x_{\sigma(1)},\ldots,x_{\sigma(p)}).\]</span></p>
+<div class="clarifybox">
+
+<p>Оператор перестановки аргументов можно определить как <span class="math inline">\((F_\sigma T)(x_1,
+\ldots,x_p)=T(x_{\sigma(1)},\ldots,x_{\sigma(p)})\)</span> или через <span class="math inline">\(\sigma^{-1}\)</span>. Оба соглашения дают одинаковые операторы <span class="math inline">\(\operatorname{Sym}\)</span> и <span class="math inline">\(\operatorname{Alt}\)</span> после суммирования по всей группе <span class="math inline">\(S_p\)</span>.</p>
+</div>
+
+<div class="definition">
+
+<p><strong>Определение 276</strong> (Симметрический тензор). Тензор <span class="math inline">\(T\in\Pi^0_p(V)\)</span> называется симметрическим, если <span class="math display">\[f_\sigma T=T
+\qquad
+\forall\sigma\in S_p.\]</span> Пространство симметрических тензоров обозначается <span class="math display">\[\operatorname{Sym}_p(V)\subset \Pi^0_p(V).\]</span></p>
+</div>
+
+<div class="definition">
+
+<p><strong>Определение 277</strong> (Оператор симметризации). Оператор симметризации задаётся формулой <span class="math display">\[\operatorname{Sym}(T)=\frac{1}{p!}\sum_{\sigma\in S_p} f_\sigma(T).\]</span></p>
+</div>
+
+<div class="proposition">
+
+<p><strong>Утверждение 278</strong> (Свойства симметризации). <em>Для оператора <span class="math inline">\(\operatorname{Sym}\)</span> выполнены:</em></p>
+<ol type="1">
+<li><p><em><span class="math inline">\(\operatorname{Im}(\operatorname{Sym})=\operatorname{Sym}_p(V)\)</span>;</em></p></li>
+<li><p><em><span class="math inline">\(\operatorname{Ker}(\operatorname{Sym})\)</span> состоит из тензоров, симметризация которых равна нулю;</em></p></li>
+<li><p><em><span class="math inline">\(\operatorname{Sym}^2=\operatorname{Sym}\)</span>.</em></p></li>
+</ol>
+</div>
+
+<div class="proof">
+
+<p><em>Набросок доказательства по страницам 88–90.</em> Если <span class="math inline">\(T\)</span> уже симметричен, то для всех <span class="math inline">\(\sigma\)</span> имеем <span class="math inline">\(f_\sigma T=T\)</span>, поэтому <span class="math display">\[\operatorname{Sym}(T)=\frac{1}{p!}\sum_{\sigma\in S_p}T=T.\]</span> Отсюда <span class="math inline">\(\operatorname{Sym}^2=\operatorname{Sym}\)</span> и <span class="math inline">\(\operatorname{Im}(\operatorname{Sym})=\operatorname{Sym}_p(V)\)</span>. Обратное включение получается из того, что симметризация любой формы инвариантна относительно перестановок аргументов.</p>
+<div class="clarifybox">
+
+<p>Симметризация действительно даёт симметрический тензор, потому что для любой <span class="math inline">\(\tau\in S_p\)</span>: <span class="math inline">\(F_\tau\operatorname{Sym}T=\frac1{p!}\sum_{\sigma\in S_p}F_{\tau\sigma}T=\operatorname{Sym}T\)</span> после перенумерации <span class="math inline">\(\rho=\tau\sigma\)</span>.</p>
+</div>
+
+<p> ◻</p>
+</div>
+
+<div class="example">
+
+<p><strong>Пример 279</strong> (Симметризация монома, стр. 89–90). Для базисных ковекторов <span class="math inline">\(e^i\)</span> рассматриваются тензоры вида <span class="math display">\[e^{i_1}\otimes\cdots\otimes e^{i_p}.\]</span> Их симметризация: <span class="math display">\[\operatorname{Sym}(e^{i_1}\otimes\cdots\otimes e^{i_p})
+=
+\frac{1}{p!}\sum_{\sigma\in S_p}
+e^{i_{\sigma(1)}}\otimes\cdots\otimes e^{i_{\sigma(p)}}.\]</span> Если среди индексов есть повторения, одинаковые слагаемые группируются.</p>
+<div class="clarifybox">
+
+<p>Для <span class="math inline">\(n=2,p=3\)</span> базис симметрических ковариантных тензоров соответствует мономам степеней <span class="math inline">\(3\)</span>: <span class="math inline">\((e^1)^3,(e^1)^2e^2,e^1(e^2)^2,(e^2)^3\)</span>. Поэтому координаты часто обозначают <span class="math inline">\(\lambda_{30},\lambda_{21},\lambda_{12},\lambda_{03}\)</span>.</p>
+</div>
+
+</div>
+
+<div class="lemma">
+
+<p><strong>Лемма 280</strong> (Базис пространства симметрических тензоров). <em>Симметрические мономы <span class="math display">\[\operatorname{Sym}\bigl((e^1)^{\otimes a_1}\otimes\cdots\otimes(e^n)^{\otimes a_n}\bigr),
+\qquad
+a_1+\cdots+a_n=p,\]</span> образуют базис пространства <span class="math inline">\(\operatorname{Sym}_p(V)\)</span>.</em></p>
+</div>
+
+<div class="corollary">
+
+<p><strong>Следствие 281</strong> (Размерность). <em><span class="math display">\[\dim \operatorname{Sym}_p(V)=\binom{n+p-1}{p}.\]</span></em></p>
+<div class="clarifybox">
+
+<p><em>Размерность пространства симметрических <span class="math inline">\(p\)</span>-тензоров на <span class="math inline">\(n\)</span>-мерном пространстве равна числу мономов степени <span class="math inline">\(p\)</span> от <span class="math inline">\(n\)</span> переменных: <span class="math inline">\(\binom{n+p-1}{p}\)</span>.</em></p>
+</div>
+
+</div>
+
+<h3 id="симметрическое-произведение">Симметрическое произведение</h3>
+<h3 id="определение-и-свойства">Определение и свойства</h3>
+<div class="definition">
+
+<p><strong>Определение 282</strong> (Симметрическое произведение). Пусть <span class="math inline">\(T\in\operatorname{Sym}_p(V)\)</span>, <span class="math inline">\(S\in\operatorname{Sym}_r(V)\)</span>. Их симметрическим произведением называется <span class="math display">\[T\odot S=\operatorname{Sym}(T\otimes S).\]</span> Иногда в конспекте перед симметризацией появляется числовой множитель, зависящий от <span class="math inline">\(p\)</span> и <span class="math inline">\(r\)</span>: <span class="math display">\[T\odot S=\frac{(p+r)!}{p!r!}\operatorname{Sym}(T\otimes S).\]</span></p>
+<div class="clarifybox">
+
+<p>Симметрическое произведение можно определить как <span class="math inline">\(S\odot T=\frac{(p+q)!}{p!q!}\operatorname{Sym}(S\otimes T)\)</span> или просто <span class="math inline">\(\operatorname{Sym}(S\otimes T)\)</span>. В этом файле фиксируем первую нормировку, чтобы произведение базисных мономов совпадало с обычным умножением многочленов.</p>
+</div>
+
+</div>
+
+<div class="proposition">
+
+<p><strong>Утверждение 283</strong> (Свойства симметрического произведения). <em>Для симметрических тензоров выполнены:</em></p>
+<ol type="1">
+<li><p><em>билинейность: <span class="math display">\[(T_1+T_2)\odot S=T_1\odot S+T_2\odot S,
+\qquad
+T\odot(S_1+S_2)=T\odot S_1+T\odot S_2;\]</span></em></p></li>
+<li><p><em>однородность по скаляру: <span class="math display">\[(\lambda T)\odot S=\lambda(T\odot S)=T\odot(\lambda S);\]</span></em></p></li>
+<li><p><em>коммутативность: <span class="math display">\[T\odot S=S\odot T;\]</span></em></p></li>
+<li><p><em>ассоциативность: <span class="math display">\[(T\odot S)\odot R=T\odot(S\odot R).\]</span></em></p></li>
+</ol>
+</div>
+
+<div class="proof">
+
+<p><em>Идея доказательства по страницам 94–95.</em> Билинейность следует из билинейности тензорного произведения и линейности оператора <span class="math inline">\(\operatorname{Sym}\)</span>. Коммутативность доказывается тем, что перестановка блока первых <span class="math inline">\(p\)</span> аргументов с блоком следующих <span class="math inline">\(r\)</span> аргументов после полной симметризации не меняет результат. Ассоциативность доказывается аналогично: полная симметризация тензора <span class="math inline">\(T\otimes S\otimes R\)</span> не зависит от порядка, в котором сначала симметризуются блоки.</p>
+<div class="clarifybox">
+
+<p>Доказательство ассоциативности симметрического произведения сводится к тому, что повторная симметризация не меняет уже симметризованный результат: <span class="math inline">\(\operatorname{Sym}\circ\operatorname{Sym}=\operatorname{Sym}\)</span>, а суммы по перестановкам можно перегруппировать.</p>
+</div>
+
+<p> ◻</p>
+</div>
+
+<h2 id="дополнительные-уточнения">Дополнительные уточнения</h2>
+<h3 id="11-симметризация-альтернирование-и-симметрическое-произведение">11. Симметризация, альтернирование и симметрическое произведение</h3>
+<p>Для чисто ковариантных <span class="math inline">\(p\)</span>-тензоров <span class="math inline">\(T\in T^p_0(V)\)</span> и перестановки <span class="math inline">\(\sigma\in S_p\)</span> задаётся оператор перестановки аргументов <span class="math display">\[(F_\sigma T)(x_1,\ldots,x_p)=T(x_{\sigma(1)},\ldots,x_{\sigma(p)}).\]</span> Оператор симметризации: <span class="math display">\[\operatorname{Sym}(T)=\frac1{p!}\sum_{\sigma\in S_p}F_\sigma T.\]</span> Его образ — пространство симметрических тензоров <span class="math inline">\(S^p(V^*)\)</span>, причём <span class="math display">\[\operatorname{Sym}^2=\operatorname{Sym}.\]</span> Базис <span class="math inline">\(S^p(V^*)\)</span> задаётся мономиальными симметризованными произведениями <span class="math display">\[(e^1)^{a_1}\cdots (e^n)^{a_n},
+\qquad
+a_1+\cdots+a_n=p,\]</span> и <span class="math display">\[\dim S^p(V^*)=\binom{n+p-1}{p}.\]</span></p>
+<p>Оператор альтернирования: <span class="math display">\[\operatorname{Alt}(T)=\frac1{p!}\sum_{\sigma\in S_p}\operatorname{sgn}(\sigma)F_\sigma T.\]</span> Кососимметрический тензор удовлетворяет <span class="math display">\[F_\sigma T=\operatorname{sgn}(\sigma)T.\]</span> Внешнее произведение базисных ковекторов задаётся как <span class="math display">\[e^{i_1}\wedge\cdots\wedge e^{i_p}
+=\operatorname{Alt}(e^{i_1}\otimes\cdots\otimes e^{i_p}).\]</span> Если среди индексов есть повторение, результат равен нулю. Базис <span class="math inline">\(\Lambda^p(V^*)\)</span> имеет вид <span class="math display">\[e^{i_1}\wedge\cdots\wedge e^{i_p},
+\qquad
+1\le i_1&lt;\cdots&lt;i_p\le n,\]</span> поэтому <span class="math display">\[\dim\Lambda^p(V^*)=\binom np.\]</span></p>
+<p>Симметрическое умножение определяется формулой <span class="math display">\[T\odot S=\operatorname{Sym}(T\otimes S).\]</span> Если <span class="math inline">\(T\in S^p(V^*)\)</span>, <span class="math inline">\(S\in S^r(V^*)\)</span>, то <span class="math display">\[T\odot S\in S^{p+r}(V^*).\]</span> На аргументах: <span class="math display">\[(T\odot S)(x_1,\ldots,x_{p+r})
+=\frac1{(p+r)!}\sum_{\sigma\in S_{p+r}}
+T(x_{\sigma(1)},\ldots,x_{\sigma(p)})
+S(x_{\sigma(p+1)},\ldots,x_{\sigma(p+r)}).\]</span> Симметрическое умножение билинейно, коммутативно и ассоциативно.</p>
+<div class="planbox">
+
+<p><strong>Стандартное продолжение билета: эта часть нужна для полного ответа.</strong> Симметрическая алгебра пространства <span class="math inline">\(V^*\)</span> определяется как <span class="math display">\[S(V^*)=\bigoplus_{p=0}^{\infty} S^p(V^*),\]</span> где <span class="math inline">\(S^p(V^*)\)</span> — пространство симметрических ковариантных <span class="math inline">\(p\)</span>-тензоров. Если <span class="math inline">\(e^1,\ldots,e^n\)</span> — базис <span class="math inline">\(V^*\)</span>, то базис <span class="math inline">\(S^p(V^*)\)</span> задаётся мономами <span class="math display">\[(e^1)^{\odot k_1}\odot\cdots\odot(e^n)^{\odot k_n},
+\qquad k_1+\cdots+k_n=p.\]</span> Отсюда <span class="math display">\[\dim S^p(V^*)=\binom{n+p-1}{p}.\]</span> Изоморфизм с алгеброй многочленов: <span class="math inline">\(e^i\)</span> соответствует переменной <span class="math inline">\(x_i\)</span>, а симметрическое произведение соответствует обычному умножению многочленов.</p>
+</div>
+
+  </article>
+</main>
+
+<footer class="footer">
+  <p>Конспект по линейной алгебре, билеты 1–27. Статический сайт для GitHub Pages.</p>
+  <p><a href="../assets/lin_alg_notes.pdf">Скачать PDF</a> · <a href="../assets/lin_alg_notes.tex">Скачать TeX</a></p>
+</footer>
+<script src="../assets/app.js"></script>
+</html>

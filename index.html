@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Главная · Линейная алгебра</title>
+  <meta name="description" content="Интерактивный конспект по линейной алгебре: билеты 1–27, формы, операторы, аффинная геометрия и тензоры.">
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[','\\]']],
+      processEscapes: true,
+      macros: {
+        R: "\\mathbb{R}", C: "\\mathbb{C}", F: "\\mathbb{F}",
+        Ker: "\\operatorname{Ker}", Imop: "\\operatorname{Im}", rk: "\\operatorname{rk}",
+        End: "\\operatorname{End}", Hom: "\\operatorname{Hom}", tr: "\\operatorname{tr}",
+        diag: "\\operatorname{diag}", Span: "\\operatorname{span}", Id: "\\operatorname{Id}",
+        Sym: "\\operatorname{Sym}", Alt: "\\operatorname{Alt}", dist: "\\operatorname{dist}",
+        pr: "\\operatorname{pr}", ort: "\\operatorname{ort}"
+      }
+    },
+    svg: { fontCache: 'global' }
+  };
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+</head>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="brand-icon">LA</span><span>Алгебра II</span></a>
+  <nav>
+    <a class="active" href="index.html#tickets">Билеты</a>
+    <a href="map.html">Карта</a>
+    <a href="trainer.html">Тренажёр</a>
+    <a href="formulas.html">Формулы</a>
+    <a href="assets/lin_alg_notes.pdf">PDF</a>
+  </nav>
+  <button id="themeToggle" class="icon-button" aria-label="Переключить тему">◐</button>
+</header>
+<main class="container">
+  <section class="hero">
+    <div>
+      <h1>Линейная алгебра: билеты 1–27</h1>
+      <p>Полный экзаменационный конспект по билинейным формам, евклидовым и эрмитовым пространствам, операторам, аффинной геометрии и тензорам. Теория сохранена в полном объёме, но упакована в сайт с поиском, картой тем, тренажёром и интерактивными визуализациями.</p>
+      <div class="actions">
+        <a class="button" href="#tickets">Открыть билеты</a>
+        <a class="button secondary" href="trainer.html">Тренажёр</a>
+        <a class="button secondary" href="interactives.html">Интерактивы</a>
+        <a class="button secondary" href="assets/lin_alg_notes.pdf">Скачать PDF</a>
+      </div>
+    </div>
+    <div class="stat-grid">
+      <div class="stat"><strong>27</strong><span>официальных билетов</span></div>
+      <div class="stat"><strong>5</strong><span>крупных разделов</span></div>
+      <div class="stat"><strong>3</strong><span>интерактивных визуализации</span></div>
+      <div class="stat"><strong>∞</strong><span>формул с MathJax</span></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2 style="margin-top:0">Быстрый поиск</h2>
+    <input id="siteSearch" placeholder="Например: Сильвестр, Грам, полярное разложение, свёртка" style="width:100%; padding:14px; border-radius:14px; border:1px solid var(--line); background:var(--paper); color:var(--text)">
+    <div id="siteSearchResults" class="cards" style="margin-top:16px"></div>
+  </section>
+
+  <h2 id="tickets" class="section-title">Билеты</h2>
+  <div class="filters">
+    <input id="ticketSearch" placeholder="Фильтр по названию">
+    <select id="topicFilter"><option value="all">Все разделы</option><option value="Аффинная геометрия и квадрики">Аффинная геометрия и квадрики</option>
+<option value="Билинейные и квадратичные формы">Билинейные и квадратичные формы</option>
+<option value="Евклидовы пространства и геометрия">Евклидовы пространства и геометрия</option>
+<option value="Тензоры и алгебры">Тензоры и алгебры</option>
+<option value="Эрмитовы пространства и операторы">Эрмитовы пространства и операторы</option></select>
+  </div>
+  <div class="cards">
+<a class="ticket-card" data-ticket-card="1" data-topic="Билинейные и квадратичные формы" href="tickets/ticket-01.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 01</span>
+  <h3>Билинейные формы и их матрицы. Преобразование матрицы билинейной формы при замене базиса. Ранг и ядра билинейной формы.</h3>
+  <p class="topic">Билинейные и квадратичные формы</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="2" data-topic="Билинейные и квадратичные формы" href="tickets/ticket-02.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 02</span>
+  <h3>Симметрические и кососимметрические билинейные формы, их матрицы. Ортогональное дополнение к подпространству относительно билинейной формы, его свойства.</h3>
+  <p class="topic">Билинейные и квадратичные формы</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="3" data-topic="Билинейные и квадратичные формы" href="tickets/ticket-03.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 03</span>
+  <h3>Квадратичные формы, поляризация. Канонический и нормальный виды симметрической билинейной и квадратичной формы.</h3>
+  <p class="topic">Билинейные и квадратичные формы</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="4" data-topic="Билинейные и квадратичные формы" href="tickets/ticket-04.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 04</span>
+  <h3>Методы Лагранжа и Якоби приведения квадратичной формы к каноническому виду. Закон инерции. Приведение кососимметрической билинейной формы к каноническому виду.</h3>
+  <p class="topic">Билинейные и квадратичные формы</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="5" data-topic="Билинейные и квадратичные формы" href="tickets/ticket-05.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 05</span>
+  <h3>Положительно/отрицательно определённые билинейные и квадратичные формы. Критерий Сильвестра.</h3>
+  <p class="topic">Билинейные и квадратичные формы</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="6" data-topic="Евклидовы пространства и геометрия" href="tickets/ticket-06.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 06</span>
+  <h3>Евклидовы векторные пространства: определение и примеры. Неравенство Коши — Буняковского, неравенство треугольника, теорема Пифагора. Длина и угол между векторами, теорема косинусов.</h3>
+  <p class="topic">Евклидовы пространства и геометрия</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="7" data-topic="Евклидовы пространства и геометрия" href="tickets/ticket-07.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 07</span>
+  <h3>Ортогональность векторов. Ортогональное дополнение к подпространству, его свойства. Ортогональная проекция и ортогональная составляющая. Ортонормированные базисы и ортогональные матрицы.</h3>
+  <p class="topic">Евклидовы пространства и геометрия</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="8" data-topic="Евклидовы пространства и геометрия" href="tickets/ticket-08.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 08</span>
+  <h3>Матрица и определитель Грама системы векторов евклидова пространства, их свойства. Процесс ортогонализации Грама — Шмидта, его геометрический смысл. Геометрический смысл определителя. QR-разложение.</h3>
+  <p class="topic">Евклидовы пространства и геометрия</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="9" data-topic="Евклидовы пространства и геометрия" href="tickets/ticket-09.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 09</span>
+  <h3>Метрика (расстояние), её свойства. Расстояние и угол между вектором и подпространством.</h3>
+  <p class="topic">Евклидовы пространства и геометрия</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="10" data-topic="Евклидовы пространства и геометрия" href="tickets/ticket-10.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 10</span>
+  <h3>Изоморфизм евклидовых пространств.</h3>
+  <p class="topic">Евклидовы пространства и геометрия</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="11" data-topic="Евклидовы пространства и геометрия" href="tickets/ticket-11.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 11</span>
+  <h3>Отождествление $V$ и $V^*$ при наличии невырожденной билинейной формы (например, скалярного произведения). Соответствие между операторами и билинейными формами в евклидовом пространстве. Сопряжённый оператор и его свойства.</h3>
+  <p class="topic">Евклидовы пространства и геометрия</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="12" data-topic="Эрмитовы пространства и операторы" href="tickets/ticket-12.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 12</span>
+  <h3>Комплексификация евклидова пространства — эрмитово (унитарное) пространство. Эрмитово скалярное произведение, его свойства. Неравенства Коши — Буняковского и треугольника в эрмитовом пространстве. Эрмитово сопряжённый оператор и его свойства.</h3>
+  <p class="topic">Эрмитовы пространства и операторы</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="13" data-topic="Эрмитовы пространства и операторы" href="tickets/ticket-13.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 13</span>
+  <h3>Нормальные операторы в эрмитовом пространстве, их собственные значения и собственные векторы. Теорема о каноническом виде матрицы нормального оператора в эрмитовом пространстве.</h3>
+  <p class="topic">Эрмитовы пространства и операторы</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="14" data-topic="Эрмитовы пространства и операторы" href="tickets/ticket-14.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 14</span>
+  <h3>Самосопряжённые (симметрические), кососимметрические, ортогональные операторы и их комплексификации — эрмитовы, косоэрмитовы, унитарные операторы соответственно. Собственные значения и собственные векторы этих операторов. Канонические виды их матриц.</h3>
+  <p class="topic">Эрмитовы пространства и операторы</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="15" data-topic="Эрмитовы пространства и операторы" href="tickets/ticket-15.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 15</span>
+  <h3>Приведение квадратичной формы к главным осям с использованием самосопряжённых операторов.</h3>
+  <p class="topic">Эрмитовы пространства и операторы</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="16" data-topic="Эрмитовы пространства и операторы" href="tickets/ticket-16.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 16</span>
+  <h3>Неотрицательно и положительно определённые самосопряжённые операторы, извлечение корней.</h3>
+  <p class="topic">Эрмитовы пространства и операторы</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="17" data-topic="Эрмитовы пространства и операторы" href="tickets/ticket-17.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 17</span>
+  <h3>Полярное разложение невырожденного линейного оператора в евклидовом пространстве.</h3>
+  <p class="topic">Эрмитовы пространства и операторы</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="18" data-topic="Эрмитовы пространства и операторы" href="tickets/ticket-18.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 18</span>
+  <h3>Нормированные пространства. Пространство со скалярным произведением, тождество параллелограмма. Теорема Йордана — фон Неймана.</h3>
+  <p class="topic">Эрмитовы пространства и операторы</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="19" data-topic="Аффинная геометрия и квадрики" href="tickets/ticket-19.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 19</span>
+  <h3>Евклидовы аффинные пространства. Декартова прямоугольная система координат. Расстояние между аффинными плоскостями. Расстояние от точки до аффинной плоскости. Расстояние от точки до гиперплоскости.</h3>
+  <p class="topic">Аффинная геометрия и квадрики</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="20" data-topic="Аффинная геометрия и квадрики" href="tickets/ticket-20.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 20</span>
+  <h3>Момент инерции системы материальных точек относительно точки. Теорема Лагранжа о моментах инерции.</h3>
+  <p class="topic">Аффинная геометрия и квадрики</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="21" data-topic="Аффинная геометрия и квадрики" href="tickets/ticket-21.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 21</span>
+  <h3>Вещественные алгебраические поверхности. Общее уравнение квадрики и классификация квадрик: центральные квадрики — конусы, эллипсоиды, гиперболоиды и построенные на них цилиндрические поверхности; нецентральные квадрики — эллиптические и гиперболические параболоиды.</h3>
+  <p class="topic">Аффинная геометрия и квадрики</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="22" data-topic="Тензоры и алгебры" href="tickets/ticket-22.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 22</span>
+  <h3>Тензоры как полилинейные функции. Примеры тензоров малых валентностей. Арифметические операции над тензорами, тензорное умножение.</h3>
+  <p class="topic">Тензоры и алгебры</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="23" data-topic="Тензоры и алгебры" href="tickets/ticket-23.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 23</span>
+  <h3>Тензорный базис и размерность пространства тензоров типа (p; q). Компоненты (координаты) тензора, их преобразование при замене базиса. Матричная запись тензоров. Эквивалентное определение тензора как «наборов чисел».</h3>
+  <p class="topic">Тензоры и алгебры</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="24" data-topic="Тензоры и алгебры" href="tickets/ticket-24.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 24</span>
+  <h3>Свёртка тензоров. Интерпретация операций линейной алгебры в терминах тензорного умножения и свёртки. Тензорное произведение операторов. Метрический тензор, подъём и опускание индексов.</h3>
+  <p class="topic">Тензоры и алгебры</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="25" data-topic="Тензоры и алгебры" href="tickets/ticket-25.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 25</span>
+  <h3>Симметрические и кососимметрические тензоры. Симметризация и альтернирование (антисимметризация), их свойства.</h3>
+  <p class="topic">Тензоры и алгебры</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="26" data-topic="Тензоры и алгебры" href="tickets/ticket-26.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 26</span>
+  <h3>Симметрическое умножение и его свойства. Симметрическая алгебра, её базис и размерность. Изоморфизм алгебре многочленов от нескольких переменных.</h3>
+  <p class="topic">Тензоры и алгебры</p>
+</a>
+
+<a class="ticket-card" data-ticket-card="27" data-topic="Тензоры и алгебры" href="tickets/ticket-27.html">
+  <span class="progress-dot"></span>
+  <span class="num">Билет 27</span>
+  <h3>Внешнее умножение и его свойства. Грассманова (внешняя) алгебра, её базис и размерность. Изоморфизм алгебре грассмановых многочленов.</h3>
+  <p class="topic">Тензоры и алгебры</p>
+</a></div>
+</main>
+
+<footer class="footer">
+  <p>Конспект по линейной алгебре, билеты 1–27. Статический сайт для GitHub Pages.</p>
+  <p><a href="assets/lin_alg_notes.pdf">Скачать PDF</a> · <a href="assets/lin_alg_notes.tex">Скачать TeX</a></p>
+</footer>
+<script src="assets/app.js"></script>
+</html>
