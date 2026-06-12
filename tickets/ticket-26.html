@@ -1,79 +1,8 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Билет 26 · Линейная Алгебра: Экзамен</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:true,macros:{R:"\\mathbb{R}",C:"\\mathbb{C}",F:"\\mathbb{F}",Ker:"\\operatorname{Ker}",rk:"\\operatorname{rk}",tr:"\\operatorname{tr}",Sym:"\\operatorname{Sym}",Alt:"\\operatorname{Alt}",dist:"\\operatorname{dist}",pr:"\\operatorname{pr}",ort:"\\operatorname{ort}",End:"\\operatorname{End}",Hom:"\\operatorname{Hom}"}},svg:{fontCache:"global"}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body class="ticket-page full-active"><header class="topbar"><a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Линейная Алгебра: Экзамен</span></a><nav><a class="active" href="../index.html">Билеты</a><a href="../map.html">Карта</a><a href="../trainer.html">Тренажёр</a><a href="../formulas.html">Формулы</a><a href="../interactives.html">Интерактивы</a></nav><button id="themeToggle" class="icon-button">◐</button></header><main class="layout"><aside class="sidebar"><div style="margin:4px 6px 12px;color:var(--muted);font-size:13px">Билеты</div><a href="ticket-01.html" class="">1</a><a href="ticket-02.html" class="">2</a><a href="ticket-03.html" class="">3</a><a href="ticket-04.html" class="">4</a><a href="ticket-05.html" class="">5</a><a href="ticket-06.html" class="">6</a><a href="ticket-07.html" class="">7</a><a href="ticket-08.html" class="">8</a><a href="ticket-09.html" class="">9</a><a href="ticket-10.html" class="">10</a><a href="ticket-11.html" class="">11</a><a href="ticket-12.html" class="">12</a><a href="ticket-13.html" class="">13</a><a href="ticket-14.html" class="">14</a><a href="ticket-15.html" class="">15</a><a href="ticket-16.html" class="">16</a><a href="ticket-17.html" class="">17</a><a href="ticket-18.html" class="">18</a><a href="ticket-19.html" class="">19</a><a href="ticket-20.html" class="">20</a><a href="ticket-21.html" class="">21</a><a href="ticket-22.html" class="">22</a><a href="ticket-23.html" class="">23</a><a href="ticket-24.html" class="">24</a><a href="ticket-25.html" class="">25</a><a href="ticket-26.html" class="current">26</a><a href="ticket-27.html" class="">27</a></aside><article class="article"><div class="ticket-tools"><button class="small-btn" data-mark-ticket="26">Отметить как выученный</button><a class="small-btn" href="ticket-25.html">← Предыдущий</a><a class="small-btn" href="ticket-27.html">Следующий →</a></div><div class="mode-switch"><button id="showFull" class="active">Полный конспект</button><button id="showOral">Устный ответ</button></div><p class="mode-note">Полный конспект восстановлен из первой полной версии сайта. Вкладка «Устный ответ» содержит текущую краткую структуру ответа.</p><section id="fullContent" class="full-content full-content-clean">
-<div class="full-conspect-note">Полный конспект этого билета перенесён из файла «Алгебра билеты v2.pdf» и отображается как адаптивный HTML-текст, без PDF-подобной разметки.</div>
-<pre class="conspect-pre">26. Билет 26. Симметрическое умножение. Сим-
-    метрическая алгебра. Изоморфизм с мно-
-    гочленами.
-  План ответа
-  Здесь не надо снова доказывать свойства Sym полностью. Нужно ис-
-  пользовать симметризацию для определения произведения и затем со-
-  брать симметрическую алгебру.
-
-   Пусть
-                             S ∈ S p (V ∗ ),         T ∈ S q (V ∗ )
-— симметрические ковариантные тензоры.
-
-Определение 26.1. Симметрическим произведением называется
-
-                                         (p + q)!
-                            S    T =              Sym(S ⊗ T )
-                                           p!q!
-
-или, при другой нормировке, просто Sym(S ⊗ T ). Главное: результат снова
-симметричен и имеет степень p + q.
-
-   Свойства симметрического умножения:
-
-  1) билинейность;
-
-  2) коммутативность:
-                                         S     T =T          S;
-
-  3) ассоциативность:
-                                (R       S)    T =R          (S    T ).
-
-Ассоциативность следует из того, что в конце всё равно выполняется пол-
-ная симметризация тензорного произведения всех множителей.
-
-Базис и размерность
-  Если e1 , . . . , en — базис V ∗ , то базис S p (V ∗ ) задаётся симметрическими мо-
-номами
-                         (e1 )⊙k1 · · · (en )⊙kn ,   k1 + · · · + kn = p.
-Поэтому                                                   
-                                     p    ∗          n+p−1
-                             dim S (V ) =                    .
-                                                       p
-
-Симметрическая алгебра
-                                               M
-                                 S(V ∗ ) =           S p (V ∗ ).
-                                               p≥0
-
-Умножение в этой алгебре — симметрическое умножение                       .
-
-Изоморфизм с многочленами
-  Отображение
-                                            ei 7−→ xi
-продолжается до изоморфизма симметрической алгебры S(V ∗ ) с алгеброй
-многочленов
-                            F[x1 , . . . , xn ].
-Симметрический моном
-                               (e1 )⊙k1         ···       (en )⊙kn
-соответствует обычному мономy
-
-                                           xk11 · · · xknn .
-
-Однородные компоненты и многочлены
-   Компонента S p (V ∗ ) соответствует однородным многочленам степени p от
-n переменных. Поэтому формула
-                                                 
-                                  p  ∗      n+p−1
-                             dim S (V ) =
-                                              p
-совпадает с числом мономов степени p:
-
-                       xk11 · · · xknn ,         k1 + · · · + kn = p.
-
-Вся симметрическая алгебра соответствует прямой сумме всех однородных
-степеней, то есть всей алгебре многочленов.</pre>
+<div class="full-conspect-note"><strong>Полный конспект.</strong> Ниже показан соответствующий фрагмент отправленного PDF «Алгебра билеты v2»: он вставлен как отрендеренные страницы, поэтому формулы, индексы, дроби и греческие буквы отображаются ровно в исходной LaTeX-вёрстке. <a href="../assets/algebra_tickets_v2_full_conspect.pdf#page=48" target="_blank" rel="noopener">Открыть этот фрагмент в PDF</a>.</div>
+<div class="pdf-page-stack" aria-label="Полный конспект билета 26: Симметрическое умножение и его свойства. Симметрическая алгебра, её базис и размерность. Изоморфизм алгебре многочленов от нескольких переменных.">
+<figure class="pdf-page"><img src="../assets/full-conspect-pages/page-048.webp" loading="lazy" decoding="async" alt="Билет 26: страница 48 полного конспекта"><figcaption>Страница 48 полного PDF-конспекта</figcaption></figure>
+<figure class="pdf-page"><img src="../assets/full-conspect-pages/page-049.webp" loading="lazy" decoding="async" alt="Билет 26: страница 49 полного конспекта"><figcaption>Страница 49 полного PDF-конспекта</figcaption></figure>
+</div>
 </section><section id="oralContent" class="oral-content"><article class="article"><h1>Билет 26. Симметрическое умножение и его свойства. Симметрическая алгебра, её базис и размерность. Изоморфизм алгебре многочленов от нескольких переменных.</h1><p class="muted"><b>Раздел:</b> Тензоры и алгебры</p>
 <h2>План ответа</h2><div class="plan"><ul><li>Определить симметрическое произведение.</li><li>Доказать билинейность, коммутативность и ассоциативность.</li><li>Ввести симметрическую алгебру.</li><li>Связать её с многочленами.</li></ul></div><h2>Основные определения и факты</h2><div class="fact">Симметрическое произведение — симметризация тензорного произведения.</div><div class="fact">Оно переводит $S^p(V^*)\times S^q(V^*)$ в $S^{p+q}(V^*)$.</div><div class="fact">Базис $S^p(V^*)$ соответствует мономам степени $p$.</div><div class="fact">Симметрическая алгебра изоморфна алгебре многочленов от $n$ переменных.</div><h2>Ключевые формулы</h2><div class="formula-list"><div class="formula"><strong>Произведение</strong><div>$S\odot T=\operatorname{Sym}(S\otimes T)$</div></div><div class="formula"><strong>Размерность</strong><div>$\dim S^p(V^*)=\binom{n+p-1}{p}$</div></div><div class="formula"><strong>Алгебра</strong><div>$S(V^*)=\bigoplus_{p\ge0}S^p(V^*)$</div></div><div class="formula"><strong>Мономы</strong><div>$e^i\leftrightarrow x_i$</div></div></div><h2>Примеры</h2><div class="example-box"><ol class="examples"><li>При $n=2,p=3$ базис соответствует $x^3,x^2y,xy^2,y^3$.</li><li>$e^1\odot e^2=e^2\odot e^1$.</li><li>Умножение симметрических тензоров работает как умножение однородных многочленов.</li></ol></div><h2>Проверочные вопросы</h2><div class="checklist"><ul><li>Почему размерность равна числу мономов?</li><li>Как симметрическое произведение связано с многочленами?</li><li>Почему произведение коммутативно?</li></ul></div></article></section></article></main><footer class="footer"><p>Линейная Алгебра: Экзамен · билеты 1–27 · статический GitHub Pages.</p><p><a href="../sources.html">Источники</a></p></footer><script src="../assets/app.js"></script></body></html>

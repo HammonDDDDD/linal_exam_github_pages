@@ -1,68 +1,8 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Билет 11 · Линейная Алгебра: Экзамен</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:true,macros:{R:"\\mathbb{R}",C:"\\mathbb{C}",F:"\\mathbb{F}",Ker:"\\operatorname{Ker}",rk:"\\operatorname{rk}",tr:"\\operatorname{tr}",Sym:"\\operatorname{Sym}",Alt:"\\operatorname{Alt}",dist:"\\operatorname{dist}",pr:"\\operatorname{pr}",ort:"\\operatorname{ort}",End:"\\operatorname{End}",Hom:"\\operatorname{Hom}"}},svg:{fontCache:"global"}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body class="ticket-page full-active"><header class="topbar"><a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Линейная Алгебра: Экзамен</span></a><nav><a class="active" href="../index.html">Билеты</a><a href="../map.html">Карта</a><a href="../trainer.html">Тренажёр</a><a href="../formulas.html">Формулы</a><a href="../interactives.html">Интерактивы</a></nav><button id="themeToggle" class="icon-button">◐</button></header><main class="layout"><aside class="sidebar"><div style="margin:4px 6px 12px;color:var(--muted);font-size:13px">Билеты</div><a href="ticket-01.html" class="">1</a><a href="ticket-02.html" class="">2</a><a href="ticket-03.html" class="">3</a><a href="ticket-04.html" class="">4</a><a href="ticket-05.html" class="">5</a><a href="ticket-06.html" class="">6</a><a href="ticket-07.html" class="">7</a><a href="ticket-08.html" class="">8</a><a href="ticket-09.html" class="">9</a><a href="ticket-10.html" class="">10</a><a href="ticket-11.html" class="current">11</a><a href="ticket-12.html" class="">12</a><a href="ticket-13.html" class="">13</a><a href="ticket-14.html" class="">14</a><a href="ticket-15.html" class="">15</a><a href="ticket-16.html" class="">16</a><a href="ticket-17.html" class="">17</a><a href="ticket-18.html" class="">18</a><a href="ticket-19.html" class="">19</a><a href="ticket-20.html" class="">20</a><a href="ticket-21.html" class="">21</a><a href="ticket-22.html" class="">22</a><a href="ticket-23.html" class="">23</a><a href="ticket-24.html" class="">24</a><a href="ticket-25.html" class="">25</a><a href="ticket-26.html" class="">26</a><a href="ticket-27.html" class="">27</a></aside><article class="article"><div class="ticket-tools"><button class="small-btn" data-mark-ticket="11">Отметить как выученный</button><a class="small-btn" href="ticket-10.html">← Предыдущий</a><a class="small-btn" href="ticket-12.html">Следующий →</a></div><div class="mode-switch"><button id="showFull" class="active">Полный конспект</button><button id="showOral">Устный ответ</button></div><p class="mode-note">Полный конспект восстановлен из первой полной версии сайта. Вкладка «Устный ответ» содержит текущую краткую структуру ответа.</p><section id="fullContent" class="full-content full-content-clean">
-<div class="full-conspect-note">Полный конспект этого билета перенесён из файла «Алгебра билеты v2.pdf» и отображается как адаптивный HTML-текст, без PDF-подобной разметки.</div>
-<pre class="conspect-pre">11. Билет 11. Отождествление V и V ∗. Опера-
-    торы и билинейные формы. Сопряжённый
-    оператор.
-  План ответа
-  Здесь три темы: изоморфизм V ≃ V ∗ через невырожденную форму,
-  соответствие операторов и билинейных форм в евклидовом простран-
-  стве, сопряжённый оператор и его свойства.
-
-Отождествление с двойственным пространством
-  Пусть β — невырожденная билинейная форма. Тогда определено отобра-
-жение
-                   Φβ : V → V ∗ , Φβ (x)(y) = β(x, y).
-Оно линейно. Невырожденность означает Ker Φβ = 0, а в конечномерном
-случае это даёт изоморфизм
-                             V ≃ V ∗.
-  В частности, если (·, ·) — скалярное произведение, то
-
-                                      x 7→ (x, ·)
-
-отождествляет V и V ∗ .
-
-Билинейные формы и операторы
-  В евклидовом пространстве каждой билинейной форме γ соответствует
-единственный оператор A ∈ End(V ) такой, что
-
-                                  γ(x, y) = (Ax, y)
-
-для всех x, y ∈ V . Существование следует из изоморфизма V ≃ V ∗ : при фикси-
-рованном x функционал y 7→ γ(x, y) представляется единственным вектором
-Ax.
-   В ортонормированном базисе матрица оператора A совпадает с матри-
-цей формы γ в выбранном соглашении.
-
-Сопряжённый оператор
-Определение 11.1. Оператор A∗ называется сопряжённым к A, если
-
-                          (Ax, y) = (x, A∗ y)        ∀x, y ∈ V.
-
-  Сопряжённый оператор существует и единственен. В ортонормирован-
-ном базисе его матрица равна транспонированной матрице A:
-
-                                    [A∗ ] = [A]T .
-
-  Основные свойства:
-
-                     (A + B)∗ = A∗ + B ∗ ,      (λA)∗ = λA∗ ,
-
-                         (AB)∗ = B ∗ A∗ ,     (A∗ )∗ = A.
-Если A обратим, то
-                                (A−1 )∗ = (A∗ )−1 .
-
-  Главное
-  Симметрическая билинейная форма соответствует самосопряжённо-
-  му оператору A∗ = A, а кососимметрическая — кососопряжённому опе-
-  ратору A∗ = −A.
-
-Две возможные связи с V ∗
-  Для произвольной билинейной формы есть два естественных отображе-
-ния:
-                       x 7→ β(x, ·), y 7→ β(·, y).
-Если форма несимметрична, эти два отображения различаются. Поэтому
-важно заранее выбрать соглашение. В конечномерном случае невырожден-
-ность формы эквивалентна тому, что соответствующая матрица невырож-
-дена, и тогда оба отображения являются изоморфизмами.</pre>
+<div class="full-conspect-note"><strong>Полный конспект.</strong> Ниже показан соответствующий фрагмент отправленного PDF «Алгебра билеты v2»: он вставлен как отрендеренные страницы, поэтому формулы, индексы, дроби и греческие буквы отображаются ровно в исходной LaTeX-вёрстке. <a href="../assets/algebra_tickets_v2_full_conspect.pdf#page=22" target="_blank" rel="noopener">Открыть этот фрагмент в PDF</a>.</div>
+<div class="pdf-page-stack" aria-label="Полный конспект билета 11: Отождествление $V$ и $V^*$ при наличии невырожденной билинейной формы. Соответствие между операторами и билинейными формами в евклидовом пространстве. Сопряжённый оператор и его свойства.">
+<figure class="pdf-page"><img src="../assets/full-conspect-pages/page-022.webp" loading="lazy" decoding="async" alt="Билет 11: страница 22 полного конспекта"><figcaption>Страница 22 полного PDF-конспекта</figcaption></figure>
+<figure class="pdf-page"><img src="../assets/full-conspect-pages/page-023.webp" loading="lazy" decoding="async" alt="Билет 11: страница 23 полного конспекта"><figcaption>Страница 23 полного PDF-конспекта</figcaption></figure>
+</div>
 </section><section id="oralContent" class="oral-content"><article class="article"><h1>Билет 11. Отождествление $V$ и $V^*$ при наличии невырожденной билинейной формы. Соответствие между операторами и билинейными формами в евклидовом пространстве. Сопряжённый оператор и его свойства.</h1><p class="muted"><b>Раздел:</b> Евклидова геометрия</p>
 <h2>План ответа</h2><div class="plan"><ul><li>Построить отображение $V\to V^*$.</li><li>Показать соответствие билинейных форм и операторов.</li><li>Определить сопряжённый оператор.</li><li>Перечислить свойства сопряжения.</li></ul></div><h2>Основные определения и факты</h2><div class="fact">Невырожденная форма даёт изоморфизм $V\simeq V^*$.</div><div class="fact">В евклидовом пространстве любой билинейной форме $\beta$ соответствует оператор $A$: $\beta(x,y)=(x,Ay)$.</div><div class="fact">Сопряжённый оператор задаётся равенством $(Ax,y)=(x,A^*y)$.</div><div class="fact">В ортонормированном базисе матрица $A^*$ равна $A^T$ над $\mathbb R$ и $A^*$ над $\mathbb C$.</div><h2>Ключевые формулы</h2><div class="formula-list"><div class="formula"><strong>Изоморфизм</strong><div>$v\mapsto (\cdot,v)$</div></div><div class="formula"><strong>Форма ↔ оператор</strong><div>$\beta(x,y)=(x,Ay)$</div></div><div class="formula"><strong>Сопряжённый оператор</strong><div>$(Ax,y)=(x,A^*y)$</div></div><div class="formula"><strong>Матрица</strong><div>${[A^*]}= [A]^T$ над $\mathbb R$</div></div></div><h2>Примеры</h2><div class="example-box"><ol class="examples"><li>Для $A=\begin{pmatrix}1&amp;2\\3&amp;4\end{pmatrix}$ над $\mathbb R$ имеем $A^*=A^T$.</li><li>Симметрическая форма соответствует самосопряжённому оператору.</li><li>Кососимметрическая форма соответствует оператору $A^*=-A$.</li></ol></div><h2>Проверочные вопросы</h2><div class="checklist"><ul><li>Почему скалярное произведение отождествляет $V$ и $V^*$?</li><li>Как по форме получить оператор?</li><li>Что значит самосопряжённость?</li></ul></div></article></section></article></main><footer class="footer"><p>Линейная Алгебра: Экзамен · билеты 1–27 · статический GitHub Pages.</p><p><a href="../sources.html">Источники</a></p></footer><script src="../assets/app.js"></script></body></html>

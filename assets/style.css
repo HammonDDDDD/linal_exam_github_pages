@@ -10,3 +10,14 @@
 .conspect-pre{white-space:pre-wrap;word-break:normal;overflow-wrap:anywhere;font-family:Georgia,"Times New Roman",serif;font-size:1.04rem;line-height:1.72;color:var(--text);background:color-mix(in srgb,var(--paper) 92%,var(--bg));border:1px solid var(--line);border-radius:18px;padding:22px;overflow-x:auto}
 .conspect-pre b{font-weight:800}
 @media (max-width:760px){.conspect-pre{font-size:.96rem;padding:16px;line-height:1.62}}
+
+
+/* v6: full conspect section only. Exact LaTeX rendering from uploaded PDF pages. */
+.full-content-clean{display:block}
+.full-conspect-note{margin:0 0 20px;padding:14px 16px;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:14px;background:color-mix(in srgb,var(--paper) 86%,var(--bg));color:var(--muted)}
+.full-conspect-note strong{color:var(--text)}
+.pdf-page-stack{display:grid;gap:22px;margin-top:18px}
+.pdf-page{margin:0;padding:0;text-align:center}
+.pdf-page img{display:block;width:100%;max-width:930px;height:auto;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 18px 45px rgba(20,18,13,.14)}
+.pdf-page figcaption{margin-top:8px;color:var(--muted);font-size:13px}
+@media (max-width:760px){.full-conspect-note{font-size:.94rem}.pdf-page-stack{gap:16px}.pdf-page img{border-radius:10px}}

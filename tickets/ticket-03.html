@@ -1,58 +1,8 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Билет 3 · Линейная Алгебра: Экзамен</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:true,macros:{R:"\\mathbb{R}",C:"\\mathbb{C}",F:"\\mathbb{F}",Ker:"\\operatorname{Ker}",rk:"\\operatorname{rk}",tr:"\\operatorname{tr}",Sym:"\\operatorname{Sym}",Alt:"\\operatorname{Alt}",dist:"\\operatorname{dist}",pr:"\\operatorname{pr}",ort:"\\operatorname{ort}",End:"\\operatorname{End}",Hom:"\\operatorname{Hom}"}},svg:{fontCache:"global"}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body class="ticket-page full-active"><header class="topbar"><a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Линейная Алгебра: Экзамен</span></a><nav><a class="active" href="../index.html">Билеты</a><a href="../map.html">Карта</a><a href="../trainer.html">Тренажёр</a><a href="../formulas.html">Формулы</a><a href="../interactives.html">Интерактивы</a></nav><button id="themeToggle" class="icon-button">◐</button></header><main class="layout"><aside class="sidebar"><div style="margin:4px 6px 12px;color:var(--muted);font-size:13px">Билеты</div><a href="ticket-01.html" class="">1</a><a href="ticket-02.html" class="">2</a><a href="ticket-03.html" class="current">3</a><a href="ticket-04.html" class="">4</a><a href="ticket-05.html" class="">5</a><a href="ticket-06.html" class="">6</a><a href="ticket-07.html" class="">7</a><a href="ticket-08.html" class="">8</a><a href="ticket-09.html" class="">9</a><a href="ticket-10.html" class="">10</a><a href="ticket-11.html" class="">11</a><a href="ticket-12.html" class="">12</a><a href="ticket-13.html" class="">13</a><a href="ticket-14.html" class="">14</a><a href="ticket-15.html" class="">15</a><a href="ticket-16.html" class="">16</a><a href="ticket-17.html" class="">17</a><a href="ticket-18.html" class="">18</a><a href="ticket-19.html" class="">19</a><a href="ticket-20.html" class="">20</a><a href="ticket-21.html" class="">21</a><a href="ticket-22.html" class="">22</a><a href="ticket-23.html" class="">23</a><a href="ticket-24.html" class="">24</a><a href="ticket-25.html" class="">25</a><a href="ticket-26.html" class="">26</a><a href="ticket-27.html" class="">27</a></aside><article class="article"><div class="ticket-tools"><button class="small-btn" data-mark-ticket="3">Отметить как выученный</button><a class="small-btn" href="ticket-02.html">← Предыдущий</a><a class="small-btn" href="ticket-04.html">Следующий →</a></div><div class="mode-switch"><button id="showFull" class="active">Полный конспект</button><button id="showOral">Устный ответ</button></div><p class="mode-note">Полный конспект восстановлен из первой полной версии сайта. Вкладка «Устный ответ» содержит текущую краткую структуру ответа.</p><section id="fullContent" class="full-content full-content-clean">
-<div class="full-conspect-note">Полный конспект этого билета перенесён из файла «Алгебра билеты v2.pdf» и отображается как адаптивный HTML-текст, без PDF-подобной разметки.</div>
-<pre class="conspect-pre">3. Билет 3. Квадратичные формы, поляризация,
-   канонический и нормальный виды.
-  План ответа
-  Определить квадратичную форму как q(x) = β(x, x) для симметрической
-  билинейной формы, восстановить β по q через поляризацию, затем объ-
-  яснить канонический и нормальный виды.
-
-Определение 3.1. Квадратичной формой на V называется функция
-                                        q : V → F,
-которая в некотором базисе имеет вид
-                                   X
-                            q(x) =   aij xi xj ,
-                                             i,j
-
-где можно считать A = (aij ) симметрической матрицей.
-   Если β — симметрическая билинейная форма, то
-                                      q(x) = β(x, x)
-является квадратичной формой.
-
-Поляризация
-  При char F 6= 2 симметрическая билинейная форма однозначно восста-
-навливается по своей квадратичной форме:
-                               1                      
-                      β(x, y) = q(x + y) − q(x) − q(y) .
-Если q(x) = β(x, x), то
-                   q(x + y) = β(x + y, x + y) = q(x) + 2β(x, y) + q(y),
-и формула следует сразу.
-
-Канонический вид
-   Каноническим видом квадратичной формы называется диагональный вид
-                                 q = λ1 y12 + · · · + λr yr2 ,
-полученный невырожденной линейной заменой координат. Нулевые коэф-
-фициенты соответствуют ядру формы.
-Теорема 3.2 (Диагонализация квадратичной формы). Над полем характе-
-ристики, не равной 2, всякая квадратичная форма приводится невырож-
-денной линейной заменой координат к диагональному виду.
-Идея. Если есть ненулевой квадратный коэффициент, выделяем полный
-квадрат и уменьшаем число переменных. Если квадратных коэффициентов
-нет, но форма ненулевая, то есть член aij xi xj ; заменой u = xi + xj , v = xi − xj
-получаем квадратные члены. Затем применяем индукцию.
-
-Нормальный вид над R
-  Над R диагональную форму можно нормировать растяжением коорди-
-нат:
-                   q = y12 + · · · + yp2 − yp+1
-                                                − · · · − yp+q
-                                                               .
-Числа p, q называются положительным и отрицательным индексами инер-
-ции. Остальные переменные входят с нулевыми коэффициентами.
-
-  Главное
-  Канонический вид — диагональный с произвольными ненулевыми ко-
-  эффициентами. Нормальный вид над R — диагональный с коэффици-
-  ентами 1, −1, 0.</pre>
+<div class="full-conspect-note"><strong>Полный конспект.</strong> Ниже показан соответствующий фрагмент отправленного PDF «Алгебра билеты v2»: он вставлен как отрендеренные страницы, поэтому формулы, индексы, дроби и греческие буквы отображаются ровно в исходной LaTeX-вёрстке. <a href="../assets/algebra_tickets_v2_full_conspect.pdf#page=7" target="_blank" rel="noopener">Открыть этот фрагмент в PDF</a>.</div>
+<div class="pdf-page-stack" aria-label="Полный конспект билета 3: Квадратичные формы, поляризация. Канонический и нормальный виды симметрической билинейной и квадратичной формы.">
+<figure class="pdf-page"><img src="../assets/full-conspect-pages/page-007.webp" loading="lazy" decoding="async" alt="Билет 3: страница 7 полного конспекта"><figcaption>Страница 7 полного PDF-конспекта</figcaption></figure>
+<figure class="pdf-page"><img src="../assets/full-conspect-pages/page-008.webp" loading="lazy" decoding="async" alt="Билет 3: страница 8 полного конспекта"><figcaption>Страница 8 полного PDF-конспекта</figcaption></figure>
+</div>
 </section><section id="oralContent" class="oral-content"><article class="article"><h1>Билет 3. Квадратичные формы, поляризация. Канонический и нормальный виды симметрической билинейной и квадратичной формы.</h1><p class="muted"><b>Раздел:</b> Билинейные и квадратичные формы</p>
 <h2>План ответа</h2><div class="plan"><ul><li>Определить квадратичную форму $q(x)=\beta(x,x)$.</li><li>Записать поляризацию и объяснить восстановление симметрической формы.</li><li>Дать канонический вид: сумма квадратов с коэффициентами.</li><li>Дать нормальный вид и связь с инерцией.</li></ul></div><h2>Основные определения и факты</h2><div class="fact">Квадратичная форма связана с симметрической билинейной формой через $q(x)=\beta(x,x)$.</div><div class="fact">Поляризация над полем характеристики не 2 восстанавливает форму: $\beta(x,y)=\frac12(q(x+y)-q(x)-q(y))$.</div><div class="fact">Канонический вид получается невырожденной линейной заменой координат.</div><div class="fact">Нормальный вид над $\mathbb R$: $y_1^2+\cdots+y_p^2-y_{p+1}^2-\cdots-y_{p+q}^2$.</div><h2>Ключевые формулы</h2><div class="formula-list"><div class="formula"><strong>Квадратичная форма</strong><div>$q(x)=\beta(x,x)$</div></div><div class="formula"><strong>Поляризация</strong><div>$\beta(x,y)=\frac{q(x+y)-q(x)-q(y)}{2}$</div></div><div class="formula"><strong>Канонический вид</strong><div>$q=\lambda_1y_1^2+\cdots+\lambda_ry_r^2$</div></div><div class="formula"><strong>Нормальный вид</strong><div>$q=y_1^2+\cdots+y_p^2-y_{p+1}^2-\cdots-y_{p+q}^2$</div></div></div><h2>Примеры</h2><div class="example-box"><ol class="examples"><li>$q(x,y)=x^2+2xy+3y^2=(x+y)^2+2y^2$ — положительно определённая форма.</li><li>$q(x,y)=x^2-y^2$ имеет нормальный вид с одним плюсом и одним минусом.</li><li>$q(x,y)=2xy$ после замены $u=x+y$, $v=x-y$ превращается в $q=(u^2-v^2)/2$.</li></ol></div><h2>Проверочные вопросы</h2><div class="checklist"><ul><li>Как восстановить билинейную форму из квадратичной?</li><li>Чем канонический вид отличается от нормального?</li><li>Что означает число плюсов и минусов в нормальном виде?</li></ul></div></article></section></article></main><footer class="footer"><p>Линейная Алгебра: Экзамен · билеты 1–27 · статический GitHub Pages.</p><p><a href="../sources.html">Источники</a></p></footer><script src="../assets/app.js"></script></body></html>

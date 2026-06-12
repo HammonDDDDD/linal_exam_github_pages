@@ -1,82 +1,8 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Билет 19 · Линейная Алгебра: Экзамен</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:true,macros:{R:"\\mathbb{R}",C:"\\mathbb{C}",F:"\\mathbb{F}",Ker:"\\operatorname{Ker}",rk:"\\operatorname{rk}",tr:"\\operatorname{tr}",Sym:"\\operatorname{Sym}",Alt:"\\operatorname{Alt}",dist:"\\operatorname{dist}",pr:"\\operatorname{pr}",ort:"\\operatorname{ort}",End:"\\operatorname{End}",Hom:"\\operatorname{Hom}"}},svg:{fontCache:"global"}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body class="ticket-page full-active"><header class="topbar"><a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Линейная Алгебра: Экзамен</span></a><nav><a class="active" href="../index.html">Билеты</a><a href="../map.html">Карта</a><a href="../trainer.html">Тренажёр</a><a href="../formulas.html">Формулы</a><a href="../interactives.html">Интерактивы</a></nav><button id="themeToggle" class="icon-button">◐</button></header><main class="layout"><aside class="sidebar"><div style="margin:4px 6px 12px;color:var(--muted);font-size:13px">Билеты</div><a href="ticket-01.html" class="">1</a><a href="ticket-02.html" class="">2</a><a href="ticket-03.html" class="">3</a><a href="ticket-04.html" class="">4</a><a href="ticket-05.html" class="">5</a><a href="ticket-06.html" class="">6</a><a href="ticket-07.html" class="">7</a><a href="ticket-08.html" class="">8</a><a href="ticket-09.html" class="">9</a><a href="ticket-10.html" class="">10</a><a href="ticket-11.html" class="">11</a><a href="ticket-12.html" class="">12</a><a href="ticket-13.html" class="">13</a><a href="ticket-14.html" class="">14</a><a href="ticket-15.html" class="">15</a><a href="ticket-16.html" class="">16</a><a href="ticket-17.html" class="">17</a><a href="ticket-18.html" class="">18</a><a href="ticket-19.html" class="current">19</a><a href="ticket-20.html" class="">20</a><a href="ticket-21.html" class="">21</a><a href="ticket-22.html" class="">22</a><a href="ticket-23.html" class="">23</a><a href="ticket-24.html" class="">24</a><a href="ticket-25.html" class="">25</a><a href="ticket-26.html" class="">26</a><a href="ticket-27.html" class="">27</a></aside><article class="article"><div class="ticket-tools"><button class="small-btn" data-mark-ticket="19">Отметить как выученный</button><a class="small-btn" href="ticket-18.html">← Предыдущий</a><a class="small-btn" href="ticket-20.html">Следующий →</a></div><div class="mode-switch"><button id="showFull" class="active">Полный конспект</button><button id="showOral">Устный ответ</button></div><p class="mode-note">Полный конспект восстановлен из первой полной версии сайта. Вкладка «Устный ответ» содержит текущую краткую структуру ответа.</p><section id="fullContent" class="full-content full-content-clean">
-<div class="full-conspect-note">Полный конспект этого билета перенесён из файла «Алгебра билеты v2.pdf» и отображается как адаптивный HTML-текст, без PDF-подобной разметки.</div>
-<pre class="conspect-pre">19. Билет 19. Евклидовы аффинные простран-
-    ства. Координаты. Расстояния до плоско-
-    стей и гиперплоскостей.
-  План ответа
-  Только аффинно-евклидова геометрия: точки, векторы направлений,
-  прямоугольные координаты и три формулы расстояния.
-
-Определение 19.1. Аффинное пространство A связано с векторным про-
-странством V так, что для точек A, B ∈ A определён вектор
-                                     −→
-                                     AB ∈ V,
-
-а к точке можно прибавить вектор.
-
-  Если V евклидово, то A называется аффинно-евклидовым пространством.
-Расстояние между точками:
-                                           −→
-                                ρ(A, B) = kABk.
-
-Декартова прямоугольная система координат
-   Выбираем начало O ∈ A и ортонормированный базис e1 , . . . , en простран-
-ства направлений. Тогда координаты точки P определяются из
-                            −→
-                            OP = x1 e1 + · · · + xn en .
-
-Аффинные плоскости
-  Аффинная плоскость с направляющим подпространством U ⊂ V имеет
-вид
-                     P = A + U = {A + u | u ∈ U }.
-Для двух аффинных плоскостей
-
-                          P = A + U,         Q=B+W
-
-расстояние равно
-                                                 −→
-                         dist(P, Q) = pr(U +W )⊥ AB .
-
-Смысл: при изменении точек внутри плоскостей вектор между ними меня-
-ется на элемент U + W , поэтому неизменной минимальной частью остаётся
-ортогональная составляющая к U + W .
-
-Расстояние от точки до аффинной плоскости
-  Для точки X и плоскости A + U :
-                                                 −−→
-                         dist(X, A + U ) = prU ⊥ AX .
-
-Расстояние от точки до гиперплоскости
-   Пусть гиперплоскость задана уравнением
-
-                                a1 x1 + · · · + an xn + b = 0.
-
-Тогда расстояние от точки X0 = (x01 , . . . , x0n ) до неё равно
-
-                                        |a1 x01 + · · · + an x0n + b|
-                         dist(X0 , H) =      p                        .
-                                                a21 + · · · + a2n
-
-Нормальный вектор гиперплоскости:
-
-                                      a = (a1 , . . . , an ).
-
-Вывод формулы для гиперплоскости
-   Уравнение гиперплоскости можно записать как
-
-                                       (a, x) + b = 0,
-
-где a — нормальный вектор. Если X ∈ H, то
-
-                                (a, X0 − X) = (a, X0 ) + b.
-
-Расстояние до гиперплоскости равно длине ортогональной проекции век-
-тора X0 − X на направление a:
-
-                                           |(a, X0 − X)|   |(a, X0 ) + b|
-                     pr⟨a⟩ (X0 − X) =                    =                .
-                                                 kak            kak
-
-Это и даёт координатную формулу.</pre>
+<div class="full-conspect-note"><strong>Полный конспект.</strong> Ниже показан соответствующий фрагмент отправленного PDF «Алгебра билеты v2»: он вставлен как отрендеренные страницы, поэтому формулы, индексы, дроби и греческие буквы отображаются ровно в исходной LaTeX-вёрстке. <a href="../assets/algebra_tickets_v2_full_conspect.pdf#page=35" target="_blank" rel="noopener">Открыть этот фрагмент в PDF</a>.</div>
+<div class="pdf-page-stack" aria-label="Полный конспект билета 19: Евклидовы аффинные пространства. Декартова прямоугольная система координат. Расстояние между аффинными плоскостями. Расстояние от точки до аффинной плоскости. Расстояние от точки до гиперплоскости.">
+<figure class="pdf-page"><img src="../assets/full-conspect-pages/page-035.webp" loading="lazy" decoding="async" alt="Билет 19: страница 35 полного конспекта"><figcaption>Страница 35 полного PDF-конспекта</figcaption></figure>
+<figure class="pdf-page"><img src="../assets/full-conspect-pages/page-036.webp" loading="lazy" decoding="async" alt="Билет 19: страница 36 полного конспекта"><figcaption>Страница 36 полного PDF-конспекта</figcaption></figure>
+</div>
 </section><section id="oralContent" class="oral-content"><article class="article"><h1>Билет 19. Евклидовы аффинные пространства. Декартова прямоугольная система координат. Расстояние между аффинными плоскостями. Расстояние от точки до аффинной плоскости. Расстояние от точки до гиперплоскости.</h1><p class="muted"><b>Раздел:</b> Аффинная геометрия и квадрики</p>
 <h2>План ответа</h2><div class="plan"><ul><li>Определить аффинно-евклидово пространство.</li><li>Ввести прямоугольную систему координат.</li><li>Доказать формулу расстояния между плоскостями.</li><li>Вывести частные случаи: точка–плоскость и точка–гиперплоскость.</li></ul></div><h2>Основные определения и факты</h2><div class="fact">Аффинная плоскость имеет вид $A+U$, где $A$ — точка, $U$ — направляющее подпространство.</div><div class="fact">Расстояние между $A+U$ и $B+W$ определяется ортогональной проекцией $\overrightarrow{AB}$ на $(U+W)^\perp$.</div><div class="fact">Расстояние от точки до плоскости — частный случай.</div><div class="fact">Гиперплоскость $a_1x_1+\cdots+a_nx_n+b=0$ имеет нормальный вектор $a=(a_i)$.</div><h2>Ключевые формулы</h2><div class="formula-list"><div class="formula"><strong>Аффинная плоскость</strong><div>$A+U$</div></div><div class="formula"><strong>Расстояние</strong><div>$\operatorname{dist}(A+U,B+W)=\|\operatorname{pr}_{(U+W)^\perp}\overrightarrow{AB}\|$</div></div><div class="formula"><strong>Точка–плоскость</strong><div>$\operatorname{dist}(P,A+U)=\|\operatorname{pr}_{U^\perp}\overrightarrow{AP}\|$</div></div><div class="formula"><strong>Гиперплоскость</strong><div>$\frac{|a_1x_1^0+\cdots+a_nx_n^0+b|}{\sqrt{a_1^2+\cdots+a_n^2}}$</div></div></div><h2>Примеры</h2><div class="example-box"><ol class="examples"><li>Расстояние от точки $(0,2)$ до оси $Ox$ равно 2.</li><li>Расстояние от $(1,2)$ до прямой $x+y-1=0$ равно $|1+2-1|/\sqrt2=\sqrt2$.</li><li>Параллельные прямые $y=0$ и $y=3$ имеют расстояние 3.</li></ol></div><h2>Проверочные вопросы</h2><div class="checklist"><ul><li>Почему берётся $(U+W)^\perp$?</li><li>Как получить формулу для гиперплоскости?</li><li>Чем точка+вектор отличается от точка+точка?</li></ul></div></article></section></article></main><footer class="footer"><p>Линейная Алгебра: Экзамен · билеты 1–27 · статический GitHub Pages.</p><p><a href="../sources.html">Источники</a></p></footer><script src="../assets/app.js"></script></body></html>

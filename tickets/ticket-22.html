@@ -1,66 +1,8 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Билет 22 · Линейная Алгебра: Экзамен</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:true,macros:{R:"\\mathbb{R}",C:"\\mathbb{C}",F:"\\mathbb{F}",Ker:"\\operatorname{Ker}",rk:"\\operatorname{rk}",tr:"\\operatorname{tr}",Sym:"\\operatorname{Sym}",Alt:"\\operatorname{Alt}",dist:"\\operatorname{dist}",pr:"\\operatorname{pr}",ort:"\\operatorname{ort}",End:"\\operatorname{End}",Hom:"\\operatorname{Hom}"}},svg:{fontCache:"global"}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body class="ticket-page full-active"><header class="topbar"><a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Линейная Алгебра: Экзамен</span></a><nav><a class="active" href="../index.html">Билеты</a><a href="../map.html">Карта</a><a href="../trainer.html">Тренажёр</a><a href="../formulas.html">Формулы</a><a href="../interactives.html">Интерактивы</a></nav><button id="themeToggle" class="icon-button">◐</button></header><main class="layout"><aside class="sidebar"><div style="margin:4px 6px 12px;color:var(--muted);font-size:13px">Билеты</div><a href="ticket-01.html" class="">1</a><a href="ticket-02.html" class="">2</a><a href="ticket-03.html" class="">3</a><a href="ticket-04.html" class="">4</a><a href="ticket-05.html" class="">5</a><a href="ticket-06.html" class="">6</a><a href="ticket-07.html" class="">7</a><a href="ticket-08.html" class="">8</a><a href="ticket-09.html" class="">9</a><a href="ticket-10.html" class="">10</a><a href="ticket-11.html" class="">11</a><a href="ticket-12.html" class="">12</a><a href="ticket-13.html" class="">13</a><a href="ticket-14.html" class="">14</a><a href="ticket-15.html" class="">15</a><a href="ticket-16.html" class="">16</a><a href="ticket-17.html" class="">17</a><a href="ticket-18.html" class="">18</a><a href="ticket-19.html" class="">19</a><a href="ticket-20.html" class="">20</a><a href="ticket-21.html" class="">21</a><a href="ticket-22.html" class="current">22</a><a href="ticket-23.html" class="">23</a><a href="ticket-24.html" class="">24</a><a href="ticket-25.html" class="">25</a><a href="ticket-26.html" class="">26</a><a href="ticket-27.html" class="">27</a></aside><article class="article"><div class="ticket-tools"><button class="small-btn" data-mark-ticket="22">Отметить как выученный</button><a class="small-btn" href="ticket-21.html">← Предыдущий</a><a class="small-btn" href="ticket-23.html">Следующий →</a></div><div class="mode-switch"><button id="showFull" class="active">Полный конспект</button><button id="showOral">Устный ответ</button></div><p class="mode-note">Полный конспект восстановлен из первой полной версии сайта. Вкладка «Устный ответ» содержит текущую краткую структуру ответа.</p><section id="fullContent" class="full-content full-content-clean">
-<div class="full-conspect-note">Полный конспект этого билета перенесён из файла «Алгебра билеты v2.pdf» и отображается как адаптивный HTML-текст, без PDF-подобной разметки.</div>
-<pre class="conspect-pre">22. Билет 22. Тензоры как полилинейные функ-
-    ции. Малые валентности. Операции и тен-
-    зорное умножение.
-  План ответа
-  Здесь только определение тензоров, простые примеры типов, опера-
-  ции над тензорами одного типа и тензорное произведение. Базис, ко-
-  ординаты и свёртка относятся к следующим билетам.
-
-Определение 22.1. Тензором типа (p, q) на конечномерном пространстве
-V называется полилинейная функция
-
-                      T : V × · · · × V × V ∗ × · · · × V ∗ → F.
-                          |   {z       } |      {z        }
-                                p                     q
-
-Пространство таких тензоров обозначается Tqp (V ).
-
-  Полилинейность означает линейность по каждому аргументу отдельно.
-
-Примеры малых валентностей
-
-                                       T00 (V ) = F
-— скаляры.
-                                      T01 (V ) = V ∗
-— ковекторы.
-                                       T10 (V ) ≃ V
-— векторы, потому что (V ∗ )∗ ≃ V в конечномерном случае.
-
-                                    T02 (V ) = Bil(V )
-
-— билинейные формы.
-                                    T11 (V ) ≃ End(V )
-— линейные операторы.
-
-Арифметические операции
-  Если S, T ∈ Tqp (V ), то их сумма определяется поточечно:
-
-                         (S + T )(. . .) = S(. . .) + T (. . .).
-
-Умножение на скаляр:
-                               (λT )(. . .) = λT (. . .).
-Тензоры одного типа образуют векторное пространство.
-
-Тензорное умножение
-     Если
-                                       S ∈ Tqp (V ),            T ∈ Tsr (V ),
-то
-                                              S ⊗ T ∈ Tq+s
-                                                       p+r
-                                                           (V ).
-На аргументах:
-
-               (S ⊗ T )(x1 , . . . , xp+r , ω 1 , . . . , ω q+s )
-                = S(x1 , . . . , xp , ω 1 , . . . , ω q )T (xp+1 , . . . , xp+r , ω q+1 , . . . , ω q+s ).
-
-Свойства:
-
-     • билинейность;
-
-     • ассоциативность;
-
-     • в общем случае некоммутативность.</pre>
+<div class="full-conspect-note"><strong>Полный конспект.</strong> Ниже показан соответствующий фрагмент отправленного PDF «Алгебра билеты v2»: он вставлен как отрендеренные страницы, поэтому формулы, индексы, дроби и греческие буквы отображаются ровно в исходной LaTeX-вёрстке. <a href="../assets/algebra_tickets_v2_full_conspect.pdf#page=40" target="_blank" rel="noopener">Открыть этот фрагмент в PDF</a>.</div>
+<div class="pdf-page-stack" aria-label="Полный конспект билета 22: Тензоры как полилинейные функции. Примеры тензоров малых валентностей. Арифметические операции над тензорами, тензорное умножение.">
+<figure class="pdf-page"><img src="../assets/full-conspect-pages/page-040.webp" loading="lazy" decoding="async" alt="Билет 22: страница 40 полного конспекта"><figcaption>Страница 40 полного PDF-конспекта</figcaption></figure>
+<figure class="pdf-page"><img src="../assets/full-conspect-pages/page-041.webp" loading="lazy" decoding="async" alt="Билет 22: страница 41 полного конспекта"><figcaption>Страница 41 полного PDF-конспекта</figcaption></figure>
+</div>
 </section><section id="oralContent" class="oral-content"><article class="article"><h1>Билет 22. Тензоры как полилинейные функции. Примеры тензоров малых валентностей. Арифметические операции над тензорами, тензорное умножение.</h1><p class="muted"><b>Раздел:</b> Тензоры и алгебры</p>
 <h2>План ответа</h2><div class="plan"><ul><li>Определить тензор как полилинейную функцию.</li><li>Привести малые типы: скаляр, ковектор, вектор, билинейная форма, оператор.</li><li>Определить сложение и умножение на скаляр для тензоров одного типа.</li><li>Определить тензорное произведение и его свойства.</li></ul></div><h2>Основные определения и факты</h2><div class="fact">Тензор фиксированного типа — полилинейная функция от заданного числа аргументов.</div><div class="fact">Тензоры одного типа образуют векторное пространство.</div><div class="fact">Тензорное произведение увеличивает тип: $T^p_q\otimes T^r_s\subset T^{p+r}_{q+s}$.</div><div class="fact">Тензорное произведение билинейно, ассоциативно, но в общем случае некоммутативно.</div><h2>Ключевые формулы</h2><div class="formula-list"><div class="formula"><strong>Тип</strong><div>$(p,q)$</div></div><div class="formula"><strong>Примеры</strong><div>$T^0_0=\mathbb F,\ T^1_0=V^*,\ T^0_1\simeq V$</div></div><div class="formula"><strong>Произведение</strong><div>$S\otimes T\in T^{p+r}_{q+s}$</div></div><div class="formula"><strong>Размерность</strong><div>$\dim T^p_q(V)=n^{p+q}$</div></div></div><h2>Примеры</h2><div class="example-box"><ol class="examples"><li>Ковектор $f\in V^*$ — тензор типа $(1,0)$.</li><li>Билинейная форма — тензор типа $(2,0)$.</li><li>Оператор — тензор типа $(1,1)$ при естественном отождествлении.</li></ol></div><h2>Проверочные вопросы</h2><div class="checklist"><ul><li>Почему нельзя складывать тензоры разных типов?</li><li>Почему матрица сама по себе не определяет тип тензора?</li><li>Как меняется тип при тензорном произведении?</li></ul></div></article></section></article></main><footer class="footer"><p>Линейная Алгебра: Экзамен · билеты 1–27 · статический GitHub Pages.</p><p><a href="../sources.html">Источники</a></p></footer><script src="../assets/app.js"></script></body></html>

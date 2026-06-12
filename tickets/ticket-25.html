@@ -1,84 +1,8 @@
 <!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Билет 25 · Линейная Алгебра: Экзамен</title><link rel="stylesheet" href="../assets/style.css"><link rel="icon" href="../assets/favicon.svg" type="image/svg+xml"><script>window.MathJax={tex:{inlineMath:[["$","$"],["\\(","\\)"]],displayMath:[["$$","$$"],["\\[","\\]"]],processEscapes:true,macros:{R:"\\mathbb{R}",C:"\\mathbb{C}",F:"\\mathbb{F}",Ker:"\\operatorname{Ker}",rk:"\\operatorname{rk}",tr:"\\operatorname{tr}",Sym:"\\operatorname{Sym}",Alt:"\\operatorname{Alt}",dist:"\\operatorname{dist}",pr:"\\operatorname{pr}",ort:"\\operatorname{ort}",End:"\\operatorname{End}",Hom:"\\operatorname{Hom}"}},svg:{fontCache:"global"}};</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script></head><body class="ticket-page full-active"><header class="topbar"><a class="brand" href="../index.html"><span class="brand-icon">LA</span><span>Линейная Алгебра: Экзамен</span></a><nav><a class="active" href="../index.html">Билеты</a><a href="../map.html">Карта</a><a href="../trainer.html">Тренажёр</a><a href="../formulas.html">Формулы</a><a href="../interactives.html">Интерактивы</a></nav><button id="themeToggle" class="icon-button">◐</button></header><main class="layout"><aside class="sidebar"><div style="margin:4px 6px 12px;color:var(--muted);font-size:13px">Билеты</div><a href="ticket-01.html" class="">1</a><a href="ticket-02.html" class="">2</a><a href="ticket-03.html" class="">3</a><a href="ticket-04.html" class="">4</a><a href="ticket-05.html" class="">5</a><a href="ticket-06.html" class="">6</a><a href="ticket-07.html" class="">7</a><a href="ticket-08.html" class="">8</a><a href="ticket-09.html" class="">9</a><a href="ticket-10.html" class="">10</a><a href="ticket-11.html" class="">11</a><a href="ticket-12.html" class="">12</a><a href="ticket-13.html" class="">13</a><a href="ticket-14.html" class="">14</a><a href="ticket-15.html" class="">15</a><a href="ticket-16.html" class="">16</a><a href="ticket-17.html" class="">17</a><a href="ticket-18.html" class="">18</a><a href="ticket-19.html" class="">19</a><a href="ticket-20.html" class="">20</a><a href="ticket-21.html" class="">21</a><a href="ticket-22.html" class="">22</a><a href="ticket-23.html" class="">23</a><a href="ticket-24.html" class="">24</a><a href="ticket-25.html" class="current">25</a><a href="ticket-26.html" class="">26</a><a href="ticket-27.html" class="">27</a></aside><article class="article"><div class="ticket-tools"><button class="small-btn" data-mark-ticket="25">Отметить как выученный</button><a class="small-btn" href="ticket-24.html">← Предыдущий</a><a class="small-btn" href="ticket-26.html">Следующий →</a></div><div class="mode-switch"><button id="showFull" class="active">Полный конспект</button><button id="showOral">Устный ответ</button></div><p class="mode-note">Полный конспект восстановлен из первой полной версии сайта. Вкладка «Устный ответ» содержит текущую краткую структуру ответа.</p><section id="fullContent" class="full-content full-content-clean">
-<div class="full-conspect-note">Полный конспект этого билета перенесён из файла «Алгебра билеты v2.pdf» и отображается как адаптивный HTML-текст, без PDF-подобной разметки.</div>
-<pre class="conspect-pre">25. Билет 25. Симметрические и кососиммет-
-    рические тензоры. Симметризация и аль-
-    тернирование.
-  План ответа
-  Здесь не нужно симметрическое или внешнее умножение как алгебры:
-  только свойства тензоров и проекторы Sym, Alt.
-
-   Рассмотрим ковариантные p-тензоры T ∈ T0p (V ). Для перестановки σ ∈ Sp
-задаётся оператор перестановки аргументов:
-
-                     (Fσ T )(x1 , . . . , xp ) = T (xσ(1) , . . . , xσ(p) ).
-
-Определение 25.1. Тензор T называется симметрическим, если
-
-                                Fσ T = T              ∀σ ∈ Sp .
-
-Он называется кососимметрическим, если
-
-                           Fσ T = sgn(σ)T                ∀σ ∈ Sp .
-
-                                                T ∈ T0p (V )
-
-             Sym T                                                               Alt T
-   среднее по перестановкам                                                среднее со знаком
-
-Симметризация
-
-                                                1 X
-                               Sym(T ) =               Fσ T.
-                                                p! σ∈S
-                                                         p
-
-Свойства:
-
- 1) Sym(T ) симметричен;
- 2) Sym = Sym;
-
- 3) = Sym — пространство симметрических тензоров.
-
-Альтернирование
-
-                                          1 X
-                           Alt(T ) =             sgn(σ)Fσ T.
-                                          p! σ∈S
-                                                  p
-
-Свойства:
-
- 1) Alt(T ) кососимметричен;
-
- 2) Alt = Alt;
-
- 3) = Alt = Λp (V ∗ ) — пространство кососимметрических p-форм.
-
-   Если в внешнем произведении повторяется один и тот же ковектор, ре-
-зультат равен нулю:
-                              ei ∧ ei = 0.
-
-  Аккуратное место
-
-  При p = 2 любой ковариантный тензор раскладывается на симметриче-
-  скую и кососимметрическую части. При p ≥ 3 одних этих двух частей
-  уже недостаточно для полного разложения всего пространства тензо-
-  ров.
-
-Почему это проекторы
-  Для любой перестановки τ ∈ Sp имеем
-
-                                     1 X
-                      Fτ Sym(T ) =          Fτ σ T = Sym(T ),
-                                     p! σ∈S
-                                          p
-
-так как при фиксированной τ множество {τ σ | σ ∈ Sp } снова равно Sp . Поэто-
-му Sym(T ) симметричен и Sym = Sym.
-   Для альтернирования аналогично:
-
-                           Fτ Alt(T ) = sgn(τ ) Alt(T ),
-поскольку sgn(τ σ) = sgn(τ ) sgn(σ). Значит, Alt(T ) кососимметричен и Alt =
-Alt.</pre>
+<div class="full-conspect-note"><strong>Полный конспект.</strong> Ниже показан соответствующий фрагмент отправленного PDF «Алгебра билеты v2»: он вставлен как отрендеренные страницы, поэтому формулы, индексы, дроби и греческие буквы отображаются ровно в исходной LaTeX-вёрстке. <a href="../assets/algebra_tickets_v2_full_conspect.pdf#page=46" target="_blank" rel="noopener">Открыть этот фрагмент в PDF</a>.</div>
+<div class="pdf-page-stack" aria-label="Полный конспект билета 25: Симметрические и кососимметрические тензоры. Симметризация и альтернирование, их свойства.">
+<figure class="pdf-page"><img src="../assets/full-conspect-pages/page-046.webp" loading="lazy" decoding="async" alt="Билет 25: страница 46 полного конспекта"><figcaption>Страница 46 полного PDF-конспекта</figcaption></figure>
+<figure class="pdf-page"><img src="../assets/full-conspect-pages/page-047.webp" loading="lazy" decoding="async" alt="Билет 25: страница 47 полного конспекта"><figcaption>Страница 47 полного PDF-конспекта</figcaption></figure>
+</div>
 </section><section id="oralContent" class="oral-content"><article class="article"><h1>Билет 25. Симметрические и кососимметрические тензоры. Симметризация и альтернирование, их свойства.</h1><p class="muted"><b>Раздел:</b> Тензоры и алгебры</p>
 <h2>План ответа</h2><div class="plan"><ul><li>Определить симметрические и кососимметрические тензоры.</li><li>Ввести действие перестановок на аргументы.</li><li>Определить $\operatorname{Sym}$ и $\operatorname{Alt}$.</li><li>Сформулировать свойства проекторов.</li></ul></div><h2>Основные определения и факты</h2><div class="fact">Симметрический тензор не меняется при перестановке аргументов.</div><div class="fact">Кососимметрический тензор меняется на знак перестановки.</div><div class="fact">$\operatorname{Sym}$ — усреднение по всем перестановкам.</div><div class="fact">$\operatorname{Alt}$ — усреднение с множителем $\operatorname{sgn}(\sigma)$.</div><h2>Ключевые формулы</h2><div class="formula-list"><div class="formula"><strong>Симметризация</strong><div>$\operatorname{Sym}T=\frac1{p!}\sum_{\sigma\in S_p}F_\sigma T$</div></div><div class="formula"><strong>Альтернирование</strong><div>$\operatorname{Alt}T=\frac1{p!}\sum_{\sigma\in S_p}\operatorname{sgn}(\sigma)F_\sigma T$</div></div><div class="formula"><strong>Проектор</strong><div>$\operatorname{Sym}^2=\operatorname{Sym}$</div></div><div class="formula"><strong>Повтор</strong><div>$\omega\wedge\omega=0$</div></div></div><h2>Примеры</h2><div class="example-box"><ol class="examples"><li>Для билинейной формы симметрическая часть: $\frac12(\beta(x,y)+\beta(y,x))$.</li><li>Кососимметрическая часть: $\frac12(\beta(x,y)-\beta(y,x))$.</li><li>Если два аргумента кососимметрической формы совпали, значение равно 0.</li></ol></div><h2>Проверочные вопросы</h2><div class="checklist"><ul><li>Почему $\operatorname{Sym}$ — проектор?</li><li>Что означает знак перестановки?</li><li>Почему при $p\ge3$ есть смешанные типы симметрии?</li></ul></div></article></section></article></main><footer class="footer"><p>Линейная Алгебра: Экзамен · билеты 1–27 · статический GitHub Pages.</p><p><a href="../sources.html">Источники</a></p></footer><script src="../assets/app.js"></script></body></html>
